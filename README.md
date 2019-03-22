@@ -50,7 +50,7 @@
 |31 | [createElement 和 cloneElement 有什么区别？](#createelement-和-cloneelement-有什么区别) |
 |32 | [在 React 中的提升状态是什么？](#在-react-中的提升状态是什么) |
 |33 | [组件生命周期的不同阶段是什么？](#组件生命周期的不同阶段是什么) |
-|34 | [What are the lifecycle methods of React?](#what-are-the-lifecycle-methods-of-react) |
+|34 | [React 生命周期方法有哪些?](#react-生命周期方法有哪些?) |
 |35 | [What are Higher-Order Components?](#what-are-higher-order-components) |
 |36 | [How to create props proxy for HOC component?](#how-to-create-props-proxy-for-hoc-component) |
 |37 | [What is context?](#what-is-context) |
@@ -882,65 +882,65 @@
 
     3. **Unmounting:** 在这个最后阶段，不需要组件，它将从浏览器 DOM 中卸载。这个阶段包含 `componentWillUnmount()` 生命周期方法。
 
-    It's worth mentioning that React internally has a concept of phases when applying changes to the DOM. They are separated as follows
     值得一提的是，在将更改应用到 DOM 时，React 内部也有阶段概念。它们按如下方式分隔开：
 
-    1. **Render** The component will render without any side-effects. This applies for Pure components and in this phase, React can pause, abort, or restart the render.
+    1. **Render** 组件将会进行无副作用渲染。这适用于纯组件（Pure Component），在此阶段，React 可以暂停，中止或重新渲染。
 
-    2. **Pre-commit** Before the component actually applies the changes to the DOM, there is a moment that allows React to read from the DOM through the `getSnapshotBeforeUpdate()`.
+    2. **Pre-commit** 在组件实际将更改应用于 DOM 之前，有一个时刻允许 React 通过`getSnapshotBeforeUpdate()`捕获一些 DOM 信息（例如滚动位置）。
 
-    3. **Commit** React works with the DOM and executes the final lifecycles respectively `componentDidMount()` for mounting, `componentDidUpdate()` for updating, and `componentWillUnmount()` for unmounting.
-
-    React 16.3+ Phases (or an [interactive version](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
+    3. **Commit** React 操作 DOM 并分别执行最后的生命周期： `componentDidMount()` 在 DOM 渲染完成后调用, `componentDidUpdate()` 在组件更新时调用,  `componentWillUnmount()` 在组件卸载时调用。
+    React 16.3+ 阶段 (也可以看[交互式版本](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/))
 
     ![phases 16.3+](images/phases16.3.jpg)
 
-    Before React 16.3
+    React 16.3 之前
 
     ![phases 16.2](images/phases.png)
 
 
-34. ### What are the lifecycle methods of React?
+34. ### React 生命周期方法有哪些?
 
     React 16.3+
 
-    - **getDerivedStateFromProps:** Invoked right before calling `render()` and is invoked on *every* render. This exists for rare use cases where you need derived state. Worth reading [if you need derived state](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **getSnapshotBeforeUpdate:** Executed right before rendered output is committed to the DOM. Any value returned by this will be passed into `componentDidUpdate()`. This is useful to capture information from the DOM i.e. scroll position.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes. This will not fire if `shouldComponentUpdate()` returns `false`.
-    - **componentWillUnmount** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **getDerivedStateFromProps:** 在调用`render()`之前调用，并在 *每次* 渲染时调用。 需要使用派生状态的情况是很罕见得。值得阅读 [如果你需要派生状态](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html).
+    - **componentDidMount:** 首次渲染后调用，所有得 Ajax 请求、DOM 或状态更新、设置事件监听器都应该在此处发生。
+    - **shouldComponentUpdate:** 确定组件是否应该更新。 默认情况下，它返回`true`。 如果您确定在更新状态或属性后不需要渲染组件，则可以返回`false`值。 它是一个提高性能的好地方，因为它允许您在组件接收新属性时阻止重新渲染。
+    - **getSnapshotBeforeUpdate:** 在最新的渲染输出提交给 DOM 前将会立即调用，这对于从 DOM 捕获信息（比如：滚动位置）很有用。
+    - **componentDidUpdate:** 它主要用于更新 DOM 以响应 prop 或 state 更改。 如果`shouldComponentUpdate()`返回`false`，则不会触发。
+    - **componentWillUnmount** 当一个组件被从 DOM 中移除时，该方法被调用，取消网络请求或者移除与该组件相关的事件监听程序等应该在这里进行。
 
     Before 16.3
 
-    - **componentWillMount:** Executed before rendering and is used for App level configuration in your root component.
-    - **componentDidMount:** Executed after first rendering and here all AJAX requests, DOM or state updates, and set up event listeners should occur.
-    - **componentWillReceiveProps:** Executed when particular prop updates to trigger state transitions.
-    - **shouldComponentUpdate:** Determines if the component will be updated or not. By default it returns `true`. If you are sure that the component doesn't need to render after state or props are updated, you can return false value. It is a great place to improve performance as it allows you to prevent a re-render if component receives new prop.
-    - **componentWillUpdate:** Executed before re-rendering the component when there are props & state changes confirmed by `shouldComponentUpdate()` which returns true.
-    - **componentDidUpdate:** Mostly it is used to update the DOM in response to prop or state changes.
-    - **componentWillUnmount:** It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
+    - **componentWillMount:** 在组件`render()`前执行，用于根组件中的应用程序级别配置。应该避免在该方法中引入任何的副作用或订阅。
+    - **componentDidMount:** 首次渲染后调用，所有得 Ajax 请求、DOM 或状态更新、设置事件监听器都应该在此处发生。
+    - **componentWillReceiveProps:** 在组件接收到新属性前调用，若你需要更新状态响应属性改变（例如，重置它），你可能需对比`this.props`和`nextProps`并在该方法中使用`this.setState()`处理状态改变。
+    - **shouldComponentUpdate:** 确定组件是否应该更新。 默认情况下，它返回`true`。 如果您确定在更新状态或属性后不需要渲染组件，则可以返回`false`值。 它是一个提高性能的好地方，因为它允许您在组件接收新属性时阻止重新渲染。
+    - **componentWillUpdate:** 当`shouldComponentUpdate`返回`true`后重新渲染组件之前执行，注意你不能在这调用`this.setState()`
+    - **componentDidUpdate:** 它主要用于更新 DOM 以响应 prop 或 state 更改。 如果`shouldComponentUpdate()`返回`false`，则不会触发。
+    - **componentWillUnmount:** 当一个组件被从 DOM 中移除时，该方法被调用，取消网络请求或者移除与该组件相关的事件监听程序等应该在这里进行。
 
-35. ### What are Higher-Order Components?
+35. ### 什么是高阶组件（HOC）?
 
-    A *higher-order component* (*HOC*) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+    *高阶组件*(*HOC*)就是一个函数，且该函数接受一个组件作为参数，并返回一个新的组件，它只是一种模式，这种模式是由`react`自身的组合性质必然产生的。
 
-    We call them **pure components** because they can accept any dynamically provided child component but they won't modify or copy any behavior from their input components.
+    我们将它们称为**纯组件**，因为它们可以接受任何动态提供的子组件，但它们不会修改或复制其输入组件中的任何行为。
 
     ```javascript
     const EnhancedComponent = higherOrderComponent(WrappedComponent)
     ```
 
-    HOC can be used for many use cases:
+    HOC 有很多用例：
 
-    1. Code reuse, logic and bootstrap abstraction.
-    2. Render hijacking.
-    3. State abstraction and manipulation.
-    4. Props manipulation.
+    1. 代码复用，逻辑抽象化
+    2. 渲染劫持
+    3. 抽象化和操作状态（`state`）
+    4. 操作属性（`props`）
+    
+    > 译注：更详细用法请参考[高阶组件的使用](https://react.docschina.org/docs/higher-order-components.html)
 
-36. ### How to create props proxy for HOC component?
+36. ### 如何为高阶组件创建属性代理？
 
-    You can add/edit props passed to the component using *props proxy* pattern like this:
+    你可以使用*属性代理*模式向输入组件增加或编辑属性（props）：
 
     ```jsx harmony
     function HOC(WrappedComponent) {
@@ -951,7 +951,7 @@
             footer: false,
             showFeatureX: false,
             showFeatureY: true
-          }
+          };
 
           return <WrappedComponent {...this.props} {...newProps} />
         }
@@ -959,20 +959,48 @@
     }
     ```
 
-37. ### What is context?
+37. ### 什么是上下文（Context）?
 
-    *Context* provides a way to pass data through the component tree without having to pass props down manually at every level. For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
+    *Context* 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递`props`。比如，需要在应用中许多组件需要访问登录用户信息、地区偏好、UI主题等。
 
-    ```javascript
-    const {Provider, Consumer} = React.createContext(defaultValue)
+    ```jsx harmony
+    // 创建一个 theme Context,  默认 theme 的值为 light
+    const ThemeContext = React.createContext('light');
+    
+    function ThemedButton(props) {
+      // ThemedButton 组件从 context 接收 theme
+      return (
+        <ThemeContext.Consumer>
+          {theme => <Button {...props} theme={theme} />}
+        </ThemeContext.Consumer>
+      );
+    }
+    
+    // 中间组件
+    function Toolbar(props) {
+      return (
+        <div>
+          <ThemedButton />
+        </div>
+      );
+    }
+    
+    class App extends React.Component {
+      render() {
+        return (
+          <ThemeContext.Provider value="dark">
+            <Toolbar />
+          </ThemeContext.Provider>
+        );
+      }
+    }
     ```
 
-38. ### What is children prop?
+38. ### children 属性是什么?
 
-    *Children* is a prop (`this.prop.children`) that allow you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
+    *Children* 是一个属性（`this.props.chldren`），它允许您将组件作为数据传递给其他组件，就像您使用的任何其他组件一样。在组件的开始和结束标记之间放置的组件树将作为`children`属性传递给该组件。
 
-    There are a number of methods available in the React API to work with this prop. These include `React.Children.map`, `React.Children.forEach`, `React.Children.count`, `React.Children.only`, `React.Children.toArray`.
-    A simple usage of children prop looks as below,
+    React API 中有许多方法中提供了这个不透明数据结构的方法，包括：`React.Children.map`、`React.Children.forEach`、`React.Children.count`、`React.Children.only`、`React.Children.toArray`。
 
     ```jsx harmony
     const MyDiv = React.createClass({
@@ -990,34 +1018,34 @@
     )
     ```
 
-39. ### How to write comments in React?
+39. ### 怎样在 React 中写注释?
 
-    The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
+    React/JSX 中的注释类似于 JavaScript 的多行注释，但是是用大括号括起来。
 
-    **Single-line comments:**
+    **单行注释：**
 
     ```jsx harmony
     <div>
-      {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
+      {/* 单行注释（在原生 JavaScript 中，单行注释用双斜杠（//）表示） */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```
 
-    **Multi-line comments:**
+    **多行注释：**
 
     ```jsx harmony
     <div>
-      {/* Multi-line comments for more than
-       one line */}
+      {/* 多行注释超过
+       一行 */}
       {`Welcome ${user}, let's play React`}
     </div>
     ```
 
-40. ### What is the purpose of using super constructor with props argument?
+40. ### 构造函数使用带 props 参数的目的是什么？
 
-    A child class constructor cannot make use of `this` reference until `super()` method has been called. The same applies for ES6 sub-classes as well. The main reason of passing props parameter to `super()` call is to access `this.props` in your child constructors.
+    在调用`super()`方法之前，子类构造函数不能使用`this`引用。这同样适用于ES6子类。将`props`参数传递给`super()`的主要原因是为了在子构造函数中访问`this.props`。
 
-    **Passing props:**
+    **带 props 参数:**
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1029,7 +1057,7 @@
     }
     ```
 
-    **Not passing props:**
+    **不带 props 参数:**
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1049,15 +1077,15 @@
     }
     ```
 
-    The above code snippets reveals that `this.props` is different only within the constructor. It would be the same outside the constructor.
+    上面的代码片段显示`this.props`仅在构造函数中有所不同。 它在构造函数之外是相同的。
 
-41. ### What is reconciliation?
+41. ### 什么是调解？
 
-    When a component's props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called *reconciliation*.
+    当组件的`props`或`state`发生更改时，React 通过将新返回的元素与先前呈现的元素进行比较来确定是否需要实际的 DOM 更新。当它们不相等时，React 将更新 DOM 。此过程称为*reconciliation*。
 
-42. ### How to set state with a dynamic key name?
+42. ### 如何使用动态属性名设置 state ？
 
-    If you are using ES6 or the Babel transpiler to transform your JSX code then you can accomplish this with *computed property names*.
+    如果您使用 ES6 或 Babel 转换器来转换您的 JSX 代码，那么您可以使用*计算属性名称*来完成此操作。
 
     ```javascript
     handleInputChange(event) {
@@ -1065,9 +1093,9 @@
     }
     ```
 
-43. ### What would be the common mistake of function being called every time the component renders?
+43. ### 每次组件渲染时调用函数的常见错误是什么？
 
-    You need to make sure that function is not being called while passing the function as a parameter.
+    您需要确保在将函数作为参数传递时未调用该函数。
 
     ```jsx harmony
     render() {
@@ -1076,7 +1104,7 @@
     }
     ```
 
-    Instead, pass the function itself without parenthesis:
+    相反地，传递函数本身应该没有括号：
 
     ```jsx harmony
     render() {
@@ -1085,13 +1113,13 @@
     }
     ```
 
-44. ### Why is it necessary to capitalize component names?
+44. ### 为什么有组件名称要首字母大写？
 
-    It is necessary because components are not DOM elements, they are constructors. Also, in JSX lowercase tag names are referring to HTML elements, not components.
+    这是必要的，因为组件不是 DOM 元素，它们是构造函数。 此外，在 JSX 中，小写标记名称是指 HTML 元素，而不是组件。
 
-45. ### Why React uses `className` over `class` attribute?
+45. ### 为什么 React 使用`className`而不是`class`属性？
 
-    `class` is a keyword in JavaSript, and JSX is an extension of JavaScript. That's the principal reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
+    `class`是 JavaScript 中的关键字，而 JSX 是JavaScript的扩展。这就是为什么 React 使用`className`而不是`class`的主要原因。传递一个字符串作为`className`属性。
 
     ```jsx harmony
     render() {
@@ -1099,9 +1127,9 @@
     }
     ```
 
-46. ### What are fragments?
+46. ### 什么是 Fragments ？
 
-    It's common pattern in React which is used for a component to return multiple elements. *Fragments* let you group a list of children without adding extra nodes to the DOM.
+    它是 React 中的常见模式，用于组件返回多个元素。*Fragments*可以让你聚合一个子元素列表，而无需向 DOM 添加额外节点。
 
     ```jsx harmony
     render() {
@@ -1115,7 +1143,7 @@
     }
     ```
 
-    There is also a *shorter syntax*, but it's not supported in many tools:
+    以下是简介语法，但是在一些工具中还不支持：
 
     ```jsx harmony
     render() {
@@ -1128,30 +1156,32 @@
       )
     }
     ```
+    
+    > 译注：`React 16` 以前，`render` 函数的返回必须有一个根节点，否则报错。
 
-47. ### Why fragments are better than container divs?
+47. ### 为什么使用 Fragments 比使用容器 div 更好？
 
-    1. Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
-    2. Some CSS mechanisms like *Flexbox* and *CSS Grid* have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
-    3. The DOM Inspector is less cluttered.
+    1. 通过不创建额外的 DOM 节点，Fragments 更快并且使用更少的内存。这在非常大而深的节点树时很有好处。
+    2. 一些 CSS 机制如*Flexbox*和*CSS Grid*具有特殊的父子关系，如果在中间添加 div 将使得很难保持所需的结构。
+    3. 在 DOM 审查器中不会那么的杂乱
 
-48. ### What are portals in React?
+48. ### 在 React 中什么是 Portal ？
 
-    *Portal* is a recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+    *Portal* 提供了一种很好的将子节点渲染到父组件以外的 DOM 节点的方式。
 
     ```javascript
     ReactDOM.createPortal(child, container)
     ```
 
-    The first argument is any render-able React child, such as an element, string, or fragment. The second argument is a DOM element.
+    第一个参数是任何可渲染的 React 子节点，例如元素，字符串或片段。第二个参数是 DOM 元素。
 
-49. ### What are stateless components?
+49. ### 什么是无状态组件？
 
-    If the behaviour is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the `this` keyword altogether.
+    如果行为独立于其状态，则它可以是无状态组件。您可以使用函数或类来创建无状态组件。但除非你需要在组件中使用生命周期钩子，否则你应该选择函数组件。无状态组件有很多好处： 它们易于编写，理解和测试，速度更快，而且您可以完全避免使用`this`关键字。
 
-50. ### What are stateful components?
+50. ### 什么是有状态组件？
 
-    If the behaviour of a component is dependent on the *state* of the component then it can be termed as stateful component. These *stateful components* are always *class components* and have a state that gets initialized in the `constructor`.
+    如果组件的行为依赖于组件的*state*，那么它可以被称为有状态组件。这些*有状态组件*总是*类组件*，并且具有在`constructor`中初始化的状态。
 
     ```javascript
     class App extends Component {
