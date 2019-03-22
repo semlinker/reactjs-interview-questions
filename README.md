@@ -8,7 +8,7 @@
 2. 为 React 16 新特性，添加在线示例或完整的示例代码
 3. 新建一个 React 16 新特性介绍文档，收集本人已读或各大资讯平台上的优秀文章
 
-对这个项目感兴趣的小伙伴，欢迎加入**React 面试大全翻译组**：
+对这个项目感兴趣的小伙伴，欢迎加入**React 面试大全翻译/校对小组**：
 
 ![wechat-qrcode](./images/wechat-group-qrcode.jpg)
 
@@ -3819,11 +3819,12 @@
      }
      ```
 
-214. ### Can I import an SVG file as react component?
+214. ### 我可以导入一个 SVG 文件作为 React 组件么?
 
-     You can import SVG directly as component instead of loading it as a file. This feature is available with `react-scripts@2.0.0` and higher.
+     您可以直接将 SVG 作为组件导入，而不是将其作为文件加载。此功能仅在 `react-scripts@2.0.0` 及更高版本中可用。
 
-     ```jsx harmony
+
+     ```jsx 
      import { ReactComponent as Logo } from './logo.svg'
 
      const App = () => (
@@ -3891,6 +3892,7 @@
      The concept of render hijacking is the ability to control what a component will output from another component. It actually means that you decorate your component by wrapping it into a Higher-Order component. By wrapping you can inject additional props or make other changes, which can cause changing logic of rendering. It does not actually enables hijacking, but by using HOC you make your component behave in different way.
 
 217. ### What are HOC factory implementations?
+
      There are two main ways of implementing HOCs in React. 1. Props Proxy (PP) and 2. Inheritance Inversion (II). They follow different approaches for manipulating the *WrappedComponent*.
      **Props Proxy**
 
@@ -3906,6 +3908,7 @@
       }
      }
      ```
+
      **Inheritance Inversion**
      In this approach, the returned HOC class (Enhancer) extends the WrappedComponent. It is called Inheritance Inversion because instead of the WrappedComponent extending some Enhancer class, it is passively extended by the Enhancer. In this way the relationship between them seems **inverse**.
 
@@ -3918,15 +3921,17 @@
       }
      }
      ```
-218. ### How to pass numbers to React component?
 
-     You should be passing the numbers via curly braces({}) where as strings inn quotes
+218. ### 如何传递数字给 React 组件？
+
+     传递数字时你应该使用 `{}`，而传递字符串时还需要使用引号：
 
      ```jsx
         React.render(<User age={30} department={"IT"} />, document.getElementById('container'));
      ```
 
 219. ### Do I need to keep all my state into Redux? Should I ever use react internal state?
+
      It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should liveSome users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
 
      Below are the thumb rules to determine what kind of data should be put into Redux
@@ -3936,9 +3941,9 @@
      4. Is there value to you in being able to restore this state to a given point in time (ie, time travel debugging)?
      5. Do you want to cache the data (ie, use what's in state if it's already there instead of re-requesting it)?
 
-220. ### What is the purpose of registerServiceWorker in React?
+220. ### 在 React 中 registerServiceWorker 的用途是什么?
 
-     React creates a service worker for you without any configuration by default. The service worker is a web API that helps you cache your assets and other files so that when the user is offline or on slow network, he/she can still see results on the screen, as such, it helps you build a better user experience, that's what you should know about service worker's for now. It's all about adding offline capabilities to your site.
+     默认情况下，React 会为你创建一个没有任何配置的 service worker。Service worker 是一个 Web API，它帮助您缓存资源和其他文件，以便当用户离线或在弱网络时，他/她仍然可以在屏幕上看到结果，因此，它可以帮助您建立更好的用户体验，这是您目前应该了解的关于 Service worker 的内容。
 
      ```jsx
         import React from 'react';
@@ -3960,9 +3965,9 @@
      });
      ```
 
-222. ### What is React lazy function?
+222. ### React lazy 函数是什么?
 
-     The React.lazy function lets you render an dynamic import as a regular component. It will automatically load the bundle containing the OtherComponent when the component gets rendered. This must return a Promise which resolves to a module with a default export containing a React component.
+     使用 React.lazy 函数允许你将动态导入的组件作为常规组件进行渲染。当组件开始渲染时，它会自动加载包含 OtherComponent 的包。它必须返回一个 Promise，该 Promise 解析后为一个带有默认导出 React 组件的模块。
 
      ```jsx
      const OtherComponent = React.lazy(() => import('./OtherComponent'));
@@ -3975,12 +3980,12 @@
       );
      }
      ```
-     **Note:**
-     React.lazy and Suspense is not yet available for server-side rendering. If you want to do code-splitting in a server rendered app, we still recommend React Loadable.
 
-223. ### How to prevent unnecessary updates using setState?
+     **注意：** React.lazy 和 Suspense 还不能用于服务端渲染。如果要在服务端渲染的应用程序中进行代码拆分，我们仍然建议使用 React Loadable。
 
-     You can compare current value of the state with an existing state value and decide whether to rerender the page or not. If the values are same then you need to return **null** to stop rerendering otherwise return the latest state value. For example, the user profile information is conditionally rendered as follows,
+223. ### 如何使用 setState 防止不必要的更新?
+
+     你可以把状态的当前值与已有的值进行比较，并决定是否重新渲染页面。如果没有更改，你需要返回 `null` 以阻止渲染，否则返回最新的状态值。例如，用户配置信息组件将按以下方式实现条件渲染：
 
      ```jsx
      getUserProfile = user => {
@@ -3994,9 +3999,10 @@
        });
      };
      ```
-224. ### How do you render Array, Strings and Numbers in React 16 Version?
 
-     **Arrays**: Unlike older releases, you don't need to make sure **render** method return a single element in React16. You are able to return multiple sibling elements without a wrapping element by returning an array. For example, let us take the below list of developers,
+224. ### 如何在 React 16 版本中渲染数组、字符串和数值？ 
+
+     **Arrays**: 与旧版本不同的是，在 React 16 中你不需要确保 **render** 方法必须返回单个元素。通过返回数组，你可以返回多个没有包装元素的同级元素。例如，让我们看看下面的开发人员列表：
 
      ```jsx
      const ReactJSDevs = () => {
@@ -4007,7 +4013,9 @@
        ];
      }
      ```
-     You can also merge this array of items in another array component
+
+     你还可以将此数组项合并到另一个数组组件中：
+
      ```jsx
      const JSDevs = () => {
        return (
@@ -4020,8 +4028,11 @@
        );
      }
      ```
-     **Strings and Numbers:** You can also return string and number type from the render method
+
+     **Strings and Numbers:** 在 render 方法中，你也可以返回字符串和数值类型：
+
      ```jsx
+     // String
      render() {
       return 'Welcome to ReactJS questions';
      }
@@ -4031,9 +4042,9 @@
      }
      ```
 
-225. ### How to use class field declarations syntax in React classes?
+225. ### 如何在 React 类中使用类字段声明语法?
 
-     React Class Components can be made much more concise using the class field declarations. You can initialize local state without using the constructor and declare class methods by using arrow functions without the extra need to bind them. Let's take a counter example to demonstrate class field declarations for state without using constructor and methods without binding,
+     使用类字段声明可以使 React 类组件更加简洁。您可以在不使用构造函数的情况下初始化本地状态，并通过使用箭头函数声明类方法，而无需额外对它们进行绑定。让我们以一个 counter 示例来演示类字段声明，即不使用构造函数初始化状态且不进行方法绑定：
 
      ```jsx
      class Counter extends Component {
@@ -4064,9 +4075,9 @@
      }
      ```
 
-226. ### What are hooks?
+226. ### 什么是 hooks?
 
-     Hooks are a new feature proposal that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+     Hooks 是一个新的草案，它允许您在不编写类的情况下使用状态和其他 React 特性。让我们来看一个 useState 钩子示例：
 
      ```jsx
      import { useState } from 'react';
@@ -4086,18 +4097,21 @@
      }
      ```
 
-227. ### What are the rules needs to follow for hooks?
+227. ### Hooks 需要遵循什么规则?
 
-     You need to follow two rules inorder to use hooks
-     1. Call Hooks only at the top level of your react functions. i.e, You shouldn’t call Hooks inside loops, conditions, or nested functions. This will ensure that Hooks are called in the same order each time a component renders and it preserves the state of Hooks between multiple useState and useEffect calls.
-     2. Call Hooks from React Functions only. i.e, You shouldn’t call Hooks from regular JavaScript functions.
+     为了使用 hooks，您需要遵守两个规则：
+
+     1. 仅在顶层的 React 函数调用 hooks。也就是说，你不能在循环、条件或内嵌函数中调用 hooks。这将确保每次组件渲染时都以相同的顺序调用 hooks，并且它会在多个 useState 和 useEffect 调用之间保留 hooks 的状态。
+     2. 仅在 React 函数中调用 hooks。例如，你不能在常规的 JavaScript 函数中调用 hooks。
 
 228. ### How to ensure hooks followed the rules in your project?
 
      React team released an ESLint plugin called **eslint-plugin-react-hooks** that enforces these two rules. You can add this plugin to your project using the below command,
-     ```javascript
+
+     ```shell
      npm install eslint-plugin-react-hooks@next
      ```
+
      And apply the below config in your ESLint config file,
      ```javascript
      // Your ESLint configuration
@@ -4112,9 +4126,11 @@
        }
      }
      ```
+
      **Note:** This plugin is intended to use in Create React App by default.
 
 229. ### What are the differences between Flux and Redux?
+
      Below are the major differences between Flux and Redux
 
      | Flux | Redux |
@@ -4153,12 +4169,12 @@
      3. 在服务端渲染期间
      4. 错误边界代码本身中引发错误时
 
-233. ### Why do not you need error boundaries for event handlers?
+233. ### 为什么事件处理器不需要错误边界?
 
-     Error boundaries do not catch errors inside event handlers. Event handlers don't happened or invoked during rendering time unlike render method or lifecycle methods. So React knows how to recover these kind of errors in event handlers.
+     错误边界不会捕获事件处理程序中的错误。与 render 方法或生命周期方法不同，在渲染期间事件处理器不会被执行或调用。
 
-     If still you need to catch an error inside event handler, use the regular JavaScript try / catch statement as below
-     
+     如果仍然需要在事件处理程序中捕获错误，请使用下面的常规 JavaScript `try/catch` 语句：
+
      ```javascript
      class MyComponent extends React.Component {
        constructor(props) {
@@ -4183,13 +4199,13 @@
      }
      ```
 
-     The above code is catching the error using vanilla javascript try/catch block instead of error boundaries.
+     上面的代码使用普通的 JavaScript try/catch 块而不是错误边界来捕获错误。
 
-234. ### What is the difference between try catch block and error boundaries?
+234. ### try catch 与错误边界有什么区别?
 
-     Try catch block works with imperative code whereas error boundaries are meant for declarative code to render on the screen.
+     Try catch 块使用命令式代码，而错误边界则是使用在屏幕上呈现声明性代码。
 
-     For example, the try catch block used for below imperative code
+     例如，以下是使用声明式代码的 try/catch 块：
 
      ```javascript
      try {
@@ -4199,7 +4215,7 @@
      }
      ```
 
-     Whereas error boundaries wrap declarative code as below,
+     而错误边界包装的声明式代码如下：
 
      ```javascript
      <ErrorBoundary>
@@ -4207,7 +4223,7 @@
      </ErrorBoundary>
      ```
 
-     So if an error occurs in a **componentDidUpdate** method caused by a **setState** somewhere deep in the tree, it will still correctly propagate to the closest error boundary.
+     因此，如果在组件树深处某个位置组件的 **componentDidUpdate** 方法中，发生了由 **setState** 引发的错误，它仍然会正确地冒泡到最近的错误边界。
 
 235. ### React 16 中未捕获的错误的行为是什么？
 
@@ -4230,15 +4246,15 @@
 
      在类组件中 render() 方法是唯一需要的方法。也就是说，对于类组件，除了 render() 方法之外的所有方法都是可选的。
 
-239. ### What are the possible return types of render method?
+239. ### render 方法可能返回的类型是什么?
 
-     Below are the list of following types used and return from render method,
+     以下列表是 render 方法返回的类型：
 
-     1. **React elements:** Elements that instruct React to render a DOM node. It includes html elements such as <div/> and user defined elements.
-     2. **Arrays and fragments:** Return multiple elements to render as Arrays and Fragments to wrap multiple elements
-     3. **Portals:** Render children into a different DOM subtree.
-     4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
-     5. **Booleans or null:** Doesn't render anything but these types are used to conditionally render content.
+     1. **React elements:** 用于告诉 React 如何渲染 DOM 节点。它包括 HTML 元素，如 `<div />` 和用户定义的元素。
+     2. **Arrays and fragments:** 以数组的形式返回多个元素和包装多个元素的片段。
+     3. **Portals:** 将子元素渲染到不同的 DOM 子树中。
+     4. **String and numbers:** 在 DOM 中将字符串和数字都作为文本节点进行呈现。
+     5. **Booleans or null:** 不会渲染任何内容，但这些类型用于有条件地渲染内容。
 
 240. ### 构造函数的主要目的是什么？
 
