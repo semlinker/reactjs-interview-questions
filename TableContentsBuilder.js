@@ -5,7 +5,7 @@ const os = require('os');
 
 const MD_FILE_PATH = path.join(__dirname, "README.md");
 const TITLE_RE = /^(\d+\.\s*#{3}|#{2})\s*([^#\r\n]+)\r?\n?$/gm;
-const TABLE_CONTENT_RE = /(<!--\s*TOC\s*-->)([^<>]*)(<!--\s*\/TOC\s*-->)/g;
+const TABLE_CONTENT_RE = /(<!--\s*TOC\s*-->)([\s\S]+)(<!--\s*\/TOC\s*-->)/g;
 
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
@@ -25,7 +25,6 @@ class TableContentsBuilder {
         let updatedContents = contents.replace(TABLE_CONTENT_RE, (match, p1, p2, p3) => {
             return p1 + tableContents + p3;
         });
-        console.dir(tableContents);
         await this.saveContents(filePath, updatedContents);
     }
 
@@ -59,6 +58,7 @@ class TableContentsBuilder {
     }
 
     async saveContents(filePath, contents) {
+        // console.log(contents);
         try {
             await writeFile(filePath, contents, {
                 encoding: "utf-8"
