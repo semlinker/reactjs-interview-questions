@@ -1,6 +1,16 @@
 # React 面试题 & 回答
 
-> 如果您喜欢这个项目，请 Star，更感谢您的 Pull Request。
+> 本项目的面试题来源于 [sudheerj/reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions) 这个项目。突然兴起就动起了翻译的念头，但由于本人目前的主要技术栈并非 React，翻译的内容难免出现错误，希望各位见谅。如果您喜欢这个项目，请 Star，更感谢您的 Pull Request。
+
+目前对于本项目，有以下短期的计划：
+
+1. 完成前期的翻译工作
+2. 为 React 16 新特性，添加在线示例或完整的示例代码
+3. 新建一个 React 16 新特性介绍文档，收集本人已读或各大资讯平台上的优秀文章
+
+对这个项目感兴趣的小伙伴，欢迎加入**React 面试大全翻译组**：
+
+![wechat-qrcode](./images/wechat-group-qrcode.jpg)
 
 ### 目录
 
@@ -382,8 +392,6 @@
     <div id='login-btn'>Login</div>
     ```
 
-    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns an JSX tree as the output:
-
     而一个组件可以用多种不同方式声明。它可以是一个含有 `render()` 方法的类。或者，在简单的情况中，它可以定义为函数。无论哪种情况，它都将
     props 作为输入，并返回一个 JSX 树作为输出：
 
@@ -436,17 +444,16 @@
 
     组件的状态是一个对象，它包含某些信息，这些信息可能在组件的生命周期中发生更改。我们应该尽量使状态尽可能简单，并尽量减少有状态组件的数量。让我们创建一个包含消息状态的 User 组件，
 
-
-    ```jsx
+    ```javascript
     class User extends React.Component {
       constructor(props) {
         super(props)
-
+    
         this.state = {
           message: 'Welcome to React world'
         }
       }
-
+    
       render() {
         return (
           <div>
@@ -456,9 +463,9 @@
       }
     }
     ```
-
+    
     ![state](images/state.jpg)
-
+    
     状态（State）与属性（Props）类似，但它是私有的，完全由组件控制。也就是说，除了它所属的组件外，任何组件都无法访问它。
 
 9. ### React 中的 props 是什么？
@@ -486,7 +493,7 @@
 
 10. ### 状态和属性有什么区别？
 
-    *props* 和 *state* 都是普通的 JavaScript 对象。虽然它们都保存着影响渲染输出的信息，但它们在组件方面的功能不同。Props 以类似于函数参数的方式传递给组件，而状态则类似于在函数内声明变量并对它进行管理。
+   *props* 和 *state* 都是普通的 JavaScript 对象。虽然它们都保存着影响渲染输出的信息，但它们在组件方面的功能不同。Props 以类似于函数参数的方式传递给组件，而状态则类似于在函数内声明变量并对它进行管理。
 
 11. ### 我们为什么不能直接更新状态？
 
@@ -508,7 +515,6 @@
 
 12. ### 回调函数作为 `setState()` 参数的目的是什么？
 
-    The callback function is invoked when setState finished and the component gets rendered. Since `setState()` is **asynchronous** the callback function is used for any post action.
     当 setState 完成和组件渲染后，回调函数将会被调用。由于 `setState()` 是异步的，回调函数用于任何后续的操作。
 
     **注意：** 建议使用生命周期方法而不是此回调函数。
@@ -548,7 +554,6 @@
 
 14. ### 如何在 JSX 回调中绑定方法或事件处理程序？
 
-    There are 3 possible ways to achieve this:
     实现这一点有三种可能的方法：
 
     1.	**Binding in Constructor:** 在 JavaScript 类中，方法默认不被绑定。这也适用于定义为类方法的 React 事件处理程序。通常我们在构造函数中绑定它们。
@@ -559,7 +564,7 @@
         super(props)
         this.handleClick = this.handleClick.bind(this)
       }
-
+    
       handleClick() {
         // ...
       }
@@ -592,7 +597,7 @@
 
 15. ### 如何将参数传递给事件处理程序或回调函数？
 
-    您可以使用 *arrow function* 来包装 *event handler* 并传递参数：
+    您可以使用箭头函数来包装事件处理器并传递参数：
 
     ```jsx 
     <button onClick={() => this.handleClick(id)} />
@@ -689,11 +694,11 @@
              this.txtSearch = e;
           }
        }
-
+    
        onInputChange(event) {
           this.setState({ term: this.txtSearch.value });
        }
-
+    
        render() {
           return (
              <input
@@ -706,6 +711,7 @@
     ```
 
     你也可以在使用 **closures** 的函数组件中使用 *refs*。
+
     **注意：** 您也可以使用内联引用回调，尽管这不是推荐的方法。
 
 21. ### 什么 forward refs？
@@ -718,7 +724,7 @@
         {props.children}
       </button>
     ));
-
+    
     // Create ref to the DOM button:
     const ref = React.createRef();
     <ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
@@ -735,7 +741,7 @@
       componentDidMount() {
         findDOMNode(this).scrollIntoView()
       }
-
+    
       render() {
         return <div />
       }
@@ -749,7 +755,7 @@
       componentDidMount() {
         this.node.scrollIntoView()
       }
-
+    
       render() {
         return <div ref={node => this.node = node} />
       }
@@ -780,6 +786,7 @@
          }
        }
        ```
+
 24. ### 什么是 Virtual DOM？
 
     *Virtual DOM* (VDOM) 是 *Real DOM* 的内存表示形式。UI 的展示形式被保存在内存中并与真实的 DOM 同步。这是在调用的渲染函数和在屏幕上显示元素之间发生的一个步骤。整个过程被称为 *reconciliation*。
@@ -811,8 +818,7 @@
 
 29. ### 什么是受控组件？
 
-    A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function.
-    在随后的用户输入中，能够控制表单中输入元素的组件被称为 **Controlled Component**，即每个状态更改都有一个相关联的处理程序。
+    在随后的用户输入中，能够控制表单中输入元素的组件被称为受控组件，即每个状态更改都有一个相关联的处理程序。
 
     例如，我们使用下面的 handleChange 函数将输入框的值转换成大写：
 
@@ -824,7 +830,7 @@
 
 30. ### 什么是非受控组件？
 
-    **Uncontrolled Components** 是在内部存储其自身状态的组件，当需要时，可以使用 ref 查询 DOM 并查找其当前值。这有点像传统的 HTML。
+    非受控组件是在内部存储其自身状态的组件，当需要时，可以使用 ref 查询 DOM 并查找其当前值。这有点像传统的 HTML。
 
     在下面的 UserProfile 组件中，我们通过 ref 引用 `name` 输入框：
 
@@ -835,12 +841,12 @@
         this.handleSubmit = this.handleSubmit.bind(this)
         this.input = React.createRef()
       }
-
+    
       handleSubmit(event) {
         alert('A name was submitted: ' + this.input.current.value)
         event.preventDefault()
       }
-
+    
       render() {
         return (
           <form onSubmit={this.handleSubmit}>
@@ -3746,9 +3752,9 @@
      }
      ```
 
-210. ### Can Redux only be used with React?
+210. ### Redux 只能与 React 一起使用么？
 
-     Redux can be used as a data store for any UI layer. The most common usage is with React and React Native, but there are bindings available for Angular, Angular 2, Vue, Mithril, and more. Redux simply provides a subscription mechanism which can be used by any other code.
+     Redux 可以用做任何 UI 层的数据存储。最常见的应用场景是 React 和 React Native，但也有一些 bindings 可用于 AngularJS，Angular 2,Vue，Mithril 等项目。Redux 只提供了一种订阅机制，任何其他代码都可以使用它。
 
 211. ### Do you need to have a particular build tool to use Redux?
 
@@ -3808,6 +3814,7 @@
        handleSubmit = () => {
          console.log("Input Value is: ", this.input.value)
        }
+     ```
 
 
        render () {
@@ -3822,19 +3829,19 @@
       }
      }
      ```
-
+    
      But our expectation is for the ref callback to get called once, when the component mounts. One quick fix is to use the ES7 class property syntax to define the function
-
+    
      ```jsx
      class UserForm extends Component {
       handleSubmit = () => {
         console.log("Input Value is: ", this.input.value)
       }
-
+    
       setSearchInput = (input) => {
         this.input = input
       }
-
+    
       render () {
         return (
           <form onSubmit={this.handleSubmit}>
@@ -3887,6 +3894,7 @@
      ```jsx
         React.render(<User age={30} department={"IT"} />, document.getElementById('container'));
      ```
+
 219. ### Do I need to keep all my state into Redux? Should I ever use react internal state?
      It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should liveSome users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
 
@@ -3910,16 +3918,21 @@
         ReactDOM.render(<App />, document.getElementById('root'));
         registerServiceWorker();
      ```
+
 221. ### What is React memo function?
 
      Class components can be restricted from rendering when their input props are the same using **PureComponent or shouldComponentUpdate**. Now you can do the same with function components by wrapping them in **React.memo**.
+
      ```jsx
      const MyComponent = React.memo(function MyComponent(props) {
       /* only rerenders if props change */
      });
      ```
+
 222. ### What is React lazy function?
+
      The React.lazy function lets you render an dynamic import as a regular component. It will automatically load the bundle containing the OtherComponent when the component gets rendered. This must return a Promise which resolves to a module with a default export containing a React component.
+
      ```jsx
      const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
@@ -3933,8 +3946,11 @@
      ```
      **Note:**
      React.lazy and Suspense is not yet available for server-side rendering. If you want to do code-splitting in a server rendered app, we still recommend React Loadable.
+
 223. ### How to prevent unnecessary updates using setState?
+
      You can compare current value of the state with an existing state value and decide whether to rerender the page or not. If the values are same then you need to return **null** to stop rerendering otherwise return the latest state value. For example, the user profile information is conditionally rendered as follows,
+
      ```jsx
      getUserProfile = user => {
        const latestAddress = user.address;
@@ -3948,7 +3964,9 @@
      };
      ```
 224. ### How do you render Array, Strings and Numbers in React 16 Version?
+
      **Arrays**: Unlike older releases, you don't need to make sure **render** method return a single element in React16. You are able to return multiple sibling elements without a wrapping element by returning an array. For example, let us take the below list of developers,
+
      ```jsx
      const ReactJSDevs = () => {
        return [
@@ -3981,8 +3999,11 @@
       return 2018;
      }
      ```
+
 225. ### How to use class field declarations syntax in React classes?
+
      React Class Components can be made much more concise using the class field declarations. You can initialize local state without using the constructor and declare class methods by using arrow functions without the extra need to bind them. Let's take a counter example to demonstrate class field declarations for state without using constructor and methods without binding,
+
      ```jsx
      class Counter extends Component {
        state = { value: 0 };
@@ -4011,8 +4032,11 @@
        }
      }
      ```
+
 226. ### What are hooks?
+
      Hooks are a new feature proposal that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+
      ```jsx
      import { useState } from 'react';
 
@@ -4030,6 +4054,7 @@
        );
      }
      ```
+
 227. ### What are the rules needs to follow for hooks?
 
      You need to follow two rules inorder to use hooks
@@ -4037,6 +4062,7 @@
      2. Call Hooks from React Functions only. i.e, You shouldn’t call Hooks from regular JavaScript functions.
 
 228. ### How to ensure hooks followed the rules in your project?
+
      React team released an ESLint plugin called **eslint-plugin-react-hooks** that enforces these two rules. You can add this plugin to your project using the below command,
      ```javascript
      npm install eslint-plugin-react-hooks@next
@@ -4068,12 +4094,16 @@
      | All the stores are disconnected and flat | Single store with hierarchical reducers|
      | It has a singleton dispatcher | There is no concept of dispatcher |
      | React components subscribe to the store | Container components uses connect function|
+
 230. ### What are the benefits of React Router V4?
+
      Below are the main benefits of React Router V4 module,
      1. In React Router v4(version 4), the API is completely about components. A router can be visualized as a single component(<BrowserRouter>) which wraps specific child router components(<Route>).
      2. You don't need to manually set history. The router module will take care history by wrapping routes with  <BrowserRouter> component.
      3. The application size is reduced by adding only the specific router module(Web, core, or native)
+
 231. ### Can you describe about componentDidCatch lifecycle method signature?
+
      The **componentDidCatch** lifecycle method is invoked after an error has been thrown by a descendant component. The method receives two parameters,
      1. error: - The error object which was thrown
      2. info: - An object with a componentStack key contains the information about which component threw the error.
@@ -4082,15 +4112,22 @@
      ```javascript
      componentDidCatch(error, info)
      ```
-232. ### In which scenarios error boundaries do not catch errors?
-     Below are the cases in which error boundaries doesn't work
-     1. Inside Event handlers
-     2. Asynchronous code using **setTimeout or requestAnimationFrame** callbacks
-     3. During Server side rendering
-     4. When errors thrown in the error boundary code itself
+
+232. ### 在哪些情况下，错误边界不会捕获错误？
+
+     以下是错误边界不起作用的情况：
+
+     1. 在事件处理器内
+     2. **setTimeout** 或 **requestAnimationFrame** 回调中的异步代码
+     3. 在服务端渲染期间
+     4. 错误边界代码本身中引发错误时
+
 233. ### Why do not you need error boundaries for event handlers?
+
      Error boundaries do not catch errors inside event handlers. Event handlers don't happened or invoked during rendering time unlike render method or lifecycle methods. So React knows how to recover these kind of errors in event handlers.
+
      If still you need to catch an error inside event handler, use the regular JavaScript try / catch statement as below
+     
      ```javascript
      class MyComponent extends React.Component {
        constructor(props) {
@@ -4114,10 +4151,15 @@
        }
      }
      ```
+
      The above code is catching the error using vanilla javascript try/catch block instead of error boundaries.
+
 234. ### What is the difference between try catch block and error boundaries?
+
      Try catch block works with imperative code whereas error boundaries are meant for declarative code to render on the screen.
+
      For example, the try catch block used for below imperative code
+
      ```javascript
      try {
        showButton();
@@ -4125,40 +4167,57 @@
        // ...
      }
      ```
+
      Whereas error boundaries wrap declarative code as below,
+
      ```javascript
      <ErrorBoundary>
        <MyComponent />
      </ErrorBoundary>
      ```
+
      So if an error occurs in a **componentDidUpdate** method caused by a **setState** somewhere deep in the tree, it will still correctly propagate to the closest error boundary.
 
-235. ### What is the behavior of uncaught errors in react 16?
-     In React 16, errors that were not caught by any error boundary will result in unmounting of the whole React component tree. The reason behind this decision is that it is worse to leave corrupted UI in place than to completely remove it. For example, it is worse for a payments app to display a wrong amount than to render nothing.
-236. ### What is the proper placement for error boundaries?
-     The granularity of error boundaries usage is up to the developer based on project needs. You can follow either of these approaches,
-     1. You can wrap top-level route components to display a generic error message for the entire application.
-     2. You can also wrap individual components in an error boundary to protect them from crashing the rest of the application.
-237. ### What is the benefit of component stack trace from error boundary?
-     Apart from error messages and javascript stack, React16 will display the component stack trace with file names and line numbers using error boundary concept. For example, BuggyCounter component displays the component stack trace as below,
+235. ### React 16 中未捕获的错误的行为是什么？
+
+     在 React 16 中，未被任何错误边界捕获的错误将导致整个 React 组件树的卸载。这一决定背后的原因是，与其显示已损坏的界面，不如完全移除它。例如，对于支付应用程序来说，显示错误的金额比什么都不提供更糟糕。
+
+236. ### 放置错误边界的正确位置是什么？
+
+     错误边界使用的粒度由开发人员根据项目需要决定。您可以遵循这些方法中的任何一种：
+
+     1. 可以包装顶层路由组件以显示整个应用程序中常见的错误消息。
+     2. 您还可以将单个组件包装在错误边界中，以防止它们奔溃时影响到应用程序的其余部分。
+
+237. ### 从错误边界跟踪组件堆栈有什么好处？
+
+     除了错误消息和 JavaScript 堆栈，React 16 将使用错误边界的概念显示带有文件名和行号的组件堆栈。例如，BuggyCounter 组件显示组件堆栈信息：
 
      ![stacktrace](images/error_boundary.png)
 
-238. ### What is the required method to be defined for a class component?
-     The render() method is the only required method in a class component. i.e, All methods other than render method are optional for a class component.
+238. ### 在定义类组件时，什么是必须的方法？
+
+     在类组件中 render() 方法是唯一需要的方法。也就是说，对于类组件，除了 render() 方法之外的所有方法都是可选的。
+
 239. ### What are the possible return types of render method?
+
      Below are the list of following types used and return from render method,
+
      1. **React elements:** Elements that instruct React to render a DOM node. It includes html elements such as <div/> and user defined elements.
      2. **Arrays and fragments:** Return multiple elements to render as Arrays and Fragments to wrap multiple elements
      3. **Portals:** Render children into a different DOM subtree.
      4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
      5. **Booleans or null:** Doesn't render anything but these types are used to conditionally render content.
 
-240. ### What is the main purpose of constructor?
-     The constructor is mainly used for two purposes,
-     1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instatnce
-     For example, the below code covers both the above casess,
+240. ### 构造函数的主要目的是什么？
+
+     使用构造函数主要有两个目的：
+
+     1. 通过将对象分配给 this.state 来初始化本地状态。
+     2. 用于为组件实例绑定事件处理方法。
+
+     例如，下面的代码涵盖了上述两种情况：
+
      ```javascript
      constructor(props) {
        super(props);
@@ -4167,10 +4226,15 @@
        this.handleClick = this.handleClick.bind(this);
      }
      ```
-241. ### Is it mandatory to define constructor for React component?
-     No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
-242. ### What are default props?
-     The defaultProps are defined as a property on the component class to set the default props for the class. This is used for undefined props, but not for null props. For example, let us create color default prop for the button component,
+
+241. ### 是否必须为 React 组件定义构造函数？
+
+     不，这不是强制的。也就是说，如果你不需要初始化状态且不需要绑定方法，则你不需要为 React 组件实现一个构造函数。
+
+242. ### 什么是默认属性？
+
+     defaultProps 被定义为组件类上的属性，用于设置组件类默认的属性值。它只适用于 undefined 的属性，而不适用于 null 属性。例如，让我们为按钮组件创建默认的 color 属性：
+
      ```javascript
      class MyButton extends React.Component {
        // ...
@@ -4182,27 +4246,29 @@
 
      ```
 
-     If props.color is not provided then it will set the default value to 'red'. i.e, Whenever you try to access the color prop it uses default value
+     如果未设置 props.color，则会使用默认值 `red`。 也就是说，每当您试图访问 color 属性时，它都使用默认值。
+
      ```javascript
      render() {
         return <MyButton /> ; // props.color will be set to red
       }
      ```
-     **Note:** If you provide null value then it remains null value.
+
+     **注意：** 如果你提供的是 null 值，它会仍然保留 null 值。
 
 243. ### 为什么不能在 componentWillUnmount 中调用 setState() 方法？
 
      不应在 componentWillUnmount() 中调用 setState()，因为一旦卸载了组件实例，就永远不会再次装载它。
 
-244. ### What is the purpose of getDerivedStateFromError?
+244. ### getDerivedStateFromError 的目的是什么？
 
-     This lifecycle method is invoked after an error has been thrown by a descendant component. It receives the error that was thrown as a parameter and should return a value to update state. The signature of the lifecycle method is as follows,
+     在子代组件抛出异常后会调用此生命周期方法。它以抛出的异常对象作为参数，并返回一个值用于更新状态。该生命周期方法的签名如下：
 
      ```javascript
      static getDerivedStateFromError(error)
      ```
 
-     Let us take error boundary use case with the above lifecycle method for demonistration purpose,
+     让我们举一个包含上述生命周期方法的错误边界示例，来说明 getDerivedStateFromError 的目的：
 
      ```javascript
      class ErrorBoundary extends React.Component {
@@ -4499,6 +4565,7 @@
      const name = response.potentiallyMaliciousInput;
      const element = <h1>{name}</h1>;
      ```
+
      This way you can prevent XSS(Cross-site-scripting) attacks in the application.
 
 262. ### 如何更新已渲染的元素？
@@ -4519,9 +4586,9 @@
      setInterval(tick, 1000);
      ```
 
-263. ### How do you say that props are read only?
+263. ### 你怎么说 props 是只读的？
 
-     When you declare a component as a function or a class, it must never modify its own props. Let us take a below capital function,
+     当您将组件声明为函数或类时，它决不能修改自己的属性。让我们来实现一个 capital 的函数：
 
      ```javascript
      function capital(amount, interest) {
@@ -4529,11 +4596,12 @@
      }
      ```
 
-     The above function is called “pure” because it does not attempt to change their inputs, and always return the same result for the same inputs. Hence, React has a single rule saying "All React components must act like pure functions with respect to their props."
+     上面的函数称为 "pure" 函数，因为它不会尝试更改输入，并总是为相同的输入返回相同的结果。因此，React 有一条规则，即"所有 React 组件的行为都必须像纯函数一样。"
 
-264. ### How do you say that state updates are merged?
+264. ### 你认为状态更新是如何合并的？
 
      When you call setState() in the component, React merges the object you provide into the current state. For example, let us take a facebook user with posts and comments details as state variables,
+     当你在组件中调用 setState() 方法时，React 会将提供的对象合并到当前状态。例如，让我们以一个使用帖子和评论详细信息的作为状态变量的 Facebook 用户为例：
 
      ```javascript
        constructor(props) {
@@ -4545,7 +4613,7 @@
        }
      ```
 
-     Now you can update them independently with separate setState() calls as below,
+     现在，您可以独立调用 setState() 方法，单独更新状态变量：
 
      ```javascript
       componentDidMount() {
@@ -4563,7 +4631,7 @@
        }
      ```
 
-     As mentioned in the above code snippets, this.setState({comments}) updates only comments variable without modifying or replacing posts variable.
+     如上面的代码段所示，`this.setState({comments})` 只会更新 comments 变量，而不会修改或替换 posts 变量。
 
 265. ### 如何将参数传递给事件处理程序？
 
@@ -5040,6 +5108,7 @@
      2. The developer can hint at which child elements may be stable across different renders with a key prop.
 
 288. ### What are the rules covered by diffing algorithm?
+
      When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements. It covers the below rules during reconsilation algorithm,
 
      1. **Elements Of Different Types:**
@@ -5208,6 +5277,7 @@
         ```shell
         npm install bootstrap
         ``
+        ```
      3. 使用 React Bootstrap 包:
         在这种情况下，您可以将 Bootstrap 添加到我们的 React 应用程序中，方法是使用一个以 React 组件形式对 Bootstrap 组件进行包装后包。下面的包在此类别中很流行：
         1. react-bootstrap
