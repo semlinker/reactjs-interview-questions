@@ -51,9 +51,9 @@
 |32 | [在 React 中的提升状态是什么?](#在-react-中的提升状态是什么) |
 |33 | [组件生命周期的不同阶段是什么?](#组件生命周期的不同阶段是什么) |
 |34 | [React 生命周期方法有哪些?](#react-生命周期方法有哪些) |
-|35 | [什么是高阶组件（HOC）?](#什么是高阶组件（hoc）) |
+|35 | [什么是高阶组件（HOC）?](#什么是高阶组件hoc) |
 |36 | [如何为高阶组件创建属性代理?](#如何为高阶组件创建属性代理) |
-|37 | [什么是上下文（Context）?](#什么是上下文（context）) |
+|37 | [什么是上下文（Context）?](#什么是上下文context) |
 |38 | [children 属性是什么?](#children-属性是什么) |
 |39 | [怎样在 React 中写注释?](#怎样在-react-中写注释) |
 |40 | [构造函数使用带 props 参数的目的是什么?](#构造函数使用带-props-参数的目的是什么) |
@@ -104,47 +104,47 @@
 |85 | [Why is `isMounted()` an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
 |86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
 |87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
-|88 | [Are custom DOM attributes supported in React v16?](#are-custom-dom-attributes-supported-in-react-v16) |
-|89 | [What is the difference between constructor and getInitialState?](#what-is-the-difference-between-constructor-and-getinitialstate) |
-|90 | [Can you force a component to re-render without calling setState?](#can-you-force-a-component-to-re-render-without-calling-setstate) |
-|91 | [What is the difference between `super()` and `super(props)` in React using ES6 classes?](#what-is-the-difference-between-super-and-superprops-in-react-using-es6-classes) |
-|92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
-|93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
-|94 | [What is React proptype array with shape?](#what-is-react-proptype-array-with-shape) |
-|95 | [How conditionally apply class attributes?](#how-conditionally-apply-class-attributes) |
-|96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
-|97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
-|98 | [How to use React label element?](#how-to-use-react-label-element) |
-|99 | [How to combine multiple inline style objects?](#how-to-combine-multiple-inline-style-objects) |
-|100 | [How to re-render the view when the browser is resized?](#how-to-re-render-the-view-when-the-browser-is-resized) |
-|101 | [What is the difference between `setState()` and `replaceState()` methods?](#what-is-the-difference-between-setstate-and-replacestate-methods) |
-|102 | [How to listen to state changes?](#how-to-listen-to-state-changes) |
-|103 | [What is the recommended approach of removing an array element in React state?](#what-is-the-recommended-approach-of-removing-an-array-element-in-react-state) |
-|104 | [Is it possible to use React without rendering HTML?](#is-it-possible-to-use-react-without-rendering-html) |
-|105 | [How to pretty print JSON with React?](#how-to-pretty-print-json-with-react) |
-|106 | [Why you can't update props in React?](#why-you-can't-update-props-in-react) |
-|107 | [How to focus an input element on page load?](#how-to-focus-an-input-element-on-page-load) |
-|108 | [What are the possible ways of updating objects in state?](#what-are-the-possible-ways-of-updating-objects-in-state) |
-|109 | [Why function is preferred over object for `setState()`?](#why-function-is-preferred-over-object-for-setstate) |
-|110 | [How can we find the version of React at runtime in the browser?](#how-can-we-find-the-version-of-react-at-runtime-in-the-browser) |
-|111 | [What are the approaches to include polyfills in your `create-react-app`?](#what-are-the-approaches-to-include-polyfills-in-your-create-react-app) |
-|112 | [How to use https instead of http in create-react-app?](#how-to-use-https-instead-of-http-in-create-react-app) |
-|113 | [How to avoid using relative path imports in create-react-app?](#how-to-avoid-using-relative-path-imports-in-create-react-app) |
-|114 | [How to add Google Analytics for React Router?](#how-to-add-google-analytics-for-react-router) |
-|115 | [How to update a component every second?](#how-to-update-a-component-every-second) |
-|116 | [How do you apply vendor prefixes to inline styles in React?](#how-do-you-apply-vendor-prefixes-to-inline-styles-in-react) |
-|117 | [How to import and export components using React and ES6?](#how-to-import-and-export-components-using-react-and-es6) |
-|118 | [Why React component names must begin with a capital letter?](#why-react-component-names-must-begin-with-a-capital-letter) |
-|119 | [Why is a component constructor called only once?](#why-is-a-component-constructor-called-only-once) |
-|120 | [How to define constants in React?](#how-to-define-constants-in-react) |
-|121 | [How to programmatically trigger click event in React?](#how-to-programmatically-trigger-click-event-in-react) |
-|122 | [Is it possible to use async/await in plain React?](#is-it-possible-to-use-async/await-in-plain-react) |
-|123 | [What are the common folder structures for React?](#what-are-the-common-folder-structures-for-react) |
-|124 | [What are the popular packages for animation?](#what-are-the-popular-packages-for-animation) |
-|125 | [What is the benefit of styles modules?](#what-is-the-benefit-of-styles-modules) |
-|126 | [What are the popular React-specific linters?](#what-are-the-popular-react-specific-linters) |
-|127 | [How to make AJAX call and in which component lifecycle methods should I make an AJAX call?](#how-to-make-ajax-call-and-in-which-component-lifecycle-methods-should-i-make-an-ajax-call) |
-|128 | [What are render props?](#what-are-render-props) |
+|88 | [在 React v16 中是否支持自定义 DOM 属性?](#在-react-v16-中是否支持自定义-dom-属性) |
+|89 | [constructor 和 getInitialState 有什么区别?](#constructor-和-getinitialstate-有什么区别) |
+|90 | [是否可以在不调用 setState 方法的情况下，强制组件重新渲染?](#是否可以在不调用-setstate-方法的情况下强制组件重新渲染) |
+|91 | [在使用 ES6 类的 React 中 `super()` 和 `super(props)` 有什么区别?](#在使用-es6-类的-react-中-super-和-superprops-有什么区别) |
+|92 | [在 JSX 中如何进行循环?](#在-jsx-中如何进行循环) |
+|93 | [如何在 attribute 引号中访问 props 属性?](#如何在-attribute-引号中访问-props-属性) |
+|94 | [什么是 React proptype 数组?](#什么是-react-proptype-数组) |
+|95 | [如何有条件地应用样式类?](#如何有条件地应用样式类) |
+|96 | [React 和 ReactDOM 之间有什么区别?](#react-和-reactdom-之间有什么区别) |
+|97 | [为什么 ReactDOM 从 React 分离出来?](#为什么-reactdom-从-react-分离出来) |
+|98 | [如何使用 React label 元素?](#如何使用-react-label-元素) |
+|99 | [如何合并多个内联的样式对象?](#如何合并多个内联的样式对象) |
+|100 | [如何在调整浏览器大小时重新渲染视图?](#如何在调整浏览器大小时重新渲染视图) |
+|101 | [`setState()` 和 `replaceState()` 方法之间有什么区别?](#setstate-和-replacestate-方法之间有什么区别) |
+|102 | [如何监听状态变化?](#如何监听状态变化) |
+|103 | [在 React 状态中删除数组元素的推荐方法是什么?](#在-react-状态中删除数组元素的推荐方法是什么) |
+|104 | [在 React 中是否可以不在页面上渲染 HTML 内容?](#在-react-中是否可以不在页面上渲染-html-内容) |
+|105 | [如何用 React 漂亮地显示 JSON?](#如何用-react-漂亮地显示-json) |
+|106 | [为什么你不能更新 React 中的 props?](#为什么你不能更新-react-中的-props) |
+|107 | [如何在页面加载时聚焦一个输入元素?](#如何在页面加载时聚焦一个输入元素) |
+|108 | [更新状态中的对象有哪些可能的方法?](#更新状态中的对象有哪些可能的方法) |
+|109 | [为什么函数比对象更适合于 `setState()`?](#为什么函数比对象更适合于-setstate) |
+|110 | [我们如何在浏览器中找到当前正在运行的 React 版本?](#我们如何在浏览器中找到当前正在运行的-react-版本) |
+|111 | [在 `create-react-app` 项目中导入 polyfills 的方法有哪些?](#在-create-react-app-项目中导入-polyfills-的方法有哪些) |
+|112 | [如何在 create-react-app 中使用 https 而不是 http?](#如何在-create-react-app-中使用-https-而不是-http) |
+|113 | [如何避免在 create-react-app 中使用相对路径导入?](#如何避免在-create-react-app-中使用相对路径导入) |
+|114 | [如何为 React Router 添加 Google Analytics?](#如何为-react-router-添加-google-analytics) |
+|115 | [如何每秒更新一个组件?](#如何每秒更新一个组件) |
+|116 | [如何将 *vendor prefixes* 应用于 React 中的内联样式?](#如何将-vendor-prefixes-应用于-react-中的内联样式) |
+|117 | [如何使用 React 和 ES6 导入和导出组件?](#如何使用-react-和-es6-导入和导出组件) |
+|118 | [为什么 React 组件名称必须以大写字母开头?](#为什么-react-组件名称必须以大写字母开头) |
+|119 | [为什么组件的构造函数只被调用一次?](#为什么组件的构造函数只被调用一次) |
+|120 | [在 React 中如何定义常量?](#在-react-中如何定义常量) |
+|121 | [在 React 中如何以编程方式触发点击事件?](#在-react-中如何以编程方式触发点击事件) |
+|122 | [在 React 中是否可以使用 async/await?](#在-react-中是否可以使用-async/await) |
+|123 | [React 项目常见的文件结构是什么?](#react-项目常见的文件结构是什么) |
+|124 | [最流行的动画软件包是什么?](#最流行的动画软件包是什么) |
+|125 | [模块化样式文件有什么好处?](#模块化样式文件有什么好处) |
+|126 | [什么是 React 流行的特定 linters?](#什么是-react-流行的特定-linters) |
+|127 | [如何发起 AJAX 调用以及应该在哪些组件生命周期方法中进行 AJAX 调用?](#如何发起-ajax-调用以及应该在哪些组件生命周期方法中进行-ajax-调用) |
+|128 | [什么是渲染属性?](#什么是渲染属性) |
 | | [React Router](#react-router) |
 |129 | [What is React Router?](#what-is-react-router) |
 |130 | [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
@@ -232,19 +232,19 @@
 |206 | [What are the main features of Reselect library?](#what-are-the-main-features-of-reselect-library) |
 |207 | [Give an example of Reselect usage?](#give-an-example-of-reselect-usage) |
 |208 | [What is an action in Redux?](#what-is-an-action-in-redux) |
-|209 | [Does the statics object work with ES6 classes in React?](#does-the-statics-object-work-with-es6-classes-in-react) |
+|209 | [在 React 中 statics 对象是否能与 ES6 类一起使用?](#在-react-中-statics-对象是否能与-es6-类一起使用) |
 |210 | [Redux 只能与 React 一起使用么?](#redux-只能与-react-一起使用么) |
 |211 | [Do you need to have a particular build tool to use Redux?](#do-you-need-to-have-a-particular-build-tool-to-use-redux) |
 |212 | [How Redux Form `initialValues` get updated from state?](#how-redux-form-initialvalues-get-updated-from-state) |
-|213 | [How React PropTypes allow different types for one prop?](#how-react-proptypes-allow-different-types-for-one-prop) |
+|213 | [React 是如何为一个属性声明不同的类型?](#react-是如何为一个属性声明不同的类型) |
 |214 | [我可以导入一个 SVG 文件作为 React 组件么?](#我可以导入一个-svg-文件作为-react-组件么) |
-|215 | [Why are inline ref callbacks or functions not recommended?](#why-are-inline-ref-callbacks-or-functions-not-recommended) |
-|216 | [What is render hijacking in react?](#what-is-render-hijacking-in-react) |
+|215 | [为什么不建议使用内联引用回调或函数?](#为什么不建议使用内联引用回调或函数) |
+|216 | [在 React 中什么是渲染劫持?](#在-react-中什么是渲染劫持) |
 |217 | [What are HOC factory implementations?](#what-are-hoc-factory-implementations) |
 |218 | [如何传递数字给 React 组件?](#如何传递数字给-react-组件) |
 |219 | [Do I need to keep all my state into Redux? Should I ever use react internal state?](#do-i-need-to-keep-all-my-state-into-redux-should-i-ever-use-react-internal-state) |
 |220 | [在 React 中 registerServiceWorker 的用途是什么?](#在-react-中-registerserviceworker-的用途是什么) |
-|221 | [What is React memo function?](#what-is-react-memo-function) |
+|221 | [React memo 函数是什么?](#react-memo-函数是什么) |
 |222 | [React lazy 函数是什么?](#react-lazy-函数是什么) |
 |223 | [如何使用 setState 防止不必要的更新?](#如何使用-setstate-防止不必要的更新) |
 |224 | [如何在 React 16 版本中渲染数组、字符串和数值? ](#如何在-react-16-版本中渲染数组、字符串和数值-) |
@@ -270,7 +270,7 @@
 |244 | [getDerivedStateFromError 的目的是什么?](#getderivedstatefromerror-的目的是什么) |
 |245 | [当组件重新渲染时顺序执行的方法有哪些?](#当组件重新渲染时顺序执行的方法有哪些) |
 |246 | [错误处理期间调用哪些方法?](#错误处理期间调用哪些方法) |
-|247 | [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property) |
+|247 | [displayName 类属性的用途是什么?](#displayname-类属性的用途是什么) |
 |248 | [支持 React 应用程序的浏览器有哪一些?](#支持-react-应用程序的浏览器有哪一些) |
 |249 | [unmountComponentAtNode 方法的目的是什么?](#unmountcomponentatnode-方法的目的是什么) |
 |250 | [什么是代码拆分?](#什么是代码拆分) |
@@ -304,22 +304,22 @@
 |278 | [在 context 中默认值的目的是什么?](#在-context-中默认值的目的是什么) |
 |279 | [你是怎么使用 contextType?](#你是怎么使用-contexttype) |
 |280 | [什么是 consumer?](#什么是-consumer) |
-|281 | [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context) |
-|282 | [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs) |
+|281 | [在使用 context 时，如何解决性能方面的问题?](#在使用-context-时如何解决性能方面的问题) |
+|282 | [在 HOCs 中 forward ref 的目的是什么?](#在-hocs-中-forward-ref-的目的是什么) |
 |283 | [ref 参数对于所有函数或类组件是否可用?](#ref-参数对于所有函数或类组件是否可用) |
 |284 | [在组件库中当使用 forward refs 时，你需要额外的注意?](#在组件库中当使用-forward-refs-时你需要额外的注意) |
 |285 | [如何在没有 ES6 的情况下创建 React 类组件](#如何在没有-es6-的情况下创建-react-类组件) |
 |286 | [是否可以在没有 JSX 的情况下使用 React?](#是否可以在没有-jsx-的情况下使用-react) |
-|287 | [What is diffing algorithm?](#what-is-diffing-algorithm) |
+|287 | [什么是差异算法?](#什么是差异算法) |
 |288 | [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm) |
 |289 | [你什么时候需要使用 refs?](#你什么时候需要使用-refs) |
-|290 | [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props) |
+|290 | [对于渲染属性来说是否必须将 prop 属性命名为 render?](#对于渲染属性来说是否必须将-prop-属性命名为-render) |
 |291 | [在 Pure Component 中使用渲染属性会有什么问题?](#在-pure-component-中使用渲染属性会有什么问题) |
 |292 | [如何使用渲染属性创建 HOC?](#如何使用渲染属性创建-hoc) |
 |293 | [什么是 windowing 技术?](#什么是-windowing-技术) |
 |294 | [你如何在 JSX 中打印 falsy 值?](#你如何在-jsx-中打印-falsy-值) |
 |295 | [portals 的典型使用场景是什么?](#portals-的典型使用场景是什么) |
-|296 | [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component) |
+|296 | [如何设置非受控组件的默认值?](#如何设置非受控组件的默认值) |
 |297 | [你最喜欢的 React 技术栈是什么?](#你最喜欢的-react-技术栈是什么) |
 |298 | [Real DOM 和 Virtual DOM 有什么区别?](#real-dom-和-virtual-dom-有什么区别) |
 |299 | [如何为 React 应用程序添加 bootstrap?](#如何为-react-应用程序添加-bootstrap) |
@@ -1024,7 +1024,7 @@
 
     **单行注释：**
 
-    ```jsx harmony
+    ```jsx 
     <div>
       {/* 单行注释（在原生 JavaScript 中，单行注释用双斜杠（//）表示） */}
       {`Welcome ${user}, let's play React`}
@@ -1131,7 +1131,7 @@
 
     它是 React 中的常见模式，用于组件返回多个元素。*Fragments* 可以让你聚合一个子元素列表，而无需向 DOM 添加额外节点。
 
-    ```jsx harmony
+    ```jsx 
     render() {
       return (
         <React.Fragment>
@@ -1145,7 +1145,7 @@
 
     以下是简介语法，但是在一些工具中还不支持：
 
-    ```jsx harmony
+    ```jsx 
     render() {
       return (
         <>
@@ -1215,7 +1215,7 @@
 
     We can define `propTypes` for `User` component as below:
 
-    ```jsx harmony
+    ```jsx 
     import React from 'react'
     import PropTypes from 'prop-types'
 
@@ -1260,7 +1260,7 @@
 
     A class component becomes an error boundary if it defines a new lifecycle method called `componentDidCatch(error, info)` or `static getDerivedStateFromError() `:
 
-    ```jsx harmony
+    ```jsx 
     class ErrorBoundary extends React.Component {
       constructor(props) {
         super(props)
@@ -1289,7 +1289,7 @@
 
     After that use it as a regular component:
 
-    ```jsx harmony
+    ```jsx 
     <ErrorBoundary>
       <MyWidget />
     </ErrorBoundary>
@@ -1352,7 +1352,7 @@
 
     In this example MyComponent uses `dangerouslySetInnerHTML` attribute for setting HTML markup:
 
-    ```jsx harmony
+    ```jsx 
     function createMarkup() {
       return { __html: 'First &middot; Second' }
     }
@@ -1366,7 +1366,7 @@
 
     The `style` attribute accepts a JavaScript object with camelCased properties rather than a CSS string. This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
 
-    ```jsx harmony
+    ```jsx 
     const divStyle = {
       color: 'blue',
       backgroundImage: 'url(' + imgUrl + ')'
@@ -1396,7 +1396,7 @@
 
     In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented. This limits the optimizations that React can do.
 
-    ```jsx harmony
+    ```jsx 
     {todos.map((todo, index) =>
       <Todo
         {...todo}
@@ -1407,7 +1407,7 @@
 
     If you use element data for unique key, assuming todo.id is unique to this list and stable, React would be able to reorder elements without needing to reevaluate them as much.
 
-    ```jsx harmony
+    ```jsx 
     {todos.map((todo) =>
       <Todo {...todo}
         key={todo.id} />
@@ -1418,7 +1418,7 @@
 
     It is recommended to avoid async initialization in `componentWillMount()` lifecycle method. `componentWillMount()` is invoked immediately before mounting occurs. It is called before `render()`, therefore setting state in this method will not trigger a re-render. Avoid introducing any side-effects or subscriptions in this method. We need to make sure async calls for component initialization happened in `componentDidMount()` instead of `componentWillMount()`.
 
-    ```jsx harmony
+    ```jsx 
     componentDidMount() {
       axios.get(`api/todos`)
         .then((result) => {
@@ -1435,7 +1435,7 @@
 
     The below component won't display the updated input value:
 
-    ```jsx harmony
+    ```jsx 
     class MyComponent extends React.Component {
       constructor(props) {
         super(props)
@@ -1454,7 +1454,7 @@
 
     Using props inside render method will update the value:
 
-    ```jsx harmony
+    ```jsx 
     class MyComponent extends React.Component {
       constructor(props) {
         super(props)
@@ -1474,7 +1474,7 @@
 
     In some cases you want to render different components depending on some state. JSX does not render `false` or `undefined`, so you can use conditional *short-circuiting* to render a given part of your component only if a certain condition is true.
 
-    ```jsx harmony
+    ```jsx 
     const MyComponent = ({ name, address }) => (
       <div>
         <h2>{name}</h2>
@@ -1487,7 +1487,7 @@
 
     If you need an `if-else` condition then use *ternary operator*.
 
-    ```jsx harmony
+    ```jsx 
     const MyComponent = ({ name, address }) => (
       <div>
         <h2>{name}</h2>
@@ -1503,7 +1503,7 @@
 
     When we *spread props* we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with `...rest` operator, so it will add only required props. For example,
 
-    ```jsx harmony
+    ```jsx 
     const ComponentA = () =>
       <ComponentB isDisplay={true} className={'componentStyle'} />
 
@@ -1515,7 +1515,7 @@
 
     You can *decorate* your *class* components, which is the same as passing the component into a function. **Decorators** are flexible and readable way of modifying component functionality.
 
-    ```jsx harmony
+    ```jsx 
     @setTitle('Profile')
     class Profile extends React.Component {
         //....
@@ -1545,7 +1545,7 @@
 
     There are memoize libraries available which can be used on function components. For example `moize` library can memoize the component in another component.
 
-    ```jsx harmony
+    ```jsx 
     import moize from 'moize'
     import Component from './components/Component' // this module exports a non-memoized component
 
@@ -1563,7 +1563,7 @@
 
     React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.
 
-    ```jsx harmony
+    ```jsx 
     import ReactDOMServer from 'react-dom/server'
     import App from './App'
 
@@ -1701,7 +1701,7 @@
 
     For example, a switching component to display different pages based on `page` prop:
 
-    ```jsx harmony
+    ```jsx 
     import HomePage from './HomePage'
     import AboutPage from './AboutPage'
     import ServicesPage from './ServicesPage'
@@ -1753,7 +1753,7 @@
 
     `React.StrictMode` is an useful component for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for *development mode* only.
 
-    ```jsx harmony
+    ```jsx 
     import React from 'react'
 
     function ExampleApplication() {
@@ -1827,7 +1827,7 @@
 
     You can define component class which name starts with lowercase letter, but when it's imported it should have capital letter. Here lowercase is fine:
 
-    ```jsx harmony
+    ```jsx 
     class myComponent extends Component {
       render() {
         return <div />
@@ -1839,37 +1839,37 @@
 
     While when imported in another file it should start with capital letter:
 
-    ```jsx harmony
+    ```jsx 
     import MyComponent from './MyComponent'
     ```
 
-88. ### Are custom DOM attributes supported in React v16?
+88. ### 在 React v16 中是否支持自定义 DOM 属性?
 
-    Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it. For example, this:
+    是的，在过去 React 会忽略未知的 DOM 属性。如果你编写的 JSX 属性 React 无法识别，那么 React 将跳过它。例如：
 
-    ```jsx harmony
+    ```jsx 
     <div mycustomattribute={'something'} />
     ```
 
-    Would render an empty div to the DOM with React v15:
+    在 React 15 中将在 DOM 中渲染一个空的 div：
 
     ```html
     <div />
     ```
 
-    In React v16 any unknown attributes will end up in the DOM:
+    在 React 16 中，任何未知的属性都将会在 DOM 显示：
 
     ```html
     <div mycustomattribute='something' />
     ```
 
-    This is useful for supplying browser-specific non-standard attributes, trying new DOM APIs, and integrating with opinionated third-party libraries.
+    这对于应用特定于浏览器的非标准属性，尝试新的 DOM APIs 与集成第三方库来说非常有用。
 
-89. ### What is the difference between constructor and getInitialState?
+89. ### constructor 和 getInitialState 有什么区别?
 
-    You should initialize state in the constructor when using ES6 classes, and `getInitialState()` method when using `React.createClass()`.
+    当使用 ES6 类时，你应该在构造函数中初始化状态，而当你使用 `React.createClass()` 时，就需要使用 `getInitialState()` 方法。
 
-    Using ES6 classes:
+    使用 ES6 类:
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1880,7 +1880,7 @@
     }
     ```
 
-    Using `React.createClass()`:
+    使用 `React.createClass()`:
 
     ```javascript
     const MyComponent = React.createClass({
@@ -1890,23 +1890,23 @@
     })
     ```
 
-    **Note:** `React.createClass()` is deprecated and removed in React v16. Use plain JavaScript classes instead.
+    **注意：** 在 React v16 中 `React.createClass()` 已被弃用和删除，请改用普通的 JavaScript 类。
 
-90. ### Can you force a component to re-render without calling setState?
+90. ### 是否可以在不调用 setState 方法的情况下，强制组件重新渲染?
 
-    By default, when your component's state or props change, your component will re-render. If your `render()` method depends on some other data, you can tell React that the component needs re-rendering by calling `forceUpdate()`.
+    默认情况下，当组件的状态或属性改变时，组件将重新渲染。如果你的 `render()` 方法依赖于其他数据，你可以通过调用 `forceUpdate()` 来告诉 React，当前组件需要重新渲染。
 
     ```javascript
     component.forceUpdate(callback)
     ```
 
-    It is recommended to avoid all uses of `forceUpdate()` and only read from `this.props` and `this.state` in `render()`.
+    建议避免使用 `forceUpdate()`，并且只在 `render()` 方法中读取 `this.props` 和 `this.state`。
 
-91. ### What is the difference between `super()` and `super(props)` in React using ES6 classes?
+91. ### 在使用 ES6 类的 React 中 `super()` 和 `super(props)` 有什么区别?
 
-    When you want to access `this.props` in `constructor()` then you should pass props to `super()` method.
+    当你想要在 `constructor()` 函数中访问 `this.props`，你需要将 props 传递给 `super()` 方法。
 
-    Using `super(props)`:
+    使用 `super(props)`:
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1917,7 +1917,7 @@
     }
     ```
 
-    Using `super()`:
+    使用 `super()`:
 
     ```javascript
     class MyComponent extends React.Component {
@@ -1928,21 +1928,21 @@
     }
     ```
 
-    Outside `constructor()` both will display same value for `this.props`.
+    在 `constructor()` 函数之外，访问 `this.props` 属性会显示相同的值。
 
-92. ### How to loop inside JSX?
+92. ### 在 JSX 中如何进行循环?
 
-    You can simply use `Array.prototype.map` with ES6 *arrow function* syntax. For example, the `items` array of objects is mapped into an array of components:
+    你只需使用带有 ES6 箭头函数语法的 `Array.prototype.map` 即可。例如，`items` 对象数组将会被映射成一个组件数组：
 
-    ```jsx harmony
+    ```jsx 
     <tbody>
       {items.map(item => <SomeComponent key={item.id} name={item.name} />)}
     </tbody>
     ```
 
-    You can't iterate using `for` loop:
+    你不能使用 `for` 循环进行迭代：
 
-    ```jsx harmony
+    ```jsx 
     <tbody>
       for (let i = 0; i < items.length; i++) {
         <SomeComponent key={items[i].id} name={items[i].name} />
@@ -1950,31 +1950,31 @@
     </tbody>
     ```
 
-    This is because JSX tags are transpiled into *function calls*, and you can't use statements inside expressions. This may change thanks to `do` expressions which are *stage 1 proposal*.
+    这是因为 JSX 标签会被转换成函数调用，并且你不能在表达式中使用语句。但这可能会由于 `do` 表达式而改变，它们是第一阶段提案。
 
-93. ### How do you access props in attribute quotes?
+93. ### 如何在 attribute 引号中访问 props 属性?
 
-    React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
+    React (或 JSX) 不支持属性值内的变量插值。下面的形式将不起作用：
 
-    ```jsx harmony
+    ```jsx
     <img className='image' src='images/{this.props.image}' />
     ```
 
-    But you can put any JS expression inside curly braces as the entire attribute value. So the below expression works:
+    但你可以将 JS 表达式作为属性值放在大括号内。所以下面的表达式是有效的：
 
-    ```jsx harmony
+    ```jsx
     <img className='image' src={'images/' + this.props.image} />
     ```
 
-    Using *template strings* will also work:
+    使用模板字符串也是可以的：
 
-    ```jsx harmony
+    ```jsx
     <img className='image' src={`images/${this.props.image}`} />
     ```
 
-94. ### What is React proptype array with shape?
+94. ### 什么是 React proptype 数组?
 
-    If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
+    如果要将对象数组传递给具有特定形状的组件，请使用 `React.PropTypes.shape()` 作为 `React.PropTypes.arrayOf()` 的参数。
 
     ```javascript
     ReactComponent.propTypes = {
@@ -1985,67 +1985,67 @@
     }
     ```
 
-95. ### How conditionally apply class attributes?
+95. ### 如何有条件地应用样式类?
 
-    You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
+    你不应该在引号内使用大括号，因为它将被计算为字符串。
 
-    ```jsx harmony
+    ```jsx 
     <div className="btn-panel {this.props.visible ? 'show' : 'hidden'}">
     ```
 
-    Instead you need to move curly braces outside (don't forget to include spaces between class names):
+    相反，你需要将大括号移到外部（不要忘记在类名之间添加空格）：
 
-    ```jsx harmony
+    ```jsx 
     <div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}>
     ```
 
-    *Template strings* will also work:
+    模板字符串也可以工作：
 
-    ```jsx harmony
+    ```jsx 
     <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
     ```
 
-96. ### What is the difference between React and ReactDOM?
+96. ### React 和 ReactDOM 之间有什么区别?
 
-    The `react` package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The `react-dom` package contains `ReactDOM.render()`, and in `react-dom/server` we have *server-side rendering* support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
+    `react` 包中包含 `React.createElement()`, `React.Component`, `React.Children`，以及与元素和组件类相关的其他帮助程序。您可以将这些视为构建组件所需的同构或通用帮助程序。`react-dom` 包中包含了 `ReactDOM.render()`，在 `react-dom/server` 包中有支持服务端渲染的 `ReactDOMServer.renderToString()` 和 `ReactDOMServer.renderToStaticMarkup()` 方法。
 
-97. ### Why ReactDOM is separated from React?
+97. ### 为什么 ReactDOM 从 React 分离出来?
 
-    The React team worked on extracting all DOM-related features into a separate library called *ReactDOM*. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM. To build more environments that React can render to, React team planned to split the main React package into two: `react` and `react-dom`. This paves the way to writing components that can be shared between the web version of React and React Native.
+    React 团队致力于将所有的与 DOM 相关的特性抽取到一个名为 ReactDOM 的独立库中。React v0.14 是第一个拆分后的版本。通过查看一些软件包，`react-native`，`react-art`，`react-canvas`，和 `react-three`，很明显，React 的优雅和本质与浏览器或 DOM 无关。为了构建更多 React 能应用的环境，React 团队计划将主要的 React 包拆分成两个：`react` 和 `react-dom`。这为编写可以在 React 和 React Native 的Web 版本之间共享的组件铺平了道路。
 
-98. ### How to use React label element?
+98. ### 如何使用 React label 元素?
 
-    If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
+    如果你尝试使用标准的 `for` 属性将 `<label>` 元素绑定到文本输入框，那么在控制台将会打印缺少 HTML 属性的警告消息。
 
-    ```jsx harmony
+    ```jsx 
     <label for={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
 
-    Since `for` is a reserved keyword in JavaScript, use `htmlFor` instead.
+    因为 `for` 是 JavaScript 的保留字，请使用 `htmlFor` 来替代。
 
-    ```jsx harmony
+    ```jsx 
     <label htmlFor={'user'}>{'User'}</label>
     <input type={'text'} id={'user'} />
     ```
 
-99. ### How to combine multiple inline style objects?
+99. ### 如何合并多个内联的样式对象?
 
-    You can use *spread operator* in regular React:
+    在 React 中，你可以使用扩展运算符:
 
-    ```jsx harmony
+    ```jsx 
      <button style={{...styles.panel.button, ...styles.panel.submitButton}}>{'Submit'}</button>
     ```
 
-    If you're using React Native then you can use the array notation:
+    如果你使用的是 React Native，则可以使用数组表示法：
 
-    ```jsx harmony
+    ```jsx 
     <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>
     ```
 
-100. ### How to re-render the view when the browser is resized?
+100. ### 如何在调整浏览器大小时重新渲染视图?
 
-     You can listen to the `resize` event in `componentDidMount()` and then update the dimensions (`width` and `height`). You should remove the listener in `componentWillUnmount()` method.
+     你可以在 `componentDidMount()` 中监听 `resize` 事件，然后更新尺寸（`width` 和 `height`）。你应该在 `componentWillUnmount()` 方法中移除监听。
 
      ```javascript
      class WindowDimensions extends React.Component {
@@ -2071,24 +2071,25 @@
      }
      ```
 
-101. ### What is the difference between `setState()` and `replaceState()` methods?
+101. ### `setState()` 和 `replaceState()` 方法之间有什么区别?
 
-     When you use `setState()` the current and previous states are merged. `replaceState()` throws out the current state, and replaces it with only what you provide. Usually `setState()` is used unless you really need to remove all previous keys for some reason. You can also set state to `false`/`null` in `setState()` instead of using `replaceState()`.
+     当你使用 `setState()` 时，当前和先前的状态将被合并。`replaceState()` 会抛出当前状态，并仅用你提供的内容替换它。通常使用 `setState()`，除非你出于某种原因确实需要删除所有以前的键。你还可以在 `setState()` 中将状态设置为 `false`/`null`，而不是使用 `replaceState()`。
 
-102. ### How to listen to state changes?
+102. ### 如何监听状态变化?
 
-     The following lifecycle methods will be called when state changes. You can compare provided state and props values with current state and props to determine if something meaningful changed.
+     当状态更改时将调用以下生命周期方法。你可以将提供的状态和属性值与当前状态和属性值进行比较，以确定是否发生了有意义的改变。
 
      ```
      componentWillUpdate(object nextProps, object nextState)
      componentDidUpdate(object prevProps, object prevState)
      ```
 
-103. ### What is the recommended approach of removing an array element in React state?
 
-     The better approach is to use `Array.prototype.filter()` method.
+103. ### 在 React 状态中删除数组元素的推荐方法是什么?
 
-     For example, let's create a `removeItem()` method for updating the state.
+     更好的方法是使用 `Array.prototype.filter()` 方法。
+
+     例如，让我们创建用于更新状态的 `removeItem()` 方法。
 
      ```javascript
      removeItem(index) {
@@ -2098,47 +2099,48 @@
      }
      ```
 
-104. ### Is it possible to use React without rendering HTML?
+104. ### 在 React 中是否可以不在页面上渲染 HTML 内容?
 
-     It is possible with latest version (>=16.2). Below are the possible options:
+     可以使用最新的版本 (>=16.2)，以下是可能的选项：
 
-     ```jsx harmony
+     ```jsx 
      render() {
        return false
      }
      ```
 
-     ```jsx harmony
+     ```jsx 
      render() {
        return null
      }
      ```
 
-     ```jsx harmony
+     ```jsx 
      render() {
        return []
      }
      ```
 
-     ```jsx harmony
+     ```jsx 
      render() {
        return <React.Fragment></React.Fragment>
      }
      ```
 
-     ```jsx harmony
+     ```jsx 
      render() {
        return <></>
      }
      ```
 
-     Returning `undefined` won't work.
+     返回 `undefined` 是无效的。
 
-105. ### How to pretty print JSON with React?
+105. ### 如何用 React 漂亮地显示 JSON?
 
-     We can use `<pre>` tag so that the formatting of the `JSON.stringify()` is retained:
+     我们可以使用 `<pre>` 标签，以便保留 `JSON.stringify()` 的格式：
 
-     ```jsx harmony
+
+     ```jsx 
      const data = { name: 'John', age: 42 }
 
      class User extends React.Component {
@@ -2154,15 +2156,15 @@
      React.render(<User />, document.getElementById('container'))
      ```
 
-106. ### Why you can't update props in React?
+106. ### 为什么你不能更新 React 中的 props?
 
-     The React philosophy is that props should be *immutable* and *top-down*. This means that a parent can send any prop values to a child, but the child can't modify received props.
+     React 的哲学是 props 应该是 *immutable* 和 *top-down*。这意味着父级可以向子级发送任何属性值，但子级不能修改接收到的属性。
 
-107. ### How to focus an input element on page load?
+107. ### 如何在页面加载时聚焦一个输入元素?
 
-     You can do it by creating *ref* for `input` element and using it in `componentDidMount()`:
+     你可以为 `input` 元素创建一个 `ref`，然后在 `componentDidMount()` 方法中使用它：
 
-     ```jsx harmony
+     ```jsx 
      class App extends React.Component{
        componentDidMount() {
          this.nameInput.focus()
@@ -2186,25 +2188,25 @@
      ReactDOM.render(<App />, document.getElementById('app'))
      ```
 
-108. ### What are the possible ways of updating objects in state?
+108. ### 更新状态中的对象有哪些可能的方法?
 
-     1. **Calling `setState()` with an object to merge with state:**
+     1. 用一个对象调用 `setState()` 来与状态合并：
 
-         * Using `Object.assign()` to create a copy of the object:
+         * 使用 `Object.assign()` 创建对象的副本：
 
              ```javascript
              const user = Object.assign({}, this.state.user, { age: 42 })
              this.setState({ user })
              ```
 
-         * Using *spread operator*:
+         * 使用扩展运算符：
 
              ```javascript
              const user = { ...this.state.user, age: 42 }
              this.setState({ user })
              ```
 
-     2. **Calling `setState()` with a function:**
+     2. 使用一个函数调用 `setState()`：
 
          ```javascript
          this.setState(prevState => ({
@@ -2215,11 +2217,12 @@
          }))
          ```
 
-109. ### Why function is preferred over object for `setState()`?
+109. ### 为什么函数比对象更适合于 `setState()`?
 
      React may batch multiple `setState()` calls into a single update for performance. Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
+     出于性能考虑，React 可能将多个 `setState()` 调用合并成单个更新。这是因为我们可以异步更新 `this.props` 和 `this.state`，所以不应该依赖它们的值来计算下一个状态。
 
-     This counter example will fail to update as expected:
+     以下的 counter 示例将无法按预期更新：
 
      ```javascript
      // Wrong
@@ -2228,7 +2231,7 @@
      })
      ```
 
-     The preferred approach is to call `setState()` with function rather than object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument.
+     首选方法是使用函数而不是对象调用 `setState()`。该函数将前一个状态作为第一个参数，当前时刻的 props 作为第二个参数。
 
      ```javascript
      // Correct
@@ -2237,11 +2240,11 @@
      }))
      ```
 
-110. ### How can we find the version of React at runtime in the browser?
+110. ### 我们如何在浏览器中找到当前正在运行的 React 版本?
 
-     You can use `React.version` to get the version.
+     你可以使用 `React.version` 来获取版本：
 
-     ```jsx harmony
+     ```jsx 
      const REACT_VERSION = React.version
 
      ReactDOM.render(
@@ -2250,11 +2253,11 @@
      )
      ```
 
-111. ### What are the approaches to include polyfills in your `create-react-app`?
+111. ### 在 `create-react-app` 项目中导入 polyfills 的方法有哪些?
 
-     1. **Manual import from `core-js`:**
+     1. **从 `core-js` 中手动导入:**
 
-         Create a file called (something like) `polyfills.js` and import it into root `index.js` file. Run `npm install core-js` or `yarn add core-js` and import your specific required features.
+         创建一个名为 `polyfills.js` 文件，并在根目录下的 `index.js` 文件中导入它。运行 `npm install core-js` 或 `yarn add core-js` 并导入你所需的功能特性：
 
          ```javascript
          import 'core-js/fn/array/find'
@@ -2262,19 +2265,19 @@
          import 'core-js/fn/number/is-nan'
          ```
 
-     2. **Using Polyfill service:**
+     2. **使用 Polyfill 服务:**
 
-         Use the polyfill.io CDN to retrieve custom, browser-specific polyfills by adding this line to `index.html`:
+         通过将以下内容添加到 `index.html` 中来获取自定义的特定于浏览器的 polyfill：
 
          ```html
          <script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes'></script>
          ```
 
-         In the above script we had to explicitly request the `Array.prototype.includes` feature as it is not included in the default feature set.
+         在上面的脚本中，我们必须显式地请求 `Array.prototype.includes` 特性，因为它没有被包含在默认的特性集中。
 
-112. ### How to use https instead of http in create-react-app?
+112. ### 如何在 create-react-app 中使用 https 而不是 http?
 
-     You just need to use `HTTPS=true` configuration. You can edit your `package.json` scripts section:
+     你只需要使用 `HTTPS=true` 配置。你可以编辑 `package.json` 中的 scripts 部分：
 
      ```json
      "scripts": {
@@ -2282,21 +2285,21 @@
      }
      ```
 
-     or just run `set HTTPS=true && npm start`
+     或直接运行 `set HTTPS=true && npm start`
 
-113. ### How to avoid using relative path imports in create-react-app?
+113. ### 如何避免在 create-react-app 中使用相对路径导入?
 
-     Create a file called `.env` in the project root and write the import path:
+     在项目的根目录中创建一个名为 `.env` 的文件，并写入导入路径：
 
      ```
      NODE_PATH=src/app
      ```
 
-     After that restart the development server. Now you should be able to import anything inside `src/app` without relative paths.
+     然后重新启动开发服务器。现在，你应该能够在没有相对路径的情况下导入 `src/app` 内的任何内容。
 
-114. ### How to add Google Analytics for React Router?
+114. ### 如何为 React Router 添加 Google Analytics?
 
-     Add a listener on the `history` object to record each page view:
+     在 `history` 对象上添加一个监听器以记录每个页面的访问：
 
      ```javascript
      history.listen(function (location) {
@@ -2305,9 +2308,10 @@
      })
      ```
 
-115. ### How to update a component every second?
 
-     You need to use `setInterval()` to trigger the change, but you also need to clear the timer when the component unmounts to prevent errors and memory leaks.
+115. ### 如何每秒更新一个组件?
+
+     你需要使用 `setInterval()` 来触发更改，但也需要在组件卸载时清除计时器，以防止错误和内存泄漏。
 
      ```javascript
      componentDidMount() {
@@ -2319,11 +2323,11 @@
      }
      ```
 
-116. ### How do you apply vendor prefixes to inline styles in React?
+116. ### 如何将 *vendor prefixes* 应用于 React 中的内联样式?
 
-     React *does not* apply *vendor prefixes* automatically. You need to add vendor prefixes manually.
+     React不会自动应用 *vendor prefixes*，你需要手动添加 *vendor prefixes*。
 
-     ```jsx harmony
+     ```jsx 
      <div style={{
        transform: 'rotate(90deg)',
        WebkitTransform: 'rotate(90deg)', // note the capital 'W' here
@@ -2331,11 +2335,11 @@
      }} />
      ```
 
-117. ### How to import and export components using React and ES6?
+117. ### 如何使用 React 和 ES6 导入和导出组件?
 
-     You should use default for exporting the components
+     导出组件时，你应该使用默认导出：
 
-     ```jsx harmony
+     ```jsx 
      import React from 'react'
      import User from 'user'
 
@@ -2350,23 +2354,24 @@
      }
      ```
 
-     With the export specifier, the MyProfile is going to be the member and exported to this module and the same can be imported without mentioning the name in other components.
+     使用 export 说明符，MyProfile 将成为成员并导出到此模块，此外在其他组件中你无需指定名称就可以导入相同的内容。
 
-118. ### Why React component names must begin with a capital letter?
+118. ### 为什么 React 组件名称必须以大写字母开头?
 
-     In JSX, lowercase tag names are considered to be HTML tags. However, capitalized and lowercase tag names with a dot (property accessors) aren't.
+     在 JSX 中，小写标签被认为是 HTML 标签。但是，含有 `.` 的大写和小写标签名却不是。
 
-     1. `<component />` compiles to `React.createElement('component')` (i.e, HTML tag)
-     2. `<obj.component />` compiles to `React.createElement(obj.component)`
-     3. `<Component />` compiles to `React.createElement(Component)`
+     1. `<component />` 将被转换为 `React.createElement('component')` (i.e, HTML 标签)
+     2. `<obj.component />` 将被转换为 `React.createElement(obj.component)`
+     3. `<Component />` 将被转换为 `React.createElement(Component)`
 
-119. ### Why is a component constructor called only once?
 
-     React's *reconciliation* algorithm assumes that without any information to the contrary, if a custom component appears in the same place on subsequent renders, it's the same component as before, so reuses the previous instance rather than creating a new one.
+119. ### 为什么组件的构造函数只被调用一次?
 
-120. ### How to define constants in React?
+     React 协调算法假设如果自定义组件出现在后续渲染的相同位置，则它与之前的组件相同，因此重用前一个实例而不是创建新实例。
 
-     You can use ES7 `static` field to define constant.
+120. ### 在 React 中如何定义常量?
+
+     你可以使用 ES7 的 `static` 来定义常量。
 
      ```javascript
      class MyComponent extends React.Component {
@@ -2374,35 +2379,33 @@
      }
      ```
 
-     *Static fields* are part of the *Class Fields* stage 3 proposal.
+121. ### 在 React 中如何以编程方式触发点击事件?
 
-121. ### How to programmatically trigger click event in React?
+     你可以使用 ref 属性通过回调函数获取对底层的 `HTMLinputeElement` 对象的引用，并将该引用存储为类属性，之后你就可以利用该引用在事件回调函数中， 使用 `HTMLElement.click` 方法触发一个点击事件。这可以分为两个步骤：
 
-     You could use the ref prop to acquire a reference to the underlying `HTMLInputElement` object through a callback, store the reference as a class property, then use that reference to later trigger a click from your event handlers using the `HTMLElement.click` method. This can be done in two steps:
+     1. 在 render 方法创建一个 ref：
 
-     1. Create ref in render method:
-
-         ```jsx harmony
+         ```jsx 
          <input ref={input => this.inputElement = input} />
          ```
 
-     2. Apply click event in your event handler:
+     2. 在事件处理器中触发点击事件
 
          ```javascript
          this.inputElement.click()
          ```
 
-122. ### Is it possible to use async/await in plain React?
+122. ### 在 React 中是否可以使用 async/await?
 
-     If you want to use `async`/`await` in React, you will need *Babel* and [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) plugin. React Native ships with Babel and a set of transforms.
+     如果要在 React 中使用 `async`/`await`，则需要 *Babel* 和 [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) 插件。
 
-123. ### What are the common folder structures for React?
+123. ### React 项目常见的文件结构是什么?
 
-     There are two common practices for React project file structure.
+     React 项目文件结构有两种常见的实践。
 
-     1. **Grouping by features or routes:**
+     1. **按功能或路由分组:**
 
-         One common way to structure projects is locate CSS, JS, and tests together, grouped by feature or route.
+         构建项目的一种常见方法是将 CSS，JS 和测试用例放在一起，按功能或路由分组。
 
          ```
          common/
@@ -2425,9 +2428,9 @@
          └─ ProfileAPI.js
          ```
 
-     2. **Grouping by file type:**
+     2. **按文件类型分组:**
 
-         Another popular way to structure projects is to group similar files together.
+         另一种流行的项目结构组织方法是将类似的文件组合在一起。
 
          ```
          api/
@@ -2447,15 +2450,15 @@
          └─ ProfileHeader.css
          ```
 
-124. ### What are the popular packages for animation?
+124. ### 最流行的动画软件包是什么?
 
-     *React Transition Group* and *React Motion* are popular animation packages in React ecosystem.
+     *React Transition Group* 和 *React Motion* 是React生态系统中流行的动画包。
 
-125. ### What is the benefit of styles modules?
+125. ### 模块化样式文件有什么好处?
 
-     It is recommended to avoid hard coding style values in components. Any values that are likely to be used across different UI components should be extracted into their own modules.
+     建议避免在组件中对样式值进行硬编码。任何可能在不同的 UI 组件之间使用的值都应该提取到它们自己的模块中。
 
-     For example, these styles could be extracted into a separate component:
+     例如，可以将这些样式提取到单独的组件中：
 
      ```javascript
      export const colors = {
@@ -2473,23 +2476,24 @@
      ]
      ```
 
-     And then imported individually in other components:
+     然后在其他组件中单独导入：
 
      ```javascript
      import { space, colors } from './styles'
      ```
 
-126. ### What are the popular React-specific linters?
 
-     ESLint is a popular JavaScript linter. There are plugins available that analyse specific code styles. One of the most common for React is an npm package called `eslint-plugin-react`. By default, it will check a number of best practices, with rules checking things from keys in iterators to a complete set of prop types. Another popular plugin is `eslint-plugin-jsx-a11y`, which will help fix common issues with accessibility. As JSX offers slightly different syntax to regular HTML, issues with `alt` text and `tabindex`, for example, will not be picked up by regular plugins.
+126. ### 什么是 React 流行的特定 linters?
 
-127. ### How to make AJAX call and in which component lifecycle methods should I make an AJAX call?
+     ESLint 是一个流行的 JavaScript linter。有一些插件可以分析特定的代码样式。在 React 中最常见的一个是名为 `eslint-plugin-react` npm 包。默认情况下，它将使用规则检查许多最佳实践，检查内容从迭代器中的键到一组完整的 prop 类型。另一个流行的插件是 `eslint-plugin-jsx-a11y`，它将帮助修复可访问性的常见问题。由于 JSX 提供的语法与常规 HTML 略有不同，因此常规插件无法获取 `alt` 文本和 `tabindex` 的问题。
 
-     You can use AJAX libraries such as Axios, jQuery AJAX, and the browser built-in `fetch`. You should fetch data in the `componentDidMount()` lifecycle method. This is so you can use `setState()` to update your component when the data is retrieved.
+127. ### 如何发起 AJAX 调用以及应该在哪些组件生命周期方法中进行 AJAX 调用?
 
-     For example, the employees list fetched from API and set local state:
+     您可以使用 AJAX 库，如 Axios，jQuery AJAX 和浏览器内置的 `fetch` API。你应该在 `componentDidMount()` 生命周期方法中获取数据。这样当获取到数据的时候，你就可以使用 `setState()` 方法来更新你的组件。
 
-     ```jsx harmony
+     例如，从 API 中获取员工列表并设置本地状态：
+
+     ```jsx 
      class MyComponent extends React.Component {
        constructor(props) {
          super(props)
@@ -2533,17 +2537,17 @@
      }
      ```
 
-128. ### What are render props?
+128. ### 什么是渲染属性?
 
-     **Render Props** is a simple technique for sharing code between components using a prop whose value is a function. The below component uses render prop which returns a React element.
+     **Render Props** 是一种简单的技术，用于使用值为函数的 prop 属性在组件之间共享代码。下面的组件使用返回 React 元素的 render 属性：
 
-     ```jsx harmony
+     ```jsx 
      <DataProvider render={data => (
        <h1>{`Hello ${data.target}`}</h1>
      )}/>
      ```
 
-     Libraries such as React Router and DownShift are using this pattern.
+     像 React Router 和 DownShift 这样的库使用了这种模式。
 
 ## React Router
 
@@ -2582,7 +2586,7 @@
 
          The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
 
-         ```jsx harmony
+         ```jsx 
          import { withRouter } from 'react-router-dom' // this also works with 'react-router-native'
 
          const Button = withRouter(({ history }) => (
@@ -2599,7 +2603,7 @@
 
          The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
 
-         ```jsx harmony
+         ```jsx 
          import { Route } from 'react-router-dom'
 
          const Button = () => (
@@ -2618,7 +2622,7 @@
 
          This option is not recommended and treated as unstable API.
 
-         ```jsx harmony
+         ```jsx 
          const Button = (props, context) => (
            <button
              type='button'
@@ -2667,7 +2671,7 @@
 
      Then define the routes within `<Switch>` block:
 
-     ```jsx harmony
+     ```jsx 
      <Router>
        <Switch>
          <Route {/* ... */} />
@@ -2694,7 +2698,7 @@
 
      A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
 
-     ```jsx harmony
+     ```jsx 
      <Switch>
        <Route exact path="/" component={Home}/>
        <Route path="/user" component={User}/>
@@ -2718,7 +2722,7 @@
 
      2. You should use the `<Router>` component instead of built-in routers. Imported the above `history.js` inside `index.js` file:
 
-         ```jsx harmony
+         ```jsx 
          import { Router } from 'react-router-dom'
          import history from './history'
          import App from './App'
@@ -2820,7 +2824,7 @@
 
      You can get the current locale in any component of your application using `injectIntl()`:
 
-     ```jsx harmony
+     ```jsx 
      import { injectIntl, intlShape } from 'react-intl'
 
      const MyComponent = ({ intl }) => (
@@ -2838,7 +2842,7 @@
 
      The `injectIntl()` higher-order component will give you access to the `formatDate()` method via the props in your component. The method is used internally by instances of `FormattedDate` and it returns the string representation of the formatted date.
 
-     ```jsx harmony
+     ```jsx 
      import { injectIntl, intlShape } from 'react-intl'
 
      const stringDate = this.props.intl.formatDate(date, {
@@ -2879,7 +2883,7 @@
 
      Then you can assert as follows:
 
-     ```jsx harmony
+     ```jsx 
      import ShallowRenderer from 'react-test-renderer/shallow'
 
      // in your test
@@ -2899,7 +2903,7 @@
 
      This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or `jsdom`.
 
-     ```jsx harmony
+     ```jsx 
      import TestRenderer from 'react-test-renderer'
 
      const Link = ({page, children}) => <a href={page}>{children}</a>
@@ -3086,7 +3090,7 @@
      1. **Use `mapStateToProps()`:** It maps the state variables from your store to the props that you specify.
      2. **Connect the above props to your container:** The object returned by the `mapStateToProps` function is connected to the container. You can import `connect()` from `react-redux`.
 
-         ```jsx harmony
+         ```jsx 
          import React from 'react'
          import { connect } from 'react-redux'
 
@@ -3355,7 +3359,7 @@
 
      If the `ownProps` parameter is specified, React Redux will pass the props that were passed to the component into your *connect* functions. So, if you use a connected component:
 
-     ```jsx harmony
+     ```jsx 
      import ConnectedComponent from './containers/ConnectedComponent';
 
      <ConnectedComponent user={'john'} />
@@ -3578,7 +3582,7 @@
 
      1. Create a Polymer element:
 
-         ```jsx harmony
+         ```jsx 
          <link rel='import' href='../../bower_components/polymer/polymer.html' />
          Polymer({
            is: 'calender-element',
@@ -3661,7 +3665,7 @@
 
      These two variables, `Title` and `Wrapper`, are now components that you can render just like any other react component.
 
-     ```jsx harmony
+     ```jsx 
      <Wrapper>
        <Title>{'Lets start first styled component!'}</Title>
      </Wrapper>
@@ -3755,9 +3759,9 @@
      }
      ```
 
-209. ### Does the statics object work with ES6 classes in React?
+209. ### 在 React 中 statics 对象是否能与 ES6 类一起使用?
 
-     No, `statics` only works with `React.createClass()`:
+     不行，`statics` 仅适用于 `React.createClass()`：
 
      ```javascript
      someComponent= React.createClass({
@@ -3769,7 +3773,7 @@
      })
      ```
 
-     But you can write statics inside ES6+ classes like this:
+     但是你可以在 ES6+ 的类中编写静态代码，如下所示：
 
      ```javascript
      class Component extends React.Component {
@@ -3804,11 +3808,11 @@
 
      If your `initialValues` prop gets updated, your form will update too.
 
-213. ### How React PropTypes allow different types for one prop?
+213. ### React 是如何为一个属性声明不同的类型?
 
-     You can use `oneOfType()` method of `PropTypes`.
+     你可以使用 `PropTypes` 中的 `oneOfType()` 方法。
 
-     For example, the height property can be defined with either `string` or `number` type as below:
+     例如，如下所示 size 的属性值可以是 `string` 或 `number` 类型。
 
      ```javascript
      Component.PropTypes = {
@@ -3837,9 +3841,9 @@
 
      **Note**: Don't forget about the curly braces in the import.
 
-215. ### Why are inline ref callbacks or functions not recommended?
+215. ### 为什么不建议使用内联引用回调或函数?
 
-     If the ref callback is defined as an inline function, it will get called twice during updates, first with null and then again with the DOM element. This is because a new instance of the function is created with each render, so React needs to clear the old ref and set up the new one.
+     如果将 ref 回调定义为内联函数，则在更新期间它将会被调用两次。首先使用 null 值，然后再使用 DOM 元素。这是因为每次渲染的时候都会创建一个新的函数实例，因此 React 必须清除旧的 ref 并设置新的 ref。
 
      ```jsx
      class UserForm extends Component {
@@ -3861,8 +3865,8 @@
       }
      }
      ```
-    
-     But our expectation is for the ref callback to get called once, when the component mounts. One quick fix is to use the ES7 class property syntax to define the function
+
+     但我们期望的是当组件挂载时，ref 回调只会被调用一次。一个快速修复的方法是使用 ES7 类属性语法定义函数。
     
      ```jsx
      class UserForm extends Component {
@@ -3887,9 +3891,9 @@
      }
      ```
 
-216. ### What is render hijacking in react?
+216. ### 在 React 中什么是渲染劫持?
 
-     The concept of render hijacking is the ability to control what a component will output from another component. It actually means that you decorate your component by wrapping it into a Higher-Order component. By wrapping you can inject additional props or make other changes, which can cause changing logic of rendering. It does not actually enables hijacking, but by using HOC you make your component behave in different way.
+     渲染劫持的概念是控制一个组件将从另一个组件输出什么的能力。实际上，这意味着你可以通过将组件包装成高阶组件来装饰组件。通过包装，你可以注入额外的属性或产生其他变化，这可能会导致渲染逻辑的更改。实际上它不支持劫持，但通过使用 HOC，你可以使组件以不同的方式工作。
 
 217. ### What are HOC factory implementations?
 
@@ -3955,9 +3959,9 @@
         registerServiceWorker();
      ```
 
-221. ### What is React memo function?
+221. ### React memo 函数是什么?
 
-     Class components can be restricted from rendering when their input props are the same using **PureComponent or shouldComponentUpdate**. Now you can do the same with function components by wrapping them in **React.memo**.
+     当类组件的输入属性相同时，可以使用 **pureComponent** 或 **shouldComponentUpdate** 来避免组件的渲染。现在，你可以通过把函数组件包装在 **React.memo** 中来实现相同的功能。
 
      ```jsx
      const MyComponent = React.memo(function MyComponent(props) {
@@ -4156,6 +4160,7 @@
      2. info: - An object with a componentStack key contains the information about which component threw the error.
 
      The method structure would be as follows
+
      ```javascript
      componentDidCatch(error, info)
      ```
@@ -4353,13 +4358,15 @@
 246. ### 错误处理期间调用哪些方法?
 
      在渲染期间，生命周期方法内或任何子组件的构造函数中出现错误时，将会调用以下方法：
+
      1. static getDerivedStateFromError()
      2. componentDidCatch()
 
-247. ### What is the purpose of displayName class property?
+247. ### displayName 类属性的用途是什么?
 
-     The displayName string is used in debugging messages. Usually, you don’t need to set it explicitly because it’s inferred from the name of the function or class that defines the component. You might want to set it explicitly if you want to display a different name for debugging purposes or when you create a higher-order component.
-     For example, To ease debugging, choose a display name that communicates that it’s the result of a withSubscription HOC.
+     displayName 被用于调试信息。通常，你不需要显式设置它，因为它是从定义组件的函数或类的名称推断出来的。如果出于调试目的或在创建高阶组件时显示不同的名称，可能需要显式设置它。
+     
+     例如，若要简化调试，请选择一个显示名称，以表明它是 withSubscription HOC 的结果。
 
      ```javascript
      function withSubscription(WrappedComponent) {
@@ -4367,6 +4374,7 @@
        WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
        return WithSubscription;
      }
+
      function getDisplayName(WrappedComponent) {
        return WrappedComponent.displayName || WrappedComponent.name || 'Component';
      }
@@ -4991,9 +4999,9 @@
      </MyContext.Consumer>
      ```
 
-281. ### How do you solve performance corner cases while using context?
+281. ### 在使用 context 时，如何解决性能方面的问题?
 
-     The context uses reference identity to determine when to re-render, there are some gotchas that could trigger unintentional renders in consumers when a provider’s parent re-renders. For example, the code below will re-render all consumers every time the Provider re-renders because a new object is always created for value.
+     Context 使用引用标识来确定何时重新渲染，当 Provider 的父元素重新渲染时，会有一些问题即可能会在 Consumers 中触发无任何意图的渲染。 例如，下面的代码将在每次 Provider 重新渲染时，重新渲染所有的 Consumers，这是因为渲染 Provider 时，始终会为 value 属性创建一个新的对象：
 
      ```javascript
      class App extends React.Component {
@@ -5006,8 +5014,8 @@
        }
      }
      ```
-
-     This can be solved by lifting up the value to parent state,
+     
+     可以通过把 value 的值提升到父状态中来解决这个问题：
 
      ```javascript
      class App extends React.Component {
@@ -5027,11 +5035,12 @@
        }
      }
      ```
-282. ### What is the purpose of forward ref in HOCs?
 
-     Refs will not get passed through because ref is not a prop. It handled differently by React just like **key**. If you add a ref to a HOC, the ref will refer to the outermost container component, not the wrapped component. In this case, you can use Forward Ref API. For example, we can explicitly forward refs to the inner FancyButton component using the React.forwardRef API.
+282. ### 在 HOCs 中 forward ref 的目的是什么?
 
-     The below HOC logs all props,
+     因为 ref 不是一个属性，所以 Refs 不会被传递。就像 **key** 一样，React 会以不同的方式处理它。如果你将 ref 添加到 HOC，则该 ref 将引用最外层的容器组件，而不是包装的组件。在这种情况下，你可以使用 Forward Ref API。例如，你可以使用 React.forwardRef API 显式地将 refs 转发的内部的 FancyButton 组件。
+
+     以下的 HOC 会记录所有的 props 变化：
 
      ```javascript
      function logProps(Component) {
@@ -5055,7 +5064,7 @@
      }
      ```
 
-     Let's use this HOC to log all props that get passed to our “fancy button” component,
+     让我们使用这个 HOC 来记录所有传递到我们 “fancy button” 组件的属性：
 
      ```javascript
      class FancyButton extends React.Component {
@@ -5068,7 +5077,7 @@
      export default logProps(FancyButton);
      ```
 
-     Now lets create a ref and pass it to FancyButton component. In this case, you can set focus to button element.
+     现在让我们创建一个 ref 并将其传递给 FancyButton 组件。在这种情况下，你可以聚焦到 button 元素上。
 
      ```javascript
      import FancyButton from './FancyButton';
@@ -5147,12 +5156,12 @@
      );
      ```
 
-287. ### What is diffing algorithm?
+287. ### 什么是差异算法?
 
-     React needs to use algorithms to find out how to efficiently update the UI to match the most recent tree. The diffing algorithms is generating the minimum number of operations to transform one tree into another. However, the algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.
-     In this case, for displaying 1000 elements would require in the order of one billion comparisons. This is far too expensive. Instead, React implements a heuristic O(n) algorithm based on two assumptions:
-     1. Two elements of different types will produce different trees.
-     2. The developer can hint at which child elements may be stable across different renders with a key prop.
+     React 需要使用算法来了解如何有效地更新 UI 以匹配最新的树。差异算法将生成将一棵树转换为另一棵树的最小操作次数。然而，算法具有 O(n3) 的复杂度，其中 n 是树中元素的数量。在这种情况下，对于显示 1000 个元素将需要大约 10 亿个比较。这太昂贵了。相反，React 基于两个假设实现了一个复杂度为 O(n) 的算法：
+
+     1. 两种不同类型的元素会产生不同的树结构。
+     2. 开发者可以通过一个 key 属性，标识哪些子元素可以在不同渲染中保持稳定。
 
 288. ### What are the rules covered by diffing algorithm?
 
@@ -5160,17 +5169,23 @@
 
      1. **Elements Of Different Types:**
         Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. For example,  elements <a> to <img>, or from <Article> to <Comment> of different types lead a full rebuild.
+
      2. **DOM Elements Of The Same Type:**
         When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes. Lets take an example with same DOM eleemnts except className attribute,
+
         ```javascript
         <div className="show" title="ReactJS" />
 
         <div className="hide" title="ReactJS" />
         ```
+
      3. **Component Elements Of The Same Type:**
+
         When a component updates, the instance stays the same, so that state is maintained across renders. React updates the props of the underlying component instance to match the new element, and calls componentWillReceiveProps() and componentWillUpdate() on the underlying instance. After that, the render() method is called and the diff algorithm recurses on the previous result and the new result.
+
      4. **Recursing On Children:**
         when recursing on the children of a DOM node, React just iterates over both lists of children at the same time and generates a mutation whenever there’s a difference. For example, when adding an element at the end of the children, converting between these two trees works well.
+
         ```javascript
         <ul>
           <li>first</li>
@@ -5185,7 +5200,9 @@
 
         ```
      5. **Handling keys:**
+
      React supports a key attribute. When children have keys, React uses the key to match children in the original tree with children in the subsequent tree. For example, adding a key can make the tree conversion efficient,
+
      ```javascript
      <ul>
        <li key="2015">Duke</li>
@@ -5198,6 +5215,7 @@
        <li key="2016">Villanova</li>
      </ul>
      ```
+
 289. ### 你什么时候需要使用 refs?
 
      这里是 refs 的一些使用场景：
@@ -5206,17 +5224,17 @@
      2. 触发命令式动画。
      3. 与第三方 DOM 库集成。
 
-290. ### Is it prop must be named as render for render props?
+290. ### 对于渲染属性来说是否必须将 prop 属性命名为 render?
 
-     Even though the pattern named render props, you don’t have to use a prop named render to use this pattern. i.e,  Any prop that is a function that a component uses to know what to render is technically a “render prop”. Lets take an example with the children prop for render props,
+     即使模式名为 `render props`，您也不必使用名为 render 的属性名来使用此模式。也就是说，组件用于知道即将渲染内容的任何函数属性，在技术上都是一个 `render props`。让我们举一个名为 children 渲染属性的示例：
 
      ```javascript
      <Mouse children={mouse => (
        <p>The mouse position is {mouse.x}, {mouse.y}</p>
      )}/>
      ```
-
-     Actually children prop doesn’t need to be named in the list of “attributes” in JSX element. Instead, you can keep it directly inside element,
+     
+     实际上，以上的 children 属性不一定需要在 JSX 元素的 `attributes` 列表中命名。反之，你可以将它直接放在元素内部：  
 
      ```javascript
      <Mouse>
@@ -5226,7 +5244,7 @@
      </Mouse>
      ```
 
-     While using this above technique(without any name), explicitly state that children should be a function in your propTypes.
+     当使用上述的技术，需要在 propTypes 中明确声明 children 必须为函数类型：
 
      ```javascript
      Mouse.propTypes = {
@@ -5274,9 +5292,9 @@
 
      当父组件拥有 `overflow: hidden` 或含有影响堆叠上下文的属性（z-index、position、opacity 等样式），且需要脱离它的容器进行展示时，React portal 就非常有用。例如，对话框、全局消息通知、悬停卡和工具提示。
 
-296. ### How do you set default value for uncontrolled component?
+296. ### 如何设置非受控组件的默认值?
 
-     In React, the value attribute on form elements will override the value in the DOM. With an uncontrolled component, you might want React to specify the initial value, but leave subsequent updates uncontrolled. To handle this case, you can specify a **defaultValue** attribute instead of **value**.
+     在 React 中，表单元素的属性值将覆盖其 DOM 中的值。对于非受控组件，你可能希望能够指定其初始值，但不会控制后续的更新。要处理这种情形，你可以指定一个 **defaultValue** 属性来取代 **value** 属性。
 
      ```javascript
      render() {

@@ -51,14 +51,13 @@ class TableContentsBuilder {
                 root: RegExp.$1 === "##",
                 index: RegExp.$1 != "##" ? index++ : 0,
                 title: RegExp.$2,
-                anchor: RegExp.$2.replace(/\s+/g, '-').replace(/[\*`<>?()\\，？]*\s*/g, '').toLowerCase()
+                anchor: RegExp.$2.replace(/\s+/g, '-').replace(/[\*`<>?()\\，？（）]*\s*/g, '').toLowerCase()
             });
         }
         return contentTitles;
     }
 
     async saveContents(filePath, contents) {
-        // console.log(contents);
         try {
             await writeFile(filePath, contents, {
                 encoding: "utf-8"
