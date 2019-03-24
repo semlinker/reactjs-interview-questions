@@ -35,7 +35,7 @@
 |19 | [refs 有什么用?](#refs-有什么用) |
 |20 | [如何创建 refs?](#如何创建-refs) |
 |21 | [什么是 forward refs?](#什么是-forward-refs) |
-|22 | [*callback refs* 和 findDOMNode() 哪一个是首选选项?](#callback-refs-和-finddomnode-哪一个是首选选项) |
+|22 | [callback refs 和 findDOMNode() 哪一个是首选选项?](#callback-refs-和-finddomnode-哪一个是首选选项) |
 |23 | [为什么 String Refs 被弃用?](#为什么-string-refs-被弃用) |
 |24 | [什么是 Virtual DOM?](#什么是-virtual-dom) |
 |25 | [Virtual DOM 如何工作?](#virtual-dom-如何工作) |
@@ -58,21 +58,21 @@
 |42 | [如何使用动态属性名设置 state ?](#如何使用动态属性名设置-state-) |
 |43 | [每次组件渲染时调用函数的常见错误是什么?](#每次组件渲染时调用函数的常见错误是什么) |
 |44 | [为什么有组件名称要首字母大写?](#为什么有组件名称要首字母大写) |
-|45 | [为什么 React 使用`className`而不是`class`属性?](#为什么-react-使用classname而不是class属性) |
+|45 | [为什么 React 使用 `className` 而不是 `class` 属性?](#为什么-react-使用-classname-而不是-class-属性) |
 |46 | [什么是 Fragments ?](#什么是-fragments-) |
 |47 | [为什么使用 Fragments 比使用容器 div 更好?](#为什么使用-fragments-比使用容器-div-更好) |
 |48 | [在 React 中什么是 Portal ?](#在-react-中什么是-portal-) |
 |49 | [什么是无状态组件?](#什么是无状态组件) |
 |50 | [什么是有状态组件?](#什么是有状态组件) |
-|51 | [How to apply validation on props in React?](#how-to-apply-validation-on-props-in-react) |
-|52 | [What are the advantages of React?](#what-are-the-advantages-of-react) |
-|53 | [What are the limitations of React?](#what-are-the-limitations-of-react) |
-|54 | [What are error boundaries in React v16?](#what-are-error-boundaries-in-react-v16) |
-|55 | [How error boundaries handled in React v15?](#how-error-boundaries-handled-in-react-v15) |
-|56 | [What are the recommended ways for static type checking?](#what-are-the-recommended-ways-for-static-type-checking) |
-|57 | [What is the use of `react-dom` package?](#what-is-the-use-of-react-dom-package) |
-|58 | [What is the purpose of render method of `react-dom`?](#what-is-the-purpose-of-render-method-of-react-dom) |
-|59 | [What is ReactDOMServer?](#what-is-reactdomserver) |
+|51 | [在 React 中如何校验 props 属性?](#在-react-中如何校验-props-属性) |
+|52 | [React 的优点是什么?](#react-的优点是什么) |
+|53 | [React 的局限性是什么?](#react-的局限性是什么) |
+|54 | [在 React v16 中的错误边界是什么?](#在-react-v16-中的错误边界是什么) |
+|55 | [在 React v15 中如何处理错误边界?](#在-react-v15-中如何处理错误边界) |
+|56 | [静态类型检查推荐的方法是什么?](#静态类型检查推荐的方法是什么) |
+|57 | [`react-dom` 包的用途是什么?](#react-dom-包的用途是什么) |
+|58 | [`react-dom` 中 render 方法的目的是什么?](#react-dom-中-render-方法的目的是什么) |
+|59 | [ReactDOMServer 是什么?](#reactdomserver-是什么) |
 |60 | [在 React 中如何使用 innerHTML?](#在-react-中如何使用-innerhtml) |
 |61 | [如何在 React 中使用样式?](#如何在-react-中使用样式) |
 |62 | [在 React 中事件有何不同?](#在-react-中事件有何不同) |
@@ -96,11 +96,11 @@
 |80 | [在组件类中方法的推荐顺序是什么?](#在组件类中方法的推荐顺序是什么) |
 |81 | [什么是 switching 组件?](#什么是-switching-组件) |
 |82 | [为什么我们需要将函数传递给 setState() 方法?](#为什么我们需要将函数传递给-setstate-方法) |
-|83 | [What is strict mode in React?](#what-is-strict-mode-in-react) |
-|84 | [What are React Mixins?](#what-are-react-mixins) |
-|85 | [Why is `isMounted()` an anti-pattern and what is the proper solution?](#why-is-ismounted-an-anti-pattern-and-what-is-the-proper-solution) |
-|86 | [What are the Pointer Events supported in React?](#what-are-the-pointer-events-supported-in-react) |
-|87 | [Why should component names start with capital letter?](#why-should-component-names-start-with-capital-letter) |
+|83 | [在 React 中什么是严格模式?](#在-react-中什么是严格模式) |
+|84 | [React Mixins 是什么?](#react-mixins-是什么) |
+|85 | [为什么 `isMounted()` 是一个反模式，而正确的解决方案是什么?](#为什么-ismounted-是一个反模式而正确的解决方案是什么) |
+|86 | [React 中支持哪些指针事件?](#react-中支持哪些指针事件) |
+|87 | [为什么组件名称应该以大写字母开头?](#为什么组件名称应该以大写字母开头) |
 |88 | [在 React v16 中是否支持自定义 DOM 属性?](#在-react-v16-中是否支持自定义-dom-属性) |
 |89 | [constructor 和 getInitialState 有什么区别?](#constructor-和-getinitialstate-有什么区别) |
 |90 | [是否可以在不调用 setState 方法的情况下，强制组件重新渲染?](#是否可以在不调用-setstate-方法的情况下强制组件重新渲染) |
@@ -212,13 +212,13 @@
 |191 | [How to debug your React Native?](#how-to-debug-your-react-native) |
 | | [React supported libraries & Integration](#react-supported-libraries-&-integration) |
 |192 | [What is reselect and how it works?](#what-is-reselect-and-how-it-works) |
-|193 | [What is Flow?](#what-is-flow) |
-|194 | [What is the difference between Flow and PropTypes?](#what-is-the-difference-between-flow-and-proptypes) |
-|195 | [How to use Font Awesome icons in React?](#how-to-use-font-awesome-icons-in-react) |
-|196 | [What is React Dev Tools?](#what-is-react-dev-tools) |
+|193 | [什么是 Flow?](#什么是-flow) |
+|194 | [Flow 和 PropTypes 有什么区别?](#flow-和-proptypes-有什么区别) |
+|195 | [在 React 中如何使用 Font Awesome 图标?](#在-react-中如何使用-font-awesome-图标) |
+|196 | [什么 是 React 开发者工具?](#什么-是-react-开发者工具) |
 |197 | [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
-|198 | [How to use Polymer in React?](#how-to-use-polymer-in-react) |
-|199 | [What are the advantages of React over Vue.js?](#what-are-the-advantages-of-react-over-vue.js) |
+|198 | [如何在 React 中使用 Polymer?](#如何在-react-中使用-polymer) |
+|199 | [与 Vue.js 相比，React 有哪些优势?](#与-vue.js-相比react-有哪些优势) |
 |200 | [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
 |201 | [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
 |202 | [What are Styled Components?](#what-are-styled-components) |
@@ -728,7 +728,7 @@
     <ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
     ```
 
-22. ### *callback refs* 和 findDOMNode() 哪一个是首选选项?
+22. ### callback refs 和 findDOMNode() 哪一个是首选选项?
 
     最好是使用 *callback refs* 而不是 `findDOMNode()` API。因为 `findDOMNode()` 阻碍了将来对 React 的某些改进。
 
@@ -1114,7 +1114,7 @@
 
     这是必要的，因为组件不是 DOM 元素，它们是构造函数。 此外，在 JSX 中，小写标记名称是指 HTML 元素，而不是组件。
 
-45. ### 为什么 React 使用`className`而不是`class`属性?
+45. ### 为什么 React 使用 `className` 而不是 `class` 属性?
 
     `class` 是 JavaScript 中的关键字，而 JSX 是 JavaScript 的扩展。这就是为什么 React 使用 `className` 而不是 `class` 的主要原因。传递一个字符串作为 `className` 属性。
 
@@ -1193,11 +1193,11 @@
     }
     ```
 
-51. ### How to apply validation on props in React?
+51. ### 在 React 中如何校验 props 属性?
 
-    When the application is running in *development mode*, React will automatically check all props that we set on components to make sure they have *correct type*. If the type is incorrect, React will generate warning messages in the console. It's disabled in *production mode* due performance impact. The mandatory props are defined with `isRequired`.
+    当应用程序以开发模式运行的时，React 将会自动检查我们在组件上设置的所有属性，以确保它们具有正确的类型。如果类型不正确，React 将在控制台中生成警告信息。由于性能影响，它在生产模式下被禁用。使用 `isRequired` 定义必填属性。
 
-    The set of predefined prop types:
+    预定义的 prop 类型：
 
     1. `PropTypes.number`
     2. `PropTypes.string`
@@ -1210,7 +1210,7 @@
     9. `PropTypes.symbol`
     10. `PropTypes.any`
 
-    We can define `propTypes` for `User` component as below:
+    我们可以为 `User` 组件定义 `propTypes`，如下所示：
 
     ```jsx 
     import React from 'react'
@@ -1233,29 +1233,30 @@
     }
     ```
 
-    **Note:** In React v15.5 *PropTypes* were moved from `React.PropTypes` to `prop-types` library.
+    **注意:** 在 React v15.5 中，*PropTypes* 从 `React.PropTypes` 被移动到 `prop-types` 库中。
 
-52. ### What are the advantages of React?
+52. ### React 的优点是什么?
 
-    1. Increases the application's performance with *Virtual DOM*.
-    2. JSX makes code easy to read and write.
-    3. It renders both on client and server side (*SSR*).
-    4. Easy to integrate with frameworks (Angular, Backbone) since it is only a view library.
-    5. Easy to write unit and integration tests with tools such as Jest.
+    1. 使用 *Virtual DOM* 提高应用程序的性能。
+    2. JSX 使代码易于读写。
+    3. 它支持在客户端和服务端渲染。
+    4. 易于与框架（Angular，Backbone）集成，因为它只是一个视图库。
+    5. 使用 Jest 等工具轻松编写单元与集成测试。
 
-53. ### What are the limitations of React?
+53. ### React 的局限性是什么?
 
-    1. React is just a view library, not a full framework.
-    2. There is a learning curve for beginners who are new to web development.
-    3. Integrating React into a traditional MVC framework requires some additional configuration.
-    4. The code complexity increases with inline templating and JSX.
+    1. React 只是一个视图库，而不是一个完整的框架。
+    2. 对于 Web 开发初学者来说，有一个学习曲线。
+    3. 将 React 集成到传统的 MVC 框架中需要一些额外的配置。
+    4. 代码复杂性随着内联模板和 JSX 的增加而增加。
+    5. 太多较小的组件导致过度工程化或样板文件。
     5. Too many smaller components leading to over engineering or boilerplate.
 
-54. ### What are error boundaries in React v16?
+54. ### 在 React v16 中的错误边界是什么?
 
-    *Error boundaries* are components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
+    错误边界是在其子组件树中的任何位置捕获 JavaScript 错误、记录这些错误并显示回退 UI 而不是崩溃的组件树的组件。
 
-    A class component becomes an error boundary if it defines a new lifecycle method called `componentDidCatch(error, info)` or `static getDerivedStateFromError() `:
+    如果一个类组件定义了一个名为 `componentDidCatch(error, info)` 或 `static getDerivedStateFromError() ` 新的生命周期方法，则该类组件将成为错误边界：
 
     ```jsx 
     class ErrorBoundary extends React.Component {
@@ -1284,7 +1285,7 @@
     }
     ```
 
-    After that use it as a regular component:
+    之后，将其作为常规组件使用：
 
     ```jsx 
     <ErrorBoundary>
@@ -1292,17 +1293,17 @@
     </ErrorBoundary>
     ```
 
-55. ### How error boundaries handled in React v15?
+55. ### 在 React v15 中如何处理错误边界?
 
-    React v15 provided very basic support for *error boundaries* using `unstable_handleError` method. It has been renamed to `componentDidCatch` in React v16.
+    React v15 使用 `unstable_handleError` 方法为错误边界提供了非常基础的支持。已在 React v16 中，将其重命名为`componentDidCatch`。 
 
-56. ### What are the recommended ways for static type checking?
+56. ### 静态类型检查推荐的方法是什么?
 
-    Normally we use *PropTypes library* (`React.PropTypes` moved to a `prop-types` package since React v15.5) for *type checking* in the React applications. For large code bases, it is recommended to use *static type checkers* such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
+    通常，我们使用 PropTypes 库（在 React v15.5 之后 `React.PropTypes` 被移动到了 `prop-types` 包中），在 React 应用程序中执行类型检查。对于大型项目，建议使用静态类型检查器，比如 Flow 或 TypeScript，它们在编译时执行类型检查并提供 auto-completion 功能。
 
-57. ### What is the use of `react-dom` package?
+57. ### `react-dom` 包的用途是什么?
 
-    The `react-dom` package provides *DOM-specific methods* that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:
+    `react-dom` 包提供了特定的 DOM 方法，可以在应用程序的顶层使用。大多数的组件不需要使用此模块。该模块中提供的一些方法如下：
 
     1. `render()`
     2. `hydrate()`
@@ -1310,24 +1311,25 @@
     4. `findDOMNode()`
     5. `createPortal()`
 
-58. ### What is the purpose of render method of `react-dom`?
+58. ### `react-dom` 中 render 方法的目的是什么?
 
-    This method is used to render a React element into the DOM in the supplied container and return a reference to the component. If the React element was previously rendered into container, it will perform an update on it and only mutate the DOM as necessary to reflect the latest changes.
+    此方法用于将 React 元素渲染到所提供容器中的 DOM 结构中，并返回对组件的引用。如果 React 元素之前已被渲染到容器中，它将对其执行更新，并且只在需要时改变 DOM 以反映最新的更改。
 
     ```
     ReactDOM.render(element, container[, callback])
     ```
 
-    If the optional callback is provided, it will be executed after the component is rendered or updated.
+    如果提供了可选的回调函数，该函数将在组件被渲染或更新后执行。
 
-59. ### What is ReactDOMServer?
 
-    The `ReactDOMServer` object enables you to render components to static markup (typically used on node server). This object is mainly used for *server-side rendering* (SSR). The following methods can be used in both the server and browser environments:
+59. ### ReactDOMServer 是什么?
+
+    `ReactDOMServer` 对象使你能够将组件渲染为静态标记（通常用于 Node 服务器中），此对象主要用于服务端渲染（SSR）。以下方法可用于服务器和浏览器环境：
 
     1. `renderToString()`
     2. `renderToStaticMarkup()`
 
-    For example, you generally run a Node-based web server like Express, Hapi, or Koa, and you call `renderToString` to render your root component to a string, which you then send as response.
+    例如，你通常运行基于 Node 的 Web 服务器，如 Express，Hapi 或 Koa，然后你调用 `renderToString` 将根组件渲染为字符串，然后作为响应进行发送。
 
     ```javascript
     // using Express
@@ -1750,9 +1752,9 @@
     // this.state.count === 3 as expected
     ```
 
-83. ### What is strict mode in React?
+83. ### 在 React 中什么是严格模式?
 
-    `React.StrictMode` is an useful component for highlighting potential problems in an application. Just like `<Fragment>`, `<StrictMode>` does not render any extra DOM elements. It activates additional checks and warnings for its descendants. These checks apply for *development mode* only.
+    `React.StrictMode` 是一个有用的组件，用于突出显示应用程序中的潜在问题。就像 `<Fragment>`，`<StrictMode>` 一样，它们不会渲染任何额外的 DOM 元素。它为其后代激活额外的检查和警告。这些检查仅适用于开发模式。
 
     ```jsx 
     import React from 'react'
@@ -1773,13 +1775,13 @@
     }
     ```
 
-    In the example above, the *strict mode* checks apply to `<ComponentOne>` and `<ComponentTwo>` components only.
+    在上面的示例中，*strict mode* 检查仅应用于 `<ComponentOne>` 和 `<ComponentTwo>` 组件。
 
-84. ### What are React Mixins?
+84. ### React Mixins 是什么?
 
-    *Mixins* are a way to totally separate components to have a common functionality. Mixins are **should not be used** and can be replaced with *higher-order components* or *decorators*.
+    *Mixins* 是一种完全分离组件通用功能的方法。 Mixins 不应该被继续使用，可以用高阶组件或装饰器来替换。
 
-    One of the most commonly used mixins is `PureRenderMixin`. You might be using it in some components to prevent unnecessary re-renders when the props and state are shallowly equal to the previous props and state:
+    最常用的 mixins 是 `PureRenderMixin`。当 props 和状态与之前的 props 和状态相等时，你可能在某些组件中使用它来防止不必要的重新渲染：
 
     ```javascript
     const PureRenderMixin = require('react-addons-pure-render-mixin')
@@ -1791,9 +1793,9 @@
     ````
     <!-- TODO: mixins are deprecated -->
 
-85. ### Why is `isMounted()` an anti-pattern and what is the proper solution?
+85. ### 为什么 `isMounted()` 是一个反模式，而正确的解决方案是什么?
 
-    The primary use case for `isMounted()` is to avoid calling `setState()` after a component has been unmounted, because it will emit a warning.
+    `isMounted()` 的主要场景是避免在组件卸载后调用 `setState()`，因为它会发出警告。
 
     ```javascript
     if (this.isMounted()) {
@@ -1801,15 +1803,16 @@
     }
     ```
 
-    Checking `isMounted()` before calling `setState()` does eliminate the warning, but it also defeats the purpose of the warning. Using `isMounted()` is a code smell because the only reason you would check is because you think you might be holding a reference after the component has unmounted.
+    在调用 `setState()` 之前检查 `isMounted()` 会消除警告，但也会破坏警告的目的。使用 `isMounted()` 有一种代码味道，因为你要检查的唯一原因是你认为在卸载组件后可能持有引用。
 
-    An optimal solution would be to find places where `setState()` might be called after a component has unmounted, and fix them. Such situations most commonly occur due to callbacks, when a component is waiting for some data and gets unmounted before the data arrives. Ideally, any callbacks should be canceled in `componentWillUnmount()`, prior to unmounting.
+    最佳解决方案是找到在组件卸载后调用 `setState()` 的位置，并修复它们。这种情况最常发生在回调中，即组件正在等待某些数据并在数据到达之前卸载。理想情况下，在卸载之前，应在 `componentWillUnmount()` 中取消任何回调。
 
-86. ### What are the Pointer Events supported in React?
 
-    *Pointer Events* provide a unified way of handling all input events. In the olden days we have a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
+86. ### React 中支持哪些指针事件?
 
-    The following event types are now available in *React DOM*:
+    *Pointer Events* 提供了处理所有输入事件的统一方法。在过去，我们有一个鼠标和相应的事件监听器来处理它们，但现在我们有许多与鼠标无关的设备，比如带触摸屏的手机或笔。我们需要记住，这些事件只能在支持 *Pointer Events* 规范的浏览器中工作。
+
+    目前以下事件类型在 *React DOM* 中是可用的：
 
     1. `onPointerDown`
     2. `onPointerMove`
@@ -1822,11 +1825,11 @@
     9. `onPointerOver`
     10. `onPointerOut`
 
-87. ### Why should component names start with capital letter?
+87. ### 为什么组件名称应该以大写字母开头?
 
-    If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
+    如果使用 JSX 渲染组件，则该组件的名称必须以大写字母开头，否则 React 将会抛出无法识别标签的错误。这种约定是因为只有 HTML 元素和 SVG 标签可以以小写字母开头。
 
-    You can define component class which name starts with lowercase letter, but when it's imported it should have capital letter. Here lowercase is fine:
+    定义组件类的时候，你可以以小写字母开头，但在导入时应该使用大写字母。
 
     ```jsx 
     class myComponent extends Component {
@@ -1838,7 +1841,7 @@
     export default myComponent
     ```
 
-    While when imported in another file it should start with capital letter:
+    当在另一个文件导入时，应该以大写字母开头：
 
     ```jsx 
     import MyComponent from './MyComponent'
@@ -3536,31 +3539,31 @@
 
      Reselect keeps a copy of the last inputs/outputs of the last call, and recomputes the result only if one of the inputs changes. If the the same inputs are provided twice in a row, Reselect returns the cached output. It's memoization and cache are fully customizable.
 
-193. ### What is Flow?
+193. ### 什么是 Flow?
 
-     *Flow* is a *static type checker* designed to find type errors in JavaScript. Flow types can express much more fine-grained distinctions than traditional type systems. For example, Flow helps you catch errors involving `null`, unlike most type systems.
+     *Flow* 是一个静态类型检查器，旨在查找 JavaScript 中的类型错误。与传统类型系统相比，Flow 类型可以表达更细粒度的区别。例如，与大多数类型系统不同，Flow 能帮助你捕获涉及 `null` 的错误。
 
-194. ### What is the difference between Flow and PropTypes?
+194. ### Flow 和 PropTypes 有什么区别?
 
-     Flow is a *static analysis tool* (static checker) which uses a superset of the language, allowing you to add type annotations to all of your code and catch an entire class of bugs at compile time. PropTypes is a *basic type checker* (runtime checker) which has been patched onto React. It can't check anything other than the types of the props being passed to a given component. If you want more flexible typechecking for your entire project Flow/TypeScript are appropriate choices.
+     Flow 是一个静态分析工具（静态检查器），它使用该语言的超集，允许你在所有代码中添加类型注释，并在编译时捕获整个类的错误。PropTypes 是一个基本类型检查器（运行时检查器），已经被添加到 React 中。除了检查传递给给定组件的属性类型外，它不能检查其他任何内容。如果你希望对整个项目进行更灵活的类型检查，那么 Flow/TypeScript 是更合适的选择。
 
-195. ### How to use Font Awesome icons in React?
+195. ### 在 React 中如何使用 Font Awesome 图标?
 
-     The below steps followed to include Font Awesome in React:
+     接下来的步骤将在 React 中引入 Font Awesome：
 
-     1. Install `font-awesome`:
+     1. 安装 `font-awesome`:
 
-     ```console
+     ```shell
      $ npm install --save font-awesome
      ```
 
-     2. Import `font-awesome` in your `index.js` file:
+     2. 在 `index.js` 文件中导入 `font-awesome`:
 
      ```javascript
      import 'font-awesome/css/font-awesome.min.css'
      ```
 
-     3. Add Font Awesome classes in `className`:
+     3. 在 `className` 中添加 Font Awesome 类:
 
      ```javascript
      render() {
@@ -3568,11 +3571,11 @@
      }
      ```
 
-196. ### What is React Dev Tools?
+196. ### 什么 是 React 开发者工具?
 
-     *React Developer Tools* let you inspect the component hierarchy, including component props and state. It exists both as a browser extension (for Chrome and Firefox), and as a standalone app (works with other environments including Safari, IE, and React Native).
+     *React Developer Tools* 允许您检查组件层次结构，包括组件属性和状态。它既可以作为浏览器扩展（用于 Chrome 和 Firefox ），也可以作为独立的应用程序（用于其他环境，包括 Safari、IE 和 React Native）。
 
-     The official extensions available for different browsers or environments.
+     可用于不同浏览器或环境的官方扩展。
      1. **Chrome extension**
      2. **Firefox extension**
      3. **Standalone app** (Safari, React Native, etc)
@@ -3581,9 +3584,9 @@
 
      If you opened a local HTML file in your browser (`file://...`) then you must first open *Chrome Extensions* and check `Allow access to file URLs`.
 
-198. ### How to use Polymer in React?
+198. ### 如何在 React 中使用 Polymer?
 
-     1. Create a Polymer element:
+     1. 创建 Polymer 元素：
 
          ```jsx 
          <link rel='import' href='../../bower_components/polymer/polymer.html' />
@@ -3595,13 +3598,13 @@
          })
          ```
 
-     2. Create the Polymer component HTML tag by importing it in a HTML document, e.g. import it in the `index.html` of your React application:
+     2. 通过在 HTML 文档中导入 Polymer 组件，来创建该组件对应的标签。例如，在 React 应用程序的 `index.html` 文件中导入。
 
          ```html
          <link rel='import' href='./src/polymer-components/calender-element.html'>
          ```
 
-         3. Use that element in the JSX file:
+     3. 在 JSX 文件中使用该元素：
 
          ```javascript
          import React from 'react'
@@ -3617,14 +3620,14 @@
          export default MyComponent
          ```
 
-199. ### What are the advantages of React over Vue.js?
+199. ### 与 Vue.js 相比，React 有哪些优势?
 
-     React has the following advantages over Vue.js:
+     与 Vue.js 相比，React 具有以下优势：
 
-     1. Gives more flexibility in large apps developing.
-     2. Easier to test.
-     3. Suitable for mobile apps creating.
-     4. More information and solutions available.
+     1. 在大型应用程序开发中提供更大的灵活性。
+     2. 更容易测试。
+     3. 更适合创建移动端应用程序。
+     4. 提供更多的信息和解决方案。
 
 200. ### What is the difference between React and Angular?
 
