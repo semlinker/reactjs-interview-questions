@@ -2552,40 +2552,40 @@
 
 ## React Router
 
-129. ### What is React Router?
+129. ### 什么是 React Router?
 
-     React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+     React Router 是一个基于 React 的强大的路由库，可以帮助您快速地向应用添加新的屏幕和流，同时保持 URL 与页面上显示的内容同步。
 
-130. ### How React Router is different from history library?
+130. ### React Router 与 history 库的区别?
 
-     React Router is a wrapper around the `history` library which handles interaction with the browser's `window.history` with its browser and hash histories. It also provides memory history which is useful for environments that don't have global history, such as mobile app development (React Native) and unit testing with Node.
+     React Router 是`history`库的包装器，它处理浏览器的`window.history`与浏览器和哈希历史的交互。它还提供了内存历史记录，这对于没有全局历史记录的环境非常有用，例如移动应用程序开发（React Native）和使用 Node 进行单元测试。
 
-131. ### What are the `<Router>` components of React Router v4?
+131. ### 在 React Router v4 中的`<Router>`组件是什么?
 
-     React Router v4 provides below 3 `<Router>` components:
+     React Router v4 提供了以下三种类型的 `<Router>` 组件:
 
      1. `<BrowserRouter>`
      2. `<HashRouter>`
      3. `<MemoryRouter>`
 
-     The above components will create *browser*, *hash*, and *memory* history instances. React Router v4 makes the properties and methods of the `history` instance associated with your router available through the context in the `router` object.
+     以上组件将创建*browser*，*hash*和*memory*的 history 实例。React Router v4 通过`router`对象中的上下文使与您的路由器关联的`history`实例的属性和方法可用。
 
-132. ### What is the purpose of `push()` and `replace()` methods of `history`?
+132. ### `history`中的`push()`和`replace()`方法的目的是什么?
 
-     A history instance has two methods for navigation purpose.
+     一个 history 实例有两种导航方法：
 
      1. `push()`
      2. `replace()`
 
-     If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
+     如果您将 history 视为一个访问位置的数组，则`push()`将向数组添加一个新位置，`replace()`将用新的位置替换数组中的当前位置。
 
-133. ### How do you programmatically navigate using React Router v4?
+133. ### 如何使用在 React Router v4 中以编程的方式进行导航?
 
-     There are three different ways to achieve programmatic routing/navigation within components.
+     在组件中实现操作路由/导航有三种不同的方法。
 
-     1. **Using the `withRouter()` higher-order function:**
+     1. **使用`withRouter()`高阶函数：**
 
-         The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
+         `withRouter()`高阶函数将注入 history 对象作为组件的 prop。该对象提供了`push()`和`replace()`方法，以避免使用上下文。
 
          ```jsx 
          import { withRouter } from 'react-router-dom' // this also works with 'react-router-native'
@@ -2600,9 +2600,9 @@
          ))
          ```
 
-     2. **Using `<Route>` component and render props pattern:**
+     2. **使用`<Route>`组件和渲染属性模式：**
 
-         The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
+         `<Route>`组件传递与`withRouter()`相同的属性，因此您将能够通过 history 属性访问到操作历史记录的方法。
 
          ```jsx 
          import { Route } from 'react-router-dom'
@@ -2619,9 +2619,9 @@
          )
          ```
 
-     3. **Using context:**
+     3. **使用上下文:**
 
-         This option is not recommended and treated as unstable API.
+         建议不要使用此选项，并将其视为不稳定的API。
 
          ```jsx 
          const Button = (props, context) => (
@@ -2642,35 +2642,37 @@
          }
          ```
 
-134. ### How to get query parameters in React Router v4?
+134. ### 如何在React Router v4中获取查询字符串参数?
 
-     The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
+     在 React Router v4 中并没有内置解析查询字符串的能力，因为多年来一直有用户希望支持不同的实现。因此，使用者可以选择他们喜欢的实现方式。建议的方法是使用 [query-string](https://www.npmjs.com/package/query-string) 库。
 
      ```javascript
      const queryString = require('query-string');
      const parsed = queryString.parse(props.location.search);
      ```
 
-     You can also use `URLSearchParams` if you want something native:
+     如果你想要使用原生 API 的话，你也可以使用 `URLSearchParams` ：
 
      ```javascript
      const params = new URLSearchParams(props.location.search)
      const foo = params.get('name')
      ```
 
-     You should use a *polyfill* for IE11.
+     如果使用 `URLSearchParams` 的话您应该为 IE11 使用*polyfill*。
 
-135. ### Why you get "Router may have only one child element" warning?
+135. ### 为什么你会得到"Router may have only one child element"警告?
 
-     You have to wrap your Route's in a `<Switch>` block because `<Switch>` is unique in that it renders a route exclusively.
+     此警告的意思是`Router`组件下仅能包含一个子节点。
 
-     At first you need to add `Switch` to your imports:
+     你必须将你的 Route 包装在`<Switch>`块中，因为`<Switch>`是唯一的，它只提供一个路由。
+
+     首先，您需要在导入中添加`Switch`：
 
      ```javascript
      import { Switch, Router, Route } from 'react-router'
      ```
 
-     Then define the routes within `<Switch>` block:
+     然后在`<Switch>`块中定义路由：
 
      ```jsx 
      <Router>
@@ -2681,9 +2683,9 @@
      </Router>
      ```
 
-136. ### How to pass params to `history.push` method in React Router v4?
+136. ### 如何在 React Router v4 中将 params 传递给`history.push`方法?
 
-     While navigating you can pass props to the `history` object:
+     在导航时，您可以将 props 传递给`history`对象：
 
      ```javascript
      this.props.history.push({
@@ -2693,11 +2695,11 @@
      })
      ```
 
-     The `search` property is used to pass query params in `push()` method.
+     `search`属性用于在`push()`方法中传递查询参数。
 
-137. ### How to implement *default* or *NotFound* page?
+137. ### 如何实现*默认*或*404*页面?
 
-     A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
+     `<Switch>`呈现匹配的第一个孩子`<Route>`。 没有路径的`<Route>`总是匹配。所以你只需要简单地删除 path 属性，如下所示：
 
      ```jsx 
      <Switch>
@@ -2707,11 +2709,11 @@
      </Switch>
      ```
 
-138. ### How to get history on React Router v4?
+138. ### 如何在 React Router v4 上获取历史对象?
 
-     1. Create a module that exports a `history` object and import this module across the project.
+     1. 创建一个导出`history`对象的模块，并在整个项目中导入该模块。
 
-         For example, create `history.js` file:
+         例如， 创建`history.js`文件:
 
          ```javascript
          import { createBrowserHistory } from 'history'
@@ -2721,7 +2723,7 @@
          })
          ```
 
-     2. You should use the `<Router>` component instead of built-in routers. Imported the above `history.js` inside `index.js` file:
+     2. 您应该使用`<Router>`组件而不是内置路由器。在`index.js`文件中导入上面的`history.js`：
 
          ```jsx 
          import { Router } from 'react-router-dom'
@@ -2735,7 +2737,7 @@
          ), holder)
          ```
 
-     3. You can also use push method of `history` object similar to built-in history object:
+     3. 您还可以使用类似于内置历史对象的`history`对象的push方法：
 
          ```javascript
          // some-other-file.js
@@ -2744,9 +2746,9 @@
          history.push('/go-here')
          ```
 
-139. ### How to perform automatic redirect after login?
+139. ### 登录后如何执行自动重定向?
 
-     The `react-router` package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
+     `react-router`包在 React Router 中提供了`<Redirect>`组件。渲染`<Redirect>`将导航到新位置。与服务器端重定向一样，新位置将覆盖历史堆栈中的当前位置。
 
      ```javascript
      import React, { Component } from 'react'
@@ -2765,23 +2767,23 @@
 
 ## React Internationalization
 
-140. ### What is React Intl?
+140. ### 什么是 React Intl?
 
-     The *React Intl* library makes internalization in React straightforward, with off-the-shelf components and an API that can handle everything from formatting strings, dates, and numbers, to pluralization. React Intl is part of *FormatJS* which provides bindings to React via its components and API.
+     [*React Intl*](https://github.com/yahoo/react-intl)库使 React 中的内部化变得简单，使用现成的组件和 API ，可以处理从格式化字符串，日期和数字到复数的所有功能。React Intl 是[*FormatJS*](http://formatjs.io/)的一部分，它通过其组件和 API 提供与 React 的绑定。
 
-141. ### What are the main features of React Intl?
+141. ### React Intl 的主要特性是什么?
 
-     1. Display numbers with separators.
-     2. Display dates and times correctly.
-     3. Display dates relative to "now".
-     4. Pluralize labels in strings.
-     5. Support for 150+ languages.
-     6. Runs in the browser and Node.
-     7. Built on standards.
+     1. 用分隔符显示数字
+     2. 正确显示日期和时间
+     3. 显示相对于“现在”的日期
+     4. 将标签转换为字符串
+     5. 支持 150 多种语言
+     6. 支持在浏览器和 Node 中运行
+     7. 建立在标准之上
 
-142. ### What are the two ways of formatting in React Intl?
+142. ### 在 React Intl 中有哪两种格式化方式?
 
-     The library provides two ways to format strings, numbers, and dates: react components or an API.
+     该库提供了两种格式化字符串，数字和日期的方法：React 组件或 API。
 
      ```jsx
      <FormattedMessage
@@ -2801,9 +2803,9 @@
      formatMessage(messages.accountMessage)
      ```
 
-143. ### How to use `<FormattedMessage>` as placeholder using React Intl?
+143. ### 在 React Intl 中如何使用`<FormattedMessage>`作为占位符使用?
 
-     The `<Formatted... />` components from `react-intl` return elements, not plain text, so they can't be used for placeholders, alt text, etc. In that case, you should use lower level API `formatMessage()`. You can inject the `intl` object into your component using `injectIntl()` higher-order component and then format the message using `formatMessage()` available on that object.
+     `react-intl`的`<Formatted ... />`组件返回元素，而不是纯文本，因此它们不能用于占位符，替代文本等。在这种情况下，您应该使用较低级别的 API `formatMessage()`。您可以使用`injectIntl()`高阶函数将`intl`对象注入到组件中，然后使用该对象上使用`formatMessage()`格式化消息。
 
      ```jsx
      import React from 'react'
