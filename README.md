@@ -129,7 +129,7 @@
 |113 | [如何避免在 create-react-app 中使用相对路径导入?](#如何避免在-create-react-app-中使用相对路径导入) |
 |114 | [如何为 React Router 添加 Google Analytics?](#如何为-react-router-添加-google-analytics) |
 |115 | [如何每秒更新一个组件?](#如何每秒更新一个组件) |
-|116 | [如何将 *vendor prefixes* 应用于 React 中的内联样式?](#如何将-vendor-prefixes-应用于-react-中的内联样式) |
+|116 | [如何将 vendor prefixes 应用于 React 中的内联样式?](#如何将-vendor-prefixes-应用于-react-中的内联样式) |
 |117 | [如何使用 React 和 ES6 导入和导出组件?](#如何使用-react-和-es6-导入和导出组件) |
 |118 | [为什么 React 组件名称必须以大写字母开头?](#为什么-react-组件名称必须以大写字母开头) |
 |119 | [为什么组件的构造函数只被调用一次?](#为什么组件的构造函数只被调用一次) |
@@ -146,12 +146,12 @@
 |129 | [什么是 React Router?](#什么是-react-router) |
 |130 | [React Router 与 history 库的区别?](#react-router-与-history-库的区别) |
 |131 | [在 React Router v4 中的`<Router>`组件是什么?](#在-react-router-v4-中的router组件是什么) |
-|132 | [`history`中的`push()`和`replace()`方法的目的是什么?](#history中的push和replace方法的目的是什么) |
+|132 | [`history` 中的 `push()` 和 `replace()` 方法的目的是什么?](#history-中的-push-和-replace-方法的目的是什么) |
 |133 | [如何使用在 React Router v4 中以编程的方式进行导航?](#如何使用在-react-router-v4-中以编程的方式进行导航) |
 |134 | [如何在React Router v4中获取查询字符串参数?](#如何在react-router-v4中获取查询字符串参数) |
 |135 | [为什么你会得到"Router may have only one child element"警告?](#为什么你会得到"router-may-have-only-one-child-element"警告) |
-|136 | [如何在 React Router v4 中将 params 传递给`history.push`方法?](#如何在-react-router-v4-中将-params-传递给history.push方法) |
-|137 | [如何实现*默认*或*404*页面?](#如何实现默认或404页面) |
+|136 | [如何在 React Router v4 中将 params 传递给 `history.push` 方法?](#如何在-react-router-v4-中将-params-传递给-history.push-方法) |
+|137 | [如何实现默认页面或 404 页面?](#如何实现默认页面或-404-页面) |
 |138 | [如何在 React Router v4 上获取历史对象?](#如何在-react-router-v4-上获取历史对象) |
 |139 | [登录后如何执行自动重定向?](#登录后如何执行自动重定向) |
 | | [React Internationalization](#react-internationalization) |
@@ -163,7 +163,7 @@
 |145 | [如何使用 React Intl 格式化日期?](#如何使用-react-intl-格式化日期) |
 | | [React Testing](#react-testing) |
 |146 | [在 React 测试中什么是浅层渲染（Shallow Renderer）?](#在-react-测试中什么是浅层渲染shallow-renderer) |
-|147 | [在 React 中`TestRenderer`包是什么?](#在-react-中testrenderer包是什么) |
+|147 | [在 React 中 `TestRenderer` 包是什么?](#在-react-中-testrenderer-包是什么) |
 |148 | [ReactTestUtils 包的目的是什么?](#reacttestutils-包的目的是什么) |
 |149 | [什么是 Jest?](#什么是-jest) |
 |150 | [Jest 对比 Jasmine 有什么优势?](#jest-对比-jasmine-有什么优势) |
@@ -179,9 +179,9 @@
 |159 | [MVW 模式的缺点是什么?](#mvw-模式的缺点是什么) |
 |160 | [Redux 和 RxJS 之间是否有任何相似之处?](#redux-和-rxjs-之间是否有任何相似之处) |
 |161 | [如何在加载时触发 Action?](#如何在加载时触发-action) |
-|162 | [在 React 中如何使用 Redux 的`connect()`?](#在-react-中如何使用-redux-的connect) |
+|162 | [在 React 中如何使用 Redux 的 `connect()` ?](#在-react-中如何使用-redux-的-connect-) |
 |163 | [如何在 Redux 中重置状态?](#如何在-redux-中重置状态) |
-|164 | [Redux 中连接装饰器的`at`符号的目的是什么?](#redux-中连接装饰器的at符号的目的是什么) |
+|164 | [Redux 中连接装饰器的 `at` 符号的目的是什么?](#redux-中连接装饰器的-at-符号的目的是什么) |
 |165 | [React 上下文和 React Redux 之间有什么区别?](#react-上下文和-react-redux-之间有什么区别) |
 |166 | [为什么 Redux 状态函数称为 reducers ?](#为什么-redux-状态函数称为-reducers-) |
 |167 | [如何在 Redux 中发起 AJAX 请求?](#如何在-redux-中发起-ajax-请求) |
@@ -2327,7 +2327,7 @@
      }
      ```
 
-116. ### 如何将 *vendor prefixes* 应用于 React 中的内联样式?
+116. ### 如何将 vendor prefixes 应用于 React 中的内联样式?
 
      React不会自动应用 *vendor prefixes*，你需要手动添加 *vendor prefixes*。
 
@@ -2573,7 +2573,7 @@
 
      以上组件将创建*browser*，*hash*和*memory*的 history 实例。React Router v4 通过`router`对象中的上下文使与您的路由器关联的`history`实例的属性和方法可用。
 
-132. ### `history`中的`push()`和`replace()`方法的目的是什么?
+132. ### `history` 中的 `push()` 和 `replace()` 方法的目的是什么?
 
      一个 history 实例有两种导航方法：
 
@@ -2686,7 +2686,7 @@
      </Router>
      ```
 
-136. ### 如何在 React Router v4 中将 params 传递给`history.push`方法?
+136. ### 如何在 React Router v4 中将 params 传递给 `history.push` 方法?
 
      在导航时，您可以将 props 传递给`history`对象：
 
@@ -2700,7 +2700,7 @@
 
      `search`属性用于在`push()`方法中传递查询参数。
 
-137. ### 如何实现*默认*或*404*页面?
+137. ### 如何实现默认页面或 404 页面?
 
      `<Switch>`呈现匹配的第一个孩子`<Route>`。 没有路径的`<Route>`总是匹配。所以你只需要简单地删除 path 属性，如下所示：
 
@@ -2905,7 +2905,7 @@
      ])
      ```
 
-147. ### 在 React 中`TestRenderer`包是什么?
+147. ### 在 React 中 `TestRenderer` 包是什么?
 
      此包提供了一个渲染器，可用于将组件渲染为纯 JavaScript 对象，而不依赖于 DOM 或原生移动环境。该包可以轻松获取由 ReactDOM 或 React Native 平台所渲染的视图层次结构（类似于DOM树）的快照，而无需使用浏览器或`jsdom`。
 
@@ -3089,7 +3089,7 @@
      export default connect(mapStateToProps, mapDispatchToProps)(App)
      ```
 
-162. ### 在 React 中如何使用 Redux 的`connect()`?
+162. ### 在 React 中如何使用 Redux 的 `connect()` ?
 
      您需要按照两个步骤在容器中使用您的 Store：
 
@@ -3153,7 +3153,7 @@
      }
      ```
 
-164. ### Redux 中连接装饰器的`at`符号的目的是什么?
+164. ### Redux 中连接装饰器的 `at` 符号的目的是什么?
 
      **@**符号实际上是用于表示装饰器的 JavaScript 表达式。*装饰器*可以在设计时注释和修改类和属性。
 
