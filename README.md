@@ -143,31 +143,31 @@
 |127 | [如何发起 AJAX 调用以及应该在哪些组件生命周期方法中进行 AJAX 调用?](#如何发起-ajax-调用以及应该在哪些组件生命周期方法中进行-ajax-调用) |
 |128 | [什么是渲染属性?](#什么是渲染属性) |
 | | [React Router](#react-router) |
-|129 | [What is React Router?](#what-is-react-router) |
-|130 | [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
-|131 | [What are the `<Router>` components of React Router v4?](#what-are-the-router-components-of-react-router-v4) |
-|132 | [What is the purpose of `push()` and `replace()` methods of `history`?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
-|133 | [How do you programmatically navigate using React Router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
-|134 | [How to get query parameters in React Router v4?](#how-to-get-query-parameters-in-react-router-v4) |
-|135 | [Why you get "Router may have only one child element" warning?](#why-you-get-"router-may-have-only-one-child-element"-warning) |
-|136 | [How to pass params to `history.push` method in React Router v4?](#how-to-pass-params-to-history.push-method-in-react-router-v4) |
-|137 | [How to implement *default* or *NotFound* page?](#how-to-implement-default-or-notfound-page) |
-|138 | [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4) |
-|139 | [How to perform automatic redirect after login?](#how-to-perform-automatic-redirect-after-login) |
+|129 | [什么是 React Router?](#什么是-react-router) |
+|130 | [React Router 与 history 库的区别?](#react-router-与-history-库的区别) |
+|131 | [在 React Router v4 中的`<Router>`组件是什么?](#在-react-router-v4-中的router组件是什么) |
+|132 | [`history`中的`push()`和`replace()`方法的目的是什么?](#history中的push和replace方法的目的是什么) |
+|133 | [如何使用在 React Router v4 中以编程的方式进行导航?](#如何使用在-react-router-v4-中以编程的方式进行导航) |
+|134 | [如何在React Router v4中获取查询字符串参数?](#如何在react-router-v4中获取查询字符串参数) |
+|135 | [为什么你会得到"Router may have only one child element"警告?](#为什么你会得到"router-may-have-only-one-child-element"警告) |
+|136 | [如何在 React Router v4 中将 params 传递给`history.push`方法?](#如何在-react-router-v4-中将-params-传递给history.push方法) |
+|137 | [如何实现*默认*或*404*页面?](#如何实现默认或404页面) |
+|138 | [如何在 React Router v4 上获取历史对象?](#如何在-react-router-v4-上获取历史对象) |
+|139 | [登录后如何执行自动重定向?](#登录后如何执行自动重定向) |
 | | [React Internationalization](#react-internationalization) |
-|140 | [What is React Intl?](#what-is-react-intl) |
-|141 | [What are the main features of React Intl?](#what-are-the-main-features-of-react-intl) |
-|142 | [What are the two ways of formatting in React Intl?](#what-are-the-two-ways-of-formatting-in-react-intl) |
-|143 | [How to use `<FormattedMessage>` as placeholder using React Intl?](#how-to-use-formattedmessage-as-placeholder-using-react-intl) |
-|144 | [How to access current locale with React Intl?](#how-to-access-current-locale-with-react-intl) |
-|145 | [How to format date using React Intl?](#how-to-format-date-using-react-intl) |
+|140 | [什么是 React Intl?](#什么是-react-intl) |
+|141 | [React Intl 的主要特性是什么?](#react-intl-的主要特性是什么) |
+|142 | [在 React Intl 中有哪两种格式化方式?](#在-react-intl-中有哪两种格式化方式) |
+|143 | [在 React Intl 中如何使用`<FormattedMessage>`作为占位符使用?](#在-react-intl-中如何使用formattedmessage作为占位符使用) |
+|144 | [如何使用 React Intl 访问当前语言环境?](#如何使用-react-intl-访问当前语言环境) |
+|145 | [如何使用 React Intl 格式化日期?](#如何使用-react-intl-格式化日期) |
 | | [React Testing](#react-testing) |
-|146 | [What is Shallow Renderer in React testing?](#what-is-shallow-renderer-in-react-testing) |
-|147 | [What is `TestRenderer` package in React?](#what-is-testrenderer-package-in-react) |
-|148 | [What is the purpose of ReactTestUtils package?](#what-is-the-purpose-of-reacttestutils-package) |
-|149 | [What is Jest?](#what-is-jest) |
-|150 | [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine) |
-|151 | [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case) |
+|146 | [在 React 测试中什么是浅层渲染（Shallow Renderer）?](#在-react-测试中什么是浅层渲染shallow-renderer) |
+|147 | [在 React 中`TestRenderer`包是什么?](#在-react-中testrenderer包是什么) |
+|148 | [ReactTestUtils 包的目的是什么?](#reacttestutils-包的目的是什么) |
+|149 | [什么是 Jest?](#什么是-jest) |
+|150 | [Jest 对比 Jasmine 有什么优势?](#jest-对比-jasmine-有什么优势) |
+|151 | [举一个简单的 Jest 测试用例](#举一个简单的-jest-测试用例) |
 | | [React Redux](#react-redux) |
 |152 | [What is flux?](#what-is-flux) |
 |153 | [What is Redux?](#what-is-redux) |
@@ -2823,9 +2823,9 @@
      export default injectIntl(MyComponent)
      ```
 
-144. ### How to access current locale with React Intl?
+144. ### 如何使用 React Intl 访问当前语言环境?
 
-     You can get the current locale in any component of your application using `injectIntl()`:
+     您可以在应用的任何组件中使用`injectIntl()`获取的当前语言环境：
 
      ```jsx 
      import { injectIntl, intlShape } from 'react-intl'
@@ -2841,9 +2841,9 @@
      export default injectIntl(MyComponent)
      ```
 
-145. ### How to format date using React Intl?
+145. ### 如何使用 React Intl 格式化日期?
 
-     The `injectIntl()` higher-order component will give you access to the `formatDate()` method via the props in your component. The method is used internally by instances of `FormattedDate` and it returns the string representation of the formatted date.
+     `injectIntl()`高阶组件将允许您通过组件中的 props 访问`formatDate()`方法。 该方法由`FormattedDate`实例在内部使用，它返回格式化日期的字符串表示。
 
      ```jsx 
      import { injectIntl, intlShape } from 'react-intl'
@@ -2867,11 +2867,11 @@
 
 ## React Testing
 
-146. ### What is Shallow Renderer in React testing?
+146. ### 在 React 测试中什么是浅层渲染（Shallow Renderer）?
 
-     *Shallow rendering* is useful for writing unit test cases in React. It lets you render a component *one level deep* and assert facts about what its render method returns, without worrying about the behavior of child components, which are not instantiated or rendered.
+     *浅层渲染*对于在 React 中编写单元测试用例很有用。它允许您渲染一个*一级深的组件*并断言其渲染方法返回的内容，而不必担心子组件未实例化或渲染。
 
-     For example, if you have the following component:
+     例如，如果您有以下组件：
 
      ```javascript
      function MyComponent() {
@@ -2884,7 +2884,7 @@
      }
      ```
 
-     Then you can assert as follows:
+     然后你可以如下断言：
 
      ```jsx 
      import ShallowRenderer from 'react-test-renderer/shallow'
@@ -2902,9 +2902,9 @@
      ])
      ```
 
-147. ### What is `TestRenderer` package in React?
+147. ### 在 React 中`TestRenderer`包是什么?
 
-     This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or `jsdom`.
+     此包提供了一个渲染器，可用于将组件渲染为纯 JavaScript 对象，而不依赖于 DOM 或原生移动环境。该包可以轻松获取由 ReactDOM 或 React Native 平台所渲染的视图层次结构（类似于DOM树）的快照，而无需使用浏览器或`jsdom`。
 
      ```jsx 
      import TestRenderer from 'react-test-renderer'
@@ -2923,27 +2923,27 @@
      // }
      ```
 
-148. ### What is the purpose of ReactTestUtils package?
+148. ### ReactTestUtils 包的目的是什么?
 
-     *ReactTestUtils* are provided in the `with-addons` package and allow you to perform actions against a simulated DOM for the purpose of unit testing.
+     *ReactTestUtils*由`with-addons`包提供，允许您对模拟 DOM 执行操作以进行单元测试。
 
-149. ### What is Jest?
+149. ### 什么是 Jest?
 
-     *Jest* is a JavaScript unit testing framework created by Facebook based on Jasmine and provides automated mock creation and a `jsdom` environment. It's often used for testing components.
+     *Jest*是一个由 Facebook 基于 Jasmine 创建的 JavaScript 单元测试框架，提供自动模拟创建和`jsdom`环境。它通常用于测试组件。
 
-150. ### What are the advantages of Jest over Jasmine?
+150. ### Jest 对比 Jasmine 有什么优势?
 
-     There are couple of advantages compared to Jasmine:
+     与 Jasmine 相比，有几个优点： 
 
-     - Automatically finds tests to execute in your source code.
-     - Automatically mocks dependencies when running your tests.
-     - Allows you to test asynchronous code synchronously.
-     - Runs your tests with a fake DOM implementation (via `jsdom`) so that your tests can be run on the command line.
-     - Runs tests in parallel processes so that they finish sooner.
+     - 自动查找在源代码中要执行测试。
+     - 在运行测试时自动模拟依赖项。
+     - 允许您同步测试异步代码。
+     - 使用假的 DOM 实现（通过`jsdom`）运行测试，以便可以在命令行上运行测试。
+     - 在并行流程中运行测试，以便更快完成。
 
-151. ### Give a simple example of Jest test case
+151. ### 举一个简单的 Jest 测试用例
 
-     Let's write a test for a function that adds two numbers in `sum.js` file:
+     让我们为`sum.js`文件中添加两个数字的函数编写一个测试：
 
      ```javascript
      const sum = (a, b) => a + b
@@ -2951,7 +2951,7 @@
      export default sum
      ```
 
-     Create a file named `sum.test.js` which contains actual test:
+     创建一个名为`sum.test.js`的文件，其中包含实际测试：
 
      ```javascript
      import sum from './sum'
@@ -2961,7 +2961,7 @@
      })
      ```
 
-     And then add the following section to your `package.json`:
+     然后将以下部分添加到`package.json`：
 
      ```json
      {
@@ -2971,7 +2971,7 @@
      }
      ```
 
-     Finally, run `yarn test` or `npm test` and Jest will print a result:
+     最后，运行`yarn test`或`npm test`，Jest 将打印结果：
 
      ```console
      $ yarn test
