@@ -2981,37 +2981,37 @@
 
 ## React Redux
 
-152. ### What is flux?
+152. ### 什么是 flux?
 
-     *Flux* is an *application design paradigm* used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+     *Flux*是*应用程序设计范例*，用于替代更传统的 MVC 模式。它不是一个框架或库，而是一种新的体系结构，它补充了 React 和单向数据流的概念。在使用 React 时，Facebook 会在内部使用此模式。
 
-     The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
+     在 dispatcher，stores 和视图组件具有如下不同的输入和输出：
 
      ![flux](images/flux.png)
 
-153. ### What is Redux?
+153. ### 什么是 Redux?
 
-     *Redux* is a predictable state container for JavaScript apps based on the *Flux design pattern*. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+     *Redux*是基于*Flux设计模式*的 JavaScript 应用程序的可预测状态容器。Redux 可以与 React 一起使用，也可以与任何其他视图库一起使用。它很小（约2kB）并且没有依赖性。
 
-154. ### What are the core principles of Redux?
+154. ### Redux 的核心原则是什么？?
 
-     Redux follows three fundamental principles:
+     Redux 遵循三个基本原则：
 
-     1. **Single source of truth:** The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
-     2. **State is read-only:** The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
-     3. **Changes are made with pure functions:** To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+     1. **单一数据来源：** 整个应用程序的状态存储在单个对象树中。单状态树可以更容易地跟踪随时间的变化并调试或检查应用程序。
+     2. **状态是只读的：** 改变状态的唯一方法是发出一个动作，一个描述发生的事情的对象。这可以确保视图和网络请求都不会直接写入状态。
+     3. **使用纯函数进行更改：** 要指定状态树如何通过操作进行转换，您可以编写reducers。Reducers 只是纯函数，它将先前的状态和操作作为参数，并返回下一个状态。
 
-155. ### What are the downsides of Redux compared to Flux?
+155. ### 与 Flux 相比，Redux 的缺点是什么?
 
-     Instead of saying downsides we can say that there are few compromises of using Redux over Flux. Those are as follows:
+     我们应该说使用 Redux 而不是 Flux 几乎没有任何缺点。这些如下：
 
-     1. **You will need to learn to avoid mutations:** Flux is un-opinionated about mutating data, but Redux doesn't like mutations and many packages complementary to Redux assume you never mutate the state. You can enforce this with dev-only packages like `redux-immutable-state-invariant`, Immutable.js, or instructing your team to write non-mutating code.
-     2. **You're going to have to carefully pick your packages:** While Flux explicitly doesn't try to solve problems such as undo/redo, persistence, or forms, Redux has extension points such as middleware and store enhancers, and it has spawned a rich ecosystem.
-     3. **There is no nice Flow integration yet:** Flux currently lets you do very impressive static type checks which Redux doesn't support yet.
+     1. **您将需要学会避免突变：** Flux 对变异数据毫不吝啬，但 Redux 不喜欢突变，许多与 Redux 互补的包假设您从不改变状态。您可以使用 dev-only 软件包强制执行此操作，例如`redux-immutable-state-invariant`，Immutable.js，或指示您的团队编写非变异代码。
+     2. **您将不得不仔细选择您的软件包：** 虽然 Flux 明确没有尝试解决诸如撤消/重做，持久性或表单之类的问题，但 Redux 有扩展点，例如中间件和存储增强器，以及它催生了丰富的生态系统。
+     3. **还没有很好的 Flow 集成：** Flux 目前可以让你做一些非常令人印象深刻的静态类型检查，Redux 还不支持。
 
-156. ### What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?
+156. ### `mapStateToProps()`和`mapDispatchToProps()`之间有什么区别?
 
-     `mapStateToProps()` is a utility which helps your component get updated state (which is updated by some other components):
+     `mapStateToProps()`是一个实用方法，它可以帮助您的组件获得最新的状态（由其他一些组件更新）：
 
      ```javascript
      const mapStateToProps = (state) => {
@@ -3021,7 +3021,7 @@
      }
      ```
 
-     `mapDispatchToProps()` is a utility which will help your component to fire an action event (dispatching action which may cause change of application state):
+     `mapDispatchToProps()`是一个实用方法，它可以帮助你的组件触发一个动作事件（可能导致应用程序状态改变的调度动作）：
 
      ```javascript
      const mapDispatchToProps = (dispatch) => {
@@ -3033,13 +3033,13 @@
      }
      ```
 
-157. ### Can I dispatch an action in reducer?
+157. ### 我可以在 reducer 中触发一个 Action 吗?
 
-     Dispatching an action within a reducer is an **anti-pattern**. Your reducer should be *without side effects*, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
+     在 reducer 中触发 Action 是**反模式**。您的 reducer 应该*没有副作用*，只是接收 Action 并返回一个新的状态对象。在 reducer 中添加侦听器和调度操作可能会导致链接的 Action 和其他副作用。
 
-158. ### How to access Redux store outside a component?
+158. ### 如何在组件外部访问 Redux 存储的对象?
 
-     Yes. You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
+     是的，您只需要使用`createStore()`从它创建的模块中导出存储。此外，它不应污染全局窗口对象。
 
      ```javascript
      store = createStore(myReducer)
@@ -3047,22 +3047,22 @@
      export default store
      ```
 
-159. ### What are the drawbacks of MVW pattern?
+159. ### MVW 模式的缺点是什么?
 
-     1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
-     3. Due to circular dependencies, a complicated model was created around models and views.
-     3. Lot of data changes happens for collaborative applications(like Google Docs).
-     4. No way to do undo (travel back in time) easily without adding so much extra code.
+     1. DOM 操作非常昂贵，导致应用程序行为缓慢且效率低下。
+     3. 由于循环依赖性，围绕模型和视图创建了复杂的模型。
+     3. 协作型应用程序（如Google Docs）会发生大量数据更改。
+     4. 无需添加太多额外代码就无法轻松撤消（及时回退）。
 
-160. ### Are there any similarities between Redux and RxJS?
+160. ### Redux 和 RxJS 之间是否有任何相似之处?
 
-     These libraries are very different for very different purposes, but there are some vague similarities.
+     这些库的目的是不同的，但是存在一些模糊的相似之处。
 
-     Redux is a tool for managing state throughout the application. It is usually used as an architecture for UIs. Think of it as an alternative to (half of) Angular. RxJS is a reactive programming library. It is usually used as a tool to accomplish asynchronous tasks in JavaScript. Think of it as an alternative to Promises. Redux uses the Reactive paradigm because the Store is reactive. The Store observes actions from a distance, and changes itself. RxJS also uses the Reactive paradigm, but instead of being an architecture, it gives you basic building blocks, Observables, to accomplish this pattern.
+     Redux 是一个在整个应用程序中管理状态的工具。它通常用作 UI 的体系结构。可以将其视为（一半）Angular 的替代品。 RxJS 是一个反应式编程库。它通常用作在 JavaScript 中完成异步任务的工具。把它想象成 Promise 的替代品。 Redux 使用 Reactive 范例，因为Store是被动的。Store 检测到 Action，并自行改变。RxJS也使用 Reactive 范例，但它不是一个体系结构，它为您提供了基本构建块 Observables 来完成这种模式。
 
-161. ### How to dispatch an action on load?
+161. ### 如何在加载时触发 Action?
 
-     You can dispatch an action in `componentDidMount()` method and in `render()` method you can verify the data.
+     您可以在`componentDidMount()`方法中触发 Action，然后在`render()`方法中可以验证数据。
 
      ```javascript
      class App extends Component {
@@ -3086,12 +3086,12 @@
      export default connect(mapStateToProps, mapDispatchToProps)(App)
      ```
 
-162. ### How to use `connect()` from React Redux?
+162. ### 在 React 中如何使用 Redux 的`connect()`?
 
-     You need to follow two steps to use your store in your container:
+     您需要按照两个步骤在容器中使用您的 Store：
 
-     1. **Use `mapStateToProps()`:** It maps the state variables from your store to the props that you specify.
-     2. **Connect the above props to your container:** The object returned by the `mapStateToProps` function is connected to the container. You can import `connect()` from `react-redux`.
+     1. **使用`mapStateToProps()`：** 它将 Store 中的状态变量映射到您指定的属性。
+     2. **将上述属性连接到容器：** `mapStateToProps`函数返回的对象连接到容器。你可以从`react-redux`导入`connect()`。
 
          ```jsx 
          import React from 'react'
@@ -3110,11 +3110,11 @@
          export default connect(mapStateToProps)(App)
          ```
 
-163. ### How to reset state in Redux?
+163. ### 如何在 Redux 中重置状态?
 
-     You need to write a *root reducer* in your application which delegate handling the action to the reducer generated by `combineReducers()`.
+     你需要在你的应用程序中编写一个*root reducer*，它将处理动作委托给`combineReducers()`生成的 reducer。
 
-     For example, let us take `rootReducer()` to return the initial state after `USER_LOGOUT` action. As we know, reducers are supposed to return the initial state when they are called with `undefined` as the first argument, no matter the action.
+     例如，让我们在`USER_LOGOUT`动作之后让`rootReducer()`返回初始状态。我们知道，无论 Action 怎么样，当使用`undefined`作为第一个参数调用它们时，reducers 应该返回初始状态。
 
      ```javascript
      const appReducer = combineReducers({
@@ -3130,7 +3130,7 @@
      }
      ```
 
-     In case of using `redux-persist`, you may also need to clean your storage. `redux-persist` keeps a copy of your state in a storage engine. First, you need to import the appropriate storage engine and then, to parse the state before setting it to undefined and clean each storage state key.
+     如果使用`redux-persist`，您可能还需要清理存储空间。`redux-persist`在 storage 引擎中保存您的状态副本。首先，您需要导入适当的 storage 引擎，然后在将其设置为`undefined`之前解析状态并清理每个存储状态键。
 
      ```javascript
      const appReducer = combineReducers({
@@ -3150,13 +3150,13 @@
      }
      ```
 
-164. ### Whats the purpose of `at` symbol in the Redux connect decorator?
+164. ### Redux 中连接装饰器的`at`符号的目的是什么?
 
-     The **@** symbol is in fact a JavaScript expression used to signify decorators. *Decorators* make it possible to annotate and modify classes and properties at design time.
+     **@**符号实际上是用于表示装饰器的 JavaScript 表达式。*装饰器*可以在设计时注释和修改类和属性。
 
-     Let's take an example setting up Redux without and with a decorator.
+     让我们举个例子，在没有装饰器的情况下设置 Redux 。
 
-     * **Without decorator:**
+     * **未使用装饰器:**
 
          ```javascript
          import React from 'react'
@@ -3179,7 +3179,7 @@
          export default connect(mapStateToProps, mapDispatchToProps)(MyApp)
          ```
 
-     * **With decorator:**
+     * **使用装饰器:**
 
          ```javascript
          import React from 'react'
@@ -3201,21 +3201,21 @@
          }
          ```
 
-     The above examples are almost similar except the usage of decorator. The decorator syntax isn't built into any JavaScript runtimes yet, and is still experimental and subject to change. You can use babel for the decorators support.
+     除了装饰器的使用外，上面的例子几乎相似。装饰器语法尚未构建到任何 JavaScript 运行时中，并且仍然是实验性的并且可能会发生变化。您可以使用`babel`来获得装饰器支持。
 
-165. ### What is the difference between React context and React Redux?
+165. ### React 上下文和 React Redux 之间有什么区别?
 
-     You can use **Context** in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas **Redux** is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.
+     您可以直接在应用程序中使用**Context**，这对于将数据传递给深度嵌套的组件非常有用。而**Redux**功能更强大，它还提供了 Context API 无法提供的大量功能。此外，React Redux 在内部使用上下文，但它不会在公共 API 中有所体现。
 
-166. ### Why are Redux state functions called reducers?
+166. ### 为什么 Redux 状态函数称为 reducers ?
 
-     Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could *reduce* a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
+     Reducers 总是返回状态的累积（基于所有先前状态和当前 Action）。因此，它们充当了状态的 Reducer。每次调用 Redux reducer 时，状态和 Action 都将作为参数传递。然后基于该 Action 减少（或累积）该状态，然后返回下一状态。您可以*reduce*一组操作和一个初始状态（Store），在该状态下执行这些操作以获得最终的最终状态。
 
-167. ### How to make AJAX request in Redux?
+167. ### 如何在 Redux 中发起 AJAX 请求?
 
-     You can use `redux-thunk` middleware which allows you to define async actions.
+     您可以使用`redux-thunk`中间件，它允许您定义异步操作。
 
-     Let's take an example of fetching specific account as an AJAX call using *fetch API*:
+     让我们举个例子，使用*fetch API*将特定帐户作为 AJAX 调用获取：
 
      ```javascript
      export function fetchAccount(id) {
@@ -3237,15 +3237,15 @@
      }
      ```
 
-168. ### Should I keep all component's state in Redux store?
+168. ### 我应该在Redux Store 中保留所有组件的状态吗?
 
-      Keep your data in the Redux store, and the UI related state internally in the component.
+      将数据保存在 Redux 存储中，并在组件内部保持 UI 相关状态。
 
-169. ### What is the proper way to access Redux store?
+169. ### 访问 Redux Store 的正确方法是什么?
 
-     The best way to access your store in a component is to use the `connect()` function, that creates a new component that wraps around your existing one. This pattern is called *Higher-Order Components*, and is generally the preferred way of extending a component's functionality in React. This allows you to map state and action creators to your component, and have them passed in automatically as your store updates.
+     在组件中访问 Store 的最佳方法是使用`connect()`函数，该函数创建一个包裹现有组件的新组件。此模式称为*高阶组件*，通常是在 React 中扩展组件功能的首选方式。这允许您将状态和 Action 创建者映射到组件，并在 Store 更新时自动传递它们。
 
-     Let's take an example of `<FilterLink>` component using connect:
+     我们来看一个使用 connect 的`<FilterLink>`组件的例子：
 
      ```javascript
      import { connect } from 'react-redux'
@@ -3268,7 +3268,7 @@
      export default FilterLink
      ```
 
-     Due to it having quite a few performance optimizations and generally being less likely to cause bugs, the Redux developers almost always recommend using `connect()` over accessing the store directly (using context API).
+     由于它具有相当多的性能优化并且通常不太可能导致错误，因此 Redux 开发人员几乎总是建议使用`connect()`直接访问 Store（使用上下文API）。
 
      ```javascript
      class MyComponent {
@@ -3278,11 +3278,11 @@
      }
      ```
 
-170. ### What is the difference between component and container in React Redux?
+170. ### React Redux 中展示组件和容器组件之间的区别是什么?
 
-     **Component** is a class or function component that describes the presentational part of your application.
+     **展示组件**是一个类或功能组件，用于描述应用程序的展示部分。
 
-     **Container** is an informal term for a component that is connected to a Redux store. Containers *subscribe* to Redux state updates and *dispatch* actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.
+     **容器组件**是连接到 Redux Store的组件的非正式术语。容器组件*订阅* Redux 状态更新和*dispatch*操作，它们通常不呈现 DOM 元素; 他们将渲染委托给展示性的子组件。
 
 171. ### What is the purpose of the constants in Redux?
 
