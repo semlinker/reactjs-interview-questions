@@ -169,25 +169,25 @@
 |150 | [Jest 对比 Jasmine 有什么优势?](#jest-对比-jasmine-有什么优势) |
 |151 | [举一个简单的 Jest 测试用例](#举一个简单的-jest-测试用例) |
 | | [React Redux](#react-redux) |
-|152 | [What is flux?](#what-is-flux) |
-|153 | [What is Redux?](#what-is-redux) |
-|154 | [What are the core principles of Redux?](#what-are-the-core-principles-of-redux) |
-|155 | [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux) |
-|156 | [What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
-|157 | [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer) |
-|158 | [How to access Redux store outside a component?](#how-to-access-redux-store-outside-a-component) |
-|159 | [What are the drawbacks of MVW pattern?](#what-are-the-drawbacks-of-mvw-pattern) |
-|160 | [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
-|161 | [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
-|162 | [How to use `connect()` from React Redux?](#how-to-use-connect-from-react-redux) |
-|163 | [How to reset state in Redux?](#how-to-reset-state-in-redux) |
-|164 | [Whats the purpose of `at` symbol in the Redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
-|165 | [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
-|166 | [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |
-|167 | [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux) |
-|168 | [Should I keep all component's state in Redux store?](#should-i-keep-all-component's-state-in-redux-store) |
-|169 | [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
-|170 | [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
+|152 | [什么是 flux?](#什么是-flux) |
+|153 | [什么是 Redux?](#什么是-redux) |
+|154 | [Redux 的核心原则是什么？?](#redux-的核心原则是什么) |
+|155 | [与 Flux 相比，Redux 的缺点是什么?](#与-flux-相比redux-的缺点是什么) |
+|156 | [`mapStateToProps()`和`mapDispatchToProps()`之间有什么区别?](#mapstatetoprops和mapdispatchtoprops之间有什么区别) |
+|157 | [我可以在 reducer 中触发一个 Action 吗?](#我可以在-reducer-中触发一个-action-吗) |
+|158 | [如何在组件外部访问 Redux 存储的对象?](#如何在组件外部访问-redux-存储的对象) |
+|159 | [MVW 模式的缺点是什么?](#mvw-模式的缺点是什么) |
+|160 | [Redux 和 RxJS 之间是否有任何相似之处?](#redux-和-rxjs-之间是否有任何相似之处) |
+|161 | [如何在加载时触发 Action?](#如何在加载时触发-action) |
+|162 | [在 React 中如何使用 Redux 的`connect()`?](#在-react-中如何使用-redux-的connect) |
+|163 | [如何在 Redux 中重置状态?](#如何在-redux-中重置状态) |
+|164 | [Redux 中连接装饰器的`at`符号的目的是什么?](#redux-中连接装饰器的at符号的目的是什么) |
+|165 | [React 上下文和 React Redux 之间有什么区别?](#react-上下文和-react-redux-之间有什么区别) |
+|166 | [为什么 Redux 状态函数称为 reducers ?](#为什么-redux-状态函数称为-reducers-) |
+|167 | [如何在 Redux 中发起 AJAX 请求?](#如何在-redux-中发起-ajax-请求) |
+|168 | [我应该在Redux Store 中保留所有组件的状态吗?](#我应该在redux-store-中保留所有组件的状态吗) |
+|169 | [访问 Redux Store 的正确方法是什么?](#访问-redux-store-的正确方法是什么) |
+|170 | [React Redux 中展示组件和容器组件之间的区别是什么?](#react-redux-中展示组件和容器组件之间的区别是什么) |
 |171 | [What is the purpose of the constants in Redux?](#what-is-the-purpose-of-the-constants-in-redux) |
 |172 | [What are the different ways to write `mapDispatchToProps()`?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
 |173 | [What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops) |
