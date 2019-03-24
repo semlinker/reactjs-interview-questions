@@ -143,51 +143,51 @@
 |127 | [如何发起 AJAX 调用以及应该在哪些组件生命周期方法中进行 AJAX 调用?](#如何发起-ajax-调用以及应该在哪些组件生命周期方法中进行-ajax-调用) |
 |128 | [什么是渲染属性?](#什么是渲染属性) |
 | | [React Router](#react-router) |
-|129 | [What is React Router?](#what-is-react-router) |
-|130 | [How React Router is different from history library?](#how-react-router-is-different-from-history-library) |
-|131 | [What are the `<Router>` components of React Router v4?](#what-are-the-router-components-of-react-router-v4) |
-|132 | [What is the purpose of `push()` and `replace()` methods of `history`?](#what-is-the-purpose-of-push-and-replace-methods-of-history) |
-|133 | [How do you programmatically navigate using React Router v4?](#how-do-you-programmatically-navigate-using-react-router-v4) |
-|134 | [How to get query parameters in React Router v4?](#how-to-get-query-parameters-in-react-router-v4) |
-|135 | [Why you get "Router may have only one child element" warning?](#why-you-get-"router-may-have-only-one-child-element"-warning) |
-|136 | [How to pass params to `history.push` method in React Router v4?](#how-to-pass-params-to-history.push-method-in-react-router-v4) |
-|137 | [How to implement *default* or *NotFound* page?](#how-to-implement-default-or-notfound-page) |
-|138 | [How to get history on React Router v4?](#how-to-get-history-on-react-router-v4) |
-|139 | [How to perform automatic redirect after login?](#how-to-perform-automatic-redirect-after-login) |
+|129 | [什么是 React Router?](#什么是-react-router) |
+|130 | [React Router 与 history 库的区别?](#react-router-与-history-库的区别) |
+|131 | [在 React Router v4 中的`<Router>`组件是什么?](#在-react-router-v4-中的router组件是什么) |
+|132 | [`history`中的`push()`和`replace()`方法的目的是什么?](#history中的push和replace方法的目的是什么) |
+|133 | [如何使用在 React Router v4 中以编程的方式进行导航?](#如何使用在-react-router-v4-中以编程的方式进行导航) |
+|134 | [如何在React Router v4中获取查询字符串参数?](#如何在react-router-v4中获取查询字符串参数) |
+|135 | [为什么你会得到"Router may have only one child element"警告?](#为什么你会得到"router-may-have-only-one-child-element"警告) |
+|136 | [如何在 React Router v4 中将 params 传递给`history.push`方法?](#如何在-react-router-v4-中将-params-传递给history.push方法) |
+|137 | [如何实现*默认*或*404*页面?](#如何实现默认或404页面) |
+|138 | [如何在 React Router v4 上获取历史对象?](#如何在-react-router-v4-上获取历史对象) |
+|139 | [登录后如何执行自动重定向?](#登录后如何执行自动重定向) |
 | | [React Internationalization](#react-internationalization) |
-|140 | [What is React Intl?](#what-is-react-intl) |
-|141 | [What are the main features of React Intl?](#what-are-the-main-features-of-react-intl) |
-|142 | [What are the two ways of formatting in React Intl?](#what-are-the-two-ways-of-formatting-in-react-intl) |
-|143 | [How to use `<FormattedMessage>` as placeholder using React Intl?](#how-to-use-formattedmessage-as-placeholder-using-react-intl) |
-|144 | [How to access current locale with React Intl?](#how-to-access-current-locale-with-react-intl) |
-|145 | [How to format date using React Intl?](#how-to-format-date-using-react-intl) |
+|140 | [什么是 React Intl?](#什么是-react-intl) |
+|141 | [React Intl 的主要特性是什么?](#react-intl-的主要特性是什么) |
+|142 | [在 React Intl 中有哪两种格式化方式?](#在-react-intl-中有哪两种格式化方式) |
+|143 | [在 React Intl 中如何使用`<FormattedMessage>`作为占位符使用?](#在-react-intl-中如何使用formattedmessage作为占位符使用) |
+|144 | [如何使用 React Intl 访问当前语言环境?](#如何使用-react-intl-访问当前语言环境) |
+|145 | [如何使用 React Intl 格式化日期?](#如何使用-react-intl-格式化日期) |
 | | [React Testing](#react-testing) |
-|146 | [What is Shallow Renderer in React testing?](#what-is-shallow-renderer-in-react-testing) |
-|147 | [What is `TestRenderer` package in React?](#what-is-testrenderer-package-in-react) |
-|148 | [What is the purpose of ReactTestUtils package?](#what-is-the-purpose-of-reacttestutils-package) |
-|149 | [What is Jest?](#what-is-jest) |
-|150 | [What are the advantages of Jest over Jasmine?](#what-are-the-advantages-of-jest-over-jasmine) |
-|151 | [Give a simple example of Jest test case](#give-a-simple-example-of-jest-test-case) |
+|146 | [在 React 测试中什么是浅层渲染（Shallow Renderer）?](#在-react-测试中什么是浅层渲染shallow-renderer) |
+|147 | [在 React 中`TestRenderer`包是什么?](#在-react-中testrenderer包是什么) |
+|148 | [ReactTestUtils 包的目的是什么?](#reacttestutils-包的目的是什么) |
+|149 | [什么是 Jest?](#什么是-jest) |
+|150 | [Jest 对比 Jasmine 有什么优势?](#jest-对比-jasmine-有什么优势) |
+|151 | [举一个简单的 Jest 测试用例](#举一个简单的-jest-测试用例) |
 | | [React Redux](#react-redux) |
-|152 | [What is flux?](#what-is-flux) |
-|153 | [What is Redux?](#what-is-redux) |
-|154 | [What are the core principles of Redux?](#what-are-the-core-principles-of-redux) |
-|155 | [What are the downsides of Redux compared to Flux?](#what-are-the-downsides-of-redux-compared-to-flux) |
-|156 | [What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?](#what-is-the-difference-between-mapstatetoprops-and-mapdispatchtoprops) |
-|157 | [Can I dispatch an action in reducer?](#can-i-dispatch-an-action-in-reducer) |
-|158 | [How to access Redux store outside a component?](#how-to-access-redux-store-outside-a-component) |
-|159 | [What are the drawbacks of MVW pattern?](#what-are-the-drawbacks-of-mvw-pattern) |
-|160 | [Are there any similarities between Redux and RxJS?](#are-there-any-similarities-between-redux-and-rxjs) |
-|161 | [How to dispatch an action on load?](#how-to-dispatch-an-action-on-load) |
-|162 | [How to use `connect()` from React Redux?](#how-to-use-connect-from-react-redux) |
-|163 | [How to reset state in Redux?](#how-to-reset-state-in-redux) |
-|164 | [Whats the purpose of `at` symbol in the Redux connect decorator?](#whats-the-purpose-of-at-symbol-in-the-redux-connect-decorator) |
-|165 | [What is the difference between React context and React Redux?](#what-is-the-difference-between-react-context-and-react-redux) |
-|166 | [Why are Redux state functions called reducers?](#why-are-redux-state-functions-called-reducers) |
-|167 | [How to make AJAX request in Redux?](#how-to-make-ajax-request-in-redux) |
-|168 | [Should I keep all component's state in Redux store?](#should-i-keep-all-component's-state-in-redux-store) |
-|169 | [What is the proper way to access Redux store?](#what-is-the-proper-way-to-access-redux-store) |
-|170 | [What is the difference between component and container in React Redux?](#what-is-the-difference-between-component-and-container-in-react-redux) |
+|152 | [什么是 flux?](#什么是-flux) |
+|153 | [什么是 Redux?](#什么是-redux) |
+|154 | [Redux 的核心原则是什么？?](#redux-的核心原则是什么) |
+|155 | [与 Flux 相比，Redux 的缺点是什么?](#与-flux-相比redux-的缺点是什么) |
+|156 | [`mapStateToProps()`和`mapDispatchToProps()`之间有什么区别?](#mapstatetoprops和mapdispatchtoprops之间有什么区别) |
+|157 | [我可以在 reducer 中触发一个 Action 吗?](#我可以在-reducer-中触发一个-action-吗) |
+|158 | [如何在组件外部访问 Redux 存储的对象?](#如何在组件外部访问-redux-存储的对象) |
+|159 | [MVW 模式的缺点是什么?](#mvw-模式的缺点是什么) |
+|160 | [Redux 和 RxJS 之间是否有任何相似之处?](#redux-和-rxjs-之间是否有任何相似之处) |
+|161 | [如何在加载时触发 Action?](#如何在加载时触发-action) |
+|162 | [在 React 中如何使用 Redux 的`connect()`?](#在-react-中如何使用-redux-的connect) |
+|163 | [如何在 Redux 中重置状态?](#如何在-redux-中重置状态) |
+|164 | [Redux 中连接装饰器的`at`符号的目的是什么?](#redux-中连接装饰器的at符号的目的是什么) |
+|165 | [React 上下文和 React Redux 之间有什么区别?](#react-上下文和-react-redux-之间有什么区别) |
+|166 | [为什么 Redux 状态函数称为 reducers ?](#为什么-redux-状态函数称为-reducers-) |
+|167 | [如何在 Redux 中发起 AJAX 请求?](#如何在-redux-中发起-ajax-请求) |
+|168 | [我应该在Redux Store 中保留所有组件的状态吗?](#我应该在redux-store-中保留所有组件的状态吗) |
+|169 | [访问 Redux Store 的正确方法是什么?](#访问-redux-store-的正确方法是什么) |
+|170 | [React Redux 中展示组件和容器组件之间的区别是什么?](#react-redux-中展示组件和容器组件之间的区别是什么) |
 |171 | [What is the purpose of the constants in Redux?](#what-is-the-purpose-of-the-constants-in-redux) |
 |172 | [What are the different ways to write `mapDispatchToProps()`?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
 |173 | [What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops) |
@@ -2552,40 +2552,40 @@
 
 ## React Router
 
-129. ### What is React Router?
+129. ### 什么是 React Router?
 
-     React Router is a powerful routing library built on top of React that helps you add new screens and flows to your application incredibly quickly, all while keeping the URL in sync with what's being displayed on the page.
+     React Router 是一个基于 React 的强大的路由库，可以帮助您快速地向应用添加新的屏幕和流，同时保持 URL 与页面上显示的内容同步。
 
-130. ### How React Router is different from history library?
+130. ### React Router 与 history 库的区别?
 
-     React Router is a wrapper around the `history` library which handles interaction with the browser's `window.history` with its browser and hash histories. It also provides memory history which is useful for environments that don't have global history, such as mobile app development (React Native) and unit testing with Node.
+     React Router 是`history`库的包装器，它处理浏览器的`window.history`与浏览器和哈希历史的交互。它还提供了内存历史记录，这对于没有全局历史记录的环境非常有用，例如移动应用程序开发（React Native）和使用 Node 进行单元测试。
 
-131. ### What are the `<Router>` components of React Router v4?
+131. ### 在 React Router v4 中的`<Router>`组件是什么?
 
-     React Router v4 provides below 3 `<Router>` components:
+     React Router v4 提供了以下三种类型的 `<Router>` 组件:
 
      1. `<BrowserRouter>`
      2. `<HashRouter>`
      3. `<MemoryRouter>`
 
-     The above components will create *browser*, *hash*, and *memory* history instances. React Router v4 makes the properties and methods of the `history` instance associated with your router available through the context in the `router` object.
+     以上组件将创建*browser*，*hash*和*memory*的 history 实例。React Router v4 通过`router`对象中的上下文使与您的路由器关联的`history`实例的属性和方法可用。
 
-132. ### What is the purpose of `push()` and `replace()` methods of `history`?
+132. ### `history`中的`push()`和`replace()`方法的目的是什么?
 
-     A history instance has two methods for navigation purpose.
+     一个 history 实例有两种导航方法：
 
      1. `push()`
      2. `replace()`
 
-     If you think of the history as an array of visited locations, `push()` will add a new location to the array and `replace()` will replace the current location in the array with the new one.
+     如果您将 history 视为一个访问位置的数组，则`push()`将向数组添加一个新位置，`replace()`将用新的位置替换数组中的当前位置。
 
-133. ### How do you programmatically navigate using React Router v4?
+133. ### 如何使用在 React Router v4 中以编程的方式进行导航?
 
-     There are three different ways to achieve programmatic routing/navigation within components.
+     在组件中实现操作路由/导航有三种不同的方法。
 
-     1. **Using the `withRouter()` higher-order function:**
+     1. **使用`withRouter()`高阶函数：**
 
-         The `withRouter()` higher-order function will inject the history object as a prop of the component. This object provides `push()` and `replace()` methods to avoid the usage of context.
+         `withRouter()`高阶函数将注入 history 对象作为组件的 prop。该对象提供了`push()`和`replace()`方法，以避免使用上下文。
 
          ```jsx 
          import { withRouter } from 'react-router-dom' // this also works with 'react-router-native'
@@ -2600,9 +2600,9 @@
          ))
          ```
 
-     2. **Using `<Route>` component and render props pattern:**
+     2. **使用`<Route>`组件和渲染属性模式：**
 
-         The `<Route>` component passes the same props as `withRouter()`, so you will be able to access the history methods through the history prop.
+         `<Route>`组件传递与`withRouter()`相同的属性，因此您将能够通过 history 属性访问到操作历史记录的方法。
 
          ```jsx 
          import { Route } from 'react-router-dom'
@@ -2619,9 +2619,9 @@
          )
          ```
 
-     3. **Using context:**
+     3. **使用上下文:**
 
-         This option is not recommended and treated as unstable API.
+         建议不要使用此选项，并将其视为不稳定的API。
 
          ```jsx 
          const Button = (props, context) => (
@@ -2642,35 +2642,37 @@
          }
          ```
 
-134. ### How to get query parameters in React Router v4?
+134. ### 如何在React Router v4中获取查询字符串参数?
 
-     The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
+     在 React Router v4 中并没有内置解析查询字符串的能力，因为多年来一直有用户希望支持不同的实现。因此，使用者可以选择他们喜欢的实现方式。建议的方法是使用 [query-string](https://www.npmjs.com/package/query-string) 库。
 
      ```javascript
      const queryString = require('query-string');
      const parsed = queryString.parse(props.location.search);
      ```
 
-     You can also use `URLSearchParams` if you want something native:
+     如果你想要使用原生 API 的话，你也可以使用 `URLSearchParams` ：
 
      ```javascript
      const params = new URLSearchParams(props.location.search)
      const foo = params.get('name')
      ```
 
-     You should use a *polyfill* for IE11.
+     如果使用 `URLSearchParams` 的话您应该为 IE11 使用*polyfill*。
 
-135. ### Why you get "Router may have only one child element" warning?
+135. ### 为什么你会得到"Router may have only one child element"警告?
 
-     You have to wrap your Route's in a `<Switch>` block because `<Switch>` is unique in that it renders a route exclusively.
+     此警告的意思是`Router`组件下仅能包含一个子节点。
 
-     At first you need to add `Switch` to your imports:
+     你必须将你的 Route 包装在`<Switch>`块中，因为`<Switch>`是唯一的，它只提供一个路由。
+
+     首先，您需要在导入中添加`Switch`：
 
      ```javascript
      import { Switch, Router, Route } from 'react-router'
      ```
 
-     Then define the routes within `<Switch>` block:
+     然后在`<Switch>`块中定义路由：
 
      ```jsx 
      <Router>
@@ -2681,9 +2683,9 @@
      </Router>
      ```
 
-136. ### How to pass params to `history.push` method in React Router v4?
+136. ### 如何在 React Router v4 中将 params 传递给`history.push`方法?
 
-     While navigating you can pass props to the `history` object:
+     在导航时，您可以将 props 传递给`history`对象：
 
      ```javascript
      this.props.history.push({
@@ -2693,11 +2695,11 @@
      })
      ```
 
-     The `search` property is used to pass query params in `push()` method.
+     `search`属性用于在`push()`方法中传递查询参数。
 
-137. ### How to implement *default* or *NotFound* page?
+137. ### 如何实现*默认*或*404*页面?
 
-     A `<Switch>` renders the first child `<Route>` that matches. A `<Route>` with no path always matches. So you just need to simply drop path attribute as below
+     `<Switch>`呈现匹配的第一个孩子`<Route>`。 没有路径的`<Route>`总是匹配。所以你只需要简单地删除 path 属性，如下所示：
 
      ```jsx 
      <Switch>
@@ -2707,11 +2709,11 @@
      </Switch>
      ```
 
-138. ### How to get history on React Router v4?
+138. ### 如何在 React Router v4 上获取历史对象?
 
-     1. Create a module that exports a `history` object and import this module across the project.
+     1. 创建一个导出`history`对象的模块，并在整个项目中导入该模块。
 
-         For example, create `history.js` file:
+         例如， 创建`history.js`文件:
 
          ```javascript
          import { createBrowserHistory } from 'history'
@@ -2721,7 +2723,7 @@
          })
          ```
 
-     2. You should use the `<Router>` component instead of built-in routers. Imported the above `history.js` inside `index.js` file:
+     2. 您应该使用`<Router>`组件而不是内置路由器。在`index.js`文件中导入上面的`history.js`：
 
          ```jsx 
          import { Router } from 'react-router-dom'
@@ -2735,7 +2737,7 @@
          ), holder)
          ```
 
-     3. You can also use push method of `history` object similar to built-in history object:
+     3. 您还可以使用类似于内置历史对象的`history`对象的push方法：
 
          ```javascript
          // some-other-file.js
@@ -2744,9 +2746,9 @@
          history.push('/go-here')
          ```
 
-139. ### How to perform automatic redirect after login?
+139. ### 登录后如何执行自动重定向?
 
-     The `react-router` package provides `<Redirect>` component in React Router. Rendering a `<Redirect>` will navigate to a new location. Like server-side redirects, the new location will override the current location in the history stack.
+     `react-router`包在 React Router 中提供了`<Redirect>`组件。渲染`<Redirect>`将导航到新位置。与服务器端重定向一样，新位置将覆盖历史堆栈中的当前位置。
 
      ```javascript
      import React, { Component } from 'react'
@@ -2765,23 +2767,23 @@
 
 ## React Internationalization
 
-140. ### What is React Intl?
+140. ### 什么是 React Intl?
 
-     The *React Intl* library makes internalization in React straightforward, with off-the-shelf components and an API that can handle everything from formatting strings, dates, and numbers, to pluralization. React Intl is part of *FormatJS* which provides bindings to React via its components and API.
+     [*React Intl*](https://github.com/yahoo/react-intl)库使 React 中的内部化变得简单，使用现成的组件和 API ，可以处理从格式化字符串，日期和数字到复数的所有功能。React Intl 是[*FormatJS*](http://formatjs.io/)的一部分，它通过其组件和 API 提供与 React 的绑定。
 
-141. ### What are the main features of React Intl?
+141. ### React Intl 的主要特性是什么?
 
-     1. Display numbers with separators.
-     2. Display dates and times correctly.
-     3. Display dates relative to "now".
-     4. Pluralize labels in strings.
-     5. Support for 150+ languages.
-     6. Runs in the browser and Node.
-     7. Built on standards.
+     1. 用分隔符显示数字
+     2. 正确显示日期和时间
+     3. 显示相对于“现在”的日期
+     4. 将标签转换为字符串
+     5. 支持 150 多种语言
+     6. 支持在浏览器和 Node 中运行
+     7. 建立在标准之上
 
-142. ### What are the two ways of formatting in React Intl?
+142. ### 在 React Intl 中有哪两种格式化方式?
 
-     The library provides two ways to format strings, numbers, and dates: react components or an API.
+     该库提供了两种格式化字符串，数字和日期的方法：React 组件或 API。
 
      ```jsx
      <FormattedMessage
@@ -2801,9 +2803,9 @@
      formatMessage(messages.accountMessage)
      ```
 
-143. ### How to use `<FormattedMessage>` as placeholder using React Intl?
+143. ### 在 React Intl 中如何使用`<FormattedMessage>`作为占位符使用?
 
-     The `<Formatted... />` components from `react-intl` return elements, not plain text, so they can't be used for placeholders, alt text, etc. In that case, you should use lower level API `formatMessage()`. You can inject the `intl` object into your component using `injectIntl()` higher-order component and then format the message using `formatMessage()` available on that object.
+     `react-intl`的`<Formatted ... />`组件返回元素，而不是纯文本，因此它们不能用于占位符，替代文本等。在这种情况下，您应该使用较低级别的 API `formatMessage()`。您可以使用`injectIntl()`高阶函数将`intl`对象注入到组件中，然后使用该对象上使用`formatMessage()`格式化消息。
 
      ```jsx
      import React from 'react'
@@ -2821,9 +2823,9 @@
      export default injectIntl(MyComponent)
      ```
 
-144. ### How to access current locale with React Intl?
+144. ### 如何使用 React Intl 访问当前语言环境?
 
-     You can get the current locale in any component of your application using `injectIntl()`:
+     您可以在应用的任何组件中使用`injectIntl()`获取的当前语言环境：
 
      ```jsx 
      import { injectIntl, intlShape } from 'react-intl'
@@ -2839,9 +2841,9 @@
      export default injectIntl(MyComponent)
      ```
 
-145. ### How to format date using React Intl?
+145. ### 如何使用 React Intl 格式化日期?
 
-     The `injectIntl()` higher-order component will give you access to the `formatDate()` method via the props in your component. The method is used internally by instances of `FormattedDate` and it returns the string representation of the formatted date.
+     `injectIntl()`高阶组件将允许您通过组件中的 props 访问`formatDate()`方法。 该方法由`FormattedDate`实例在内部使用，它返回格式化日期的字符串表示。
 
      ```jsx 
      import { injectIntl, intlShape } from 'react-intl'
@@ -2865,11 +2867,11 @@
 
 ## React Testing
 
-146. ### What is Shallow Renderer in React testing?
+146. ### 在 React 测试中什么是浅层渲染（Shallow Renderer）?
 
-     *Shallow rendering* is useful for writing unit test cases in React. It lets you render a component *one level deep* and assert facts about what its render method returns, without worrying about the behavior of child components, which are not instantiated or rendered.
+     *浅层渲染*对于在 React 中编写单元测试用例很有用。它允许您渲染一个*一级深的组件*并断言其渲染方法返回的内容，而不必担心子组件未实例化或渲染。
 
-     For example, if you have the following component:
+     例如，如果您有以下组件：
 
      ```javascript
      function MyComponent() {
@@ -2882,7 +2884,7 @@
      }
      ```
 
-     Then you can assert as follows:
+     然后你可以如下断言：
 
      ```jsx 
      import ShallowRenderer from 'react-test-renderer/shallow'
@@ -2900,9 +2902,9 @@
      ])
      ```
 
-147. ### What is `TestRenderer` package in React?
+147. ### 在 React 中`TestRenderer`包是什么?
 
-     This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or `jsdom`.
+     此包提供了一个渲染器，可用于将组件渲染为纯 JavaScript 对象，而不依赖于 DOM 或原生移动环境。该包可以轻松获取由 ReactDOM 或 React Native 平台所渲染的视图层次结构（类似于DOM树）的快照，而无需使用浏览器或`jsdom`。
 
      ```jsx 
      import TestRenderer from 'react-test-renderer'
@@ -2921,27 +2923,27 @@
      // }
      ```
 
-148. ### What is the purpose of ReactTestUtils package?
+148. ### ReactTestUtils 包的目的是什么?
 
-     *ReactTestUtils* are provided in the `with-addons` package and allow you to perform actions against a simulated DOM for the purpose of unit testing.
+     *ReactTestUtils*由`with-addons`包提供，允许您对模拟 DOM 执行操作以进行单元测试。
 
-149. ### What is Jest?
+149. ### 什么是 Jest?
 
-     *Jest* is a JavaScript unit testing framework created by Facebook based on Jasmine and provides automated mock creation and a `jsdom` environment. It's often used for testing components.
+     *Jest*是一个由 Facebook 基于 Jasmine 创建的 JavaScript 单元测试框架，提供自动模拟创建和`jsdom`环境。它通常用于测试组件。
 
-150. ### What are the advantages of Jest over Jasmine?
+150. ### Jest 对比 Jasmine 有什么优势?
 
-     There are couple of advantages compared to Jasmine:
+     与 Jasmine 相比，有几个优点： 
 
-     - Automatically finds tests to execute in your source code.
-     - Automatically mocks dependencies when running your tests.
-     - Allows you to test asynchronous code synchronously.
-     - Runs your tests with a fake DOM implementation (via `jsdom`) so that your tests can be run on the command line.
-     - Runs tests in parallel processes so that they finish sooner.
+     - 自动查找在源代码中要执行测试。
+     - 在运行测试时自动模拟依赖项。
+     - 允许您同步测试异步代码。
+     - 使用假的 DOM 实现（通过`jsdom`）运行测试，以便可以在命令行上运行测试。
+     - 在并行流程中运行测试，以便更快完成。
 
-151. ### Give a simple example of Jest test case
+151. ### 举一个简单的 Jest 测试用例
 
-     Let's write a test for a function that adds two numbers in `sum.js` file:
+     让我们为`sum.js`文件中添加两个数字的函数编写一个测试：
 
      ```javascript
      const sum = (a, b) => a + b
@@ -2949,7 +2951,7 @@
      export default sum
      ```
 
-     Create a file named `sum.test.js` which contains actual test:
+     创建一个名为`sum.test.js`的文件，其中包含实际测试：
 
      ```javascript
      import sum from './sum'
@@ -2959,7 +2961,7 @@
      })
      ```
 
-     And then add the following section to your `package.json`:
+     然后将以下部分添加到`package.json`：
 
      ```json
      {
@@ -2969,7 +2971,7 @@
      }
      ```
 
-     Finally, run `yarn test` or `npm test` and Jest will print a result:
+     最后，运行`yarn test`或`npm test`，Jest 将打印结果：
 
      ```console
      $ yarn test
@@ -2979,37 +2981,37 @@
 
 ## React Redux
 
-152. ### What is flux?
+152. ### 什么是 flux?
 
-     *Flux* is an *application design paradigm* used as a replacement for the more traditional MVC pattern. It is not a framework or a library but a new kind of architecture that complements React and the concept of Unidirectional Data Flow. Facebook uses this pattern internally when working with React.
+     *Flux*是*应用程序设计范例*，用于替代更传统的 MVC 模式。它不是一个框架或库，而是一种新的体系结构，它补充了 React 和单向数据流的概念。在使用 React 时，Facebook 会在内部使用此模式。
 
-     The workflow between dispatcher, stores and views components with distinct inputs and outputs as follows:
+     在 dispatcher，stores 和视图组件具有如下不同的输入和输出：
 
      ![flux](images/flux.png)
 
-153. ### What is Redux?
+153. ### 什么是 Redux?
 
-     *Redux* is a predictable state container for JavaScript apps based on the *Flux design pattern*. Redux can be used together with React, or with any other view library. It is tiny (about 2kB) and has no dependencies.
+     *Redux*是基于*Flux设计模式*的 JavaScript 应用程序的可预测状态容器。Redux 可以与 React 一起使用，也可以与任何其他视图库一起使用。它很小（约2kB）并且没有依赖性。
 
-154. ### What are the core principles of Redux?
+154. ### Redux 的核心原则是什么？?
 
-     Redux follows three fundamental principles:
+     Redux 遵循三个基本原则：
 
-     1. **Single source of truth:** The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
-     2. **State is read-only:** The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
-     3. **Changes are made with pure functions:** To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
+     1. **单一数据来源：** 整个应用程序的状态存储在单个对象树中。单状态树可以更容易地跟踪随时间的变化并调试或检查应用程序。
+     2. **状态是只读的：** 改变状态的唯一方法是发出一个动作，一个描述发生的事情的对象。这可以确保视图和网络请求都不会直接写入状态。
+     3. **使用纯函数进行更改：** 要指定状态树如何通过操作进行转换，您可以编写reducers。Reducers 只是纯函数，它将先前的状态和操作作为参数，并返回下一个状态。
 
-155. ### What are the downsides of Redux compared to Flux?
+155. ### 与 Flux 相比，Redux 的缺点是什么?
 
-     Instead of saying downsides we can say that there are few compromises of using Redux over Flux. Those are as follows:
+     我们应该说使用 Redux 而不是 Flux 几乎没有任何缺点。这些如下：
 
-     1. **You will need to learn to avoid mutations:** Flux is un-opinionated about mutating data, but Redux doesn't like mutations and many packages complementary to Redux assume you never mutate the state. You can enforce this with dev-only packages like `redux-immutable-state-invariant`, Immutable.js, or instructing your team to write non-mutating code.
-     2. **You're going to have to carefully pick your packages:** While Flux explicitly doesn't try to solve problems such as undo/redo, persistence, or forms, Redux has extension points such as middleware and store enhancers, and it has spawned a rich ecosystem.
-     3. **There is no nice Flow integration yet:** Flux currently lets you do very impressive static type checks which Redux doesn't support yet.
+     1. **您将需要学会避免突变：** Flux 对变异数据毫不吝啬，但 Redux 不喜欢突变，许多与 Redux 互补的包假设您从不改变状态。您可以使用 dev-only 软件包强制执行此操作，例如`redux-immutable-state-invariant`，Immutable.js，或指示您的团队编写非变异代码。
+     2. **您将不得不仔细选择您的软件包：** 虽然 Flux 明确没有尝试解决诸如撤消/重做，持久性或表单之类的问题，但 Redux 有扩展点，例如中间件和存储增强器，以及它催生了丰富的生态系统。
+     3. **还没有很好的 Flow 集成：** Flux 目前可以让你做一些非常令人印象深刻的静态类型检查，Redux 还不支持。
 
-156. ### What is the difference between `mapStateToProps()` and `mapDispatchToProps()`?
+156. ### `mapStateToProps()`和`mapDispatchToProps()`之间有什么区别?
 
-     `mapStateToProps()` is a utility which helps your component get updated state (which is updated by some other components):
+     `mapStateToProps()`是一个实用方法，它可以帮助您的组件获得最新的状态（由其他一些组件更新）：
 
      ```javascript
      const mapStateToProps = (state) => {
@@ -3019,7 +3021,7 @@
      }
      ```
 
-     `mapDispatchToProps()` is a utility which will help your component to fire an action event (dispatching action which may cause change of application state):
+     `mapDispatchToProps()`是一个实用方法，它可以帮助你的组件触发一个动作事件（可能导致应用程序状态改变的调度动作）：
 
      ```javascript
      const mapDispatchToProps = (dispatch) => {
@@ -3031,13 +3033,13 @@
      }
      ```
 
-157. ### Can I dispatch an action in reducer?
+157. ### 我可以在 reducer 中触发一个 Action 吗?
 
-     Dispatching an action within a reducer is an **anti-pattern**. Your reducer should be *without side effects*, simply digesting the action payload and returning a new state object. Adding listeners and dispatching actions within the reducer can lead to chained actions and other side effects.
+     在 reducer 中触发 Action 是**反模式**。您的 reducer 应该*没有副作用*，只是接收 Action 并返回一个新的状态对象。在 reducer 中添加侦听器和调度操作可能会导致链接的 Action 和其他副作用。
 
-158. ### How to access Redux store outside a component?
+158. ### 如何在组件外部访问 Redux 存储的对象?
 
-     Yes. You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
+     是的，您只需要使用`createStore()`从它创建的模块中导出存储。此外，它不应污染全局窗口对象。
 
      ```javascript
      store = createStore(myReducer)
@@ -3045,22 +3047,22 @@
      export default store
      ```
 
-159. ### What are the drawbacks of MVW pattern?
+159. ### MVW 模式的缺点是什么?
 
-     1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
-     3. Due to circular dependencies, a complicated model was created around models and views.
-     3. Lot of data changes happens for collaborative applications(like Google Docs).
-     4. No way to do undo (travel back in time) easily without adding so much extra code.
+     1. DOM 操作非常昂贵，导致应用程序行为缓慢且效率低下。
+     3. 由于循环依赖性，围绕模型和视图创建了复杂的模型。
+     3. 协作型应用程序（如Google Docs）会发生大量数据更改。
+     4. 无需添加太多额外代码就无法轻松撤消（及时回退）。
 
-160. ### Are there any similarities between Redux and RxJS?
+160. ### Redux 和 RxJS 之间是否有任何相似之处?
 
-     These libraries are very different for very different purposes, but there are some vague similarities.
+     这些库的目的是不同的，但是存在一些模糊的相似之处。
 
-     Redux is a tool for managing state throughout the application. It is usually used as an architecture for UIs. Think of it as an alternative to (half of) Angular. RxJS is a reactive programming library. It is usually used as a tool to accomplish asynchronous tasks in JavaScript. Think of it as an alternative to Promises. Redux uses the Reactive paradigm because the Store is reactive. The Store observes actions from a distance, and changes itself. RxJS also uses the Reactive paradigm, but instead of being an architecture, it gives you basic building blocks, Observables, to accomplish this pattern.
+     Redux 是一个在整个应用程序中管理状态的工具。它通常用作 UI 的体系结构。可以将其视为（一半）Angular 的替代品。 RxJS 是一个反应式编程库。它通常用作在 JavaScript 中完成异步任务的工具。把它想象成 Promise 的替代品。 Redux 使用 Reactive 范例，因为Store是被动的。Store 检测到 Action，并自行改变。RxJS也使用 Reactive 范例，但它不是一个体系结构，它为您提供了基本构建块 Observables 来完成这种模式。
 
-161. ### How to dispatch an action on load?
+161. ### 如何在加载时触发 Action?
 
-     You can dispatch an action in `componentDidMount()` method and in `render()` method you can verify the data.
+     您可以在`componentDidMount()`方法中触发 Action，然后在`render()`方法中可以验证数据。
 
      ```javascript
      class App extends Component {
@@ -3084,12 +3086,12 @@
      export default connect(mapStateToProps, mapDispatchToProps)(App)
      ```
 
-162. ### How to use `connect()` from React Redux?
+162. ### 在 React 中如何使用 Redux 的`connect()`?
 
-     You need to follow two steps to use your store in your container:
+     您需要按照两个步骤在容器中使用您的 Store：
 
-     1. **Use `mapStateToProps()`:** It maps the state variables from your store to the props that you specify.
-     2. **Connect the above props to your container:** The object returned by the `mapStateToProps` function is connected to the container. You can import `connect()` from `react-redux`.
+     1. **使用`mapStateToProps()`：** 它将 Store 中的状态变量映射到您指定的属性。
+     2. **将上述属性连接到容器：** `mapStateToProps`函数返回的对象连接到容器。你可以从`react-redux`导入`connect()`。
 
          ```jsx 
          import React from 'react'
@@ -3108,11 +3110,11 @@
          export default connect(mapStateToProps)(App)
          ```
 
-163. ### How to reset state in Redux?
+163. ### 如何在 Redux 中重置状态?
 
-     You need to write a *root reducer* in your application which delegate handling the action to the reducer generated by `combineReducers()`.
+     你需要在你的应用程序中编写一个*root reducer*，它将处理动作委托给`combineReducers()`生成的 reducer。
 
-     For example, let us take `rootReducer()` to return the initial state after `USER_LOGOUT` action. As we know, reducers are supposed to return the initial state when they are called with `undefined` as the first argument, no matter the action.
+     例如，让我们在`USER_LOGOUT`动作之后让`rootReducer()`返回初始状态。我们知道，无论 Action 怎么样，当使用`undefined`作为第一个参数调用它们时，reducers 应该返回初始状态。
 
      ```javascript
      const appReducer = combineReducers({
@@ -3128,7 +3130,7 @@
      }
      ```
 
-     In case of using `redux-persist`, you may also need to clean your storage. `redux-persist` keeps a copy of your state in a storage engine. First, you need to import the appropriate storage engine and then, to parse the state before setting it to undefined and clean each storage state key.
+     如果使用`redux-persist`，您可能还需要清理存储空间。`redux-persist`在 storage 引擎中保存您的状态副本。首先，您需要导入适当的 storage 引擎，然后在将其设置为`undefined`之前解析状态并清理每个存储状态键。
 
      ```javascript
      const appReducer = combineReducers({
@@ -3148,13 +3150,13 @@
      }
      ```
 
-164. ### Whats the purpose of `at` symbol in the Redux connect decorator?
+164. ### Redux 中连接装饰器的`at`符号的目的是什么?
 
-     The **@** symbol is in fact a JavaScript expression used to signify decorators. *Decorators* make it possible to annotate and modify classes and properties at design time.
+     **@**符号实际上是用于表示装饰器的 JavaScript 表达式。*装饰器*可以在设计时注释和修改类和属性。
 
-     Let's take an example setting up Redux without and with a decorator.
+     让我们举个例子，在没有装饰器的情况下设置 Redux 。
 
-     * **Without decorator:**
+     * **未使用装饰器:**
 
          ```javascript
          import React from 'react'
@@ -3177,7 +3179,7 @@
          export default connect(mapStateToProps, mapDispatchToProps)(MyApp)
          ```
 
-     * **With decorator:**
+     * **使用装饰器:**
 
          ```javascript
          import React from 'react'
@@ -3199,21 +3201,21 @@
          }
          ```
 
-     The above examples are almost similar except the usage of decorator. The decorator syntax isn't built into any JavaScript runtimes yet, and is still experimental and subject to change. You can use babel for the decorators support.
+     除了装饰器的使用外，上面的例子几乎相似。装饰器语法尚未构建到任何 JavaScript 运行时中，并且仍然是实验性的并且可能会发生变化。您可以使用`babel`来获得装饰器支持。
 
-165. ### What is the difference between React context and React Redux?
+165. ### React 上下文和 React Redux 之间有什么区别?
 
-     You can use **Context** in your application directly and is going to be great for passing down data to deeply nested components which what it was designed for. Whereas **Redux** is much more powerful and provides a large number of features that the Context API doesn't provide. Also, React Redux uses context internally but it doesn't expose this fact in the public API.
+     您可以直接在应用程序中使用**Context**，这对于将数据传递给深度嵌套的组件非常有用。而**Redux**功能更强大，它还提供了 Context API 无法提供的大量功能。此外，React Redux 在内部使用上下文，但它不会在公共 API 中有所体现。
 
-166. ### Why are Redux state functions called reducers?
+166. ### 为什么 Redux 状态函数称为 reducers ?
 
-     Reducers always return the accumulation of the state (based on all previous and current actions). Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could *reduce* a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
+     Reducers 总是返回状态的累积（基于所有先前状态和当前 Action）。因此，它们充当了状态的 Reducer。每次调用 Redux reducer 时，状态和 Action 都将作为参数传递。然后基于该 Action 减少（或累积）该状态，然后返回下一状态。您可以*reduce*一组操作和一个初始状态（Store），在该状态下执行这些操作以获得最终的最终状态。
 
-167. ### How to make AJAX request in Redux?
+167. ### 如何在 Redux 中发起 AJAX 请求?
 
-     You can use `redux-thunk` middleware which allows you to define async actions.
+     您可以使用`redux-thunk`中间件，它允许您定义异步操作。
 
-     Let's take an example of fetching specific account as an AJAX call using *fetch API*:
+     让我们举个例子，使用*fetch API*将特定帐户作为 AJAX 调用获取：
 
      ```javascript
      export function fetchAccount(id) {
@@ -3235,15 +3237,15 @@
      }
      ```
 
-168. ### Should I keep all component's state in Redux store?
+168. ### 我应该在Redux Store 中保留所有组件的状态吗?
 
-      Keep your data in the Redux store, and the UI related state internally in the component.
+      将数据保存在 Redux 存储中，并在组件内部保持 UI 相关状态。
 
-169. ### What is the proper way to access Redux store?
+169. ### 访问 Redux Store 的正确方法是什么?
 
-     The best way to access your store in a component is to use the `connect()` function, that creates a new component that wraps around your existing one. This pattern is called *Higher-Order Components*, and is generally the preferred way of extending a component's functionality in React. This allows you to map state and action creators to your component, and have them passed in automatically as your store updates.
+     在组件中访问 Store 的最佳方法是使用`connect()`函数，该函数创建一个包裹现有组件的新组件。此模式称为*高阶组件*，通常是在 React 中扩展组件功能的首选方式。这允许您将状态和 Action 创建者映射到组件，并在 Store 更新时自动传递它们。
 
-     Let's take an example of `<FilterLink>` component using connect:
+     我们来看一个使用 connect 的`<FilterLink>`组件的例子：
 
      ```javascript
      import { connect } from 'react-redux'
@@ -3266,7 +3268,7 @@
      export default FilterLink
      ```
 
-     Due to it having quite a few performance optimizations and generally being less likely to cause bugs, the Redux developers almost always recommend using `connect()` over accessing the store directly (using context API).
+     由于它具有相当多的性能优化并且通常不太可能导致错误，因此 Redux 开发人员几乎总是建议使用`connect()`直接访问 Store（使用上下文API）。
 
      ```javascript
      class MyComponent {
@@ -3276,11 +3278,11 @@
      }
      ```
 
-170. ### What is the difference between component and container in React Redux?
+170. ### React Redux 中展示组件和容器组件之间的区别是什么?
 
-     **Component** is a class or function component that describes the presentational part of your application.
+     **展示组件**是一个类或功能组件，用于描述应用程序的展示部分。
 
-     **Container** is an informal term for a component that is connected to a Redux store. Containers *subscribe* to Redux state updates and *dispatch* actions, and they usually don't render DOM elements; they delegate rendering to presentational child components.
+     **容器组件**是连接到 Redux Store的组件的非正式术语。容器组件*订阅* Redux 状态更新和*dispatch*操作，它们通常不呈现 DOM 元素; 他们将渲染委托给展示性的子组件。
 
 171. ### What is the purpose of the constants in Redux?
 
