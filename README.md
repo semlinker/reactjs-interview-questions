@@ -12,7 +12,7 @@
 ### 目录
 <!-- TOC -->
 | 序号. | 问题 |
-| --- | --------- | 
+| --- | --------- |
 | | [Core React](#core-react) |
 |1 | [什么是 React?](#什么是-react) |
 |2 | [React 的主要特点是什么?](#react-的主要特点是什么) |
@@ -328,21 +328,25 @@
 
 1. ### 什么是 React?
 
-    React 是一个 **开源前端 JavaScript 库**，用于构建用户界面，尤其是单页应用程序。它用于处理网页和移动应用程序的视图层。React 是由 Facebook 的软件工程师 Jordan Walke 创建的。在 2011 年 React 应用首次被部署到 Facebook 的信息流中，之后于 2012 年被应用到 Instagram 上。
+    [React](https://reactjs.org/) 是一个**开源前端 JavaScript 库**，用于构建用户界面，尤其是单页应用程序。它用于处理网页和移动应用程序的视图层。React 是由 Facebook 的软件工程师 Jordan Walke 创建的。在 2011 年 React 应用首次被部署到 Facebook 的信息流中，之后于 2012 年被应用到 Instagram 上。
+
+    阅读资源：
+
+    1. [React 中文文档](https://react.docschina.org/docs/hello-world.html)
 
 
 2. ### React 的主要特点是什么?
 
     React 的主要特性有：
 
-    * 考虑到真实的 DOM 操作成本很高，它使用 VirtualDOM 而不是真实的 DOM
+    * 考虑到真实的 DOM 操作成本很高，它使用 VirtualDOM 而不是真实的 DOM。
     * 支持服务端渲染。
     * 遵循单向数据流或数据绑定。
     * 使用可重用/可组合的 UI 组件开发视图。
 
 3. ### 什么是 JSX?
 
-    *JSX* 是 ECMAScript 一个类似 XML 的语法扩展。基本上，它只是为 `React.createElement()` 函数提供语法糖，从而让在我们在 JavaScript 中，使用类 HTML 模板的语法，进行页面描述。
+    JSX 是 ECMAScript 一个类似 XML 的语法扩展。基本上，它只是为 `React.createElement()` 函数提供语法糖，从而让在我们在 JavaScript 中，使用类 HTML 模板的语法，进行页面描述。
 
     在下面的示例中，`<h1>` 内的文本标签会作为 JavaScript 函数返回给渲染函数。
 
@@ -358,9 +362,19 @@
     }
     ```
 
+    以上示例 render 方法中的 JSX 将会被转换为以下内容：
+
+    ```javascript
+    React.createElement("div", null, React.createElement(
+      "h1", null, 'Welcome to React world!'));
+    ```
+
+    这里你可以访问 [Babeljs](https://babeljs.io/repl) 在线体验一下。
+
+
 4. ### 元素和组件有什么区别?
 
-    一个 *Element* 是一个简单的对象，它描述了你希望在屏幕上以DOM节点或其他组件的形式呈现的内容。*Elements* 在它们的属性中可以包含其他 *Elements*。创建一个 React 元素是很轻量的。一旦元素被创建后，它将不会被修改。
+    一个 *Element* 是一个简单的对象，它描述了你希望在屏幕上以 DOM 节点或其他组件的形式呈现的内容。*Elements* 在它们的属性中可以包含其他 *Elements*。创建一个 React 元素是很轻量的。一旦元素被创建后，它将不会被修改。
 
     React Element 的对象表示如下：
 
@@ -390,8 +404,7 @@
     <div id='login-btn'>Login</div>
     ```
 
-    而一个组件可以用多种不同方式声明。它可以是一个含有 `render()` 方法的类。或者，在简单的情况中，它可以定义为函数。无论哪种情况，它都将
-    props 作为输入，并返回一个 JSX 树作为输出：
+    而一个组件可以用多种不同方式声明。它可以是一个含有 `render()` 方法的类。或者，在简单的情况中，它可以定义为函数。无论哪种情况，它都将 props 作为输入，并返回一个 JSX 树作为输出：
 
     ```jsx
     const Button = ({ onLogin }) =>
@@ -420,7 +433,7 @@
         }
         ```
 
-    2. **Class Components:** 你还可以使用 ES6 类来定义组件。上面的函数组件可以写成：
+    2. **Class Components:** 你还可以使用 ES6 类来定义组件。上面的函数组件若使用 ES6 的类可改写为：
 
         ```jsx 
         class Greeting extends React.Component {
@@ -432,15 +445,15 @@
 
 6. ### 何时使用类组件和函数组件?
 
-    如果组件需要 *状态或生命周期方法*，那么使用类组件，否则使用函数组件。
+    如果组件需要使用**状态或生命周期方法**，那么使用类组件，否则使用函数组件。
 
 7. ### 什么是 Pure Components?
 
-    *`React.PureComponent`* 与 *`React.Component`* 完全相同，只是它为你处理了 `shouldComponentUpdate()` 方法。当属性或状态发生变化时，*PureComponent* 将对属性和状态进行浅比较。另一方面，*Component* 不会将当前的属性和状态与新的属性和状态进行比较。因此，在默认情况下，每当调用 `shouldComponentUpdate` 时，组件将重新渲染。
+    `React.PureComponent` 与 `React.Component` 完全相同，只是它为你处理了 `shouldComponentUpdate()` 方法。当属性或状态发生变化时，PureComponent 将对属性和状态进行浅比较。另一方面，普通组件不会将当前的属性和状态与新的属性和状态进行比较。因此，在默认情况下，每当调用 `shouldComponentUpdate` 时，组件将重新渲染。
 
 8. ### React 的状态是什么?
 
-    组件的状态是一个对象，它包含某些信息，这些信息可能在组件的生命周期中发生更改。我们应该尽量使状态尽可能简单，并尽量减少有状态组件的数量。让我们创建一个包含消息状态的 User 组件，
+    组件的状态是一个对象，它包含某些信息，这些信息可能在组件的生命周期中发生更改。我们应该尽量使状态尽可能简单，并尽量减少有状态组件的数量。让我们创建一个包含消息状态的 User 组件：
 
     ```javascript
     class User extends React.Component {
@@ -461,15 +474,14 @@
       }
     }
     ```
-    
+
     ![state](images/state.jpg)
-    
+
     状态（State）与属性（Props）类似，但它是私有的，完全由组件控制。也就是说，除了它所属的组件外，任何组件都无法访问它。
 
 9. ### React 中的 props 是什么?
 
-    *Props* 是组件的输入。它们是单个值或包含一组值的对象，这些值在创建时使用类似于 HTML 标记属性的命名约定传递给组件。它们是从父组件传递到子
-    组件的数据。
+    Props 是组件的输入。它们是单个值或包含一组值的对象，这些值在创建时使用类似于 HTML 标记属性的命名约定传递给组件。它们是从父组件传递到子组件的数据。
 
     Props 的主要目的是提供以下组件功能：
 
@@ -491,7 +503,18 @@
 
 10. ### 状态和属性有什么区别?
 
-   *props* 和 *state* 都是普通的 JavaScript 对象。虽然它们都保存着影响渲染输出的信息，但它们在组件方面的功能不同。Props 以类似于函数参数的方式传递给组件，而状态则类似于在函数内声明变量并对它进行管理。
+  state 和 props 都是普通的 JavaScript 对象。虽然它们都保存着影响渲染输出的信息，但它们在组件方面的功能不同。Props 以类似于函数参数的方式传递给组件，而状态则类似于在函数内声明变量并对它进行管理。
+
+  States vs Props
+
+  | Conditions           | States | Props |
+  | -------------------- | ------ | ----- |
+  | 可从父组件接收初始值 | 是     | 是    |
+  | 可在父组件中改变其值 | 否     | 是    |
+  | 在组件内设置默认值   | 是     | 是    |
+  | 在组件内可改变       | 是     | 否    |
+  | 可作为子组件的初始值 | 是     | 是    |
+
 
 11. ### 我们为什么不能直接更新状态?
 
@@ -613,7 +636,7 @@
 
 17. ### 什么是内联条件表达式?
 
-    在 JS 中你可以使用 *if statements* 或 *ternary expressions* ，来实现条件判断。除了这些方法之外，你还可以在 JSX 中嵌入任何表达式，方法是将它们用大括号括起来，然后再加上 JS 逻辑运算符 `&&`。
+    在 JS 中你可以使用 if 语句或三元表达式，来实现条件判断。除了这些方法之外，你还可以在 JSX 中嵌入任何表达式，方法是将它们用大括号括起来，然后再加上 JS 逻辑运算符 `&&`。
 
     ```jsx 
     <h1>Hello!</h1>
@@ -789,6 +812,21 @@
 
     *Virtual DOM* (VDOM) 是 *Real DOM* 的内存表示形式。UI 的展示形式被保存在内存中并与真实的 DOM 同步。这是在调用的渲染函数和在屏幕上显示元素之间发生的一个步骤。整个过程被称为 *reconciliation*。
 
+    Real DOM vs Virtual DOM
+
+    |           Real DOM           |       Virtual DOM        |
+    | :--------------------------: | :----------------------: |
+    |           更新较慢           |         更新较快         |
+    |      可以直接更新 HTML       |    无法直接更新 HTML     |
+    | 如果元素更新，则创建新的 DOM | 如果元素更新，则更新 JSX |
+    |       DOM 操作非常昂贵       |     DOM 操作非常简单     |
+    |        较多的内存浪费        |       没有内存浪费       |
+
+    阅读资源：
+
+    1. [知乎 - 如何理解虚拟DOM?](https://www.zhihu.com/question/29504639)
+    2. [edureka - react-interview-questions](https://www.edureka.co/blog/interview-questions/react-interview-questions/)
+
 25. ### Virtual DOM 如何工作?
 
     *Virtual DOM* 分为三个简单的步骤。
@@ -804,7 +842,7 @@
 
 26. ### Shadow DOM 和 Virtual DOM 之间有什么区别?
 
-    [*Shadow DOM*](https://developers.google.com/web/fundamentals/web-components/shadowdom?hl=zh-cn) 是一种浏览器技术，它解决了构建网络应用的脆弱性问题。Shadow DOM 修复了 CSS 和 DOM。它在网络平台中引入作用域样式。 无需工具或命名约定，你即可使用原生 JavaScript 捆绑 CSS 和标记、隐藏实现详情以及编写独立的组件。*Virtual DOM* 是一个由 JavaScript 库在浏览器 API 之上实现的概念。
+    [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom?hl=zh-cn) 是一种浏览器技术，它解决了构建网络应用的脆弱性问题。Shadow DOM 修复了 CSS 和 DOM。它在网络平台中引入作用域样式。 无需工具或命名约定，你即可使用原生 JavaScript 捆绑 CSS 和标记、隐藏实现详情以及编写独立的组件。*Virtual DOM* 是一个由 JavaScript 库在浏览器 API 之上实现的概念。
 
 27. ### 什么是 React Fiber?
 
@@ -1459,12 +1497,12 @@
     class MyComponent extends React.Component {
       constructor(props) {
         super(props)
-
+    
         this.state = {
           record: []
         }
       }
-
+    
       render() {
         return <div>{this.props.inputValue}</div>
       }
@@ -2146,7 +2184,7 @@
 
      ```jsx 
      const data = { name: 'John', age: 42 }
-
+    
      class User extends React.Component {
        render() {
          return (
@@ -2156,7 +2194,7 @@
          )
        }
      }
-
+    
      React.render(<User />, document.getElementById('container'))
      ```
 
@@ -3836,7 +3874,7 @@
 
      ```jsx 
      import { ReactComponent as Logo } from './logo.svg'
-
+    
      const App = () => (
        <div>
          {/* Logo is an actual react component */}
@@ -3844,7 +3882,7 @@
        </div>
      )
      ```
-
+    
      **Note**: Don't forget about the curly braces in the import.
 
 215. ### 为什么不建议使用内联引用回调或函数?
@@ -3871,7 +3909,7 @@
       }
      }
      ```
-
+    
      但我们期望的是当组件挂载时，ref 回调只会被调用一次。一个快速修复的方法是使用 ES7 类属性语法定义函数。
     
      ```jsx
