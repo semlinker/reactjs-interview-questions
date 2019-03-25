@@ -12,7 +12,7 @@
 ### 目录
 <!-- TOC -->
 | 序号. | 问题 |
-| --- | --------- |
+| --- | --------- | 
 | | [Core React](#core-react) |
 |1 | [什么是 React?](#什么是-react) |
 |2 | [React 的主要特点是什么?](#react-的主要特点是什么) |
@@ -148,8 +148,8 @@
 |131 | [在 React Router v4 中的`<Router>`组件是什么?](#在-react-router-v4-中的router组件是什么) |
 |132 | [`history` 中的 `push()` 和 `replace()` 方法的目的是什么?](#history-中的-push-和-replace-方法的目的是什么) |
 |133 | [如何使用在 React Router v4 中以编程的方式进行导航?](#如何使用在-react-router-v4-中以编程的方式进行导航) |
-|134 | [如何在React Router v4中获取查询字符串参数?](#如何在react-router-v4中获取查询字符串参数) |
-|135 | [为什么你会得到"Router may have only one child element"警告?](#为什么你会得到"router-may-have-only-one-child-element"警告) |
+|134 | [如何在 React Router v4 中获取查询字符串参数?](#如何在-react-router-v4-中获取查询字符串参数) |
+|135 | [为什么你会得到 "Router may have only one child element" 警告?](#为什么你会得到-"router-may-have-only-one-child-element"-警告) |
 |136 | [如何在 React Router v4 中将 params 传递给 `history.push` 方法?](#如何在-react-router-v4-中将-params-传递给-history.push-方法) |
 |137 | [如何实现默认页面或 404 页面?](#如何实现默认页面或-404-页面) |
 |138 | [如何在 React Router v4 上获取历史对象?](#如何在-react-router-v4-上获取历史对象) |
@@ -169,11 +169,11 @@
 |150 | [Jest 对比 Jasmine 有什么优势?](#jest-对比-jasmine-有什么优势) |
 |151 | [举一个简单的 Jest 测试用例](#举一个简单的-jest-测试用例) |
 | | [React Redux](#react-redux) |
-|152 | [什么是 flux?](#什么是-flux) |
+|152 | [什么是 Flux?](#什么是-flux) |
 |153 | [什么是 Redux?](#什么是-redux) |
 |154 | [Redux 的核心原则是什么？?](#redux-的核心原则是什么) |
 |155 | [与 Flux 相比，Redux 的缺点是什么?](#与-flux-相比redux-的缺点是什么) |
-|156 | [`mapStateToProps()`和`mapDispatchToProps()`之间有什么区别?](#mapstatetoprops和mapdispatchtoprops之间有什么区别) |
+|156 | [`mapStateToProps()` 和 `mapDispatchToProps()` 之间有什么区别?](#mapstatetoprops-和-mapdispatchtoprops-之间有什么区别) |
 |157 | [我可以在 reducer 中触发一个 Action 吗?](#我可以在-reducer-中触发一个-action-吗) |
 |158 | [如何在组件外部访问 Redux 存储的对象?](#如何在组件外部访问-redux-存储的对象) |
 |159 | [MVW 模式的缺点是什么?](#mvw-模式的缺点是什么) |
@@ -185,24 +185,24 @@
 |165 | [React 上下文和 React Redux 之间有什么区别?](#react-上下文和-react-redux-之间有什么区别) |
 |166 | [为什么 Redux 状态函数称为 reducers ?](#为什么-redux-状态函数称为-reducers-) |
 |167 | [如何在 Redux 中发起 AJAX 请求?](#如何在-redux-中发起-ajax-请求) |
-|168 | [我应该在Redux Store 中保留所有组件的状态吗?](#我应该在redux-store-中保留所有组件的状态吗) |
+|168 | [我应该在 Redux Store 中保留所有组件的状态吗?](#我应该在-redux-store-中保留所有组件的状态吗) |
 |169 | [访问 Redux Store 的正确方法是什么?](#访问-redux-store-的正确方法是什么) |
 |170 | [React Redux 中展示组件和容器组件之间的区别是什么?](#react-redux-中展示组件和容器组件之间的区别是什么) |
-|171 | [Redux中常量的用途是什么?](#redux中常量的用途是什么) |
-|172 | [编写`mapDispatchToProps()`有哪些不同的方法?](#编写mapdispatchtoprops有哪些不同的方法) |
-|173 | [在`mapStateToProps()`和`mapDispatchToProps()`中使用`ownProps`参数有什么用?](#在mapstatetoprops和mapdispatchtoprops中使用ownprops参数有什么用) |
+|171 | [Redux 中常量的用途是什么?](#redux-中常量的用途是什么) |
+|172 | [编写 `mapDispatchToProps()` 有哪些不同的方法?](#编写-mapdispatchtoprops-有哪些不同的方法) |
+|173 | [在 `mapStateToProps()` 和 `mapDispatchToProps()` 中使用 `ownProps` 参数有什么用?](#在-mapstatetoprops-和-mapdispatchtoprops-中使用-ownprops-参数有什么用) |
 |174 | [如何构建 Redux 项目目录?](#如何构建-redux-项目目录) |
 |175 | [什么是 redux-saga?](#什么是-redux-saga) |
 |176 | [redux-saga 的模型概念是什么?](#redux-saga-的模型概念是什么) |
-|177 | [在 redux-saga 中`call()`和`put()`之间有什么区别？?](#在-redux-saga-中call和put之间有什么区别) |
+|177 | [在 redux-saga 中 `call()` 和 `put()` 之间有什么区别?](#在-redux-saga-中-call-和-put-之间有什么区别) |
 |178 | [什么是 Redux Thunk?](#什么是-redux-thunk) |
-|179 | [`redux-saga`和`redux-thunk`之间有什么区别?](#redux-saga和redux-thunk之间有什么区别) |
+|179 | [`redux-saga` 和 `redux-thunk` 之间有什么区别?](#redux-saga-和-redux-thunk-之间有什么区别) |
 |180 | [什么是 Redux DevTools?](#什么是-redux-devtools) |
 |181 | [Redux DevTools 的功能有哪些?](#redux-devtools-的功能有哪些) |
 |182 | [什么是 Redux 选择器以及使用它们的原因?](#什么是-redux-选择器以及使用它们的原因) |
 |183 | [什么是 Redux Form?](#什么是-redux-form) |
 |184 | [Redux Form 的主要功能有哪些?](#redux-form-的主要功能有哪些) |
-|185 | [如何向Redux添加多个中间件?](#如何向redux添加多个中间件) |
+|185 | [如何向 Redux 添加多个中间件?](#如何向-redux-添加多个中间件) |
 |186 | [如何在 Redux 中设置初始状态?](#如何在-redux-中设置初始状态) |
 |187 | [Relay 与 Redux 有何不同?](#relay-与-redux-有何不同) |
 | | [React Native](#react-native) |
@@ -220,19 +220,19 @@
 |198 | [如何在 React 中使用 Polymer?](#如何在-react-中使用-polymer) |
 |199 | [与 Vue.js 相比，React 有哪些优势?](#与-vue.js-相比react-有哪些优势) |
 |200 | [React 和 Angular 有什么区别?](#react-和-angular-有什么区别) |
-|201 | [为什么 Reac t选项卡不会显示在 DevTools 中?](#为什么-reac-t选项卡不会显示在-devtools-中) |
+|201 | [为什么 React 选项卡不会显示在 DevTools 中?](#为什么-react-选项卡不会显示在-devtools-中) |
 |202 | [什么是 Styled Components?](#什么是-styled-components) |
 |203 | [举一个 Styled Components 的例子?](#举一个-styled-components-的例子) |
 |204 | [什么是 Relay?](#什么是-relay) |
-|205 | [如何在`create-react-app`中使用TypeScript?](#如何在create-react-app中使用typescript) |
+|205 | [如何在 `create-react-app` 中使用 TypeScript?](#如何在-create-react-app-中使用-typescript) |
 | | [Miscellaneous](#miscellaneous) |
 |206 | [Reselect 库的主要功能有哪些?](#reselect-库的主要功能有哪些) |
 |207 | [举一个 Reselect 用法的例子?](#举一个-reselect-用法的例子) |
-|208 | [Redux中的 Action 是什么?](#redux中的-action-是什么) |
+|208 | [Redux 中的 Action 是什么?](#redux-中的-action-是什么) |
 |209 | [在 React 中 statics 对象是否能与 ES6 类一起使用?](#在-react-中-statics-对象是否能与-es6-类一起使用) |
 |210 | [Redux 只能与 React 一起使用么?](#redux-只能与-react-一起使用么) |
 |211 | [您是否需要使用特定的构建工具来使用 Redux ?](#您是否需要使用特定的构建工具来使用-redux-) |
-|212 | [Redux Form 的`initialValues`如何从状态更新?](#redux-form-的initialvalues如何从状态更新) |
+|212 | [Redux Form 的 `initialValues` 如何从状态更新?](#redux-form-的-initialvalues-如何从状态更新) |
 |213 | [React 是如何为一个属性声明不同的类型?](#react-是如何为一个属性声明不同的类型) |
 |214 | [我可以导入一个 SVG 文件作为 React 组件么?](#我可以导入一个-svg-文件作为-react-组件么) |
 |215 | [为什么不建议使用内联引用回调或函数?](#为什么不建议使用内联引用回调或函数) |
@@ -293,7 +293,7 @@
 |270 | [formik 相对于其他 redux 表单库有什么优势?](#formik-相对于其他-redux-表单库有什么优势) |
 |271 | [为什么不需要使用继承?](#为什么不需要使用继承) |
 |272 | [我可以在 React 应用程序中可以使用 web components 么?](#我可以在-react-应用程序中可以使用-web-components-么) |
-|273 | [什么是 dynamic import?](#什么是-dynamic-import) |
+|273 | [什么是动态导入?](#什么是动态导入) |
 |274 | [什么是 loadable 组件?](#什么是-loadable-组件) |
 |275 | [什么是 suspense 组件?](#什么是-suspense-组件) |
 |276 | [什么是基于路由的代码拆分?](#什么是基于路由的代码拆分) |
@@ -2683,7 +2683,7 @@
          }
          ```
 
-134. ### 如何在React Router v4中获取查询字符串参数?
+134. ### 如何在 React Router v4 中获取查询字符串参数?
 
      在 React Router v4 中并没有内置解析查询字符串的能力，因为多年来一直有用户希望支持不同的实现。因此，使用者可以选择他们喜欢的实现方式。建议的方法是使用 [query-string](https://www.npmjs.com/package/query-string) 库。
 
@@ -2701,7 +2701,7 @@
 
      如果使用 `URLSearchParams` 的话您应该为 IE11 使用*polyfill*。
 
-135. ### 为什么你会得到"Router may have only one child element"警告?
+135. ### 为什么你会得到 "Router may have only one child element" 警告?
 
      此警告的意思是`Router`组件下仅能包含一个子节点。
 
@@ -3022,9 +3022,9 @@
 
 ## React Redux
 
-152. ### 什么是 flux?
+152. ### 什么是 Flux?
 
-     *Flux*是*应用程序设计范例*，用于替代更传统的 MVC 模式。它不是一个框架或库，而是一种新的体系结构，它补充了 React 和单向数据流的概念。在使用 React 时，Facebook 会在内部使用此模式。
+     *Flux* 是*应用程序设计范例*，用于替代更传统的 MVC 模式。它不是一个框架或库，而是一种新的体系结构，它补充了 React 和单向数据流的概念。在使用 React 时，Facebook 会在内部使用此模式。
 
      在 dispatcher，stores 和视图组件具有如下不同的输入和输出：
 
@@ -3032,7 +3032,7 @@
 
 153. ### 什么是 Redux?
 
-     *Redux*是基于*Flux设计模式*的 JavaScript 应用程序的可预测状态容器。Redux 可以与 React 一起使用，也可以与任何其他视图库一起使用。它很小（约2kB）并且没有依赖性。
+     *Redux* 是基于 *Flux设计模式* 的 JavaScript 应用程序的可预测状态容器。Redux 可以与 React 一起使用，也可以与任何其他视图库一起使用。它很小（约2kB）并且没有依赖性。
 
 154. ### Redux 的核心原则是什么？?
 
@@ -3050,7 +3050,7 @@
      2. **您将不得不仔细选择您的软件包：** 虽然 Flux 明确没有尝试解决诸如撤消/重做，持久性或表单之类的问题，但 Redux 有扩展点，例如中间件和存储增强器，以及它催生了丰富的生态系统。
      3. **还没有很好的 Flow 集成：** Flux 目前可以让你做一些非常令人印象深刻的静态类型检查，Redux 还不支持。
 
-156. ### `mapStateToProps()`和`mapDispatchToProps()`之间有什么区别?
+156. ### `mapStateToProps()` 和 `mapDispatchToProps()` 之间有什么区别?
 
      `mapStateToProps()`是一个实用方法，它可以帮助您的组件获得最新的状态（由其他一些组件更新）：
 
@@ -3278,7 +3278,7 @@
      }
      ```
 
-168. ### 我应该在Redux Store 中保留所有组件的状态吗?
+168. ### 我应该在 Redux Store 中保留所有组件的状态吗?
 
       将数据保存在 Redux 存储中，并在组件内部保持 UI 相关状态。
 
@@ -3325,7 +3325,7 @@
 
      **容器组件**是连接到 Redux Store的组件的非正式术语。容器组件*订阅* Redux 状态更新和*dispatch*操作，它们通常不呈现 DOM 元素; 他们将渲染委托给展示性的子组件。
 
-171. ### Redux中常量的用途是什么?
+171. ### Redux 中常量的用途是什么?
 
      常量允许您在使用 IDE 时轻松查找项目中该特定功能的所有用法。它还可以防止你拼写错误，在这种情况下，你会立即得到一个`ReferenceError`。
 
@@ -3377,7 +3377,7 @@
          }
          ```
 
-172. ### 编写`mapDispatchToProps()`有哪些不同的方法?
+172. ### 编写 `mapDispatchToProps()` 有哪些不同的方法?
 
      有一些方法可以将*action creators*绑定到`mapDispatchToProps()`中的`dispatch()`。以下是可能的写法：
 
@@ -3399,7 +3399,7 @@
 
      第三种写法只是第一种写法的简写。
 
-173. ### 在`mapStateToProps()`和`mapDispatchToProps()`中使用`ownProps`参数有什么用?
+173. ### 在 `mapStateToProps()` 和 `mapDispatchToProps()` 中使用 `ownProps` 参数有什么用?
 
      如果指定了`ownProps`参数，React Redux 会将传递给该组件的 props 传递给你的*connect*函数。因此，如果您使用连接组件：
 
@@ -3443,7 +3443,7 @@
 
      *Saga*就像你的项目中的一个单独的线程，它独自负责副作用。`redux-saga` 是一个 redux *中间件*，这意味着它可以在项目启动中使用正常的 Redux 操作，暂停和取消该线程，它可以访问完整的 Redux 应用程序状态，并且它也可以调度 Redux 操作。
 
-177. ### 在 redux-saga 中`call()`和`put()`之间有什么区别？?
+177. ### 在 redux-saga 中 `call()` 和 `put()` 之间有什么区别?
 
      `call()`和`put()`都是 Effect 创建函数。 `call()`函数用于创建 Effect 描述，指示中间件调用 promise。`put()`函数创建一个 Effect，指示中间件将一个 Action 分派给 Store。
 
@@ -3467,7 +3467,7 @@
 
      *Redux Thunk*中间件允许您编写返回函数而不是 Action 的创建者。 thunk 可用于延迟 Action 的发送，或仅在满足某个条件时发送。内部函数接收 Store 的方法`dispatch()`和`getState()`作为参数。
 
-179. ### `redux-saga`和`redux-thunk`之间有什么区别?
+179. ### `redux-saga` 和 `redux-thunk` 之间有什么区别?
 
      *Redux Thunk*和*Redux Saga*都负责处理副作用。在大多数场景中，Thunk 使用*Promises*来处理它们，而 Saga 使用*Generators*。Thunk 易于使用，因为许多开发人员都熟悉 Promise，Sagas/Generators 功能更强大，但您需要学习它们。但是这两个中间件可以共存，所以你可以从 Thunks 开始，并在需要时引入 Sagas。
 
@@ -3503,7 +3503,7 @@
        2. 验证（同步/异步）和提交。
        3. 字段值的格式化，解析和规范化。
 
-185. ### 如何向Redux添加多个中间件?
+185. ### 如何向 Redux 添加多个中间件?
 
      你可以使用`applyMiddleware()`。
 
@@ -3677,7 +3677,7 @@
      | React Native 是一种 React 类型，它用于构建移动应用程序，它更快，更稳定 | Ionic，Angular 的移动 app 相对原生 app 来说不太稳定和慢 |
      | 在 Reac t中，数据只以单一方向传递，因此调试很容易 | 在 Angular 中，数据以两种方式传递，即它在子节点和父节点之间具有双向数据绑定，因此调试通常很困难 |
 
-201. ### 为什么 Reac t选项卡不会显示在 DevTools 中?
+201. ### 为什么 React 选项卡不会显示在 DevTools 中?
 
      当页面加载时，*React DevTools*设置一个名为`__REACT_DEVTOOLS_GLOBAL_HOOK__`的全局变量，然后 React 在初始化期间与该钩子通信。如果网站没有使用 React，或者如果 React 无法与 DevTools 通信，那么它将不会显示该选项卡。
 
@@ -3719,7 +3719,7 @@
 
      Relay 是一个 JavaScript 框架，用于使用 React 视图层为 Web 应用程序提供数据层和客户端与服务器之间的通信。
 
-205. ### 如何在`create-react-app`中使用TypeScript?
+205. ### 如何在 `create-react-app` 中使用 TypeScript?
 
      当您创建一个新项目带有`--scripts-version`选项值为`react-scripts-ts`时便可将 TypeScript 引入。
 
@@ -3790,7 +3790,7 @@
      console.log(totalSelector(exampleState))    // { total: 2.322 }
      ```
 
-208. ### Redux中的 Action 是什么?
+208. ### Redux 中的 Action 是什么?
 
      *Actions*是纯 JavaScript 对象或信息的有效负载，可将数据从您的应用程序发送到您的 Store。 它们是 Store 唯一的数据来源。 Action 必须具有指示正在执行的操作类型的 type 属性。
 
@@ -3839,7 +3839,7 @@
 
      Redux 最初是用 ES6 编写的，用 Webpack 和 Babel 编译成 ES5。 无论您的 JavaScript 构建过程如何，您都应该能够使用它。Redux 还提供了一个 UMD 版本，可以直接使用而无需任何构建过程。
 
-212. ### Redux Form 的`initialValues`如何从状态更新?
+212. ### Redux Form 的 `initialValues` 如何从状态更新?
 
      你需要添加`enableReinitialize：true`设置。
 
@@ -4864,9 +4864,9 @@
      export default App;
      ```
 
-273. ### 什么是 dynamic import?
+273. ### 什么是动态导入?
 
-     dynamic import() 语法是 ECMAScript 提案，目前不属于语言标准的一部分。它有望在不久的将来被采纳。在你的应用程序中，你可以使用 dynamic import() 来实现代码拆分。让我们举一个加法的例子：
+     动态导入语法是 ECMAScript 提案，目前不属于语言标准的一部分。它有望在不久的将来被采纳。在你的应用程序中，你可以使用动态导入来实现代码拆分。让我们举一个加法的例子：
 
      1. **Normal Import**
      ```javascript
