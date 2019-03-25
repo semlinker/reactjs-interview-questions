@@ -188,30 +188,30 @@
 |168 | [我应该在Redux Store 中保留所有组件的状态吗?](#我应该在redux-store-中保留所有组件的状态吗) |
 |169 | [访问 Redux Store 的正确方法是什么?](#访问-redux-store-的正确方法是什么) |
 |170 | [React Redux 中展示组件和容器组件之间的区别是什么?](#react-redux-中展示组件和容器组件之间的区别是什么) |
-|171 | [What is the purpose of the constants in Redux?](#what-is-the-purpose-of-the-constants-in-redux) |
-|172 | [What are the different ways to write `mapDispatchToProps()`?](#what-are-the-different-ways-to-write-mapdispatchtoprops) |
-|173 | [What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?](#what-is-the-use-of-the-ownprops-parameter-in-mapstatetoprops-and-mapdispatchtoprops) |
-|174 | [How to structure Redux top level directories?](#how-to-structure-redux-top-level-directories) |
-|175 | [What is redux-saga?](#what-is-redux-saga) |
-|176 | [What is the mental model of redux-saga?](#what-is-the-mental-model-of-redux-saga) |
-|177 | [What are the differences between `call()` and `put()` in redux-saga?](#what-are-the-differences-between-call-and-put-in-redux-saga) |
-|178 | [What is Redux Thunk?](#what-is-redux-thunk) |
-|179 | [What are the differences between `redux-saga` and `redux-thunk`?](#what-are-the-differences-between-redux-saga-and-redux-thunk) |
-|180 | [What is Redux DevTools?](#what-is-redux-devtools) |
-|181 | [What are the features of Redux DevTools?](#what-are-the-features-of-redux-devtools) |
-|182 | [What are Redux selectors and why to use them?](#what-are-redux-selectors-and-why-to-use-them) |
-|183 | [What is Redux Form?](#what-is-redux-form) |
-|184 | [What are the main features of Redux Form?](#what-are-the-main-features-of-redux-form) |
-|185 | [How to add multiple middlewares to Redux?](#how-to-add-multiple-middlewares-to-redux) |
-|186 | [How to set initial state in Redux?](#how-to-set-initial-state-in-redux) |
-|187 | [How Relay is different from Redux?](#how-relay-is-different-from-redux) |
+|171 | [Redux中常量的用途是什么?](#redux中常量的用途是什么) |
+|172 | [编写`mapDispatchToProps()`有哪些不同的方法?](#编写mapdispatchtoprops有哪些不同的方法) |
+|173 | [在`mapStateToProps()`和`mapDispatchToProps()`中使用`ownProps`参数有什么用?](#在mapstatetoprops和mapdispatchtoprops中使用ownprops参数有什么用) |
+|174 | [如何构建 Redux 项目目录?](#如何构建-redux-项目目录) |
+|175 | [什么是 redux-saga?](#什么是-redux-saga) |
+|176 | [redux-saga 的模型概念是什么?](#redux-saga-的模型概念是什么) |
+|177 | [在 redux-saga 中`call()`和`put()`之间有什么区别？?](#在-redux-saga-中call和put之间有什么区别) |
+|178 | [什么是 Redux Thunk?](#什么是-redux-thunk) |
+|179 | [`redux-saga`和`redux-thunk`之间有什么区别?](#redux-saga和redux-thunk之间有什么区别) |
+|180 | [什么是 Redux DevTools?](#什么是-redux-devtools) |
+|181 | [Redux DevTools 的功能有哪些?](#redux-devtools-的功能有哪些) |
+|182 | [什么是 Redux 选择器以及使用它们的原因?](#什么是-redux-选择器以及使用它们的原因) |
+|183 | [什么是 Redux Form?](#什么是-redux-form) |
+|184 | [Redux Form 的主要功能有哪些?](#redux-form-的主要功能有哪些) |
+|185 | [如何向Redux添加多个中间件?](#如何向redux添加多个中间件) |
+|186 | [如何在 Redux 中设置初始状态?](#如何在-redux-中设置初始状态) |
+|187 | [Relay 与 Redux 有何不同?](#relay-与-redux-有何不同) |
 | | [React Native](#react-native) |
-|188 | [What is the difference between React Native and React?](#what-is-the-difference-between-react-native-and-react) |
-|189 | [How to test React Native apps?](#how-to-test-react-native-apps) |
-|190 | [How to do logging in React Native?](#how-to-do-logging-in-react-native) |
-|191 | [How to debug your React Native?](#how-to-debug-your-react-native) |
+|188 | [React Native 和 React 有什么区别?](#react-native-和-react-有什么区别) |
+|189 | [如何测试 React Native 应用程序?](#如何测试-react-native-应用程序) |
+|190 | [如何在 React Native 查看日志?](#如何在-react-native-查看日志) |
+|191 | [怎么调试 React Native 应用?](#怎么调试-react-native-应用) |
 | | [React supported libraries & Integration](#react-supported-libraries-&-integration) |
-|192 | [What is reselect and how it works?](#what-is-reselect-and-how-it-works) |
+|192 | [什么是 Reselect 以及它是如何工作的?](#什么是-reselect-以及它是如何工作的) |
 |193 | [什么是 Flow?](#什么是-flow) |
 |194 | [Flow 和 PropTypes 有什么区别?](#flow-和-proptypes-有什么区别) |
 |195 | [在 React 中如何使用 Font Awesome 图标?](#在-react-中如何使用-font-awesome-图标) |
@@ -219,9 +219,9 @@
 |197 | [Why is DevTools not loading in Chrome for local files?](#why-is-devtools-not-loading-in-chrome-for-local-files) |
 |198 | [如何在 React 中使用 Polymer?](#如何在-react-中使用-polymer) |
 |199 | [与 Vue.js 相比，React 有哪些优势?](#与-vue.js-相比react-有哪些优势) |
-|200 | [What is the difference between React and Angular?](#what-is-the-difference-between-react-and-angular) |
-|201 | [Why React tab is not showing up in DevTools?](#why-react-tab-is-not-showing-up-in-devtools) |
-|202 | [What are Styled Components?](#what-are-styled-components) |
+|200 | [React 和 Angular 有什么区别?](#react-和-angular-有什么区别) |
+|201 | [为什么 Reac t选项卡不会显示在 DevTools 中?](#为什么-reac-t选项卡不会显示在-devtools-中) |
+|202 | [什么是 Styled Components?](#什么是-styled-components) |
 |203 | [Give an example of Styled Components?](#give-an-example-of-styled-components) |
 |204 | [What is Relay?](#what-is-relay) |
 |205 | [How to use TypeScript in `create-react-app` application?](#how-to-use-typescript-in-create-react-app-application) |
@@ -3287,11 +3287,11 @@
 
      **容器组件**是连接到 Redux Store的组件的非正式术语。容器组件*订阅* Redux 状态更新和*dispatch*操作，它们通常不呈现 DOM 元素; 他们将渲染委托给展示性的子组件。
 
-171. ### What is the purpose of the constants in Redux?
+171. ### Redux中常量的用途是什么?
 
-     Constants allows you to easily find all usages of that specific functionality across the project when you use an IDE. It also prevents you from introducing silly bugs caused by typos – in which case, you will get a `ReferenceError` immediately.
+     常量允许您在使用 IDE 时轻松查找项目中该特定功能的所有用法。它还可以防止你拼写错误，在这种情况下，你会立即得到一个`ReferenceError`。
 
-     Normally we will save them in a single file (`constants.js` or `actionTypes.js`).
+     通常我们会将它们保存在一个文件中（`constants.js`或`actionTypes.js`）。
 
      ```javascript
      export const ADD_TODO = 'ADD_TODO'
@@ -3302,11 +3302,11 @@
      export const CLEAR_COMPLETED = 'CLEAR_COMPLETED'
      ```
 
-     In Redux you use them in two places:
+     在 Redux 中，您可以在两个地方使用它们：
 
-     1. **During action creation:**
+     1. **在 Action 创建时:**
 
-         Let's take `actions.js`:
+         让我们看看 `actions.js`:
 
          ```javascript
          import { ADD_TODO } from './actionTypes';
@@ -3316,9 +3316,9 @@
          }
          ```
 
-     2. **In reducers:**
+     2. **在 reducers 里:**
 
-         Let's create `reducer.js`:
+         让我们创建 `reducer.js` 文件:
 
          ```javascript
          import { ADD_TODO } from './actionTypes'
@@ -3339,9 +3339,9 @@
          }
          ```
 
-172. ### What are the different ways to write `mapDispatchToProps()`?
+172. ### 编写`mapDispatchToProps()`有哪些不同的方法?
 
-     There are a few ways of binding *action creators* to `dispatch()` in `mapDispatchToProps()`. Below are the possible options:
+     有一些方法可以将*action creators*绑定到`mapDispatchToProps()`中的`dispatch()`。以下是可能的写法：
 
      ```javascript
      const mapDispatchToProps = (dispatch) => ({
@@ -3359,11 +3359,11 @@
      const mapDispatchToProps = { action }
      ```
 
-     The third option is just a shorthand for the first one.
+     第三种写法只是第一种写法的简写。
 
-173. ### What is the use of the `ownProps` parameter in `mapStateToProps()` and `mapDispatchToProps()`?
+173. ### 在`mapStateToProps()`和`mapDispatchToProps()`中使用`ownProps`参数有什么用?
 
-     If the `ownProps` parameter is specified, React Redux will pass the props that were passed to the component into your *connect* functions. So, if you use a connected component:
+     如果指定了`ownProps`参数，React Redux 会将传递给该组件的 props 传递给你的*connect*函数。因此，如果您使用连接组件：
 
      ```jsx 
      import ConnectedComponent from './containers/ConnectedComponent';
@@ -3371,45 +3371,45 @@
      <ConnectedComponent user={'john'} />
      ```
 
-     The `ownProps` inside your `mapStateToProps()` and `mapDispatchToProps()` functions will be an object:
+     你的`mapStateToProps()`和`mapDispatchToProps()`函数里面的`ownProps`将是一个对象：
 
      ```javascript
      { user: 'john' }
      ```
 
-     You can use this object to decide what to return from those functions.
+     您可以使用此对象来决定从这些函数返回的内容。
 
-174. ### How to structure Redux top level directories?
+174. ### 如何构建 Redux 项目目录?
 
-     Most of the applications has several top-level directories as below:
+     大多数项目都有几个顶级目录，如下所示：
 
-     1. **Components**: Used for *dumb* components unaware of Redux.
-     2. **Containers**: Used for *smart* components connected to Redux.
-     3. **Actions**: Used for all action creators, where file names correspond to part of the app.
-     4. **Reducers**: Used for all reducers, where files name correspond to state key.
-     5. **Store**: Used for store initialization.
+     1. **Components**: 用于*dumb*组件，Redux 不必关心的组件。
+     2. **Containers**: 用于连接到 Redux 的*smart*组件。
+     3. **Actions**: 用于所有 Action 创建器，其中文件名对应于应用程序的一部分。
+     4. **Reducers**: 用于所有 reducer，其中文件名对应于state key。
+     5. **Store**: 用于 Store 初始化。
 
-     This structure works well for small and medium size apps.
+     这种结构适用于中小型项目。
 
-175. ### What is redux-saga?
+175. ### 什么是 redux-saga?
 
-     `redux-saga` is a library that aims to make side effects (asynchronous things like data fetching and impure things like accessing the browser cache) in React/Redux applications easier and better.
+     `redux-saga`是一个库，旨在使 React/Redux 项目中的副作用（数据获取等异步操作和访问浏览器缓存等可能产生副作用的动作）更容易，更好。
 
-     It is available in NPM:
+     这个包在 NPM 上有发布:
 
      ```console
      $ npm install --save redux-saga
      ```
 
-176. ### What is the mental model of redux-saga?
+176. ### redux-saga 的模型概念是什么?
 
-     *Saga* is like a separate thread in your application, that's solely responsible for side effects. `redux-saga` is a redux *middleware*, which means this thread can be started, paused and cancelled from the main application with normal Redux actions, it has access to the full Redux application state and it can dispatch Redux actions as well.
+     *Saga*就像你的项目中的一个单独的线程，它独自负责副作用。`redux-saga` 是一个 redux *中间件*，这意味着它可以在项目启动中使用正常的 Redux 操作，暂停和取消该线程，它可以访问完整的 Redux 应用程序状态，并且它也可以调度 Redux 操作。
 
-177. ### What are the differences between `call()` and `put()` in redux-saga?
+177. ### 在 redux-saga 中`call()`和`put()`之间有什么区别？?
 
-     Both `call()` and `put()` are effect creator functions. `call()` function is used to create effect description, which instructs middleware to call the promise. `put()` function creates an effect, which instructs middleware to dispatch an action to the store.
+     `call()`和`put()`都是 Effect 创建函数。 `call()`函数用于创建 Effect 描述，指示中间件调用 promise。`put()`函数创建一个 Effect，指示中间件将一个 Action 分派给 Store。
 
-     Let's take example of how these effects work for fetching particular user data.
+     让我们举例说明这些 Effect 如何用于获取特定用户数据。
 
      ```javascript
      function* fetchUserSaga(action) {
@@ -3425,60 +3425,60 @@
      }
      ```
 
-178. ### What is Redux Thunk?
+178. ### 什么是 Redux Thunk?
 
-     *Redux Thunk* middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods `dispatch()` and `getState()` as parameters.
+     *Redux Thunk*中间件允许您编写返回函数而不是 Action 的创建者。 thunk 可用于延迟 Action 的发送，或仅在满足某个条件时发送。内部函数接收 Store 的方法`dispatch()`和`getState()`作为参数。
 
-179. ### What are the differences between `redux-saga` and `redux-thunk`?
+179. ### `redux-saga`和`redux-thunk`之间有什么区别?
 
-     Both *Redux Thunk* and *Redux Saga* take care of dealing with side effects. In most of the scenarios, Thunk uses *Promises* to deal with them, whereas Saga uses *Generators*. Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. But both middleware can coexist, so you can start with Thunks and introduce Sagas when/if you need them.
+     *Redux Thunk*和*Redux Saga*都负责处理副作用。在大多数场景中，Thunk 使用*Promises*来处理它们，而 Saga 使用*Generators*。Thunk 易于使用，因为许多开发人员都熟悉 Promise，Sagas/Generators 功能更强大，但您需要学习它们。但是这两个中间件可以共存，所以你可以从 Thunks 开始，并在需要时引入 Sagas。
 
-180. ### What is Redux DevTools?
+180. ### 什么是 Redux DevTools?
 
-     *Redux DevTools* is a live-editing time travel environment for Redux with hot reloading, action replay, and customizable UI. If you don't want to bother with installing Redux DevTools and integrating it into your project, consider using Redux DevTools Extension for Chrome and Firefox.
+     *Redux DevTools*是 Redux 的实时编辑的时间旅行环境，具有热重新加载，Action 重放和可自定义的 UI。如果您不想安装 Redux DevTools 并将其集成到项目中，请考虑使用 Chrome 和 Firefox 的扩展插件。
 
-181. ### What are the features of Redux DevTools?
+181. ### Redux DevTools 的功能有哪些?
 
-     1. Lets you inspect every state and action payload.
-     2. Lets you go back in time by *cancelling* actions.
-     3. If you change the reducer code, each *staged* action will be re-evaluated.
-     4. If the reducers throw, you will see during which action this happened, and what the error was.
-     5. With `persistState()` store enhancer, you can persist debug sessions across page reloads.
+     1. 允许您检查每个状态和 action 负载。
+     2. 让你可以通过*撤销*回到过去。
+     3. 如果更改 reducer 代码，将重新评估每个*已暂存*的 Action。
+     4. 如果 Reducers 抛出错误，你会看到这发生了什么 Action，以及错误是什么。
+     5. 使用`persistState()`存储增强器，您可以在页面重新加载期间保持调试会话。
 
-182. ### What are Redux selectors and why to use them?
+182. ### 什么是 Redux 选择器以及使用它们的原因?
 
-     *Selectors* are functions that take Redux state as an argument and return some data to pass to the component.
+     *选择器*是将 Redux 状态作为参数并返回一些数据以传递给组件的函数。
 
-     For example, to get user details from the state:
+     例如，要从 state 中获取用户详细信息：
 
      ```javascript
      const getUserData = state => state.user.data
      ```
 
-183. ### What is Redux Form?
+183. ### 什么是 Redux Form?
 
-     *Redux Form* works with React and Redux to enable a form in React to use Redux to store all of its state. Redux Form can be used with raw HTML5 inputs, but it also works very well with common UI frameworks like Material UI, React Widgets and React Bootstrap.
+     *Redux Form*与 React 和 Redux 一起使用，以使 React 中的表单能够使用 Redux 来存储其所有状态。Redux Form 可以与原始 HTML5 输入一起使用，但它也适用于常见的 UI 框架，如 Material UI，React Widgets和React Bootstrap。
 
-184. ### What are the main features of Redux Form?
+184. ### Redux Form 的主要功能有哪些?
 
-       1. Field values persistence via Redux store.
-       2. Validation (sync/async) and submission.
-       3. Formatting, parsing and normalization of field values.
+       1. 字段值通过 Redux 存储持久化。
+       2. 验证（同步/异步）和提交。
+       3. 字段值的格式化，解析和规范化。
 
-185. ### How to add multiple middlewares to Redux?
+185. ### 如何向Redux添加多个中间件?
 
-     You can use `applyMiddleware()`.
+     你可以使用`applyMiddleware()`。
 
-     For example, you can add `redux-thunk` and `logger` passing them as arguments to `applyMiddleware()`:
+     例如，你可以添加`redux-thunk`和`logger`作为参数传递给`applyMiddleware()`：
 
      ```javascript
      import { createStore, applyMiddleware } from 'redux'
      const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore)
      ```
 
-186. ### How to set initial state in Redux?
+186. ### 如何在 Redux 中设置初始状态?
 
-     You need to pass initial state as second argument to createStore:
+     您需要将初始状态作为第二个参数传递给 createStore ：
 
      ```javascript
      const rootReducer = combineReducers({
@@ -3496,48 +3496,48 @@
      )
      ```
 
-187. ### How Relay is different from Redux?
+187. ### Relay 与 Redux 有何不同?
 
-     Relay is similar to Redux in that they both use a single store. The main difference is that relay only manages state originated from the server, and all access to the state is used via *GraphQL* queries (for reading data) and mutations (for changing data). Relay caches the data for you and optimizes data fetching for you, by fetching only changed data and nothing more.
+     Relay 与 Redux 类似，因为它们都使用单个 Store。主要区别在于 relay 仅管理源自服务器的状态，并且通过*GraphQL*查询（用于读取数据）和突变（用于更改数据）来使用对状态的所有访问。Relay 通过仅提取已更改的数据而为您缓存数据并优化数据提取。
 
 ## React Native
 
-188. ### What is the difference between React Native and React?
+188. ### React Native 和 React 有什么区别?
 
-     **React** is a JavaScript library, supporting both front end web and being run on the server, for building user interfaces and web applications.
+     **React**是一个 JavaScript 库，支持前端 Web 和在服务器上运行，用于构建用户界面和 Web 应用程序。
 
-     **React Native** is a mobile framework that compiles to native app components, allowing you to build native mobile applications (iOS, Android, and Windows) in JavaScript that allows you to use React to build your components, and implements React under the hood.
+     **React Native**是一个移动端框架，可编译为本机应用程序组件，允许您使用 JavaScript 构建本机移动应用程序（iOS，Android和Windows），允许您使用 React 构建组件。
 
-189. ### How to test React Native apps?
+189. ### 如何测试 React Native 应用程序?
 
-     React Native can be tested only in mobile simulators like iOS and Android. You can run the app in your mobile using expo app (https://expo.io) Where it syncs using QR code, your mobile and computer should be in same wireless network.
+     React Native 只能在 iOS 和 Android 等移动模拟器中进行测试。您可以使用 expo app（https://expo.io）在移动设备上运行该应用程序。如果使用 QR 代码进行同步，则您的移动设备和计算机应位于同一个无线网络中。
 
-190. ### How to do logging in React Native?
+190. ### 如何在 React Native 查看日志?
 
-     You can use `console.log`, `console.warn`, etc. As of React Native v0.29 you can simply run the following to see logs in the console:
+     您可以使用`console.log`，`console.warn`等。从 React Native v0.29 开始，您只需运行以下命令即可在控制台中查看日志：
 
      ```
      $ react-native log-ios
      $ react-native log-android
      ```
 
-191. ### How to debug your React Native?
+191. ### 怎么调试 React Native 应用?
 
-     Follow the below steps to debug React Native app:
+     按照以下步骤调试 React Native 应用程序：
 
-     1. Run your application in the iOS simulator.
-     2. Press `Command + D` and a webpage should open up at `http://localhost:8081/debugger-ui`.
-     3. Enable *Pause On Caught Exceptions* for a better debugging experience.
-     4. Press `Command + Option + I` to open the Chrome Developer tools, or open it via `View` -> `Developer` -> `Developer Tools`.
-     5. You should now be able to debug as you normally would.
+     1. 在 iOS 模拟器中运行您的应用程序。
+     2. 按`Command + D`，然后在网页中打开`http://localhost:8081/debugger-ui`。
+     3. 启用*Pause On Caught Exceptions*以获得更好的调试体验。
+     4. 按`Command + Option + I`打开 Chrome Developer 工具，或通过`View` ->`Developer` ->`Developer Tools`打开它。
+     5. 您现在应该能够像平常那样进行调试。
 
 ## React supported libraries & Integration
 
-192. ### What is reselect and how it works?
+192. ### 什么是 Reselect 以及它是如何工作的?
 
-     *Reselect* is a **selector library** (for Redux) which uses *memoization* concept. It was originally written to compute derived data from Redux-like applications state, but it can't be tied to any architecture or library.
+     *Reselect*是一个**选择器库**（用于 Redux ），它使用*memoization*概念。它最初编写用于计算类似 Redux 的应用程序状态的派生数据，但它不能绑定到任何体系结构或库。
 
-     Reselect keeps a copy of the last inputs/outputs of the last call, and recomputes the result only if one of the inputs changes. If the the same inputs are provided twice in a row, Reselect returns the cached output. It's memoization and cache are fully customizable.
+     Reselect 保留最后一次调用的最后输入/输出的副本，并仅在其中一个输入发生更改时重新计算结果。如果连续两次提供相同的输入，则 Reselect 将返回缓存的输出。它的 memoization 和缓存是完全可定制的。
 
 193. ### 什么是 Flow?
 
@@ -3629,23 +3629,23 @@
      3. 更适合创建移动端应用程序。
      4. 提供更多的信息和解决方案。
 
-200. ### What is the difference between React and Angular?
+200. ### React 和 Angular 有什么区别?
 
      | React | Angular |
      | ----- | ------- |
-     | React is a library and has only the View layer | Angular is a framework and has complete MVC functionality |
-     | React handles rendering on the server side | AngularJS renders only on the client side but Angular 2 and above renders on the server side |
-     | React uses JSX that looks like HTML in JS which can be confusing | Angular follows the template approach for HTML, which makes code shorter and easy to understand |
-     | React Native, which is a React type to build mobile applications are faster and more stable | Ionic, Angular's mobile native app is relatively less stable and slower |
-     | In React, data flows only in one way and hence debugging is easy | In Angular, data flows both way i.e it has two-way data binding between children and parent and hence debugging is often difficult |
+     | React 是一个库，只有View层 | Angular是一个框架，具有完整的 MVC 功能 |
+     | React 可以处理服务器端的渲染 | AngularJS 仅在客户端呈现，但 Angular 2 及更高版本可以在服务器端渲染 |
+     | React 在 JS 中使用看起来像 HTML 的 JSX，这可能令人困惑 | Angular 遵循 HTML 的模板方法，这使得代码更短且易于理解 |
+     | React Native 是一种 React 类型，它用于构建移动应用程序，它更快，更稳定 | Ionic，Angular 的移动 app 相对原生 app 来说不太稳定和慢 |
+     | 在 Reac t中，数据只以单一方向传递，因此调试很容易 | 在 Angular 中，数据以两种方式传递，即它在子节点和父节点之间具有双向数据绑定，因此调试通常很困难 |
 
-201. ### Why React tab is not showing up in DevTools?
+201. ### 为什么 Reac t选项卡不会显示在 DevTools 中?
 
-     When the page loads, *React DevTools* sets a global named `__REACT_DEVTOOLS_GLOBAL_HOOK__`, then React communicates with that hook during initialization. If the website is not using React or if React fails to communicate with DevTools then it won't show up the tab.
+     当页面加载时，*React DevTools*设置一个名为`__REACT_DEVTOOLS_GLOBAL_HOOK__`的全局变量，然后 React 在初始化期间与该钩子通信。如果网站没有使用 React，或者如果 React 无法与 DevTools 通信，那么它将不会显示该选项卡。
 
-202. ### What are Styled Components?
+202. ### 什么是 Styled Components?
 
-     `styled-components` is a JavaScript library for styling React applications. It removes the mapping between styles and components, and lets you write actual CSS augmented with JavaScript.
+    `styled-components`是一个用于样式化 React 应用程序的 JavaScript 库。 它删除了样式和组件之间的映射，并允许您在 js 中编写 css。
 
 203. ### Give an example of Styled Components?
 
