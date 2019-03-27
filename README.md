@@ -344,7 +344,7 @@
     * 考虑到真实的 DOM 操作成本很高，它使用 VirtualDOM 而不是真实的 DOM。
     * 支持服务端渲染。
     * 遵循单向数据流或数据绑定。
-    * 使用可重用/可组合的 UI 组件开发视图。
+    * 使用可复用/可组合的 UI 组件开发视图。
 
 3. ### 什么是 JSX?
 
@@ -455,7 +455,7 @@
 
 7. ### 什么是 Pure Components?
 
-    `React.PureComponent` 与 `React.Component` 完全相同，只是它为你处理了 `shouldComponentUpdate()` 方法。当属性或状态发生变化时，PureComponent 将对属性和状态进行浅比较。另一方面，普通组件不会将当前的属性和状态与新的属性和状态进行比较。因此，在默认情况下，每当调用 `shouldComponentUpdate` 时，组件将重新渲染。
+    `React.PureComponent` 与 `React.Component` 完全相同，只是它为你处理了 `shouldComponentUpdate()` 方法。当属性或状态发生变化时，PureComponent 将对属性和状态进行**浅比较**。另一方面，一般的组件不会将当前的属性和状态与新的属性和状态进行比较。因此，在默认情况下，每当调用 `shouldComponentUpdate` 时，默认返回 true，所以组件都将重新渲染。
 
 8. ### React 的状态是什么?
 
@@ -524,14 +524,14 @@
 
 11. ### 我们为什么不能直接更新状态?
 
-    如果你尝试直接更新状态，则不会重新渲染组件?
+    如果你尝试直接改变状态，那么组件将不会重新渲染。
 
     ```javascript
     //Wrong
     this.state.message = 'Hello world'
     ```
 
-    而是使用 `setState()` 方法。它调度组件状态对象的更新。当状态更改时，组件通过重新渲染来响应。
+    正确方法应该是使用 `setState()` 方法。它调度组件状态对象的更新。当状态更改时，组件通将会重新渲染。
 
     ```javascript
     //Correct
@@ -661,6 +661,16 @@
           </h2>
     }
     ```
+    
+    当然如果只是想判断 if，可以如下直接判断：
+    
+    ```
+    {
+        isLogin && <span>Your have been login!</span>
+    }
+    ```
+    
+    在上面的代码中，不需要使用`isLogin ? <span>Your have been login!</span> : null`这样的形式。
 
 18. ### 什么是 "key" 属性，在元素数组中使用它们有什么好处?
 
@@ -1171,6 +1181,8 @@
       return <span className={'menu navigation-menu'}>{'Menu'}</span>
     }
     ```
+    
+    在实际项目中，我们经常使用[classnames](https://github.com/JedWatson/classnames)来方便我们操作`className`。
 
 46. ### 什么是 Fragments ?
 
@@ -1188,7 +1200,7 @@
     }
     ```
 
-    以下是简介语法，但是在一些工具中还不支持：
+    以下是简洁语法，但是在一些工具中还不支持：
 
     ```jsx 
     render() {
@@ -1297,8 +1309,7 @@
     2. 对于 Web 开发初学者来说，有一个学习曲线。
     3. 将 React 集成到传统的 MVC 框架中需要一些额外的配置。
     4. 代码复杂性随着内联模板和 JSX 的增加而增加。
-    5. 太多较小的组件导致过度工程化或样板文件。
-    5. Too many smaller components leading to over engineering or boilerplate.
+    5. 如果有太多的小组件可能增加项目的庞大和复杂。
 
 54. ### 在 React v16 中的错误边界是什么?
 
@@ -2030,7 +2041,7 @@
 
 94. ### 什么是 React proptype 数组?
 
-    如果要将对象数组传递给具有特定形状的组件，请使用 `React.PropTypes.shape()` 作为 `React.PropTypes.arrayOf()` 的参数。
+    如果你要规范具有特定对象格式的数组的属性，请使用 `React.PropTypes.shape()` 作为 `React.PropTypes.arrayOf()` 的参数。
 
     ```javascript
     ReactComponent.propTypes = {
@@ -2275,7 +2286,6 @@
 
 109. ### 为什么函数比对象更适合于 `setState()`?
 
-     React may batch multiple `setState()` calls into a single update for performance. Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
      出于性能考虑，React 可能将多个 `setState()` 调用合并成单个更新。这是因为我们可以异步更新 `this.props` 和 `this.state`，所以不应该依赖它们的值来计算下一个状态。
 
      以下的 counter 示例将无法按预期更新：
@@ -2609,7 +2619,7 @@
 
 129. ### 什么是 React Router?
 
-     React Router 是一个基于 React 的强大的路由库，可以帮助您快速地向应用添加新的屏幕和流，同时保持 URL 与页面上显示的内容同步。
+     React Router 是一个基于 React 之上的强大路由库，可以帮助您快速地向应用添加视图和数据流，同时保持 UI 与 URL 同步。
 
 130. ### React Router 与 history 库的区别?
 
