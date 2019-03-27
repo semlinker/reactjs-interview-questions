@@ -333,6 +333,8 @@
     阅读资源：
 
     1. [React 中文文档](https://react.docschina.org/docs/hello-world.html)
+    2. [掘金 - 图解 React](https://juejin.im/post/5b481f6b51882519ad6175c2)
+    2. [掘金 - 200行代码实现简版react](https://juejin.im/post/5c0c7304f265da613e22106c)
 
 
 2. ### React 的主要特点是什么?
@@ -370,6 +372,10 @@
     ```
 
     这里你可以访问 [Babeljs](https://babeljs.io/repl) 在线体验一下。
+
+    阅读资源：
+
+    1. [从零开始实现一个React（一）：JSX和虚拟DOM ](https://github.com/hujiulong/blog/issues/4)
 
 
 4. ### 元素和组件有什么区别?
@@ -543,6 +549,10 @@
     ```javascript
     setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
     ```
+
+    阅读资源：
+
+    1. [掘金 - 揭密React setState](https://juejin.im/post/5b87d14e6fb9a01a18268caf)
 
 13. ### HTML 和 React 事件处理有什么区别?
 
@@ -1537,6 +1547,10 @@
       </div>
     )
     ```
+
+    阅读资源：
+
+    1. [掘金 - 精读《React 八种条件渲染》](https://juejin.im/post/5b285c0d5188257494641d0b)
 
 
 68. ### 为什么在 DOM 元素上展开 props 需要小心?
@@ -4144,6 +4158,10 @@
        );
      }
      ```
+
+      阅读资源：
+      
+      1. [掘金 - 30分钟精通React Hooks](https://juejin.im/post/5be3ea136fb9a049f9121014)
 
 227. ### Hooks 需要遵循什么规则?
 
