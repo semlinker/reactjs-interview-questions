@@ -336,6 +336,7 @@
     2. [掘金 - 图解 React](https://juejin.im/post/5b481f6b51882519ad6175c2)
     2. [掘金 - 200行代码实现简版react](https://juejin.im/post/5c0c7304f265da613e22106c)
 
+    **[⬆ 返回顶部](#目录)**
 
 2. ### React 的主要特点是什么?
 
@@ -345,6 +346,8 @@
     * 支持服务端渲染。
     * 遵循单向数据流或数据绑定。
     * 使用可重用/可组合的 UI 组件开发视图。
+
+    **[⬆ 返回顶部](#目录)**
 
 3. ### 什么是 JSX?
 
@@ -377,6 +380,7 @@
 
     1. [从零开始实现一个React（一）：JSX和虚拟DOM ](https://github.com/hujiulong/blog/issues/4)
 
+    **[⬆ 返回顶部](#目录)**
 
 4. ### 元素和组件有什么区别?
 
@@ -427,6 +431,8 @@
     )
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 5. ### 如何在 React 中创建组件?
 
     有两种可行的方法来创建一个组件：
@@ -449,13 +455,19 @@
         }
         ```
 
+    **[⬆ 返回顶部](#目录)**
+
 6. ### 何时使用类组件和函数组件?
 
     如果组件需要使用**状态或生命周期方法**，那么使用类组件，否则使用函数组件。
 
+    **[⬆ 返回顶部](#目录)**
+
 7. ### 什么是 Pure Components?
 
     `React.PureComponent` 与 `React.Component` 完全相同，只是它为你处理了 `shouldComponentUpdate()` 方法。当属性或状态发生变化时，PureComponent 将对属性和状态进行浅比较。另一方面，普通组件不会将当前的属性和状态与新的属性和状态进行比较。因此，在默认情况下，每当调用 `shouldComponentUpdate` 时，组件将重新渲染。
+
+    **[⬆ 返回顶部](#目录)**
 
 8. ### React 的状态是什么?
 
@@ -485,6 +497,8 @@
 
     状态（State）与属性（Props）类似，但它是私有的，完全由组件控制。也就是说，除了它所属的组件外，任何组件都无法访问它。
 
+    **[⬆ 返回顶部](#目录)**
+
 9. ### React 中的 props 是什么?
 
     Props 是组件的输入。它们是单个值或包含一组值的对象，这些值在创建时使用类似于 HTML 标记属性的命名约定传递给组件。它们是从父组件传递到子组件的数据。
@@ -507,20 +521,23 @@
     props.reactProp
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 10. ### 状态和属性有什么区别?
 
-  state 和 props 都是普通的 JavaScript 对象。虽然它们都保存着影响渲染输出的信息，但它们在组件方面的功能不同。Props 以类似于函数参数的方式传递给组件，而状态则类似于在函数内声明变量并对它进行管理。
+    state 和 props 都是普通的 JavaScript 对象。虽然它们都保存着影响渲染输出的信息，但它们在组件方面的功能不同。Props 以类似于函数参数的方式传递给组件，而状态则类似于在函数内声明变量并对它进行管理。
 
-  States vs Props
+    States vs Props
 
-  | Conditions           | States | Props |
-  | -------------------- | ------ | ----- |
-  | 可从父组件接收初始值 | 是     | 是    |
-  | 可在父组件中改变其值 | 否     | 是    |
-  | 在组件内设置默认值   | 是     | 是    |
-  | 在组件内可改变       | 是     | 否    |
-  | 可作为子组件的初始值 | 是     | 是    |
+    | Conditions           | States | Props |
+    | -------------------- | ------ | ----- |
+    | 可从父组件接收初始值 | 是     | 是    |
+    | 可在父组件中改变其值 | 否     | 是    |
+    | 在组件内设置默认值   | 是     | 是    |
+    | 在组件内可改变       | 是     | 否    |
+    | 可作为子组件的初始值 | 是     | 是    |
 
+    **[⬆ 返回顶部](#目录)**
 
 11. ### 我们为什么不能直接更新状态?
 
@@ -540,6 +557,8 @@
 
     **注意：** 你可以在 *constructor* 中或使用最新的 JavaScript 类属性声明语法直接设置状态对象。
 
+    **[⬆ 返回顶部](#目录)**
+
 12. ### 回调函数作为 `setState()` 参数的目的是什么?
 
     当 setState 完成和组件渲染后，回调函数将会被调用。由于 `setState()` 是异步的，回调函数用于任何后续的操作。
@@ -553,6 +572,8 @@
     阅读资源：
 
     1. [掘金 - 揭密React setState](https://juejin.im/post/5b87d14e6fb9a01a18268caf)
+
+    **[⬆ 返回顶部](#目录)**
 
 13. ### HTML 和 React 事件处理有什么区别?
 
@@ -582,6 +603,8 @@
       console.log('The link was clicked.')
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 14. ### 如何在 JSX 回调中绑定方法或事件处理程序?
 
@@ -626,6 +649,8 @@
 
     **注意：** 如果回调函数作为属性传给子组件，那么这些组件可能触发一个额外的重新渲染。在这些情况下，考虑到性能，最好使用 `.bind()` 或 *public class fields syntax* 方案。
 
+    **[⬆ 返回顶部](#目录)**
+
 15. ### 如何将参数传递给事件处理程序或回调函数?
 
     你可以使用箭头函数来包装事件处理器并传递参数：
@@ -640,9 +665,13 @@
     <button onClick={this.handleClick.bind(this, id)} />
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 16. ### React 中的合成事件是什么?
 
     `SyntheticEvent` 是对浏览器原生事件的跨浏览器包装。它的 API 与浏览器的原生事件相同，包括 `stopPropagation()` 和 `preventDefault()`，除了事件在所有浏览器中的工作方式相同。
+
+    **[⬆ 返回顶部](#目录)**
 
 17. ### 什么是内联条件表达式?
 
@@ -661,6 +690,8 @@
           </h2>
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 18. ### 什么是 "key" 属性，在元素数组中使用它们有什么好处?
 
@@ -691,6 +722,8 @@
     1. 由于列表项的顺序可能发生改变，因此并不推荐使用 *indexes* 作为 *keys*。这可能会对性能产生负面影响，并可能导致组件状态出现问题。
     2. 如果将列表项提取为单独的组件，则在列表组件上应用 *keys* 而不是 `li` 标签。
     3. 如果在列表项中没有设置 `key` 属性，在控制台会显示警告消息。
+
+    **[⬆ 返回顶部](#目录)**
 
 19. ### refs 有什么用?
 
@@ -745,6 +778,8 @@
 
     **注意：** 你也可以使用内联引用回调，尽管这不是推荐的方法。
 
+    **[⬆ 返回顶部](#目录)**
+
 21. ### 什么是 forward refs?
 
     *Ref forwarding* 是一个特性，它允许一些组件获取接收到 *ref* 对象并将它进一步传递给子组件。
@@ -760,6 +795,8 @@
     const ref = React.createRef();
     <ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 22. ### callback refs 和 findDOMNode() 哪一个是首选选项?
 
@@ -793,6 +830,8 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 23. ### 为什么 String Refs 被弃用?
 
     如果你以前使用过 React，你可能会熟悉旧的 API，其中的 `ref` 属性是字符串，如 `ref={'textInput'}`，并且 DOM 节点的访问方式为`this.refs.textInput`。我们建议不要这样做，因为字符串引用有以下问题，并且被认为是遗留问题。字符串 refs 在 React v16 版本中被移除。
@@ -818,6 +857,8 @@
        }
        ```
 
+    **[⬆ 返回顶部](#目录)**
+
 24. ### 什么是 Virtual DOM?
 
     *Virtual DOM* (VDOM) 是 *Real DOM* 的内存表示形式。UI 的展示形式被保存在内存中并与真实的 DOM 同步。这是在调用的渲染函数和在屏幕上显示元素之间发生的一个步骤。整个过程被称为 *reconciliation*。
@@ -837,6 +878,8 @@
     1. [知乎 - 如何理解虚拟DOM?](https://www.zhihu.com/question/29504639)
     2. [edureka - react-interview-questions](https://www.edureka.co/blog/interview-questions/react-interview-questions/)
 
+    **[⬆ 返回顶部](#目录)**
+
 25. ### Virtual DOM 如何工作?
 
     *Virtual DOM* 分为三个简单的步骤。
@@ -850,17 +893,25 @@
     3. 一旦计算完成，真实的 DOM 将只更新实际更改的内容。
         ![vdom3](images/vdom3.png)
 
+    **[⬆ 返回顶部](#目录)**
+
 26. ### Shadow DOM 和 Virtual DOM 之间有什么区别?
 
     [Shadow DOM](https://developers.google.com/web/fundamentals/web-components/shadowdom?hl=zh-cn) 是一种浏览器技术，它解决了构建网络应用的脆弱性问题。Shadow DOM 修复了 CSS 和 DOM。它在网络平台中引入作用域样式。 无需工具或命名约定，你即可使用原生 JavaScript 捆绑 CSS 和标记、隐藏实现详情以及编写独立的组件。*Virtual DOM* 是一个由 JavaScript 库在浏览器 API 之上实现的概念。
+
+    **[⬆ 返回顶部](#目录)**
 
 27. ### 什么是 React Fiber?
 
     Fiber 是 React v16 中新的 *reconciliation* 引擎，或核心算法的重新实现。React Fiber 的目标是提高对动画，布局，手势，暂停，中止或者重用任务的能力及为不同类型的更新分配优先级，及新的并发原语等领域的适用性。
 
+    **[⬆ 返回顶部](#目录)**
+
 28. ### React Fiber 的主要目标是什么?
 
     *React Fiber* 的目标是提高其在动画、布局和手势等领域的适用性。它的主要特性是 **incremental rendering**: 将渲染任务拆分为小的任务块并将任务分配到多个帧上的能力。
+
+    **[⬆ 返回顶部](#目录)**
 
 29. ### 什么是受控组件?
 
@@ -873,6 +924,8 @@
       this.setState({value: event.target.value.toUpperCase()})
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 30. ### 什么是非受控组件?
 
@@ -909,13 +962,19 @@
 
     在大多数情况下，建议使用受控组件来实现表单。
 
+    **[⬆ 返回顶部](#目录)**
+
 31. ### createElement 和 cloneElement 有什么区别?
 
     JSX 元素将被转换为 `React.createElement()` 函数来创建 React 元素，这些对象将用于表示 UI 对象。而 `cloneElement` 用于克隆元素并传递新的属性。
 
+    **[⬆ 返回顶部](#目录)**
+
 32. ### 在 React 中的提升状态是什么?
 
     当多个组件需要共享相同的更改数据时，建议将共享状态提升到最接近的共同祖先。这意味着，如果两个子组件共享来自其父组件的相同数据，则将状态移动到父组件，而不是在两个子组件中维护局部状态。
+
+    **[⬆ 返回顶部](#目录)**
 
 33. ### 组件生命周期的不同阶段是什么?
 
@@ -942,6 +1001,8 @@
 
     ![phases 16.2](images/phases.png)
 
+    **[⬆ 返回顶部](#目录)**
+
 
 34. ### React 生命周期方法有哪些?
 
@@ -964,6 +1025,8 @@
     - **componentDidUpdate:** 它主要用于更新 DOM 以响应 prop 或 state 更改。 如果`shouldComponentUpdate()`返回`false`，则不会触发。
     - **componentWillUnmount:** 当一个组件被从 DOM 中移除时，该方法被调用，取消网络请求或者移除与该组件相关的事件监听程序等应该在这里进行。
 
+    **[⬆ 返回顶部](#目录)**
+
 35. ### 什么是高阶组件（HOC）?
 
     *高阶组件*(*HOC*) 就是一个函数，且该函数接受一个组件作为参数，并返回一个新的组件，它只是一种模式，这种模式是由`react`自身的组合性质必然产生的。
@@ -982,6 +1045,8 @@
     4. 操作属性（`props`）
     
     > 译注：更详细用法请参考[高阶组件的使用](https://react.docschina.org/docs/higher-order-components.html)
+
+    **[⬆ 返回顶部](#目录)**
 
 36. ### 如何为高阶组件创建属性代理?
 
@@ -1003,6 +1068,8 @@
       }
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 37. ### 什么是上下文（Context）?
 
@@ -1041,6 +1108,8 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 38. ### children 属性是什么?
 
     *Children* 是一个属性（`this.props.chldren`），它允许你将组件作为数据传递给其他组件，就像你使用的任何其他组件一样。在组件的开始和结束标记之间放置的组件树将作为`children`属性传递给该组件。
@@ -1062,6 +1131,8 @@
       node
     )
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 39. ### 怎样在 React 中写注释?
 
@@ -1085,6 +1156,8 @@
       {`Welcome ${user}, let's play React`}
     </div>
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 40. ### 构造函数使用带 props 参数的目的是什么?
 
@@ -1124,9 +1197,13 @@
 
     上面的代码片段显示`this.props`仅在构造函数中有所不同。 它在构造函数之外是相同的。
 
+    **[⬆ 返回顶部](#目录)**
+
 41. ### 什么是调解?
 
     当组件的`props`或`state`发生更改时，React 通过将新返回的元素与先前呈现的元素进行比较来确定是否需要实际的 DOM 更新。当它们不相等时，React 将更新 DOM 。此过程称为*reconciliation*。
+
+    **[⬆ 返回顶部](#目录)**
 
 42. ### 如何使用动态属性名设置 state ?
 
@@ -1137,6 +1214,8 @@
       this.setState({ [event.target.id]: event.target.value })
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 43. ### 每次组件渲染时调用函数的常见错误是什么?
 
@@ -1158,9 +1237,13 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 44. ### 为什么有组件名称要首字母大写?
 
     这是必要的，因为组件不是 DOM 元素，它们是构造函数。 此外，在 JSX 中，小写标记名称是指 HTML 元素，而不是组件。
+
+    **[⬆ 返回顶部](#目录)**
 
 45. ### 为什么 React 使用 `className` 而不是 `class` 属性?
 
@@ -1171,6 +1254,8 @@
       return <span className={'menu navigation-menu'}>{'Menu'}</span>
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 46. ### 什么是 Fragments ?
 
@@ -1204,11 +1289,15 @@
     
     > 译注：`React 16` 以前，`render` 函数的返回必须有一个根节点，否则报错。
 
+    **[⬆ 返回顶部](#目录)**
+
 47. ### 为什么使用 Fragments 比使用容器 div 更好?
 
     1. 通过不创建额外的 DOM 节点，Fragments 更快并且使用更少的内存。这在非常大而深的节点树时很有好处。
     2. 一些 CSS 机制如*Flexbox*和*CSS Grid*具有特殊的父子关系，如果在中间添加 div 将使得很难保持所需的结构。
-    3. 在 DOM 审查器中不会那么的杂乱
+    3. 在 DOM 审查器中不会那么的杂乱。
+
+    **[⬆ 返回顶部](#目录)**
 
 48. ### 在 React 中什么是 Portal ?
 
@@ -1220,9 +1309,13 @@
 
     第一个参数是任何可渲染的 React 子节点，例如元素，字符串或片段。第二个参数是 DOM 元素。
 
+    **[⬆ 返回顶部](#目录)**
+
 49. ### 什么是无状态组件?
 
     如果行为独立于其状态，则它可以是无状态组件。你可以使用函数或类来创建无状态组件。但除非你需要在组件中使用生命周期钩子，否则你应该选择函数组件。无状态组件有很多好处： 它们易于编写，理解和测试，速度更快，而且你可以完全避免使用`this`关键字。
+
+    **[⬆ 返回顶部](#目录)**
 
 50. ### 什么是有状态组件?
 
@@ -1240,6 +1333,8 @@
       }
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 51. ### 在 React 中如何校验 props 属性?
 
@@ -1283,6 +1378,8 @@
 
     **注意:** 在 React v15.5 中，*PropTypes* 从 `React.PropTypes` 被移动到 `prop-types` 库中。
 
+    **[⬆ 返回顶部](#目录)**
+
 52. ### React 的优点是什么?
 
     1. 使用 *Virtual DOM* 提高应用程序的性能。
@@ -1291,6 +1388,8 @@
     4. 易于与框架（Angular，Backbone）集成，因为它只是一个视图库。
     5. 使用 Jest 等工具轻松编写单元与集成测试。
 
+    **[⬆ 返回顶部](#目录)**
+
 53. ### React 的局限性是什么?
 
     1. React 只是一个视图库，而不是一个完整的框架。
@@ -1298,7 +1397,8 @@
     3. 将 React 集成到传统的 MVC 框架中需要一些额外的配置。
     4. 代码复杂性随着内联模板和 JSX 的增加而增加。
     5. 太多较小的组件导致过度工程化或样板文件。
-    5. Too many smaller components leading to over engineering or boilerplate.
+
+    **[⬆ 返回顶部](#目录)**
 
 54. ### 在 React v16 中的错误边界是什么?
 
@@ -1341,13 +1441,19 @@
     </ErrorBoundary>
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 55. ### 在 React v15 中如何处理错误边界?
 
     React v15 使用 `unstable_handleError` 方法为错误边界提供了非常基础的支持。已在 React v16 中，将其重命名为`componentDidCatch`。 
 
+    **[⬆ 返回顶部](#目录)**
+
 56. ### 静态类型检查推荐的方法是什么?
 
     通常，我们使用 PropTypes 库（在 React v15.5 之后 `React.PropTypes` 被移动到了 `prop-types` 包中），在 React 应用程序中执行类型检查。对于大型项目，建议使用静态类型检查器，比如 Flow 或 TypeScript，它们在编译时执行类型检查并提供 auto-completion 功能。
+
+    **[⬆ 返回顶部](#目录)**
 
 57. ### `react-dom` 包的用途是什么?
 
@@ -1359,6 +1465,8 @@
     4. `findDOMNode()`
     5. `createPortal()`
 
+    **[⬆ 返回顶部](#目录)**
+
 58. ### `react-dom` 中 render 方法的目的是什么?
 
     此方法用于将 React 元素渲染到所提供容器中的 DOM 结构中，并返回对组件的引用。如果 React 元素之前已被渲染到容器中，它将对其执行更新，并且只在需要时改变 DOM 以反映最新的更改。
@@ -1369,6 +1477,7 @@
 
     如果提供了可选的回调函数，该函数将在组件被渲染或更新后执行。
 
+    **[⬆ 返回顶部](#目录)**
 
 59. ### ReactDOMServer 是什么?
 
@@ -1393,6 +1502,8 @@
     })
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 60. ### 在 React 中如何使用 innerHTML?
 
     `dangerouslySetInnerHTML` 属性是 React 用来替代在浏览器 DOM 中使用 `innerHTML`。与 `innerHTML` 一样，考虑到跨站脚本攻击（XSS），使用此属性也是有风险的。使用时，你只需传递以 `__html` 作为键，而 HTML 文本作为对应值的对象。
@@ -1408,6 +1519,8 @@
       return <div dangerouslySetInnerHTML={createMarkup()} />
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 61. ### 如何在 React 中使用样式?
 
@@ -1426,6 +1539,8 @@
 
     为了与在 JavaScript 中访问 DOM 节点上的属性保持一致，样式键采用了 camelcased（例如`node.style.backgroundImage`）。
 
+    **[⬆ 返回顶部](#目录)**
+
 
 62. ### 在 React 中事件有何不同?
 
@@ -1434,9 +1549,13 @@
     1. React 事件处理程序是采用驼峰而不是小写来命名的。 
     2. 使用 JSX，你将传递一个函数作为事件处理程序，而不是字符串。
 
+    **[⬆ 返回顶部](#目录)**
+
 63. ### 如果在构造函数中使用 `setState()` 会发生什么?
 
     当你使用 `setState()` 时，除了设置状态对象之外，React 还会重新渲染组件及其所有的子组件。你会得到这样的错误：*Can only update a mounted or mounting component.*。因此我们需要在构造函数中使用 `this.state` 初始化状态。
+
+    **[⬆ 返回顶部](#目录)**
 
 64. ### 索引作为键的影响是什么?
 
@@ -1462,6 +1581,8 @@
     )}
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 65. ### 在 `componentWillMount()` 方法中使用 `setState()` 好吗?
 
     建议避免在 `componentWillMount()` 生命周期方法中执行异步初始化。在 mounting 发生之前会立即调用 `componentWillMount()`，且它在 `render()` 之前被调用，因此在此方法中更新状态将不会触发重新渲染。应避免在此方法中引入任何副作用或订阅操作。我们需要确保对组件初始化的异步调用发生在 `componentDidMount()` 中，而不是在 `componentWillMount()` 中。
@@ -1476,6 +1597,8 @@
         })
     }
     ```
+  
+    **[⬆ 返回顶部](#目录)**
 
 66. ### 如果在初始状态中使用 props 属性会发生什么?
 
@@ -1519,6 +1642,8 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 67. ### 如何有条件地渲染组件?
 
     在某些情况下，你希望根据某些状态渲染不同的组件。 JSX 不会渲染 `false` 或 `undefined`，因此你可以使用 `&&` 运算符，在某个条件为 true 时，渲染组件中指定的内容。
@@ -1552,6 +1677,7 @@
 
     1. [掘金 - 精读《React 八种条件渲染》](https://juejin.im/post/5b285c0d5188257494641d0b)
 
+    **[⬆ 返回顶部](#目录)**
 
 68. ### 为什么在 DOM 元素上展开 props 需要小心?
 
@@ -1564,6 +1690,8 @@
     const ComponentB = ({ isDisplay, ...domProps }) =>
       <div {...domProps}>{'ComponentB'}</div>
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 69. ### 在 React 中如何使用装饰器?
 
@@ -1593,6 +1721,8 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 70. ### 如何 memoize（记忆）组件?
 
     有可用于函数组件的 memoize 库。例如 `moize` 库可以将组件存储在另一个组件中。
@@ -1611,6 +1741,7 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
 
 71. ### 如何实现 Server Side Rendering 或 SSR?
 
@@ -1625,9 +1756,13 @@
 
     此方法将以字符串形式输出常规 HTML，然后将其作为服务器响应的一部分放在页面正文中。在客户端，React 检测预渲染的内容并无缝地衔接。
 
+    **[⬆ 返回顶部](#目录)**
+
 72. ### 如何在 React 中启用生产模式?
 
     你应该使用 Webpack 的 `DefinePlugin` 方法将 `NODE_ENV` 设置为 `production`，通过它你可以去除 propType 验证和额外警告等内容。除此之外，如果你压缩代码，如使用 Uglify 的死代码消除，以去掉用于开发的代码和注释，它将大大减少包的大小。
+
+    **[⬆ 返回顶部](#目录)**
 
 73. ### 什么是 CRA 及其好处?
 
@@ -1658,6 +1793,8 @@
     5. 一个实时开发服务器，用于警告常见错误。
     6. 一个构建脚本，用于打包用于生产中包含 hashes 和 sourcemaps 的 JS、CSS 和 Images 文件。
 
+    **[⬆ 返回顶部](#目录)**
+
 74. ### 在 mounting 阶段生命周期方法的执行顺序是什么?
 
     在创建组件的实例并将其插入到 DOM 中时，将按以下顺序调用生命周期方法。
@@ -1666,6 +1803,8 @@
     2. `static getDerivedStateFromProps()`
     3. `render()`
     4. `componentDidMount()`
+
+    **[⬆ 返回顶部](#目录)**
 
 75. ### 在 React v16 中，哪些生命周期方法将被弃用?
 
@@ -1676,6 +1815,8 @@
     3. `componentWillUpdate()`
 
     从 React v16.3 开始，这些方法使用 `UNSAFE_` 前缀作为别名，未加前缀的版本将在 React v17 中被移除。
+
+    **[⬆ 返回顶部](#目录)**
 
 76. ### 生命周期方法 `getDerivedStateFromProps()` 的目的是什么?
 
@@ -1691,6 +1832,8 @@
 
     此生命周期方法与 `componentDidUpdate()` 一起涵盖了 `componentWillReceiveProps()` 的所有用例。
 
+    **[⬆ 返回顶部](#目录)**
+
 77. ### 生命周期方法 `getSnapshotBeforeUpdate()` 的目的是什么?
 
     新的 `getSnapshotBeforeUpdate()` 生命周期方法在 DOM 更新之前被调用。此方法的返回值将作为第三个参数传递给`componentDidUpdate()`。
@@ -1705,9 +1848,13 @@
 
     此生命周期方法与 `componentDidUpdate()` 一起涵盖了 `componentWillUpdate()` 的所有用例。
 
+    **[⬆ 返回顶部](#目录)**
+
 78. ### createElement() 和 cloneElement() 方法有什么区别?
 
     JSX 元素将被转换为 `React.createElement()` 函数来创建 React 元素，这些对象将用于表示 UI 对象。而 `cloneElement` 用于克隆元素并传递新的属性。
+
+    **[⬆ 返回顶部](#目录)**
 
 79. ### 推荐的组件命名方法是什么?
 
@@ -1730,6 +1877,8 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 80. ### 在组件类中方法的推荐顺序是什么?
 
     从 *mounting* 到 *render stage* 阶段推荐的方法顺序：
@@ -1748,6 +1897,8 @@
     12. 用于渲染的getter方法，如 `getSelectReason()` 或 `getFooterContent()`
     13. 可选的渲染方法，如 `renderNavigation()` 或 `renderProfilePicture()`
     14. `render()`
+
+    **[⬆ 返回顶部](#目录)**
 
 81. ### 什么是 switching 组件?
 
@@ -1780,6 +1931,7 @@
     }
     ```
 
+    **[⬆ 返回顶部](#目录)**
 
 82. ### 为什么我们需要将函数传递给 setState() 方法?
 
@@ -1803,6 +1955,8 @@
     }))
     // this.state.count === 3 as expected
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 83. ### 在 React 中什么是严格模式?
 
@@ -1829,6 +1983,8 @@
 
     在上面的示例中，*strict mode* 检查仅应用于 `<ComponentOne>` 和 `<ComponentTwo>` 组件。
 
+    **[⬆ 返回顶部](#目录)**
+
 84. ### React Mixins 是什么?
 
     *Mixins* 是一种完全分离组件通用功能的方法。 Mixins 不应该被继续使用，可以用高阶组件或装饰器来替换。
@@ -1845,6 +2001,8 @@
     ````
     <!-- TODO: mixins are deprecated -->
 
+    **[⬆ 返回顶部](#目录)**
+
 85. ### 为什么 `isMounted()` 是一个反模式，而正确的解决方案是什么?
 
     `isMounted()` 的主要场景是避免在组件卸载后调用 `setState()`，因为它会发出警告。
@@ -1859,6 +2017,7 @@
 
     最佳解决方案是找到在组件卸载后调用 `setState()` 的位置，并修复它们。这种情况最常发生在回调中，即组件正在等待某些数据并在数据到达之前卸载。理想情况下，在卸载之前，应在 `componentWillUnmount()` 中取消任何回调。
 
+    **[⬆ 返回顶部](#目录)**
 
 86. ### React 中支持哪些指针事件?
 
@@ -1876,6 +2035,8 @@
     8. `onPointerLeave`
     9. `onPointerOver`
     10. `onPointerOut`
+
+    **[⬆ 返回顶部](#目录)**
 
 87. ### 为什么组件名称应该以大写字母开头?
 
@@ -1899,6 +2060,8 @@
     import MyComponent from './MyComponent'
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 88. ### 在 React v16 中是否支持自定义 DOM 属性?
 
     是的，在过去 React 会忽略未知的 DOM 属性。如果你编写的 JSX 属性 React 无法识别，那么 React 将跳过它。例如：
@@ -1920,6 +2083,8 @@
     ```
 
     这对于应用特定于浏览器的非标准属性，尝试新的 DOM APIs 与集成第三方库来说非常有用。
+
+    **[⬆ 返回顶部](#目录)**
 
 89. ### constructor 和 getInitialState 有什么区别?
 
@@ -1948,6 +2113,8 @@
 
     **注意：** 在 React v16 中 `React.createClass()` 已被弃用和删除，请改用普通的 JavaScript 类。
 
+    **[⬆ 返回顶部](#目录)**
+
 90. ### 是否可以在不调用 setState 方法的情况下，强制组件重新渲染?
 
     默认情况下，当组件的状态或属性改变时，组件将重新渲染。如果你的 `render()` 方法依赖于其他数据，你可以通过调用 `forceUpdate()` 来告诉 React，当前组件需要重新渲染。
@@ -1957,6 +2124,8 @@
     ```
 
     建议避免使用 `forceUpdate()`，并且只在 `render()` 方法中读取 `this.props` 和 `this.state`。
+
+    **[⬆ 返回顶部](#目录)**
 
 91. ### 在使用 ES6 类的 React 中 `super()` 和 `super(props)` 有什么区别?
 
@@ -1986,6 +2155,8 @@
 
     在 `constructor()` 函数之外，访问 `this.props` 属性会显示相同的值。
 
+    **[⬆ 返回顶部](#目录)**
+
 92. ### 在 JSX 中如何进行循环?
 
     你只需使用带有 ES6 箭头函数语法的 `Array.prototype.map` 即可。例如，`items` 对象数组将会被映射成一个组件数组：
@@ -2008,6 +2179,8 @@
 
     这是因为 JSX 标签会被转换成函数调用，并且你不能在表达式中使用语句。但这可能会由于 `do` 表达式而改变，它们是第一阶段提案。
 
+    **[⬆ 返回顶部](#目录)**
+
 93. ### 如何在 attribute 引号中访问 props 属性?
 
     React (或 JSX) 不支持属性值内的变量插值。下面的形式将不起作用：
@@ -2028,6 +2201,8 @@
     <img className='image' src={`images/${this.props.image}`} />
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 94. ### 什么是 React proptype 数组?
 
     如果要将对象数组传递给具有特定形状的组件，请使用 `React.PropTypes.shape()` 作为 `React.PropTypes.arrayOf()` 的参数。
@@ -2040,6 +2215,8 @@
       })).isRequired
     }
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 95. ### 如何有条件地应用样式类?
 
@@ -2061,13 +2238,19 @@
     <div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 96. ### React 和 ReactDOM 之间有什么区别?
 
     `react` 包中包含 `React.createElement()`, `React.Component`, `React.Children`，以及与元素和组件类相关的其他帮助程序。你可以将这些视为构建组件所需的同构或通用帮助程序。`react-dom` 包中包含了 `ReactDOM.render()`，在 `react-dom/server` 包中有支持服务端渲染的 `ReactDOMServer.renderToString()` 和 `ReactDOMServer.renderToStaticMarkup()` 方法。
 
+    **[⬆ 返回顶部](#目录)**
+
 97. ### 为什么 ReactDOM 从 React 分离出来?
 
-    React 团队致力于将所有的与 DOM 相关的特性抽取到一个名为 ReactDOM 的独立库中。React v0.14 是第一个拆分后的版本。通过查看一些软件包，`react-native`，`react-art`，`react-canvas`，和 `react-three`，很明显，React 的优雅和本质与浏览器或 DOM 无关。为了构建更多 React 能应用的环境，React 团队计划将主要的 React 包拆分成两个：`react` 和 `react-dom`。这为编写可以在 React 和 React Native 的Web 版本之间共享的组件铺平了道路。
+    React 团队致力于将所有的与 DOM 相关的特性抽取到一个名为 ReactDOM 的独立库中。React v0.14 是第一个拆分后的版本。通过查看一些软件包，`react-native`，`react-art`，`react-canvas`，和 `react-three`，很明显，React 的优雅和本质与浏览器或 DOM 无关。为了构建更多 React 能应用的环境，React 团队计划将主要的 React 包拆分成两个：`react` 和 `react-dom`。这为编写可以在 React 和 React Native 的 Web 版本之间共享的组件铺平了道路。
+
+    **[⬆ 返回顶部](#目录)**
 
 98. ### 如何使用 React label 元素?
 
@@ -2085,6 +2268,8 @@
     <input type={'text'} id={'user'} />
     ```
 
+    **[⬆ 返回顶部](#目录)**
+
 99. ### 如何合并多个内联的样式对象?
 
     在 React 中，你可以使用扩展运算符:
@@ -2098,6 +2283,8 @@
     ```jsx 
     <button style={[styles.panel.button, styles.panel.submitButton]}>{'Submit'}</button>
     ```
+
+    **[⬆ 返回顶部](#目录)**
 
 100. ### 如何在调整浏览器大小时重新渲染视图?
 
@@ -2127,9 +2314,13 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 101. ### `setState()` 和 `replaceState()` 方法之间有什么区别?
 
      当你使用 `setState()` 时，当前和先前的状态将被合并。`replaceState()` 会抛出当前状态，并仅用你提供的内容替换它。通常使用 `setState()`，除非你出于某种原因确实需要删除所有以前的键。你还可以在 `setState()` 中将状态设置为 `false`/`null`，而不是使用 `replaceState()`。
+
+     **[⬆ 返回顶部](#目录)**
 
 102. ### 如何监听状态变化?
 
@@ -2139,6 +2330,8 @@
      componentWillUpdate(object nextProps, object nextState)
      componentDidUpdate(object prevProps, object prevState)
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 
 103. ### 在 React 状态中删除数组元素的推荐方法是什么?
@@ -2154,6 +2347,8 @@
        })
      }
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 104. ### 在 React 中是否可以不在页面上渲染 HTML 内容?
 
@@ -2191,6 +2386,8 @@
 
      返回 `undefined` 是无效的。
 
+     **[⬆ 返回顶部](#目录)**
+
 105. ### 如何用 React 漂亮地显示 JSON?
 
      我们可以使用 `<pre>` 标签，以便保留 `JSON.stringify()` 的格式：
@@ -2212,9 +2409,13 @@
      React.render(<User />, document.getElementById('container'))
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 106. ### 为什么你不能更新 React 中的 props?
 
      React 的哲学是 props 应该是 *immutable* 和 *top-down*。这意味着父级可以向子级发送任何属性值，但子级不能修改接收到的属性。
+
+     **[⬆ 返回顶部](#目录)**
 
 107. ### 如何在页面加载时聚焦一个输入元素?
 
@@ -2243,6 +2444,8 @@
 
      ReactDOM.render(<App />, document.getElementById('app'))
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 108. ### 更新状态中的对象有哪些可能的方法?
 
@@ -2273,6 +2476,8 @@
          }))
          ```
 
+      **[⬆ 返回顶部](#目录)**
+
 109. ### 为什么函数比对象更适合于 `setState()`?
 
      React may batch multiple `setState()` calls into a single update for performance. Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
@@ -2296,6 +2501,8 @@
      }))
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 110. ### 我们如何在浏览器中找到当前正在运行的 React 版本?
 
      你可以使用 `React.version` 来获取版本：
@@ -2308,6 +2515,8 @@
        document.getElementById('app')
      )
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 111. ### 在 `create-react-app` 项目中导入 polyfills 的方法有哪些?
 
@@ -2331,6 +2540,8 @@
 
          在上面的脚本中，我们必须显式地请求 `Array.prototype.includes` 特性，因为它没有被包含在默认的特性集中。
 
+     **[⬆ 返回顶部](#目录)**
+
 112. ### 如何在 create-react-app 中使用 https 而不是 http?
 
      你只需要使用 `HTTPS=true` 配置。你可以编辑 `package.json` 中的 scripts 部分：
@@ -2343,6 +2554,8 @@
 
      或直接运行 `set HTTPS=true && npm start`
 
+     **[⬆ 返回顶部](#目录)**
+
 113. ### 如何避免在 create-react-app 中使用相对路径导入?
 
      在项目的根目录中创建一个名为 `.env` 的文件，并写入导入路径：
@@ -2352,6 +2565,8 @@
      ```
 
      然后重新启动开发服务器。现在，你应该能够在没有相对路径的情况下导入 `src/app` 内的任何内容。
+
+     **[⬆ 返回顶部](#目录)**
 
 114. ### 如何为 React Router 添加 Google Analytics?
 
@@ -2364,6 +2579,7 @@
      })
      ```
 
+     **[⬆ 返回顶部](#目录)**
 
 115. ### 如何每秒更新一个组件?
 
@@ -2379,6 +2595,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 116. ### 如何将 vendor prefixes 应用于 React 中的内联样式?
 
      React不会自动应用 *vendor prefixes*，你需要手动添加 *vendor prefixes*。
@@ -2390,6 +2608,8 @@
        msTransform: 'rotate(90deg)' // 'ms' is the only lowercase vendor prefix
      }} />
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 117. ### 如何使用 React 和 ES6 导入和导出组件?
 
@@ -2412,6 +2632,8 @@
 
      使用 export 说明符，MyProfile 将成为成员并导出到此模块，此外在其他组件中你无需指定名称就可以导入相同的内容。
 
+     **[⬆ 返回顶部](#目录)**
+
 118. ### 为什么 React 组件名称必须以大写字母开头?
 
      在 JSX 中，小写标签被认为是 HTML 标签。但是，含有 `.` 的大写和小写标签名却不是。
@@ -2420,10 +2642,13 @@
      2. `<obj.component />` 将被转换为 `React.createElement(obj.component)`
      3. `<Component />` 将被转换为 `React.createElement(Component)`
 
+     **[⬆ 返回顶部](#目录)**
 
 119. ### 为什么组件的构造函数只被调用一次?
 
      React 协调算法假设如果自定义组件出现在后续渲染的相同位置，则它与之前的组件相同，因此重用前一个实例而不是创建新实例。
+
+     **[⬆ 返回顶部](#目录)**
 
 120. ### 在 React 中如何定义常量?
 
@@ -2434,6 +2659,8 @@
        static DEFAULT_PAGINATION = 10
      }
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 121. ### 在 React 中如何以编程方式触发点击事件?
 
@@ -2451,9 +2678,13 @@
          this.inputElement.click()
          ```
 
+     **[⬆ 返回顶部](#目录)**
+
 122. ### 在 React 中是否可以使用 async/await?
 
      如果要在 React 中使用 `async`/`await`，则需要 *Babel* 和 [transform-async-to-generator](https://babeljs.io/docs/en/babel-plugin-transform-async-to-generator) 插件。
+
+     **[⬆ 返回顶部](#目录)**
 
 123. ### React 项目常见的文件结构是什么?
 
@@ -2506,9 +2737,13 @@
          └─ ProfileHeader.css
          ```
 
+     **[⬆ 返回顶部](#目录)**
+
 124. ### 最流行的动画软件包是什么?
 
      *React Transition Group* 和 *React Motion* 是React生态系统中流行的动画包。
+
+     **[⬆ 返回顶部](#目录)**
 
 125. ### 模块化样式文件有什么好处?
 
@@ -2538,10 +2773,14 @@
      import { space, colors } from './styles'
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 
 126. ### 什么是 React 流行的特定 linters?
 
      ESLint 是一个流行的 JavaScript linter。有一些插件可以分析特定的代码样式。在 React 中最常见的一个是名为 `eslint-plugin-react` npm 包。默认情况下，它将使用规则检查许多最佳实践，检查内容从迭代器中的键到一组完整的 prop 类型。另一个流行的插件是 `eslint-plugin-jsx-a11y`，它将帮助修复可访问性的常见问题。由于 JSX 提供的语法与常规 HTML 略有不同，因此常规插件无法获取 `alt` 文本和 `tabindex` 的问题。
+
+     **[⬆ 返回顶部](#目录)**
 
 127. ### 如何发起 AJAX 调用以及应该在哪些组件生命周期方法中进行 AJAX 调用?
 
@@ -2593,6 +2832,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 128. ### 什么是渲染属性?
 
      **Render Props** 是一种简单的技术，用于使用值为函数的 prop 属性在组件之间共享代码。下面的组件使用返回 React 元素的 render 属性：
@@ -2605,15 +2846,21 @@
 
      像 React Router 和 DownShift 这样的库使用了这种模式。
 
+     **[⬆ 返回顶部](#目录)**
+
 ## React Router
 
 129. ### 什么是 React Router?
 
      React Router 是一个基于 React 的强大的路由库，可以帮助您快速地向应用添加新的屏幕和流，同时保持 URL 与页面上显示的内容同步。
 
+     **[⬆ 返回顶部](#目录)**
+
 130. ### React Router 与 history 库的区别?
 
      React Router 是`history`库的包装器，它处理浏览器的`window.history`与浏览器和哈希历史的交互。它还提供了内存历史记录，这对于没有全局历史记录的环境非常有用，例如移动应用程序开发（React Native）和使用 Node 进行单元测试。
+
+     **[⬆ 返回顶部](#目录)**
 
 131. ### 在 React Router v4 中的`<Router>`组件是什么?
 
@@ -2625,6 +2872,8 @@
 
      以上组件将创建*browser*，*hash*和*memory*的 history 实例。React Router v4 通过`router`对象中的上下文使与您的路由器关联的`history`实例的属性和方法可用。
 
+     **[⬆ 返回顶部](#目录)**
+
 132. ### `history` 中的 `push()` 和 `replace()` 方法的目的是什么?
 
      一个 history 实例有两种导航方法：
@@ -2633,6 +2882,8 @@
      2. `replace()`
 
      如果您将 history 视为一个访问位置的数组，则`push()`将向数组添加一个新位置，`replace()`将用新的位置替换数组中的当前位置。
+
+     **[⬆ 返回顶部](#目录)**
 
 133. ### 如何使用在 React Router v4 中以编程的方式进行导航?
 
@@ -2697,6 +2948,8 @@
          }
          ```
 
+     **[⬆ 返回顶部](#目录)**
+
 134. ### 如何在 React Router v4 中获取查询字符串参数?
 
      在 React Router v4 中并没有内置解析查询字符串的能力，因为多年来一直有用户希望支持不同的实现。因此，使用者可以选择他们喜欢的实现方式。建议的方法是使用 [query-string](https://www.npmjs.com/package/query-string) 库。
@@ -2714,6 +2967,8 @@
      ```
 
      如果使用 `URLSearchParams` 的话您应该为 IE11 使用*polyfill*。
+
+     **[⬆ 返回顶部](#目录)**
 
 135. ### 为什么你会得到 "Router may have only one child element" 警告?
 
@@ -2738,6 +2993,8 @@
      </Router>
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 136. ### 如何在 React Router v4 中将 params 传递给 `history.push` 方法?
 
      在导航时，您可以将 props 传递给`history`对象：
@@ -2752,6 +3009,8 @@
 
      `search`属性用于在`push()`方法中传递查询参数。
 
+     **[⬆ 返回顶部](#目录)**
+
 137. ### 如何实现默认页面或 404 页面?
 
      `<Switch>`呈现匹配的第一个孩子`<Route>`。 没有路径的`<Route>`总是匹配。所以你只需要简单地删除 path 属性，如下所示：
@@ -2763,6 +3022,8 @@
        <Route component={NotFound} />
      </Switch>
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 138. ### 如何在 React Router v4 上获取历史对象?
 
@@ -2801,6 +3062,8 @@
          history.push('/go-here')
          ```
 
+     **[⬆ 返回顶部](#目录)**
+
 139. ### 登录后如何执行自动重定向?
 
      `react-router`包在 React Router 中提供了`<Redirect>`组件。渲染`<Redirect>`将导航到新位置。与服务器端重定向一样，新位置将覆盖历史堆栈中的当前位置。
@@ -2820,11 +3083,15 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 ## React Internationalization
 
 140. ### 什么是 React Intl?
 
-     [*React Intl*](https://github.com/yahoo/react-intl)库使 React 中的内部化变得简单，使用现成的组件和 API ，可以处理从格式化字符串，日期和数字到复数的所有功能。React Intl 是[*FormatJS*](http://formatjs.io/)的一部分，它通过其组件和 API 提供与 React 的绑定。
+     [React Intl](https://github.com/yahoo/react-intl)库使 React 中的内部化变得简单，使用现成的组件和 API ，可以处理从格式化字符串，日期和数字到复数的所有功能。React Intl 是[FormatJS](http://formatjs.io/)的一部分，它通过其组件和 API 提供与 React 的绑定。
+
+     **[⬆ 返回顶部](#目录)**
 
 141. ### React Intl 的主要特性是什么?
 
@@ -2835,6 +3102,8 @@
      5. 支持 150 多种语言
      6. 支持在浏览器和 Node 中运行
      7. 建立在标准之上
+
+     **[⬆ 返回顶部](#目录)**
 
 142. ### 在 React Intl 中有哪两种格式化方式?
 
@@ -2858,6 +3127,8 @@
      formatMessage(messages.accountMessage)
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 143. ### 在 React Intl 中如何使用`<FormattedMessage>`作为占位符使用?
 
      `react-intl`的`<Formatted ... />`组件返回元素，而不是纯文本，因此它们不能用于占位符，替代文本等。在这种情况下，您应该使用较低级别的 API `formatMessage()`。您可以使用`injectIntl()`高阶函数将`intl`对象注入到组件中，然后使用该对象上使用`formatMessage()`格式化消息。
@@ -2878,6 +3149,8 @@
      export default injectIntl(MyComponent)
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 144. ### 如何使用 React Intl 访问当前语言环境?
 
      您可以在应用的任何组件中使用`injectIntl()`获取的当前语言环境：
@@ -2895,6 +3168,8 @@
 
      export default injectIntl(MyComponent)
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 145. ### 如何使用 React Intl 格式化日期?
 
@@ -2919,6 +3194,8 @@
 
      export default injectIntl(MyComponent)
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 ## React Testing
 
@@ -2957,6 +3234,8 @@
      ])
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 147. ### 在 React 中 `TestRenderer` 包是什么?
 
      此包提供了一个渲染器，可用于将组件渲染为纯 JavaScript 对象，而不依赖于 DOM 或原生移动环境。该包可以轻松获取由 ReactDOM 或 React Native 平台所渲染的视图层次结构（类似于DOM树）的快照，而无需使用浏览器或`jsdom`。
@@ -2978,13 +3257,19 @@
      // }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 148. ### ReactTestUtils 包的目的是什么?
 
      *ReactTestUtils*由`with-addons`包提供，允许您对模拟 DOM 执行操作以进行单元测试。
 
+     **[⬆ 返回顶部](#目录)**
+
 149. ### 什么是 Jest?
 
      *Jest*是一个由 Facebook 基于 Jasmine 创建的 JavaScript 单元测试框架，提供自动模拟创建和`jsdom`环境。它通常用于测试组件。
+
+     **[⬆ 返回顶部](#目录)**
 
 150. ### Jest 对比 Jasmine 有什么优势?
 
@@ -2995,6 +3280,8 @@
      - 允许您同步测试异步代码。
      - 使用假的 DOM 实现（通过`jsdom`）运行测试，以便可以在命令行上运行测试。
      - 在并行流程中运行测试，以便更快完成。
+
+     **[⬆ 返回顶部](#目录)**
 
 151. ### 举一个简单的 Jest 测试用例
 
@@ -3034,6 +3321,8 @@
      ✓ adds 1 + 2 to equal 3 (2ms)
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 ## React Redux
 
 152. ### 什么是 Flux?
@@ -3044,9 +3333,13 @@
 
      ![flux](images/flux.png)
 
+     **[⬆ 返回顶部](#目录)**
+
 153. ### 什么是 Redux?
 
      *Redux* 是基于 *Flux设计模式* 的 JavaScript 应用程序的可预测状态容器。Redux 可以与 React 一起使用，也可以与任何其他视图库一起使用。它很小（约2kB）并且没有依赖性。
+
+     **[⬆ 返回顶部](#目录)**
 
 154. ### Redux 的核心原则是什么？?
 
@@ -3056,6 +3349,8 @@
      2. **状态是只读的：** 改变状态的唯一方法是发出一个动作，一个描述发生的事情的对象。这可以确保视图和网络请求都不会直接写入状态。
      3. **使用纯函数进行更改：** 要指定状态树如何通过操作进行转换，您可以编写reducers。Reducers 只是纯函数，它将先前的状态和操作作为参数，并返回下一个状态。
 
+     **[⬆ 返回顶部](#目录)**
+
 155. ### 与 Flux 相比，Redux 的缺点是什么?
 
      我们应该说使用 Redux 而不是 Flux 几乎没有任何缺点。这些如下：
@@ -3063,6 +3358,8 @@
      1. **您将需要学会避免突变：** Flux 对变异数据毫不吝啬，但 Redux 不喜欢突变，许多与 Redux 互补的包假设您从不改变状态。您可以使用 dev-only 软件包强制执行此操作，例如`redux-immutable-state-invariant`，Immutable.js，或指示您的团队编写非变异代码。
      2. **您将不得不仔细选择您的软件包：** 虽然 Flux 明确没有尝试解决诸如撤消/重做，持久性或表单之类的问题，但 Redux 有扩展点，例如中间件和存储增强器，以及它催生了丰富的生态系统。
      3. **还没有很好的 Flow 集成：** Flux 目前可以让你做一些非常令人印象深刻的静态类型检查，Redux 还不支持。
+
+     **[⬆ 返回顶部](#目录)**
 
 156. ### `mapStateToProps()` 和 `mapDispatchToProps()` 之间有什么区别?
 
@@ -3088,9 +3385,13 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 157. ### 我可以在 reducer 中触发一个 Action 吗?
 
      在 reducer 中触发 Action 是**反模式**。您的 reducer 应该*没有副作用*，只是接收 Action 并返回一个新的状态对象。在 reducer 中添加侦听器和调度操作可能会导致链接的 Action 和其他副作用。
+
+     **[⬆ 返回顶部](#目录)**
 
 158. ### 如何在组件外部访问 Redux 存储的对象?
 
@@ -3102,6 +3403,8 @@
      export default store
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 159. ### MVW 模式的缺点是什么?
 
      1. DOM 操作非常昂贵，导致应用程序行为缓慢且效率低下。
@@ -3109,11 +3412,15 @@
      3. 协作型应用程序（如Google Docs）会发生大量数据更改。
      4. 无需添加太多额外代码就无法轻松撤消（及时回退）。
 
+     **[⬆ 返回顶部](#目录)**
+
 160. ### Redux 和 RxJS 之间是否有任何相似之处?
 
      这些库的目的是不同的，但是存在一些模糊的相似之处。
 
      Redux 是一个在整个应用程序中管理状态的工具。它通常用作 UI 的体系结构。可以将其视为（一半）Angular 的替代品。 RxJS 是一个反应式编程库。它通常用作在 JavaScript 中完成异步任务的工具。把它想象成 Promise 的替代品。 Redux 使用 Reactive 范例，因为Store是被动的。Store 检测到 Action，并自行改变。RxJS也使用 Reactive 范例，但它不是一个体系结构，它为您提供了基本构建块 Observables 来完成这种模式。
+
+     **[⬆ 返回顶部](#目录)**
 
 161. ### 如何在加载时触发 Action?
 
@@ -3141,6 +3448,8 @@
      export default connect(mapStateToProps, mapDispatchToProps)(App)
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 162. ### 在 React 中如何使用 Redux 的 `connect()` ?
 
      您需要按照两个步骤在容器中使用您的 Store：
@@ -3164,6 +3473,8 @@
 
          export default connect(mapStateToProps)(App)
          ```
+
+     **[⬆ 返回顶部](#目录)**
 
 163. ### 如何在 Redux 中重置状态?
 
@@ -3204,6 +3515,8 @@
        return appReducer(state, action)
      }
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 164. ### Redux 中连接装饰器的 `at` 符号的目的是什么?
 
@@ -3258,13 +3571,19 @@
 
      除了装饰器的使用外，上面的例子几乎相似。装饰器语法尚未构建到任何 JavaScript 运行时中，并且仍然是实验性的并且可能会发生变化。您可以使用`babel`来获得装饰器支持。
 
+     **[⬆ 返回顶部](#目录)**
+
 165. ### React 上下文和 React Redux 之间有什么区别?
 
      您可以直接在应用程序中使用**Context**，这对于将数据传递给深度嵌套的组件非常有用。而**Redux**功能更强大，它还提供了 Context API 无法提供的大量功能。此外，React Redux 在内部使用上下文，但它不会在公共 API 中有所体现。
 
+     **[⬆ 返回顶部](#目录)**
+
 166. ### 为什么 Redux 状态函数称为 reducers ?
 
      Reducers 总是返回状态的累积（基于所有先前状态和当前 Action）。因此，它们充当了状态的 Reducer。每次调用 Redux reducer 时，状态和 Action 都将作为参数传递。然后基于该 Action 减少（或累积）该状态，然后返回下一状态。您可以*reduce*一组操作和一个初始状态（Store），在该状态下执行这些操作以获得最终的最终状态。
+
+     **[⬆ 返回顶部](#目录)**
 
 167. ### 如何在 Redux 中发起 AJAX 请求?
 
@@ -3292,9 +3611,13 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 168. ### 我应该在 Redux Store 中保留所有组件的状态吗?
 
       将数据保存在 Redux 存储中，并在组件内部保持 UI 相关状态。
+
+      **[⬆ 返回顶部](#目录)**
 
 169. ### 访问 Redux Store 的正确方法是什么?
 
@@ -3333,11 +3656,15 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 170. ### React Redux 中展示组件和容器组件之间的区别是什么?
 
      **展示组件**是一个类或功能组件，用于描述应用程序的展示部分。
 
      **容器组件**是连接到 Redux Store的组件的非正式术语。容器组件*订阅* Redux 状态更新和*dispatch*操作，它们通常不呈现 DOM 元素; 他们将渲染委托给展示性的子组件。
+
+     **[⬆ 返回顶部](#目录)**
 
 171. ### Redux 中常量的用途是什么?
 
@@ -3391,6 +3718,8 @@
          }
          ```
 
+     **[⬆ 返回顶部](#目录)**
+
 172. ### 编写 `mapDispatchToProps()` 有哪些不同的方法?
 
      有一些方法可以将*action creators*绑定到`mapDispatchToProps()`中的`dispatch()`。以下是可能的写法：
@@ -3413,6 +3742,8 @@
 
      第三种写法只是第一种写法的简写。
 
+     **[⬆ 返回顶部](#目录)**
+
 173. ### 在 `mapStateToProps()` 和 `mapDispatchToProps()` 中使用 `ownProps` 参数有什么用?
 
      如果指定了`ownProps`参数，React Redux 会将传递给该组件的 props 传递给你的*connect*函数。因此，如果您使用连接组件：
@@ -3431,6 +3762,8 @@
 
      您可以使用此对象来决定从这些函数返回的内容。
 
+     **[⬆ 返回顶部](#目录)**
+
 174. ### 如何构建 Redux 项目目录?
 
      大多数项目都有几个顶级目录，如下所示：
@@ -3443,6 +3776,8 @@
 
      这种结构适用于中小型项目。
 
+     **[⬆ 返回顶部](#目录)**
+
 175. ### 什么是 redux-saga?
 
      `redux-saga`是一个库，旨在使 React/Redux 项目中的副作用（数据获取等异步操作和访问浏览器缓存等可能产生副作用的动作）更容易，更好。
@@ -3453,9 +3788,13 @@
      $ npm install --save redux-saga
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 176. ### redux-saga 的模型概念是什么?
 
      *Saga*就像你的项目中的一个单独的线程，它独自负责副作用。`redux-saga` 是一个 redux *中间件*，这意味着它可以在项目启动中使用正常的 Redux 操作，暂停和取消该线程，它可以访问完整的 Redux 应用程序状态，并且它也可以调度 Redux 操作。
+
+     **[⬆ 返回顶部](#目录)**
 
 177. ### 在 redux-saga 中 `call()` 和 `put()` 之间有什么区别?
 
@@ -3477,17 +3816,25 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 178. ### 什么是 Redux Thunk?
 
      *Redux Thunk*中间件允许您编写返回函数而不是 Action 的创建者。 thunk 可用于延迟 Action 的发送，或仅在满足某个条件时发送。内部函数接收 Store 的方法`dispatch()`和`getState()`作为参数。
+
+     **[⬆ 返回顶部](#目录)**
 
 179. ### `redux-saga` 和 `redux-thunk` 之间有什么区别?
 
      *Redux Thunk*和*Redux Saga*都负责处理副作用。在大多数场景中，Thunk 使用*Promises*来处理它们，而 Saga 使用*Generators*。Thunk 易于使用，因为许多开发人员都熟悉 Promise，Sagas/Generators 功能更强大，但您需要学习它们。但是这两个中间件可以共存，所以你可以从 Thunks 开始，并在需要时引入 Sagas。
 
+     **[⬆ 返回顶部](#目录)**
+
 180. ### 什么是 Redux DevTools?
 
      *Redux DevTools*是 Redux 的实时编辑的时间旅行环境，具有热重新加载，Action 重放和可自定义的 UI。如果您不想安装 Redux DevTools 并将其集成到项目中，请考虑使用 Chrome 和 Firefox 的扩展插件。
+
+     **[⬆ 返回顶部](#目录)**
 
 181. ### Redux DevTools 的功能有哪些?
 
@@ -3496,6 +3843,8 @@
      3. 如果更改 reducer 代码，将重新评估每个*已暂存*的 Action。
      4. 如果 Reducers 抛出错误，你会看到这发生了什么 Action，以及错误是什么。
      5. 使用`persistState()`存储增强器，您可以在页面重新加载期间保持调试会话。
+
+     **[⬆ 返回顶部](#目录)**
 
 182. ### 什么是 Redux 选择器以及使用它们的原因?
 
@@ -3507,15 +3856,21 @@
      const getUserData = state => state.user.data
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 183. ### 什么是 Redux Form?
 
      *Redux Form*与 React 和 Redux 一起使用，以使 React 中的表单能够使用 Redux 来存储其所有状态。Redux Form 可以与原始 HTML5 输入一起使用，但它也适用于常见的 UI 框架，如 Material UI，React Widgets和React Bootstrap。
+
+     **[⬆ 返回顶部](#目录)**
 
 184. ### Redux Form 的主要功能有哪些?
 
        1. 字段值通过 Redux 存储持久化。
        2. 验证（同步/异步）和提交。
        3. 字段值的格式化，解析和规范化。
+
+     **[⬆ 返回顶部](#目录)**
 
 185. ### 如何向 Redux 添加多个中间件?
 
@@ -3527,6 +3882,8 @@
      import { createStore, applyMiddleware } from 'redux'
      const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore)
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 186. ### 如何在 Redux 中设置初始状态?
 
@@ -3548,9 +3905,13 @@
      )
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 187. ### Relay 与 Redux 有何不同?
 
      Relay 与 Redux 类似，因为它们都使用单个 Store。主要区别在于 relay 仅管理源自服务器的状态，并且通过*GraphQL*查询（用于读取数据）和突变（用于更改数据）来使用对状态的所有访问。Relay 通过仅提取已更改的数据而为您缓存数据并优化数据提取。
+
+     **[⬆ 返回顶部](#目录)**
 
 ## React Native
 
@@ -3560,9 +3921,13 @@
 
      **React Native**是一个移动端框架，可编译为本机应用程序组件，允许您使用 JavaScript 构建本机移动应用程序（iOS，Android和Windows），允许您使用 React 构建组件。
 
+     **[⬆ 返回顶部](#目录)**
+
 189. ### 如何测试 React Native 应用程序?
 
      React Native 只能在 iOS 和 Android 等移动模拟器中进行测试。您可以使用 expo app（https://expo.io）在移动设备上运行该应用程序。如果使用 QR 代码进行同步，则您的移动设备和计算机应位于同一个无线网络中。
+
+     **[⬆ 返回顶部](#目录)**
 
 190. ### 如何在 React Native 查看日志?
 
@@ -3572,6 +3937,8 @@
      $ react-native log-ios
      $ react-native log-android
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 191. ### 怎么调试 React Native 应用?
 
@@ -3583,6 +3950,8 @@
      4. 按`Command + Option + I`打开 Chrome Developer 工具，或通过`View` ->`Developer` ->`Developer Tools`打开它。
      5. 您现在应该能够像平常那样进行调试。
 
+     **[⬆ 返回顶部](#目录)**
+
 ## React supported libraries & Integration
 
 192. ### 什么是 Reselect 以及它是如何工作的?
@@ -3591,13 +3960,19 @@
 
      Reselect 保留最后一次调用的最后输入/输出的副本，并仅在其中一个输入发生更改时重新计算结果。如果连续两次提供相同的输入，则 Reselect 将返回缓存的输出。它的 memoization 和缓存是完全可定制的。
 
+     **[⬆ 返回顶部](#目录)**
+
 193. ### 什么是 Flow?
 
      *Flow* 是一个静态类型检查器，旨在查找 JavaScript 中的类型错误。与传统类型系统相比，Flow 类型可以表达更细粒度的区别。例如，与大多数类型系统不同，Flow 能帮助你捕获涉及 `null` 的错误。
 
+     **[⬆ 返回顶部](#目录)**
+
 194. ### Flow 和 PropTypes 有什么区别?
 
      Flow 是一个静态分析工具（静态检查器），它使用该语言的超集，允许你在所有代码中添加类型注释，并在编译时捕获整个类的错误。PropTypes 是一个基本类型检查器（运行时检查器），已经被添加到 React 中。除了检查传递给给定组件的属性类型外，它不能检查其他任何内容。如果你希望对整个项目进行更灵活的类型检查，那么 Flow/TypeScript 是更合适的选择。
+
+     **[⬆ 返回顶部](#目录)**
 
 195. ### 在 React 中如何使用 Font Awesome 图标?
 
@@ -3623,6 +3998,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 196. ### 什么 是 React 开发者工具?
 
      *React Developer Tools* 允许您检查组件层次结构，包括组件属性和状态。它既可以作为浏览器扩展（用于 Chrome 和 Firefox ），也可以作为独立的应用程序（用于其他环境，包括 Safari、IE 和 React Native）。
@@ -3632,9 +4009,13 @@
      2. **Firefox插件**
      3. **独立应用** (Safari, React Native, 等)
 
+     **[⬆ 返回顶部](#目录)**
+
 197. ### 在 Chrome 中为什么 DevTools 没有加载本地文件?
 
      如果您在浏览器中打开了本地 HTML 文件（`file://...`），则必须先打开*Chrome Extensions*并选中“允许访问文件URL”。
+
+     **[⬆ 返回顶部](#目录)**
 
 198. ### 如何在 React 中使用 Polymer?
 
@@ -3672,6 +4053,8 @@
          export default MyComponent
          ```
 
+     **[⬆ 返回顶部](#目录)**
+
 199. ### 与 Vue.js 相比，React 有哪些优势?
 
      与 Vue.js 相比，React 具有以下优势：
@@ -3680,6 +4063,8 @@
      2. 更容易测试。
      3. 更适合创建移动端应用程序。
      4. 提供更多的信息和解决方案。
+
+     **[⬆ 返回顶部](#目录)**
 
 200. ### React 和 Angular 有什么区别?
 
@@ -3691,13 +4076,19 @@
      | React Native 是一种 React 类型，它用于构建移动应用程序，它更快，更稳定 | Ionic，Angular 的移动 app 相对原生 app 来说不太稳定和慢 |
      | 在 Reac t中，数据只以单一方向传递，因此调试很容易 | 在 Angular 中，数据以两种方式传递，即它在子节点和父节点之间具有双向数据绑定，因此调试通常很困难 |
 
+     **[⬆ 返回顶部](#目录)**
+
 201. ### 为什么 React 选项卡不会显示在 DevTools 中?
 
      当页面加载时，*React DevTools*设置一个名为`__REACT_DEVTOOLS_GLOBAL_HOOK__`的全局变量，然后 React 在初始化期间与该钩子通信。如果网站没有使用 React，或者如果 React 无法与 DevTools 通信，那么它将不会显示该选项卡。
 
+     **[⬆ 返回顶部](#目录)**
+
 202. ### 什么是 Styled Components?
 
-    `styled-components`是一个用于样式化 React 应用程序的 JavaScript 库。 它删除了样式和组件之间的映射，并允许您在 js 中编写 css。
+     styled-components 是一个用于样式化 React 应用程序的 JavaScript 库。 它删除了样式和组件之间的映射，并允许您在 js 中编写 CSS。
+
+     **[⬆ 返回顶部](#目录)**
 
 203. ### 举一个 Styled Components 的例子?
 
@@ -3729,9 +4120,13 @@
      </Wrapper>
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 204. ### 什么是 Relay?
 
      Relay 是一个 JavaScript 框架，用于使用 React 视图层为 Web 应用程序提供数据层和客户端与服务器之间的通信。
+
+     **[⬆ 返回顶部](#目录)**
 
 205. ### 如何在 `create-react-app` 中使用 TypeScript?
 
@@ -3754,6 +4149,8 @@
      └─ tslint.json
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 ## Miscellaneous
 
 206. ### Reselect 库的主要功能有哪些?
@@ -3761,6 +4158,8 @@
        1. 选择器可以计算派生数据，允许 Redux 存储最小可能状态。
        2. 选择器是有效的。除非其参数之一发生更改，否则不会重新计算选择器。
        3. 选择器是可组合的。它们可以用作其他选择器的输入。
+
+     **[⬆ 返回顶部](#目录)**
 
 207. ### 举一个 Reselect 用法的例子?
 
@@ -3804,6 +4203,8 @@
      console.log(totalSelector(exampleState))    // { total: 2.322 }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 208. ### Redux 中的 Action 是什么?
 
      *Actions*是纯 JavaScript 对象或信息的有效负载，可将数据从您的应用程序发送到您的 Store。 它们是 Store 唯一的数据来源。 Action 必须具有指示正在执行的操作类型的 type 属性。
@@ -3816,6 +4217,8 @@
        text: 'Add todo item'
      }
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 209. ### 在 React 中 statics 对象是否能与 ES6 类一起使用?
 
@@ -3845,13 +4248,19 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 210. ### Redux 只能与 React 一起使用么?
 
      Redux 可以用做任何 UI 层的数据存储。最常见的应用场景是 React 和 React Native，但也有一些 bindings 可用于 AngularJS，Angular 2,Vue，Mithril 等项目。Redux 只提供了一种订阅机制，任何其他代码都可以使用它。
 
+     **[⬆ 返回顶部](#目录)**
+
 211. ### 您是否需要使用特定的构建工具来使用 Redux ?
 
      Redux 最初是用 ES6 编写的，用 Webpack 和 Babel 编译成 ES5。 无论您的 JavaScript 构建过程如何，您都应该能够使用它。Redux 还提供了一个 UMD 版本，可以直接使用而无需任何构建过程。
+
+     **[⬆ 返回顶部](#目录)**
 
 212. ### Redux Form 的 `initialValues` 如何从状态更新?
 
@@ -3865,6 +4274,8 @@
      ```
 
      如果你的`initialValues`属性得到更新，你的表单也会更新。
+
+     **[⬆ 返回顶部](#目录)**
 
 213. ### React 是如何为一个属性声明不同的类型?
 
@@ -3881,6 +4292,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 214. ### 我可以导入一个 SVG 文件作为 React 组件么?
 
      你可以直接将 SVG 作为组件导入，而不是将其作为文件加载。此功能仅在 `react-scripts@2.0.0` 及更高版本中可用。
@@ -3896,8 +4309,8 @@
        </div>
      )
      ```
-    
-     **Note**: Don't forget about the curly braces in the import.
+  
+     **[⬆ 返回顶部](#目录)**
 
 215. ### 为什么不建议使用内联引用回调或函数?
 
@@ -3908,8 +4321,6 @@
        handleSubmit = () => {
          console.log("Input Value is: ", this.input.value)
        }
-     ```
-
 
        render () {
         return (
@@ -3949,9 +4360,13 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 216. ### 在 React 中什么是渲染劫持?
 
      渲染劫持的概念是控制一个组件将从另一个组件输出什么的能力。实际上，这意味着你可以通过将组件包装成高阶组件来装饰组件。通过包装，你可以注入额外的属性或产生其他变化，这可能会导致渲染逻辑的更改。实际上它不支持劫持，但通过使用 HOC，你可以使组件以不同的方式工作。
+
+     **[⬆ 返回顶部](#目录)**
 
 217. ### 什么是 HOC 工厂实现?
 
@@ -3984,6 +4399,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 218. ### 如何传递数字给 React 组件?
 
      传递数字时你应该使用 `{}`，而传递字符串时还需要使用引号：
@@ -3992,11 +4409,14 @@
         React.render(<User age={30} department={"IT"} />, document.getElementById('container'));
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 219. ### 我需要将所有状态保存到 Redux 中吗？我应该使用 react 的内部状态吗?
 
      这取决于开发者的决定。即开发人员的工作是确定应用程序的哪种状态，以及每个状态应该存在的位置，有些用户喜欢将每一个数据保存在 Redux 中，以维护其应用程序的完全可序列化和受控。其他人更喜欢在组件的内部状态内保持非关键或UI状态，例如“此下拉列表当前是否打开”。
 
-     以下是确定应将哪种数据放入Redux的主要规则
+     以下是确定应将哪种数据放入Redux的主要规则：
+
      1. 应用程序的其他部分是否关心此数据？
      2. 您是否需要能够基于此原始数据创建更多派生数据？
      3. 是否使用相同的数据来驱动多个组件？
@@ -4017,6 +4437,8 @@
         registerServiceWorker();
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 221. ### React memo 函数是什么?
 
      当类组件的输入属性相同时，可以使用 **pureComponent** 或 **shouldComponentUpdate** 来避免组件的渲染。现在，你可以通过把函数组件包装在 **React.memo** 中来实现相同的功能。
@@ -4026,6 +4448,8 @@
       /* only rerenders if props change */
      });
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 222. ### React lazy 函数是什么?
 
@@ -4045,6 +4469,8 @@
 
      **注意：** React.lazy 和 Suspense 还不能用于服务端渲染。如果要在服务端渲染的应用程序中进行代码拆分，我们仍然建议使用 React Loadable。
 
+     **[⬆ 返回顶部](#目录)**
+
 223. ### 如何使用 setState 防止不必要的更新?
 
      你可以把状态的当前值与已有的值进行比较，并决定是否重新渲染页面。如果没有更改，你需要返回 `null` 以阻止渲染，否则返回最新的状态值。例如，用户配置信息组件将按以下方式实现条件渲染：
@@ -4061,6 +4487,8 @@
        });
      };
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 224. ### 如何在 React 16 版本中渲染数组、字符串和数值? 
 
@@ -4104,6 +4532,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 225. ### 如何在 React 类中使用类字段声明语法?
 
      使用类字段声明可以使 React 类组件更加简洁。你可以在不使用构造函数的情况下初始化本地状态，并通过使用箭头函数声明类方法，而无需额外对它们进行绑定。让我们以一个 counter 示例来演示类字段声明，即不使用构造函数初始化状态且不进行方法绑定：
@@ -4137,6 +4567,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 226. ### 什么是 hooks?
 
      Hooks 是一个新的草案，它允许你在不编写类的情况下使用状态和其他 React 特性。让我们来看一个 useState 钩子示例：
@@ -4163,12 +4595,16 @@
       
       1. [掘金 - 30分钟精通React Hooks](https://juejin.im/post/5be3ea136fb9a049f9121014)
 
+      **[⬆ 返回顶部](#目录)**
+
 227. ### Hooks 需要遵循什么规则?
 
      为了使用 hooks，你需要遵守两个规则：
 
      1. 仅在顶层的 React 函数调用 hooks。也就是说，你不能在循环、条件或内嵌函数中调用 hooks。这将确保每次组件渲染时都以相同的顺序调用 hooks，并且它会在多个 useState 和 useEffect 调用之间保留 hooks 的状态。
      2. 仅在 React 函数中调用 hooks。例如，你不能在常规的 JavaScript 函数中调用 hooks。
+
+     **[⬆ 返回顶部](#目录)**
 
 228. ### 如何确保钩子遵循正确的使用规则?
 
@@ -4195,6 +4631,8 @@
 
      **注意：** 此插件在 Create React App 已经默认配置。
 
+     **[⬆ 返回顶部](#目录)**
+
 229. ### Flux 和 Redux 之间有什么区别?
 
      以下是 Flux 和 Redux 之间的主要区别
@@ -4208,16 +4646,22 @@
      | 它有一个单独的 dispatcher | 没有 dispatcher 的概念 |
      | React 组件监测 Store | 容器组件使用连接函数 |
 
+     **[⬆ 返回顶部](#目录)**
+
 230. ### React Router V4 有什么好处?
 
-     以下是React Router V4模块的主要优点：
+     以下是 React Router V4 模块的主要优点：
+
      1. 在React Router v4（版本4）中，API完全与组件有关。路由器可以显示为单个组件（<BrowserRouter>），它包装特定的子路由器组件（<Route>）。
      2. 您无需手动设置历史记录。路由器模块将通过使用<BrowserRouter>组件包装路由来处理历史记录。
-     3. 通过仅添加特定路由器模块（Web，core 或 native）来减少应用大小
+     3. 通过仅添加特定路由器模块（Web，core 或 native）来减少应用大小。
+
+     **[⬆ 返回顶部](#目录)**
 
 231. ### 您能描述一下 componentDidCatch 生命周期方法签名吗?
 
      在后代层级的组件抛出错误后，将调用**componentDidCatch**生命周期方法。该方法接收两个参数：
+
      1. error: - 抛出的错误对象
      2. info: - 具有 componentStack 键的对象，包含有关哪个组件引发错误的信息。
 
@@ -4227,14 +4671,18 @@
      componentDidCatch(error, info)
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 232. ### 在哪些情况下，错误边界不会捕获错误?
 
      以下是错误边界不起作用的情况：
 
-     1. 在事件处理器内
-     2. **setTimeout** 或 **requestAnimationFrame** 回调中的异步代码
-     3. 在服务端渲染期间
-     4. 错误边界代码本身中引发错误时
+     1. 在事件处理器内。
+     2. **setTimeout** 或 **requestAnimationFrame** 回调中的异步代码。
+     3. 在服务端渲染期间。
+     4. 错误边界代码本身中引发错误时。
+
+     **[⬆ 返回顶部](#目录)**
 
 233. ### 为什么事件处理器不需要错误边界?
 
@@ -4268,6 +4716,8 @@
 
      上面的代码使用普通的 JavaScript try/catch 块而不是错误边界来捕获错误。
 
+     **[⬆ 返回顶部](#目录)**
+
 234. ### try catch 与错误边界有什么区别?
 
      Try catch 块使用命令式代码，而错误边界则是使用在屏幕上呈现声明性代码。
@@ -4292,9 +4742,13 @@
 
      因此，如果在组件树深处某个位置组件的 **componentDidUpdate** 方法中，发生了由 **setState** 引发的错误，它仍然会正确地冒泡到最近的错误边界。
 
+     **[⬆ 返回顶部](#目录)**
+
 235. ### React 16 中未捕获的错误的行为是什么?
 
      在 React 16 中，未被任何错误边界捕获的错误将导致整个 React 组件树的卸载。这一决定背后的原因是，与其显示已损坏的界面，不如完全移除它。例如，对于支付应用程序来说，显示错误的金额比什么都不提供更糟糕。
+
+     **[⬆ 返回顶部](#目录)**
 
 236. ### 放置错误边界的正确位置是什么?
 
@@ -4303,15 +4757,21 @@
      1. 可以包装顶层路由组件以显示整个应用程序中常见的错误消息。
      2. 你还可以将单个组件包装在错误边界中，以防止它们奔溃时影响到应用程序的其余部分。
 
+     **[⬆ 返回顶部](#目录)**
+
 237. ### 从错误边界跟踪组件堆栈有什么好处?
 
      除了错误消息和 JavaScript 堆栈，React 16 将使用错误边界的概念显示带有文件名和行号的组件堆栈。例如，BuggyCounter 组件显示组件堆栈信息：
 
      ![stacktrace](images/error_boundary.png)
 
+     **[⬆ 返回顶部](#目录)**
+
 238. ### 在定义类组件时，什么是必须的方法?
 
      在类组件中 render() 方法是唯一需要的方法。也就是说，对于类组件，除了 render() 方法之外的所有方法都是可选的。
+
+     **[⬆ 返回顶部](#目录)**
 
 239. ### render 方法可能返回的类型是什么?
 
@@ -4322,6 +4782,8 @@
      3. **Portals:** 将子元素渲染到不同的 DOM 子树中。
      4. **String and numbers:** 在 DOM 中将字符串和数字都作为文本节点进行呈现。
      5. **Booleans or null:** 不会渲染任何内容，但这些类型用于有条件地渲染内容。
+
+     **[⬆ 返回顶部](#目录)**
 
 240. ### 构造函数的主要目的是什么?
 
@@ -4341,9 +4803,13 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 241. ### 是否必须为 React 组件定义构造函数?
 
      不，这不是强制的。也就是说，如果你不需要初始化状态且不需要绑定方法，则你不需要为 React 组件实现一个构造函数。
+
+     **[⬆ 返回顶部](#目录)**
 
 242. ### 什么是默认属性?
 
@@ -4370,9 +4836,13 @@
 
      **注意：** 如果你提供的是 null 值，它会仍然保留 null 值。
 
+     **[⬆ 返回顶部](#目录)**
+
 243. ### 为什么不能在 componentWillUnmount 中调用 setState() 方法?
 
      不应在 componentWillUnmount() 中调用 setState()，因为一旦卸载了组件实例，就永远不会再次装载它。
+
+     **[⬆ 返回顶部](#目录)**
 
 244. ### getDerivedStateFromError 的目的是什么?
 
@@ -4407,6 +4877,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 245. ### 当组件重新渲染时顺序执行的方法有哪些?
 
      更新可能由属性或状态的更改引起。在重新渲染组件时，会按以下顺序调用下列方法。
@@ -4417,12 +4889,16 @@
      4. getSnapshotBeforeUpdate()
      5. componentDidUpdate()
 
+     **[⬆ 返回顶部](#目录)**
+
 246. ### 错误处理期间调用哪些方法?
 
      在渲染期间，生命周期方法内或任何子组件的构造函数中出现错误时，将会调用以下方法：
 
      1. static getDerivedStateFromError()
      2. componentDidCatch()
+
+     **[⬆ 返回顶部](#目录)**
 
 247. ### displayName 类属性的用途是什么?
 
@@ -4442,9 +4918,13 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 248. ### 支持 React 应用程序的浏览器有哪一些?
 
      React 支持所有流行的浏览器，包括 Internet Explorer 9 和更高版本，但旧版本的浏览器（如IE 9 和 IE 10）需要一些 polyfill。如果你使用 **es5-shim and es5-sham** polyfill，那么它甚至支持不支持 ES5 方法的旧浏览器。
+
+     **[⬆ 返回顶部](#目录)**
 
 249. ### unmountComponentAtNode 方法的目的是什么?
 
@@ -4453,6 +4933,8 @@
      ```javascript
      ReactDOM.unmountComponentAtNode(container)
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 250. ### 什么是代码拆分?
 
@@ -4491,6 +4973,8 @@
      export default App;
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 251. ### 严格模式有什么好处?
 
      在下面的情况下，<StrictMode> 将有所帮助：
@@ -4500,6 +4984,8 @@
      3. 检测无法预测的 **side effects**。
      4. 检测 **legacy context** API。
      5. 有关已弃用的 findDOMNode 用法的警告。
+
+     **[⬆ 返回顶部](#目录)**
 
 252. ### 什么是 Keyed Fragments ?
 
@@ -4523,6 +5009,8 @@
 
      **注意：** 键是唯一可以传递给 Fragment 的属性。将来，可能会支持其他属性，例如事件处理程序。
 
+     **[⬆ 返回顶部](#目录)**
+
 253. ### React 支持所有的 HTML 属性么?
 
      从 React 16 开始，完全支持标准或自定义 DOM 属性。由于 React 组件通常同时使用自定义和与 DOM 相关的属性，因此 React 与 DOM API 一样都使用 camelCase 约定。让我们对标准 HTML 属性采取一些措施：
@@ -4534,6 +5022,8 @@
      ```
 
      除了特殊情况外，这些属性的工作方式与相应的 HTML 属性类似。它还支持所有 SVG 属性。
+
+     **[⬆ 返回顶部](#目录)**
 
 254. ### HOC 有哪些限制?
 
@@ -4573,6 +5063,8 @@
         ```
      3. **Refs 不会被往下传递**
         对于HOC，您需要将所有属性传递给包装组件，但这对于 refs 不起作用。这是因为 ref 并不是一个类似于 key 的属性。在这种情况下，您需要使用 React.forwardRef API。
+
+     **[⬆ 返回顶部](#目录)**
 
 255. ### 如何在 DevTools 中调试 forwardRefs?
 
@@ -4615,6 +5107,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 256. ### 什么时候组件的 props 属性默认为 true?
 
      如果没有传递属性值，则默认为 true。此行为可用，以便与 HTML 的行为匹配。例如，下面的表达式是等价的：
@@ -4627,6 +5121,8 @@
 
      **注意：** 不建议使用此方法，因为它可能与 ES6 对象 shorthand 混淆（例如，{name}，它是{ name:name } 的缩写）
 
+     **[⬆ 返回顶部](#目录)**
+
 257. ### 什么是 NextJS 及其主要特征?
 
      Next.js 是一个流行的轻量级框架，用于使用 React 构建静态和服务端渲染应用程序。它还提供样式和路由解决方案。以下是 NextJS 提供的主要功能：
@@ -4638,6 +5134,8 @@
      5. 能够使用 Express 或任何其他 Node.js HTTP 服务器
      6. 可自定义你自己的 Babel 和 Webpack 配置
 
+     **[⬆ 返回顶部](#目录)**
+
 258. ### 如何将事件处理程序传递给组件?
 
      可以将事件处理程序和其他函数作为属性传递给子组件。它可以在子组件中使用，如下所示：
@@ -4645,6 +5143,8 @@
      ```
      <button onClick={this.handleClick}>
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 259. ### 在渲染方法中使用箭头函数好么?
 
@@ -4663,9 +5163,13 @@
 
      **注意：** 组件每次渲染时，在 render 方法中的箭头函数都会创建一个新的函数，这可能会影响性能。
 
+     **[⬆ 返回顶部](#目录)**
+
 260. ### 如何防止函数被多次调用?
 
-     如果你使用一个事件处理程序，如 **onClick or onScroll** 并希望防止回调被过快地触发，那么你可以限制回调的执行速度。这可以通过以下可能的方式实现：
+     如果你使用一个事件处理程序，如 **onClick or onScroll** 并希望防止回调被过快地触发，那么你可以限制回调的执行速度。
+     
+     这可以通过以下可能的方式实现：
 
      1. **Throttling:** 基于时间的频率进行更改。例如，它可以使用 lodash 的 _.throttle 函数。
      2. **Debouncing:** 在一段时间不活动后发布更改。例如，可以使用 lodash 的 _.debounce 函数。
@@ -4673,9 +5177,10 @@
 
      > 注意：_.debounce , _.throttle 和 raf-schd 都提供了一个 cancel 方法来取消延迟回调。所以需要调用 componentWillUnmount，或者对代码进行检查来保证在延迟函数有效期间内组件始终挂载。
 
+     **[⬆ 返回顶部](#目录)**
+
 261. ### JSX 如何防止注入攻击?
 
-     React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. For example, you can embed user input as below,
      React DOM 会在渲染 JSX 中嵌入的任何值之前对其进行转义。因此，它确保你永远不能注入任何未在应用程序中显式写入的内容。
 
      ```javascript
@@ -4683,7 +5188,9 @@
      const element = <h1>{name}</h1>;
      ```
 
-     This way you can prevent XSS(Cross-site-scripting) attacks in the application.
+     这样可以防止应用程序中的XSS（跨站点脚本）攻击。
+
+     **[⬆ 返回顶部](#目录)**
 
 262. ### 如何更新已渲染的元素?
 
@@ -4703,6 +5210,8 @@
      setInterval(tick, 1000);
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 263. ### 你怎么说 props 是只读的?
 
      当你将组件声明为函数或类时，它决不能修改自己的属性。让我们来实现一个 capital 的函数：
@@ -4714,6 +5223,8 @@
      ```
 
      上面的函数称为 "pure" 函数，因为它不会尝试更改输入，并总是为相同的输入返回相同的结果。因此，React 有一条规则，即"所有 React 组件的行为都必须像纯函数一样。"
+
+     **[⬆ 返回顶部](#目录)**
 
 264. ### 你认为状态更新是如何合并的?
 
@@ -4750,6 +5261,8 @@
 
      如上面的代码段所示，`this.setState({comments})` 只会更新 comments 变量，而不会修改或替换 posts 变量。
 
+     **[⬆ 返回顶部](#目录)**
+
 265. ### 如何将参数传递给事件处理程序?
 
      在迭代或循环期间，向事件处理程序传递额外的参数是很常见的。这可以通过箭头函数或绑定方法实现。让我们以网格中更新的用户详细信息为例：
@@ -4760,6 +5273,8 @@
      ```
 
      在这两种方法中，合成参数 e 作为第二个参数传递。你需要在箭头函数中显式传递它，并使用 bind 方法自动转发它。
+
+     **[⬆ 返回顶部](#目录)**
 
 266. ### 如何防止组件渲染?
 
@@ -4799,12 +5314,17 @@
 
      在上面的示例中，greeting 组件通过应用条件并返回空值跳过其渲染部分。
 
+     **[⬆ 返回顶部](#目录)**
+
 267. ### 安全地使用索引作为键的条件是什么?
 
      有三个条件可以确保，使用索引作为键是安全的：
+
      1. 列表项是静态的，它们不会被计算，也不会更改。
      2. 列表中的列表项没有 ids 属性。
      3. 列表不会被重新排序或筛选。
+
+     **[⬆ 返回顶部](#目录)**
 
 268. ### keys 是否需要全局唯一?
 
@@ -4838,6 +5358,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 269. ### 用于表单处理的流行选择是什么?
 
      Formik 是一个用于 React 的表单库，它提供验证、跟踪访问字段和处理表单提交等解决方案。具体来说，你可以按以下方式对它们进行分类：
@@ -4848,17 +5370,23 @@
 
      它用于创建一个具有最小 API 的可伸缩、性能良好的表单助手，以解决令人讨厌的问题。
 
+     **[⬆ 返回顶部](#目录)**
+
 270. ### formik 相对于其他 redux 表单库有什么优势?
 
      下面是建议使用 formik 而不是 redux 表单库的主要原因：
 
      1. 表单状态本质上是短期的和局部的，因此不需要在 redux（或任何类型的flux库）中跟踪它。
      2. 每次按一个键，Redux-Form 都会多次调用整个顶级 Redux Reducer。这样就增加了大型应用程序的输入延迟。
-     3. 经过 gzip 压缩过的 Redux-Form 为 22.5 kB，而 Formik 只有 12.7 kB
+     3. 经过 gzip 压缩过的 Redux-Form 为 22.5 kB，而 Formik 只有 12.7 kB。
+
+     **[⬆ 返回顶部](#目录)**
 
 271. ### 为什么不需要使用继承?
 
      在 React 中，建议使用组合而不是继承来重用组件之间的代码。Props 和 composition 都为你提供了以一种明确和安全的方式自定义组件外观和行为所需的灵活性。但是，如果你希望在组件之间复用非 UI 功能，建议将其提取到单独的 JavaScript 模块中。之后的组件导入它并使用该函数、对象或类，而不需扩展它。
+
+     **[⬆ 返回顶部](#目录)**
 
 272. ### 我可以在 React 应用程序中可以使用 web components 么?
 
@@ -4882,6 +5410,8 @@
      export default App;
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 273. ### 什么是动态导入?
 
      动态导入语法是 ECMAScript 提案，目前不属于语言标准的一部分。它有望在不久的将来被采纳。在你的应用程序中，你可以使用动态导入来实现代码拆分。让我们举一个加法的例子：
@@ -4898,6 +5428,8 @@
        console.log(math.add(10, 20));
      });
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 274. ### 什么是 loadable 组件?
 
@@ -4919,6 +5451,8 @@
 
      现在，其他组件将以单独的包进行加载。
 
+     **[⬆ 返回顶部](#目录)**
+
 275. ### 什么是 suspense 组件?
 
      如果父组件在渲染时包含 dynamic import 的模块尚未加载完成，在此加载过程中，你必须使用一个 loading 指示器显示后备内容。这可以使用 **Suspense** 组件来实现。例如，下面的代码使用 Suspense 组件：
@@ -4938,6 +5472,8 @@
      ```
 
      正如上面的代码中所展示的，懒加载的组件被包装在 Suspense 组件中。
+
+     **[⬆ 返回顶部](#目录)**
 
 276. ### 什么是基于路由的代码拆分?
 
@@ -4963,6 +5499,8 @@
      ```
 
      在上面的代码中，代码拆分将发生在每个路由层级。
+
+     **[⬆ 返回顶部](#目录)**
 
 277. ### 举例说明如何使用 context?
 
@@ -4998,6 +5536,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 278. ### 在 context 中默认值的目的是什么?
 
      当在组件树中的组件没有匹配到在其上方的 Provider 时，才会使用 defaultValue 参数。这有助于在不包装组件的情况下单独测试组件。下面的代码段提供了默认的主题值 Luna。
@@ -5006,6 +5546,8 @@
      const defaultTheme = "Luna"；
      const MyContext = React.createContext(defaultTheme);
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 279. ### 你是怎么使用 contextType?
 
@@ -5051,6 +5593,8 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 280. ### 什么是 consumer?
 
      Consumer 是一个订阅上下文更改的 React 组件。它需要一个函数作为子元素，该函数接收当前上下文的值作为参数，并返回一个 React 元素。传递给函数 value 参数的参数值将等于在组件树中当前组件最近的 Provider 元素的 value 属性值。举个简单的例子：
@@ -5060,6 +5604,8 @@
        {value => /* render something based on the context value */}
      </MyContext.Consumer>
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 281. ### 在使用 context 时，如何解决性能方面的问题?
 
@@ -5097,6 +5643,8 @@
        }
      }
      ```
+
+     **[⬆ 返回顶部](#目录)**
 
 282. ### 在 HOCs 中 forward ref 的目的是什么?
 
@@ -5153,13 +5701,19 @@
      />;
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 283. ### ref 参数对于所有函数或类组件是否可用?
 
      常规函数或类组件不会接收到 ref 参数，并且 ref 在 props 中也不可用。只有在使用 React.forwardRef 定义组件时，才存在第二个 ref 参数。
 
+     **[⬆ 返回顶部](#目录)**
+
 284. ### 在组件库中当使用 forward refs 时，你需要额外的注意?
 
      当你开始在组件库中使用 forwardRef 时，你应该将其视为一个破坏性的更改，并为库发布一个新的主要版本。这是因为你的库可能具有不同的行为，如已分配了哪些引用，以及导出哪些类型。这些更改可能会破坏依赖于旧行为的应用程序和其他库。
+
+     **[⬆ 返回顶部](#目录)**
 
 285. ### 如何在没有 ES6 的情况下创建 React 类组件
 
@@ -5185,6 +5739,8 @@
      ```
 
      **注意：** 如果使用 createReactClass，则所有方法都会自动绑定。也就是说，你不需要在事件处理程序的构造函数中使用 .bind(this)。
+
+     **[⬆ 返回顶部](#目录)**
 
 286. ### 是否可以在没有 JSX 的情况下使用 React?
 
@@ -5218,12 +5774,16 @@
      );
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 287. ### 什么是差异算法?
 
      React 需要使用算法来了解如何有效地更新 UI 以匹配最新的树。差异算法将生成将一棵树转换为另一棵树的最小操作次数。然而，算法具有 O(n3) 的复杂度，其中 n 是树中元素的数量。在这种情况下，对于显示 1000 个元素将需要大约 10 亿个比较。这太昂贵了。相反，React 基于两个假设实现了一个复杂度为 O(n) 的算法：
 
      1. 两种不同类型的元素会产生不同的树结构。
      2. 开发者可以通过一个 key 属性，标识哪些子元素可以在不同渲染中保持稳定。
+
+     **[⬆ 返回顶部](#目录)**
 
 288. ### 差异算法涵盖了哪些规则?
 
@@ -5278,6 +5838,8 @@
      </ul>
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 289. ### 你什么时候需要使用 refs?
 
      这里是 refs 的一些使用场景：
@@ -5285,6 +5847,8 @@
      1. 管理聚焦、文本选择或媒体播放。
      2. 触发命令式动画。
      3. 与第三方 DOM 库集成。
+
+     **[⬆ 返回顶部](#目录)**
 
 290. ### 对于渲染属性来说是否必须将 prop 属性命名为 render?
 
@@ -5314,9 +5878,13 @@
      };
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 291. ### 在 Pure Component 中使用渲染属性会有什么问题?
 
      如果在渲染方法中创建函数，则会否定纯组件的用途。因为浅属性比较对于新属性总是返回 false，在这种情况下，每次渲染都将为渲染属性生成一个新值。你可以通过将渲染函数定义为实例方法来解决这个问题。
+
+     **[⬆ 返回顶部](#目录)**
 
 292. ### 如何使用渲染属性创建 HOC?
 
@@ -5336,9 +5904,13 @@
      }
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 293. ### 什么是 windowing 技术?
 
      Windowing 是一种技术，它在任何给定时间只呈现一小部分行，并且可以显著减少重新呈现组件所需的时间以及创建的 DOM 节点的数量。如果应用程序呈现长的数据列表，则建议使用此技术。react-window 和 react-virtualized 都是常用的 windowing 库，它提供了几个可重用的组件，用于显示列表、网格和表格数据。
+
+     **[⬆ 返回顶部](#目录)**
 
 294. ### 你如何在 JSX 中打印 falsy 值?
 
@@ -5350,9 +5922,13 @@
      </div>
      ```
 
+     **[⬆ 返回顶部](#目录)**
+
 295. ### portals 的典型使用场景是什么?
 
      当父组件拥有 `overflow: hidden` 或含有影响堆叠上下文的属性（z-index、position、opacity 等样式），且需要脱离它的容器进行展示时，React portal 就非常有用。例如，对话框、全局消息通知、悬停卡和工具提示。
+
+     **[⬆ 返回顶部](#目录)**
 
 296. ### 如何设置非受控组件的默认值?
 
@@ -5375,13 +5951,17 @@
      }
      ```
 
-     The same applies for `select` and `textArea` inputs. But you need to use **defaultChecked** for `checkbox` and `radio` inputs.
+     这同样适用于 `select` 和 `textArea` 输入框。但对于 `checkbox` 和 `radio` 控件，需要使用 **defaultChecked**。
+
+     **[⬆ 返回顶部](#目录)**
 
 297. ### 你最喜欢的 React 技术栈是什么?
 
      尽管技术栈因开发人员而异，但最流行的技术栈用于 React boilerplate 项目代码中。它主要使用 redux 和 redux saga 进行状态管理和具有副作用的异步操作，使用 react-router 进行路由管理，使用 styled-components 库开发 React 组件，使用 axios 调用 REST api，以及其他支持的技术栈，如 webpack、reseselect、esnext、babel 等。
 
      你可以克隆 [https://github.com/react-boilerplate/react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) 并开始开发任何新的 React 项目。
+
+     **[⬆ 返回顶部](#目录)**
 
 298. ### Real DOM 和 Virtual DOM 有什么区别?
      以下是Real DOM和Virtual DOM之间的主要区别：
@@ -5394,6 +5974,8 @@
      | 造成太多内存浪费 | 更少的内存消耗 |
      | 如果元素更新了，创建新的 DOM 节点 | 如果元素更新，则更新 JSX 元素 |
 
+     **[⬆ 返回顶部](#目录)**
+
 299. ### 如何为 React 应用程序添加 bootstrap?
 
      Bootstrap 可以通过三种可能的方式添加到 React 应用程序中：
@@ -5401,14 +5983,16 @@
         这是添加 bootstrap 最简单的方式。在 head 标签中添加 bootstrap 相应的 CSS 和 JS 资源。
      2. 把 Bootstrap 作为依赖项：
         如果你使用的是构建工具或模块绑定器（如Webpack），那么这是向 React 应用程序添加 bootstrap 的首选选项。
+
         ```shell
         npm install bootstrap
-        ``
         ```
      3. 使用 React Bootstrap 包:
         在这种情况下，你可以将 Bootstrap 添加到我们的 React 应用程序中，方法是使用一个以 React 组件形式对 Bootstrap 组件进行包装后包。下面的包在此类别中很流行：
         1. react-bootstrap
         2. reactstrap
+
+     **[⬆ 返回顶部](#目录)**
 
 300. ### 你能否列出使用 React 作为前端框架的顶级网站或应用程序?
 
@@ -5425,8 +6009,10 @@
      9. Netflix
      10. PayPal
 
+     **[⬆ 返回顶部](#目录)**
+
 301. ### 是否建议在 React 中使用 CSS In JS 技术?
 
      React 对如何定义样式没有任何意见，但如果你是初学者，那么好的起点是像往常一样在单独的 *.css 文件中定义样式，并使用类名引用它们。此功能不是 React 的一部分，而是来自第三方库。但是如果你想尝试不同的方法（JS中的CSS），那么 styled-components 库是一个不错的选择。
 
-**[⬆ 返回顶部](#目录)**
+     **[⬆ 返回顶部](#目录)**
