@@ -4386,8 +4386,8 @@
 217. ### 什么是 HOC 工厂实现?
 
      在 React 中实现 HOC 有两种主要方式。 1.属性代理（PP）和 2.继承倒置（II）。他们遵循不同的方法来操纵*WrappedComponent*。
-     **属性代理**
 
+     **属性代理**
      在这种方法中，HOC 的 render 方法返回 WrappedComponent 类型的 React 元素。我们通过 HOC 收到 props，因此定义为**属性代理**。
 
      ```jsx
