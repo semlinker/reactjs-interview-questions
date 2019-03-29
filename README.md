@@ -577,7 +577,7 @@
 
 13. ### HTML 和 React 事件处理有什么区别?
 
-    1. 在 HTML 中事件名必须小写:
+    1. 在 HTML 中事件名必须小写：
 
     ```html
     <button onclick='activateLasers()'>
@@ -3535,7 +3535,7 @@
 
 164. ### Redux 中连接装饰器的 `at` 符号的目的是什么?
 
-     **@**符号实际上是用于表示装饰器的 JavaScript 表达式。*装饰器*可以在设计时注释和修改类和属性。
+     **@** 符号实际上是用于表示装饰器的 JavaScript 表达式。*装饰器*可以在设计时注释和修改类和属性。
 
      让我们举个例子，在没有装饰器的情况下设置 Redux 。
 
@@ -3677,7 +3677,7 @@
 
      **展示组件**是一个类或功能组件，用于描述应用程序的展示部分。
 
-     **容器组件**是连接到 Redux Store的组件的非正式术语。容器组件*订阅* Redux 状态更新和*dispatch*操作，它们通常不呈现 DOM 元素; 他们将渲染委托给展示性的子组件。
+     **容器组件**是连接到 Redux Store的组件的非正式术语。容器组件*订阅* Redux 状态更新和*dispatch*操作，它们通常不呈现 DOM 元素；他们将渲染委托给展示性的子组件。
 
      **[⬆ 返回顶部](#目录)**
 
@@ -3940,7 +3940,7 @@
 
 189. ### 如何测试 React Native 应用程序?
 
-     React Native 只能在 iOS 和 Android 等移动模拟器中进行测试。您可以使用 expo app（https://expo.io）在移动设备上运行该应用程序。如果使用 QR 代码进行同步，则您的移动设备和计算机应位于同一个无线网络中。
+     React Native 只能在 iOS 和 Android 等移动模拟器中进行测试。您可以使用 expo app（[https://expo.io](https://expo.io)）在移动设备上运行该应用程序。如果使用 QR 代码进行同步，则您的移动设备和计算机应位于同一个无线网络中。
 
      **[⬆ 返回顶部](#目录)**
 
@@ -4022,7 +4022,7 @@
      可用于不同浏览器或环境的官方扩展。
      1. **Chrome插件**
      2. **Firefox插件**
-     3. **独立应用** (Safari, React Native, 等)
+     3. **独立应用** （ Safari，React Native 等）
 
      **[⬆ 返回顶部](#目录)**
 
@@ -4267,7 +4267,7 @@
 
 210. ### Redux 只能与 React 一起使用么?
 
-     Redux 可以用做任何 UI 层的数据存储。最常见的应用场景是 React 和 React Native，但也有一些 bindings 可用于 AngularJS，Angular 2,Vue，Mithril 等项目。Redux 只提供了一种订阅机制，任何其他代码都可以使用它。
+     Redux 可以用做任何 UI 层的数据存储。最常见的应用场景是 React 和 React Native，但也有一些 bindings 可用于 AngularJS，Angular 2，Vue，Mithril 等项目。Redux 只提供了一种订阅机制，任何其他代码都可以使用它。
 
      **[⬆ 返回顶部](#目录)**
 
@@ -5190,7 +5190,7 @@
      2. **Debouncing:** 在一段时间不活动后发布更改。例如，可以使用 lodash 的 _.debounce 函数。
      3. **RequestAnimationFrame throttling:** 基于 requestAnimationFrame 的更改。例如，可以使用 raf-schd。
 
-     > 注意：_.debounce , _.throttle 和 raf-schd 都提供了一个 cancel 方法来取消延迟回调。所以需要调用 componentWillUnmount，或者对代码进行检查来保证在延迟函数有效期间内组件始终挂载。
+     > 注意：_.debounce， _.throttle 和 raf-schd 都提供了一个 cancel 方法来取消延迟回调。所以需要调用 componentWillUnmount，或者对代码进行检查来保证在延迟函数有效期间内组件始终挂载。
 
      **[⬆ 返回顶部](#目录)**
 
@@ -5237,13 +5237,12 @@
      }
      ```
 
-     上面的函数称为 "pure" 函数，因为它不会尝试更改输入，并总是为相同的输入返回相同的结果。因此，React 有一条规则，即"所有 React 组件的行为都必须像纯函数一样。"
+     上面的函数称为“纯”函数，因为它不会尝试更改输入，并总是为相同的输入返回相同的结果。因此，React 有一条规则，即“所有 React 组件的行为都必须像纯函数一样”。
 
      **[⬆ 返回顶部](#目录)**
 
 264. ### 你认为状态更新是如何合并的?
 
-     When you call setState() in the component, React merges the object you provide into the current state. For example, let us take a facebook user with posts and comments details as state variables,
      当你在组件中调用 setState() 方法时，React 会将提供的对象合并到当前状态。例如，让我们以一个使用帖子和评论详细信息的作为状态变量的 Facebook 用户为例：
 
      ```javascript
@@ -5558,7 +5557,7 @@
      当在组件树中的组件没有匹配到在其上方的 Provider 时，才会使用 defaultValue 参数。这有助于在不包装组件的情况下单独测试组件。下面的代码段提供了默认的主题值 Luna。
 
      ```javascript
-     const defaultTheme = "Luna"；
+     const defaultTheme = "Luna";
      const MyContext = React.createContext(defaultTheme);
      ```
 
@@ -5903,7 +5902,7 @@
 
 292. ### 如何使用渲染属性创建 HOC?
 
-     可以使用带有渲染属性的常规组件实现大多数高阶组件（HOC）。例如，如果希望使用 withMouse HOC 而不是 <Mouse> 组件，则你可以使用带有渲染属性的常规 <Mouse> 组件轻松创建一个 HOC 组件。
+     可以使用带有渲染属性的常规组件实现大多数高阶组件（HOC）。例如，如果希望使用 withMouse HOC 而不是 `<Mouse>` 组件，则你可以使用带有渲染属性的常规 `<Mouse>` 组件轻松创建一个 HOC 组件。
 
      ```javascript
      function withMouse(Component) {
