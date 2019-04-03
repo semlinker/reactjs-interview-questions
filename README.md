@@ -1288,7 +1288,6 @@
     3. 将 React 集成到传统的 MVC 框架中需要一些额外的配置。
     4. 代码复杂性随着内联模板和 JSX 的增加而增加。
     5. 太多较小的组件导致过度工程化或样板文件。
-    5. Too many smaller components leading to over engineering or boilerplate.
 
 54. ### 在 React v16 中的错误边界是什么?
 
