@@ -431,6 +431,10 @@
     )
     ```
 
+    阅读资源：
+
+    1. [为什么React元素有一个$$typeof属性?](https://overreacted.io/zh-hans/why-do-react-elements-have-typeof-property/)
+
     **[⬆ 返回顶部](#目录)**
 
 5. ### 如何在 React 中创建组件?
@@ -454,6 +458,27 @@
           }
         }
         ```
+
+    通过以上任意方式创建的组件，可以这样使用：
+
+    ```jsx 
+      <Greeting message="semlinker"/>
+    ```
+
+    在 React 内部对函数组件和类组件的处理方式是不一样的，如：
+
+    ```javascript
+      // 如果 Greeting 是一个函数
+      const result = Greeting(props); // <p>Hello</p>
+
+      // 如果 Greeting 是一个类
+      const instance = new Greeting(props); // Greeting {}
+      const result = instance.render(); // <p>Hello</p>
+    ```
+
+    阅读资源：
+
+    1. [React 如何区分 Class 和 Function?](https://overreacted.io/zh-hans/how-does-react-tell-a-class-from-a-function/)
 
     **[⬆ 返回顶部](#目录)**
 
@@ -572,6 +597,7 @@
     阅读资源：
 
     1. [掘金 - 揭密React setState](https://juejin.im/post/5b87d14e6fb9a01a18268caf)
+    2. [setState 如何知道该做什么?](https://overreacted.io/zh-hans/how-does-setstate-know-what-to-do/)
 
     **[⬆ 返回顶部](#目录)**
 
@@ -2166,6 +2192,10 @@
     ```
 
     在 `constructor()` 函数之外，访问 `this.props` 属性会显示相同的值。
+
+    阅读资源：
+
+    1. [为什么我们要写 super(props)？](https://overreacted.io/zh-hans/why-do-we-write-super-props/)
 
     **[⬆ 返回顶部](#目录)**
 
