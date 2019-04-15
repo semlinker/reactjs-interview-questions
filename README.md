@@ -322,6 +322,9 @@
 |299 | [如何为 React 应用程序添加 bootstrap?](#如何为-react-应用程序添加-bootstrap) |
 |300 | [你能否列出使用 React 作为前端框架的顶级网站或应用程序?](#你能否列出使用-react-作为前端框架的顶级网站或应用程序) |
 |301 | [是否建议在 React 中使用 CSS In JS 技术?](#是否建议在-react-中使用-css-in-js-技术) |
+|302 | [我需要用 hooks 重写所有类组件吗?](#我需要用-hooks-重写所有类组件吗) |
+|303 | [如何使用 React Hooks 获取数据?](#如何使用-react-hooks-获取数据) |
+|304 | [Hooks 是否涵盖了类的所有用例?](#hooks-是否涵盖了类的所有用例) |
 <!-- /TOC -->
 
 ## Core React
@@ -1679,7 +1682,7 @@
       }
     }
     ```
-
+    
     **[⬆ 返回顶部](#目录)**
 
 67. ### 如何有条件地渲染组件?
@@ -2450,7 +2453,7 @@
     
      React.render(<User />, document.getElementById('container'))
      ```
-
+    
      **[⬆ 返回顶部](#目录)**
 
 106. ### 为什么你不能更新 React 中的 props?
@@ -4350,7 +4353,7 @@
        </div>
      )
      ```
-  
+      
      **[⬆ 返回顶部](#目录)**
 
 215. ### 为什么不建议使用内联引用回调或函数?
@@ -4362,7 +4365,7 @@
        handleSubmit = () => {
          console.log("Input Value is: ", this.input.value)
        }
-
+     
        render () {
         return (
           <form onSubmit={this.handleSubmit}>
@@ -4375,19 +4378,19 @@
       }
      }
      ```
-    
+
      但我们期望的是当组件挂载时，ref 回调只会被调用一次。一个快速修复的方法是使用 ES7 类属性语法定义函数。
-    
+         
      ```jsx
      class UserForm extends Component {
       handleSubmit = () => {
         console.log("Input Value is: ", this.input.value)
       }
-    
+         
       setSearchInput = (input) => {
         this.input = input
       }
-    
+         
       render () {
         return (
           <form onSubmit={this.handleSubmit}>
@@ -4417,7 +4420,7 @@
      在这种方法中，HOC 的 render 方法返回 WrappedComponent 类型的 React 元素。我们通过 HOC 收到 props，因此定义为**属性代理**。
 
      ```jsx
-
+     
      function ppHOC(WrappedComponent) {
       return class PP extends React.Component {
         render() {
@@ -4473,7 +4476,7 @@
         import ReactDOM from 'react-dom';
         import App from './App';
         import registerServiceWorker from './registerServiceWorker';
-
+     
         ReactDOM.render(<App />, document.getElementById('root'));
         registerServiceWorker();
      ```
@@ -4498,7 +4501,7 @@
 
      ```jsx
      const OtherComponent = React.lazy(() => import('./OtherComponent'));
-
+     
      function MyComponent() {
       return (
         <div>
@@ -4582,24 +4585,24 @@
      ```jsx
      class Counter extends Component {
        state = { value: 0 };
-
+     
        handleIncrement = () => {
          this.setState(prevState => ({
            value: prevState.value + 1
          }));
        };
-
+     
        handleDecrement = () => {
          this.setState(prevState => ({
            value: prevState.value - 1
          }));
        };
-
+     
        render() {
          return (
            <div>
              {this.state.value}
-
+     
              <button onClick={this.handleIncrement}>+</button>
              <button onClick={this.handleDecrement}>-</button>
            </div>
@@ -4616,11 +4619,11 @@
 
      ```jsx
      import { useState } from 'react';
-
+     
      function Example() {
        // Declare a new state variable, which we'll call "count"
        const [count, setCount] = useState(0);
-
+     
        return (
          <div>
            <p>You clicked {count} times</p>
@@ -4633,7 +4636,7 @@
      ```
 
       阅读资源：
-      
+
       1. [掘金 - 30分钟精通React Hooks](https://juejin.im/post/5be3ea136fb9a049f9121014)
 
       **[⬆ 返回顶部](#目录)**
@@ -4737,7 +4740,7 @@
          super(props);
          this.state = { error: null };
        }
-
+     
        handleClick = () => {
          try {
            // Do something that could throw
@@ -4745,7 +4748,7 @@
            this.setState({ error });
          }
        }
-
+     
        render() {
          if (this.state.error) {
            return <h1>Caught an error.</h1>
@@ -4860,11 +4863,11 @@
      class MyButton extends React.Component {
        // ...
      }
-
+     
      MyButton.defaultProps = {
        color: 'red'
      };
-
+     
      ```
 
      如果未设置 props.color，则会使用默认值 `red`。 也就是说，每当你试图访问 color 属性时，它都使用默认值。
@@ -4901,18 +4904,18 @@
          super(props);
          this.state = { hasError: false };
        }
-
+     
        static getDerivedStateFromError(error) {
          // Update state so the next render will show the fallback UI.
          return { hasError: true };
        }
-
+     
        render() {
          if (this.state.hasError) {
            // You can render any custom fallback UI
            return <h1>Something went wrong.</h1>;
          }
-
+     
          return this.props.children;
        }
      }
@@ -4944,7 +4947,7 @@
 247. ### displayName 类属性的用途是什么?
 
      displayName 被用于调试信息。通常，你不需要显式设置它，因为它是从定义组件的函数或类的名称推断出来的。如果出于调试目的或在创建高阶组件时显示不同的名称，可能需要显式设置它。
-     
+
      例如，若要简化调试，请选择一个显示名称，以表明它是 withSubscription HOC 的结果。
 
      ```javascript
@@ -4953,7 +4956,7 @@
        WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
        return WithSubscription;
      }
-
+     
      function getDisplayName(WrappedComponent) {
        return WrappedComponent.displayName || WrappedComponent.name || 'Component';
      }
@@ -4984,13 +4987,13 @@
      **moduleA.js**
      ```javascript
      const moduleA = 'Hello';
-
+     
      export { moduleA };
      ```
      **App.js**
      ```javascript
      import React, { Component } from 'react';
-
+     
      class App extends Component {
        handleClick = () => {
          import('./moduleA')
@@ -5001,7 +5004,7 @@
              // Handle failure
            });
        };
-
+     
        render() {
          return (
            <div>
@@ -5010,7 +5013,7 @@
          );
        }
      }
-
+     
      export default App;
      ```
 
@@ -5134,16 +5137,16 @@
        class LogProps extends React.Component {
          // ...
        }
-
+     
        function forwardRef(props, ref) {
          return <LogProps {...props} forwardedRef={ref} />;
        }
-
+     
        // Give this component a more helpful display name in DevTools.
        // e.g. "ForwardRef(logProps(MyComponent))"
        const name = Component.displayName || Component.name;
        forwardRef.displayName = `logProps(${name})`;
-
+     
        return React.forwardRef(forwardRef);
      }
      ```
@@ -5156,7 +5159,7 @@
 
      ```javascript
      <MyInput autocomplete />
-
+     
      <MyInput autocomplete={true} />
      ```
 
@@ -5209,7 +5212,7 @@
 260. ### 如何防止函数被多次调用?
 
      如果你使用一个事件处理程序，如 **onClick or onScroll** 并希望防止回调被过快地触发，那么你可以限制回调的执行速度。
-     
+
      这可以通过以下可能的方式实现：
 
      1. **Throttling:** 基于时间的频率进行更改。例如，它可以使用 lodash 的 _.throttle 函数。
@@ -5247,7 +5250,7 @@
        );
        ReactDOM.render(element, document.getElementById('root'));
      }
-
+     
      setInterval(tick, 1000);
      ```
 
@@ -5290,7 +5293,7 @@
              posts: response.posts
            });
          });
-
+     
          fetchComments().then(response => {
            this.setState({
              comments: response.comments
@@ -5325,7 +5328,7 @@
        if (!props.loggedIn) {
          return null;
        }
-
+     
        return (
          <div className="greeting">
            welcome, {props.name}
@@ -5340,7 +5343,7 @@
          super(props);
          this.state = {loggedIn: false, name: 'John'};
        }
-
+     
        render() {
         return (
             <div>
@@ -5436,7 +5439,7 @@
      import React, { Component } from 'react';
      import './App.css';
      import '@vaadin/vaadin-date-picker';
-
+     
      class App extends Component {
        render() {
          return (
@@ -5446,7 +5449,7 @@
          );
        }
      }
-
+     
      export default App;
      ```
 
@@ -5477,9 +5480,9 @@
 
      ```javascript
      import loadable from '@loadable/component'
-
+     
      const OtherComponent = loadable(() => import('./OtherComponent'))
-
+     
      function MyComponent() {
        return (
          <div>
@@ -5499,7 +5502,7 @@
 
      ```javascript
      const OtherComponent = React.lazy(() => import('./OtherComponent'));
-
+     
      function MyComponent() {
        return (
          <div>
@@ -5522,10 +5525,10 @@
      ```javascript
      import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
      import React, { Suspense, lazy } from 'react';
-
+     
      const Home = lazy(() => import('./routes/Home'));
      const About = lazy(() => import('./routes/About'));
-
+     
      const App = () => (
        <Router>
          <Suspense fallback={<div>Loading...</div>}>
@@ -5662,7 +5665,7 @@
        }
      }
      ```
-     
+
      可以通过把 value 的值提升到父状态中来解决这个问题：
 
      ```javascript
@@ -5673,7 +5676,7 @@
            value: {something: 'something'},
          };
        }
-
+     
        render() {
          return (
            <Provider value={this.state.value}>
@@ -5699,15 +5702,15 @@
            console.log('old props:', prevProps);
            console.log('new props:', this.props);
          }
-
+     
          render() {
            const {forwardedRef, ...rest} = this.props;
-
+     
            // Assign the custom prop "forwardedRef" as a ref
            return <Component ref={forwardedRef} {...rest} />;
          }
        }
-
+     
        return React.forwardRef((props, ref) => {
          return <LogProps {...props} forwardedRef={ref} />;
        });
@@ -5721,7 +5724,7 @@
        focus() {
          // ...
        }
-
+     
        // ...
      }
      export default logProps(FancyButton);
@@ -5731,7 +5734,7 @@
 
      ```javascript
      import FancyButton from './FancyButton';
-
+     
      const ref = React.createRef();
      ref.current.focus();
      <FancyButton
@@ -5792,7 +5795,7 @@
          return <div>Hello {this.props.message}</div>;
        }
      }
-
+     
      ReactDOM.render(
        <Greeting message="World" />,
        document.getElementById('root')
@@ -5807,7 +5810,7 @@
          return React.createElement('div', null, `Hello ${this.props.message}`);
        }
      }
-
+     
      ReactDOM.render(
        React.createElement(Greeting, {message: 'World'}, null),
        document.getElementById('root')
@@ -5870,7 +5873,7 @@
        <li key="2015">Duke</li>
        <li key="2016">Villanova</li>
      </ul>
-
+     
      <ul>
        <li key="2014">Connecticut</li>
        <li key="2015">Duke</li>
@@ -5899,7 +5902,7 @@
        <p>The mouse position is {mouse.x}, {mouse.y}</p>
      )}/>
      ```
-     
+
      实际上，以上的 children 属性不一定需要在 JSX 元素的 `attributes` 列表中命名。反之，你可以将它直接放在元素内部：  
 
      ```javascript
@@ -6055,6 +6058,55 @@
 
      React 对如何定义样式没有任何意见，但如果你是初学者，那么好的起点是像往常一样在单独的 *.css 文件中定义样式，并使用类名引用它们。此功能不是 React 的一部分，而是来自第三方库。但是如果你想尝试不同的方法（JS中的CSS），那么 styled-components 库是一个不错的选择。
 
+     **[⬆ 返回顶部](#目录)**
+
+302. ### 我需要用 hooks 重写所有类组件吗?
+
+     不需要。但你可以在某些组件（或新组件）中尝试使用 hooks，而无需重写任何已存在的代码。因为在 ReactJS 中目前没有移除 classes 的计划。
+
+     **[⬆ 返回顶部](#目录)**
+
+303. ### 如何使用 React Hooks 获取数据?
+
+     名为 useEffect 的 effect hook 可用于使用 axios 从 API 中获取数据，并使用 useState 钩子提供的更新函数设置组件本地状态中的数据。让我们举一个例子，它从 API 中获取 react 文章列表。
+
+     ```jsx
+     import React, { useState, useEffect } from 'react';
+     import axios from 'axios';
+     
+     function App() {
+       const [data, setData] = useState({ hits: [] });
+     
+       useEffect(async () => {
+         const result = await axios(
+           'http://hn.algolia.com/api/v1/search?query=react',
+         );
+     
+         setData(result.data);
+       }, []);
+     
+       return (
+         <ul>
+           {data.hits.map(item => (
+             <li key={item.objectID}>
+               <a href={item.url}>{item.title}</a>
+             </li>
+           ))}
+         </ul>
+       );
+     }
+     
+     export default App;
+     ```
+
+     记住，我们为 effect hook 提供了一个空数组作为第二个参数，以避免在组件更新时再次激活它，它只会在组件挂载时被执行。比如，示例中仅在组件挂载时获取数据。
+
+     **[⬆ 返回顶部](#目录)**
+
+304. ### Hooks 是否涵盖了类的所有用例?
+
+     Hooks 并没有涵盖类的所有用例，但是有计划很快添加它们。目前，还没有与不常见的 getSnapshotBeforeUpdate 和componentDidCatch 生命周期等效的钩子。
+     
 
 **[⬆ 返回顶部](#目录)**
 

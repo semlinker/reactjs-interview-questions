@@ -315,16 +315,15 @@
 |299| [How to add a bootstrap for a react application?](#how-to-add-a-bootstrap-for-a-react-application)|
 |300| [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)|
 |301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
+|302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
+|303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
+|304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
 
 ## Core React
 
 1. ### What is React?
 
     React is an **open-source frontend JavaScript library** which is used for building user interfaces especially for single page applications. It is used for handling view layer for web and mobile apps. React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook's News Feed in 2011 and on Instagram in 2012.
-  
-  React 是一个开源的前端 JavaScript 框架，可用于构建用户界面特别是单页应用程序。它被用于作为网页和移动应用的视图层。React 由 Facebook 
-  的工程师 Jordan Walke 创建。在 2011 年 React 应用首次被部署到 Facebook 的信息流上，之后于 2012 年被应用到 Instagram 中。
-
 
 2. ### What are the major features of React?
 
@@ -334,12 +333,6 @@
     * Supports **server-side rendering**.
     * Follows *Unidirectional** data flow or data binding.
     * Uses **reusable/composable** UI components to develop the view.
-
-    React 的主要特性有：
-    * 考虑到真实的 DOM 操作比较昂贵，它使用 VirtualDOM 来替代真实的 DOM
-    * 支持服务端渲染
-    * 遵从单向数据流或数据绑定
-    * 使用可重用/可组合的 UI 组件开发视图
 
 3. ### What is JSX?
 
@@ -358,31 +351,11 @@
       }
     }
     ```
-    JSX 是一个对 ECMAScript 进行类 XML 的语法的扩展。它只是为 `React.createElement()` 函数提供语法糖，从而让在我们在 JavaScript 中，
-    使用类 HTML 模板的语法，进行页面描述。
-
-    在以下示例中，在 `<h1>` 标签中的文本会以 JavaScript 函数的形式返回给渲染函数。
-
-    ```jsx harmony
-    class App extends React.Component {
-      render() {
-        return(
-          <div>
-            <h1>{'Welcome to React world!'}</h1>
-          </div>
-        )
-      }
-    }
-    ```
-
 
 4. ### What is the difference between Element and Component?
 
     An *Element* is a plain object describing what you want to appear on the screen in terms of the DOM nodes or other components. *Elements* can contain other *Elements* in their props. Creating a React element is cheap. Once an element is created, it is never mutated.
 
-    一个 Element 是一个普通的对象，以 DOM 节点或其他组件的方式描述你期望在屏幕上呈现的内容。
-
-    React 元素的对象表示如下：
     The object representation of React Element would be as follows:
 
     ```javascript
@@ -394,7 +367,6 @@
     ```
 
     The above `React.createElement()` function returns an object:
-    上面的 `React.createElement()` 函数会返回一个对象。
 
     ```
     {
@@ -407,25 +379,19 @@
     ```
 
     And finally it renders to the DOM using `ReactDOM.render()`:
-    最终使用 `ReactDOM.render()` 方法渲染到 DOM：
 
     ```html
     <div id='login-btn'>Login</div>
     ```
 
-    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns an JSX tree as the output:
-
-    然而一个组件可以以多种不同方式进行声明。它可以是一个含有 `render()` 方法的类。在简单的场景中，它能被定义成函数。在其它场景，它接收 props
-    作为输入，返回 JSX 树作为输出：
+    Whereas a **component** can be declared in several different ways. It can be a class with a `render()` method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:
 
     ```javascript
     const Button = ({ onLogin }) =>
       <div id={'login-btn'} onClick={onLogin} />
     ```
 
-    Then JSX gets transpiled to `React.createElement()` function tree:
-
-    接着 JSX 被转译为 `React.createElement()` 函数树：
+    Then JSX gets transpiled to a `React.createElement()` function tree:
 
     ```javascript
     const Button = ({ onLogin }) => React.createElement(
@@ -438,15 +404,12 @@
 5. ### How to create components in React?
 
     There are two possible ways to create a component.
-    这里有两种可行方式来创建一个组件：
 
     1. **Function Components:** This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as first parameter and return React elements:
 
-    1. **Function Components:** 这是创建组件最简单的方式
-
         ```jsx harmony
         function Greeting({ message }) {
-          return <h1>{`Hello, ${message}`}</h1>
+          return <h1>{`Hello, ${message}`}</h1> 
         }
         ```
 
@@ -1109,7 +1072,7 @@
 
 45. ### Why React uses `className` over `class` attribute?
 
-    `class` is a keyword in JavaSript, and JSX is an extension of JavaScript. That's the principal reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
+    `class` is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principal reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
 
     ```jsx harmony
     render() {
@@ -3879,6 +3842,7 @@
 
 217. ### What are HOC factory implementations?
      There are two main ways of implementing HOCs in React. 1. Props Proxy (PP) and 2. Inheritance Inversion (II). They follow different approaches for manipulating the *WrappedComponent*.
+
      **Props Proxy**
 
      In this approach, the render method of the HOC returns a React Element of the type of the WrappedComponent. We also pass through the props that the HOC receives, hence the name **Props Proxy**.
@@ -3894,6 +3858,7 @@
      }
      ```
      **Inheritance Inversion**
+
      In this approach, the returned HOC class (Enhancer) extends the WrappedComponent. It is called Inheritance Inversion because instead of the WrappedComponent extending some Enhancer class, it is passively extended by the Enhancer. In this way the relationship between them seems **inverse**.
 
      ```jsx
@@ -4173,7 +4138,7 @@
      The render() method is the only required method in a class component. i.e, All methods other than render method are optional for a class component.
 239. ### What are the possible return types of render method?
      Below are the list of following types used and return from render method,
-     1. **React elements:** Elements that instruct React to render a DOM node. It includes html elements such as <div/> and user defined elements.
+     1. **React elements:** Elements that instruct React to render a DOM node. It includes html elements such as `<div/>` and user defined elements.
      2. **Arrays and fragments:** Return multiple elements to render as Arrays and Fragments to wrap multiple elements
      3. **Portals:** Render children into a different DOM subtree.
      4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
@@ -5065,3 +5030,39 @@
      10. PayPal
 301. ### Is it recommended to use CSS In JS technique in React?
      React does not have any opinion about how styles are defined but if you are a beginner then good starting point is to define your styles in a separate *.css file as usual and refer to them using className. This functionality is not part of React but came from third-party libraries. But If you want to try a different approach(CSS-In-JS) then styled-components library is a good option.
+302. ### Do I need to rewrite all my class components with hooks?
+     No. But you can try Hooks in a few components(or new components) without rewriting any existing code. Because there are no plans to remove classes in ReactJS.
+303. ### How to fetch data with React Hooks?
+     The effect hook called `useEffect` is used to fetch the data with axios from the API and to set the data in the local state of the component with the state hook’s update function.
+     Let's take an example in which it fetches list of react articles from the API
+     ```javascript
+     import React, { useState, useEffect } from 'react';
+     import axios from 'axios';
+
+     function App() {
+       const [data, setData] = useState({ hits: [] });
+
+       useEffect(async () => {
+         const result = await axios(
+           'http://hn.algolia.com/api/v1/search?query=react',
+         );
+
+         setData(result.data);
+       }, []);
+
+       return (
+         <ul>
+           {data.hits.map(item => (
+             <li key={item.objectID}>
+               <a href={item.url}>{item.title}</a>
+             </li>
+           ))}
+         </ul>
+       );
+     }
+
+     export default App;
+     ```
+     Remember we provided an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component. i.e, It fetches only for component mount.
+304. ### Is Hooks cover all use cases for classes?
+     Hooks doesn't cover all use cases of classes but there is a plan to add them soon. Currently there are no Hook equivalents to the uncommon **getSnapshotBeforeUpdate** and **componentDidCatch** lifecycles yet.
