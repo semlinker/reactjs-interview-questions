@@ -9,10 +9,14 @@
 
 这里再次感谢 **[liaoyongfu](https://github.com/liaoyongfu)** 的大力支持🌹！
 
+**阅读更多关于 Angular、TypeScript、Node.js/Java 、Spring 等技术文章，欢迎访问我的个人博客或关注我的公众号 —— [全栈修仙之路](http://www.semlinker.com/)**
+
+![fer_road_qrcode](./images/fer_road_qrcode.jpg)
+
 ### 目录
 <!-- TOC -->
 | 序号. | 问题 |
-| --- | --------- | 
+| --- | --------- |
 | | [Core React](#core-react) |
 |1 | [什么是 React?](#什么是-react) |
 |2 | [React 的主要特点是什么?](#react-的主要特点是什么) |
