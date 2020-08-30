@@ -13,7 +13,14 @@
 
 ![fer_road_qrcode](./images/fer_road_qrcode.jpg)
 
+<<前端进阶篇 v1.1>> PDF 出炉了 — 「阿宝哥」，精心准备的 9 万多字 242 页的前端进阶资料。发布后 5 天内下载量为 **3170**。
+
+<img src="./images/frontend-advanced-intro-v1.1.jpg" style="zoom: 25%;" />
+
+点击此 [全栈修仙之路 - 前端进阶篇](http://book.bugstack.cn/#s/6I-ldR3A) 链接，即可免费下载电子书。
+
 ### 目录
+
 <!-- TOC -->
 | 序号. | 问题 |
 | --- | --------- |

@@ -2,6 +2,12 @@
 
 > Click :star:if you like the project. Pull Request are highly appreciated.
 
+<<前端进阶篇 v1.1>> PDF 出炉了 — 「阿宝哥」，精心准备的 9 万多字 242 页的前端进阶资料。发布后 5 天内下载量为 **3170**。
+
+<img src="./images/frontend-advanced-intro-v1.1.jpg" style="zoom: 25%;" />
+
+点击此 [全栈修仙之路 - 前端进阶篇](http://book.bugstack.cn/#s/6I-ldR3A) 链接，即可免费下载电子书。
+
 ### Table of Contents
 
 | No. | Questions |
@@ -440,12 +446,12 @@
     class User extends React.Component {
       constructor(props) {
         super(props)
-
+    
         this.state = {
           message: 'Welcome to React world'
         }
       }
-
+    
       render() {
         return (
           <div>
@@ -455,9 +461,9 @@
       }
     }
     ```
-
+    
     ![state](images/state.jpg)
-
+    
     State is similar to props, but it is private and fully controlled by the component. i.e, It is not accessible to any component other than the one that owns and sets it.
 
 9. ### What are props in React?
@@ -3796,6 +3802,7 @@
        handleSubmit = () => {
          console.log("Input Value is: ", this.input.value)
        }
+     ```
 
 
        render () {
@@ -3810,19 +3817,19 @@
       }
      }
      ```
-
+    
      But our expectation is for the ref callback to get called once, when the component mounts. One quick fix is to use the ES7 class property syntax to define the function
-
+    
      ```jsx
      class UserForm extends Component {
       handleSubmit = () => {
         console.log("Input Value is: ", this.input.value)
       }
-
+    
       setSearchInput = (input) => {
         this.input = input
       }
-
+    
       render () {
         return (
           <form onSubmit={this.handleSubmit}>
@@ -5011,6 +5018,7 @@
         ```javascript
         npm install bootstrap
         ``
+        ```
      3. React Bootstrap Package:
         In this case, you can add Bootstrap to our React app is by using a package that has rebuilt Bootstrap components to work particularly as React components. Below packages are popular in this category,
         1. react-bootstrap
